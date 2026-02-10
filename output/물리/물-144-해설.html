@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-144 | 2016_건국대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-144.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[만유인력과 전기력의 평형, 지렛대와 용수철]</h2>
+<div class="spacer"></div>
+<p>[문제 1]</p>
+<div class="spacer"></div>
+<p>두 물체가 정지하게 된 것은 중력과 전기력이 역학적 평형상태에 놓여있게 되었기 때문이다. 따라서 역학적 평형에 의해 거리 \(r\)에서 두 물체의 전기력과 만유인력이 같다는 뜻이 된다.</p>
+<div class="spacer"></div>
+<p>즉 전기력 = 만유인력이 된다.</p>
+<div class="spacer"></div>
+<p>따라서 \(k_e \frac{eq}{r^2} = G\frac{m_1 m_2}{r^2}\)이므로 문제에 주어진 물체의 질량, 전자의 전하량 값과 제시문에 기술한 만유인력 상수, 쿨롱상수를 대입하여 계산하면, 물체의 전하량은</p>
+<div class="spacer"></div>
+<div class="math-block">\[q = \frac{Gm_1 m_2}{k_e e} = \frac{6.7 \times 10^{-11} \text{ N}\cdot\text{m}^2\text{kg}^{-2} \times 9.0\text{kg} \times 1.6\text{kg}}{9.0 \times 10^9 \text{ N}\cdot\text{m}^2\text{C}^{-2} \times (-1.6 \times 10^{-19}\text{C})} = -0.67\text{C}\]</div>
+<div class="spacer"></div>
+<p>이 될 때 두 물체가 힘의 평형을 이루어 정지할 수 있게 된다.</p>
+<div class="spacer"></div>
+<p>[문제 2]</p>
+<div class="spacer"></div>
+<p>그림 (나)은 지렛대의 오른쪽 물체 1에 가해지는 중력과 왼쪽의 용수철의 탄성력이 평형을 이룬 상태이다. 오른쪽 지렛대 끝이 원래 높이보다 \(d_1\)만큼 내려갈 때 용수철의 변위 \(x\)는 닮은꼴 두 삼각형의 비례 관계식으로부터 \(x = d_1 \frac{l_1}{l_2}\) 식을 얻는다.</p>
+<div class="spacer"></div>
+<p>즉, 물체 1에 의한 탄성력 \(= k\frac{l_1}{l_2}d_1\) \(\quad\cdots\) (1)</p>
+<div class="spacer"></div>
+<p>그림 (다)에서 물체 1이 작용하는 힘에 더하여 물체 2에 의한 전기력이 더해져서 오른쪽 지렛대가 \(d_2\)만큼 이동하였으므로 이때 탄성력의 크기는 \(k\frac{l_1}{l_2}d_2\)가 된다.</p>
+<div class="spacer"></div>
+<p>즉, 물체 2에 의해 추가된 탄성력 \(= k\frac{l_1}{l_2}(d_2 - d_1)\) \(\quad\cdots\) (2)</p>
+<div class="spacer"></div>
+<p>(1), (2)에 의해 물체1과 물체 2 사이의 전기력과 지렛대의 운동으로 추가된 탄성력 사이에 돌림힘 평형 식은 \(k\frac{l_1}{l_2}(d_2 - d_1)l_1 = k_e \frac{q_1 q_2}{r^2}l_2\)이 되고</p>
+<div class="spacer"></div>
+<p>이 식을 통해 \(r\)값을 계산하면 \(r = \frac{l_2}{l_1}\sqrt{\frac{k_e q_1 q_2}{k(d_2 - d_1)}}\)이 된다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-144</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>
