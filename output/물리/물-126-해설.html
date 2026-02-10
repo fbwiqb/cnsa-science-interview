@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-126 | 2022_건국대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-126.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">에너지띠와 반도체</h2>
+<div class="spacer"></div>
+<p><strong>[문제 1]</strong></p>
+<div class="spacer"></div>
+<div class="figure"><img src="../../data/물리/2022_건국대_물리학_해설1/fig1.png" /></div>
+<div class="spacer"></div>
+<p>전류가 증가한 물질은 저마늄(0.7 eV)과 황화 납(0.4 eV)이다. 그 이유는 띠 간격이 빛 에너지(0.82 eV) 보다 작은 물질(왼쪽 그림)은 원자가 띠의 전자가 빛을 흡수하여 채워지지 않은 에너지 상태로 전이되어 전압에 의해 전자가 한 쪽 방향으로 움직여 전류가 증가하기 때문이다.</p>
+<div class="spacer"></div>
+<p><strong>[문제 2]</strong></p>
+<div class="spacer"></div>
+<p>제시문 (나)에서 설명된 바와 같이, 고체의 에너지 띠는 전자의 에너지 준위가 아주 미세하게 나뉘어져 있으며 모든 전이 가능한 경우에 대해서 빛을 흡수한다. 따라서 고체의 에너지 띠를 바탕으로 흡수하는 에너지는 다음과 같다.</p>
+<div class="spacer"></div>
+<p>1. 원자가 띠에서 1번 띠로 전이하는 경우: 1 eV ~ 3 eV</p>
+<p>2. 원자가 띠에서 2번 띠로 전이하는 경우: 6 eV ~ 8 eV</p>
+<p>3. 1번 띠에서 2번 띠로 전이하는 경우: 4 eV ~ 6 eV</p>
+<div class="spacer"></div>
+<p>즉, 문제에서 주어진 고체는 1 eV ~ 3 eV 구간과 4 eV ~ 8 eV 구간의 빛을 흡수한다. 이를 파장으로 변환하면 제시문(가)에 따라 다음과 같이 쓸 수 있다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta E = hf = \frac{hc}{\lambda} \text{ 이므로 } \lambda = \frac{hc}{\Delta E}\]</div>
+<div class="spacer"></div>
+<p>문제의 조건에서 1eV의 에너지를 가지는 빛의 파장을 1240 nm 근사하였으므로 1 eV ~ 3 eV는 1240 nm ~ 413 nm(II 구간), 4 eV ~ 8 eV는 310 nm ~ 155 nm(I 구간)이다. 따라서 <strong>A는 155 nm, B는 310 nm, C는 413 nm (또는 413.3 nm, $\dfrac{1240}{3}$ nm)</strong>이다. 그러므로 흡수 구간 (I)은 원자가 띠에서 2번 띠로 전이하는 경우와 1번 띠에서 2번 띠로 전이하는 경우, 이 두 가지 경우를 합쳐서 나타난 것이다.</p>
+<div class="spacer"></div>
+<p>(I)의 구간은 자외선 영역이고, (II)의 구간은 가시광선 영역 일부와 일부 적외선 영역을 포함하므로 이 고체를 CCD로 이용하기 위해서는 (II)구간의 흡수를 이용하게 된다. 하지만, 이 고체는 310nm ~ 413nm 영역의 빛을 흡수하지 못하고, 특히 가시광선 영역 중 380 nm ~ 413 nm 영역의 빛을 흡수하지 못한다. 따라서 무지개 사진을 찍는다면 보라색 영역의 빛을 검출할 수 없다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="../../data/물리/2022_건국대_물리학_해설1/fig2.png" /></div>
+<div class="spacer"></div>
+<div class="figure"><img src="../../data/물리/2022_건국대_물리학_해설1/fig3.png" /></div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-126</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

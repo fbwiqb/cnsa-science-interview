@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-123 | 2025_경희대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-123.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">논제 II-2</h2>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 안테나 A와 B는 같은 파장(주파수), 파면, 위상, 세기의 전자기파를 발생하므로 논제의 상황은 제시문 [사]의 이중 슬릿의 간섭 실험과 같다. 즉, 두 안테나가 떨어진 거리는 이중슬릿 사이의 간격에 해당한다.</p>
+<div class="spacer"></div>
+<p>\(\theta = 0\)에서는 각 안테나에서 발생한 두 전자기파의 경로차가 0이므로 보강 간섭이 일어나고, 관측자는 이 위치에서 최대 세기의 전자기파를 수신한다. 그리고 관측자가 측정하는 전자기파의 세기는, \(-\dfrac{\pi}{2} \le \theta \le \dfrac{\pi}{2}\) 범위 내에 상쇄 간섭이 일어나지 않는다면 \(\theta = 0\)의 위치에서 멀어질수록 점차 약해진다.</p>
+<div class="spacer"></div>
+<p>논제에서 관측자가 \(\theta\)와 관계없이 세기 \(I_0\) 이상의 전자기파를 수신하므로, \(\theta = \pm\dfrac{\pi}{2}\)에 도달하는 전자기파 세기가 \(I_0\)보다 같거나 커야 한다. \(\theta = \pm\dfrac{\pi}{2}\)에서 중첩된 전자기파의 세기가 \(I_0\)일 때 \(d\)가 최댓값(\(d_{\text{최대}}\))을 가지므로 (\(\because\) \(d\)가 작아질수록 두 전자기파의 경로차가 줄어들므로 중첩된 전자기파의 세기는 커진다) 다음의 식이 성립한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[d_{\text{최대}} \times \sin\left(\theta = \pm\frac{\pi}{2}\right) = m\frac{\lambda_0}{3} \quad (m = 1, 2, \cdots)\]</div>
+<div class="spacer"></div>
+<p>(\(\because\) 세기가 \(I_0\)으로 같은 두 파동이 중첩되었을 때의 세기가 여전히 \(I_0\)이면 두 파동의 위상이 \(\dfrac{2}{3}\pi\) 또는 \(\dfrac{4}{3}\pi\)만큼 차이가 나야 한다.)</p>
+<div class="spacer"></div>
+<p>여기서 \(-\dfrac{\pi}{2} \le \theta \le \dfrac{\pi}{2}\) 범위 내에 상쇄 간섭이 일어나서는 안 되므로, \(m = 1\)만 가능하다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\therefore d_{\text{최대}} = \frac{\lambda_0}{3}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 논제에서 \(d = 0.4\,\text{m}\), \(\lambda = \lambda_0 = \dfrac{c}{f_0} = \dfrac{3 \times 10^8}{1.5 \times 10^9} = 0.2\,\text{m}\)이므로, 전자기파 세기가 최대로 측정되는 즉, 보강 간섭이 일어나는 관측자의 위치 \(\theta\)는 다음의 식을 만족한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\sin\theta = m\frac{\lambda}{d} = \frac{m}{2}\]</div>
+<div class="spacer"></div>
+<p>\(|\sin\theta| \le 1\)이고 \(m = 0, \pm 1, \pm 2\)이므로, 각 \(m\)에 대응되는 \(\theta = -\dfrac{\pi}{2},\; -\dfrac{\pi}{6},\; 0,\; \dfrac{\pi}{6},\; \dfrac{\pi}{2}\)이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-123</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

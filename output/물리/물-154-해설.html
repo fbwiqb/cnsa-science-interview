@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-154 | 2010_한양대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-154.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[페르마의 원리로부터 반사 법칙과 굴절 법칙 유도]</h2>
+<div class="spacer"></div>
+<p>(문항 1) 풀이 1</p>
+<div class="spacer"></div>
+<p>빛의 속력이 일정한 경우 (혹은 같은 물질 내에서) 빛이 최단 경로인 직선으로 진행함을 파악하고 있는가?</p>
+<div class="spacer"></div>
+<p>- 페르마 원리에 따라 한 점에서 다른 점으로 이동할 때는 최소 시간에 갈 수 있는 경로를 취하며 빛의 속력이 일정한 경우 최단 경로를 선택한다.</p>
+<p>- 반사하는 동안 빛은 같은 물질 내에 있으므로 반사 전후의 속력은 일정하다.</p>
+<p>- 따라서 최단 경로는 아래 그림에서처럼 A에 대한 거울 상점 A'에서 B까지의 직선 A'B이다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="../../data/물리/2010_한양대_물리학_해설1/fig1.jpeg" /></div>
+<div class="spacer"></div>
+<p>- 입사각과 반사각의 관계를 이해하는가?</p>
+<div class="spacer"></div>
+<p>직선 A'B와 경계면이 만나는 점이 O가 된다. 점 O를 지나는 법선과 직선 A'B가 이루는 두 각 \(\theta_r\)과 \(\theta_3\)는 같다. 경계면과 법선이 수직인 상황에서 두 삼각형 ADO와 삼각형 A'DO는 합동이므로 \(\theta_i = \theta_3\)이 된다. 따라서 \(\theta_i = \theta_r\)로 반사법칙 성립한다.</p>
+<div class="spacer"></div>
+<p>풀이 2</p>
+<div class="spacer"></div>
+<p>출제의도와 달리 문항 1을 문항 2와 똑같은 방식으로 풀이할 수도 있다. 이에 대한 예시답안은 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="../../data/물리/2010_한양대_물리학_해설1/fig2.jpeg" /></div>
+<div class="spacer"></div>
+<p>매질1에서 빛의 속도의 크기를 \(v_i\)라고 하자.</p>
+<div class="spacer"></div>
+<p>A로부터 다른 두 매질의 경계면에서 반사되어 B로 가는 시간 \(t(x)\)는 그 거리를 속력으로 나눈 값과 같다. 즉,</p>
+<div class="spacer"></div>
+<div class="math-block">\[t(x) = \frac{\text{AO}}{v_i} + \frac{\text{OB}}{v_i} = \frac{\sqrt{a^2 + x^2}}{v_i} + \frac{\sqrt{b^2 + (d-x)^2}}{v_i} = \frac{(a^2 + x^2)^{\frac{1}{2}}}{v_i} + \frac{(b^2 + (d-x)^2)^{\frac{1}{2}}}{v_i}\]</div>
+<div class="spacer"></div>
+<p>페르마의 원리로부터 빛은 직진하기 때문에 한 점에서 다른 점으로 이동할 때는 최소 시간에 갈 수 있는 경로를 취하므로 \(\frac{dt}{dx} = 0\)이 되어야 한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{dt}{dx} = \frac{1}{v_i} \cdot \frac{x}{\sqrt{a^2 + x^2}} - \frac{1}{v_i} \cdot \frac{d - x}{\sqrt{b^2 + (d-x)^2}} = 0\]</div>
+<div class="spacer"></div>
+<p>여기서</p>
+<div class="spacer"></div>
+<div class="math-block">\[\sin\theta_i = \frac{x}{\text{AO}} = \frac{x}{\sqrt{a^2 + x^2}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\sin\theta_r = \frac{d - x}{\text{OC}} = \frac{d - x}{\sqrt{b^2 + (d-x)^2}}\]</div>
+<div class="spacer"></div>
+<p>임을 감안하면 \(\sin\theta_i = \sin\theta_r\), 즉 \(\theta_i = \theta_r\)인 반사법칙을 얻는다.</p>
+<div class="spacer"></div>
+<p>(문항 2)</p>
+<div class="spacer"></div>
+<div class="figure"><img src="../../data/물리/2010_한양대_물리학_해설1/fig3.jpeg" /></div>
+<div class="spacer"></div>
+<p>- 동일 물질 내에서 빛의 속력은 일정하므로 최단 경로인 직선으로 진행함을 파악하고 있는가? (20%)</p>
+<p>- 거리와 속력의 관계로부터 시간을 구할 수 있는가? (10%)</p>
+<div class="spacer"></div>
+<p>매질1에서 빛의 속도의 크기를 \(v_i\), 매질2에서 빛의 속도의 크기를 \(v_t\)라고 하자.</p>
+<div class="spacer"></div>
+<p>A로부터 다른 두 매질의 경계면에서 굴절되어 C로 가는 시간 \(t(x)\)는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[t(x) = \frac{\text{AO}}{v_i} + \frac{\text{OC}}{v_t} = \frac{\sqrt{a^2 + x^2}}{v_i} + \frac{\sqrt{b^2 + (d-x)^2}}{v_t} = \frac{(a^2 + x^2)^{\frac{1}{2}}}{v_i} + \frac{(b^2 + (d-x)^2)^{\frac{1}{2}}}{v_t}\]</div>
+<div class="spacer"></div>
+<p>- 페르마의 원리 적용을 위해 최소 시간을 구할 수 있는가? (20%)</p>
+<p>- 빛의 속력과 굴절률간의 관계를 파악하고 있는가? (10%)</p>
+<div class="spacer"></div>
+<p>페르마의 원리에 따라 한 점에서 다른 점으로 빛이 진행할 때 최소 시간의 경로를 택하므로 \(\frac{dt}{dx} = 0\)이 되어야 한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{dt}{dx} = \frac{1}{v_i} \cdot \frac{x}{\sqrt{a^2 + x^2}} - \frac{1}{v_t} \cdot \frac{d - x}{\sqrt{b^2 + (d-x)^2}} = 0\]</div>
+<div class="spacer"></div>
+<p>여기서 각각</p>
+<div class="spacer"></div>
+<div class="math-block">\[\sin\theta_i = \frac{x}{\text{AO}} = \frac{x}{\sqrt{a^2 + x^2}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\sin\theta_t = \frac{d - x}{\text{OC}} = \frac{d - x}{\sqrt{b^2 + (d-x)^2}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_i = \frac{c}{n_1}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_t = \frac{c}{n_2}\]</div>
+<div class="spacer"></div>
+<p>이므로 \(\frac{n_1}{c}\sin\theta_i = \frac{n_2}{c}\sin\theta_t\), 즉 \(n_1\sin\theta_i = n_2\sin\theta_t\)인 굴절법칙을 유도할 수 있다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-154</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>
