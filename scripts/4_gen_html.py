@@ -150,14 +150,14 @@ def process_inline(text):
             if i + 1 < len(text) and text[i+1] == '$':
                 end = text.find('$$', i+2)
                 if end != -1:
-                    formula = text[i+2:end]
+                    formula = text[i+2:end].replace('·', '\\cdot ')
                     parts.append(f'<div class="math-block">\\[{formula}\\]</div>')
                     i = end + 2
                     continue
             else:
                 end = text.find('$', i+1)
                 if end != -1:
-                    formula = text[i+1:end]
+                    formula = text[i+1:end].replace('·', '\\cdot ')
                     parts.append(f'\\({formula}\\)')
                     i = end + 1
                     continue
