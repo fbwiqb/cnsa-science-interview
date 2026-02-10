@@ -190,13 +190,24 @@ function buildViewList() {
 }
 
 const cacheBust = Date.now();
+
+function getSplitTitle(uid) {
+  const item = ALL_DATA.find(d => d.uid === uid);
+  if (item) {
+    const hasSol = viewList[viewIndex] && viewList[viewIndex].sol;
+    const suffix = hasSol ? ' - 문제 / 해설' : ' - 문제';
+    return item.year + ' ' + item.school + ' ' + (item.subject || '') + ' ' + (item.number || '') + suffix;
+  }
+  return uid;
+}
+
 function openSplit(probUrl, solUrl, uid) {
   buildViewList();
   viewIndex = viewList.findIndex(v => v.uid === uid);
   if (viewIndex < 0) viewIndex = 0;
   iframeProb.src = probUrl + '?v=' + cacheBust;
-  iframeSol.src = solUrl + '?v=' + cacheBust;
-  splitTitle.textContent = uid + ' - 문제 / 해설';
+  iframeSol.src = solUrl ? solUrl + '?v=' + cacheBust : 'about:blank';
+  splitTitle.textContent = getSplitTitle(uid);
   splitOverlay.classList.add('active');
   document.getElementById('split-counter').textContent = (viewIndex + 1) + ' / ' + viewList.length;
   preloadNext(5);
@@ -217,10 +228,12 @@ function preloadNext(count) {
       l1.rel = 'prefetch';
       l1.href = v.prob;
       document.head.appendChild(l1);
-      const l2 = document.createElement('link');
-      l2.rel = 'prefetch';
-      l2.href = v.sol;
-      document.head.appendChild(l2);
+      if (v.sol) {
+        const l2 = document.createElement('link');
+        l2.rel = 'prefetch';
+        l2.href = v.sol;
+        document.head.appendChild(l2);
+      }
       v._preloaded = true;
     }
   }
@@ -232,8 +245,8 @@ function navSplit(delta) {
   if (viewIndex >= viewList.length) viewIndex = 0;
   const v = viewList[viewIndex];
   iframeProb.src = v.prob + '?v=' + cacheBust;
-  iframeSol.src = v.sol + '?v=' + cacheBust;
-  splitTitle.textContent = v.uid + ' - 문제 / 해설';
+  iframeSol.src = v.sol ? v.sol + '?v=' + cacheBust : 'about:blank';
+  splitTitle.textContent = getSplitTitle(v.uid);
   document.getElementById('split-counter').textContent = (viewIndex + 1) + ' / ' + viewList.length;
   preloadNext(5);
 }
