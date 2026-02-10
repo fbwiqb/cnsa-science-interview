@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-146 | 2015_건국대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-146.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">보어 수소 원자 모델과 발광 다이오드</h2>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 광자 충돌에 의한 전자 전이와 이온화 에너지</p>
+<div class="spacer"></div>
+<p>진동수 \(f = 3000\) THz \(= 3000 \times 10^{12}\) Hz \(= 3 \times 10^{15}\) Hz인 광자의 에너지를 구한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_{\text{photon}} = hf = 6.6 \times 10^{-34} \times 3 \times 10^{15} = 19.8 \times 10^{-19} \text{ J}\]</div>
+<div class="spacer"></div>
+<p>eV 단위로 변환하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_{\text{photon}} = \frac{19.8 \times 10^{-19}}{1.6 \times 10^{-19}} = 12.375 \text{ eV}\]</div>
+<div class="spacer"></div>
+<p>보어 수소 원자 모델에서 각 에너지 준위는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_n = -\frac{13.6}{n^2} \text{ eV}\]</div>
+<div class="spacer"></div>
+<p>- \(E_1 = -13.6\) eV (바닥상태)</p>
+<p>- \(E_2 = -3.4\) eV</p>
+<p>- \(E_3 = -1.51\) eV</p>
+<p>- \(E_4 = -0.85\) eV</p>
+<div class="spacer"></div>
+<p>바닥상태(\(n=1\))에서 \(n\)번째 준위로 전이하는 데 필요한 에너지는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta E = E_n - E_1 = -\frac{13.6}{n^2} + 13.6 = 13.6\left(1 - \frac{1}{n^2}\right) \text{ eV}\]</div>
+<div class="spacer"></div>
+<p>각 전이에 필요한 에너지:</p>
+<p>- \(n=2\): \(\Delta E = 13.6 \times (1 - \frac{1}{4}) = 13.6 \times \frac{3}{4} = 10.2\) eV</p>
+<p>- \(n=3\): \(\Delta E = 13.6 \times (1 - \frac{1}{9}) = 13.6 \times \frac{8}{9} = 12.09\) eV</p>
+<p>- \(n=4\): \(\Delta E = 13.6 \times (1 - \frac{1}{16}) = 13.6 \times \frac{15}{16} = 12.75\) eV</p>
+<div class="spacer"></div>
+<p>광자 에너지 12.375 eV로 가능한 전이:</p>
+<p>- \(n=2\): 10.2 eV \(\leq\) 12.375 eV (가능)</p>
+<p>- \(n=3\): 12.09 eV \(\leq\) 12.375 eV (가능)</p>
+<p>- \(n=4\): 12.75 eV &gt; 12.375 eV (불가능)</p>
+<div class="spacer"></div>
+<p>따라서 전자가 도달할 수 있는 가장 높은 들뜸상태의 양자수는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{n = 3}\]</div>
+<div class="spacer"></div>
+<p>이온화 에너지는 바닥상태의 전자를 원자핵에서 완전히 분리(\(n = \infty\))시키는 데 필요한 에너지이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_{\text{ionization}} = E_\infty - E_1 = 0 - (-13.6) = 13.6 \text{ eV}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{E_{\text{ionization}} = 13.6 \text{ eV} = 13.6 \times 1.6 \times 10^{-19} = 2.176 \times 10^{-18} \text{ J}}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 발광 다이오드의 에너지 갭</p>
+<div class="spacer"></div>
+<p>발광 다이오드에서 방출되는 빛의 파장이 \(\lambda\)일 때, 에너지 갭은 방출되는 광자의 에너지와 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_g = hf = \frac{hc}{\lambda}\]</div>
+<div class="spacer"></div>
+<p>여기서 \(c = 3 \times 10^8\) m/s (빛의 속도)이다.</p>
+<div class="spacer"></div>
+<p><strong>파장 375 nm인 자외선의 에너지 갭:</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[E_g = \frac{hc}{\lambda} = \frac{6.6 \times 10^{-34} \times 3 \times 10^{8}}{375 \times 10^{-9}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[E_g = \frac{19.8 \times 10^{-26}}{375 \times 10^{-9}} = \frac{19.8 \times 10^{-26}}{3.75 \times 10^{-7}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[E_g = 5.28 \times 10^{-19} \text{ J}\]</div>
+<div class="spacer"></div>
+<p>eV로 변환하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{E_g = \frac{5.28 \times 10^{-19}}{1.6 \times 10^{-19}} = 3.3 \text{ eV}}\]</div>
+<div class="spacer"></div>
+<p><strong>파장 750 nm인 적외선의 에너지 갭:</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[E_g' = \frac{hc}{\lambda'} = \frac{6.6 \times 10^{-34} \times 3 \times 10^{8}}{750 \times 10^{-9}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[E_g' = \frac{19.8 \times 10^{-26}}{750 \times 10^{-9}} = \frac{19.8 \times 10^{-26}}{7.5 \times 10^{-7}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[E_g' = 2.64 \times 10^{-19} \text{ J}\]</div>
+<div class="spacer"></div>
+<p>eV로 변환하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{E_g' = \frac{2.64 \times 10^{-19}}{1.6 \times 10^{-19}} = 1.65 \text{ eV}}\]</div>
+<div class="spacer"></div>
+<p>파장 750 nm의 적외선을 방출하려면 에너지 갭이 약 1.65 eV인 반도체를 사용해야 한다. 자외선(375 nm)을 방출하는 반도체(에너지 갭 3.3 eV)보다 에너지 갭이 작은 반도체를 사용해야 하며, 이에 적합한 반도체 소재로는 GaAs(갈륨비소, \(E_g \approx 1.4\) eV) 계열의 반도체가 있다. 적외선 대역의 빛을 방출하려면 에너지 갭이 작은 좁은 밴드갭 반도체를 사용하여야 한다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-146</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

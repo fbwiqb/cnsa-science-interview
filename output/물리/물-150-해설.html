@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-150 | 2012_건국대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-150.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">정전기력 현미경과 쿨롱의 법칙</h2>
+<div class="spacer"></div>
+<p><strong>(3-1)</strong> 정전기력에 의한 탐침의 변위</p>
+<div class="spacer"></div>
+<p><strong>i) 힘의 균형 방정식</strong></p>
+<div class="spacer"></div>
+<p>나노 입자의 전하 \(Q > 0\)와 탐침 끝의 전하 \(-q\) (\(q > 0\)) 사이에 정전기적 인력이 작용한다. 초기 거리는 \(a\)이며, 변위 \(x\)는 거리에 비해 매우 작으므로 정전기력은 초기 위치에서의 값으로 근사한다.</p>
+<div class="spacer"></div>
+<p>탐침에 작용하는 정전기력(아래 방향)과 용수철의 복원력(위 방향)이 평형을 이루므로 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[kx = k_e\frac{Qq}{a^2}\]</div>
+<div class="spacer"></div>
+<p>변위 \(x\)에 대해 정리하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{x = \frac{k_eQq}{ka^2}}\]</div>
+<div class="spacer"></div>
+<p><strong>ii) 총에너지 유도</strong></p>
+<div class="spacer"></div>
+<p>탐침이 \(x = \frac{a}{10}\)만큼 이동하여 정지해 있을 때의 총에너지를 구한다.</p>
+<div class="spacer"></div>
+<p>용수철의 탄성 퍼텐셜 에너지는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_{\text{spring}} = \frac{1}{2}kx^2 = \frac{1}{2}k\left(\frac{a}{10}\right)^2 = \frac{ka^2}{200}\]</div>
+<div class="spacer"></div>
+<p>정전기적 퍼텐셜 에너지는 탐침이 \(x\)만큼 이동했을 때 (인력이므로 음의 값) 다음과 같다. 탐침과 나노 입자 사이의 거리는 근사적으로 \(a\)로 유지되므로 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_{\text{elec}} = -k_e\frac{Qq}{a}\]</div>
+<div class="spacer"></div>
+<p>준정적(quasi-static) 과정에서 총에너지는 용수철 에너지와 정전기적 퍼텐셜 에너지의 합이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_{\text{total}} = \frac{1}{2}kx^2 - k_e\frac{Qq}{a}\]</div>
+<div class="spacer"></div>
+<p>\(x = \frac{a}{10}\)을 대입하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_{\text{total}} = \frac{ka^2}{200} - \frac{k_eQq}{a}\]</div>
+<div class="spacer"></div>
+<p>총에너지를 \(x\)에 대해 미분하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{dE_{\text{total}}}{dx} = kx - k_e\frac{Qq}{a^2}\]</div>
+<div class="spacer"></div>
+<p>평형 상태에서 이 값은 0이 되어야 하며, 이는 (i)의 힘의 균형 조건과 일치한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\frac{dE_{\text{total}}}{dx}\bigg|_{x=a/10} = k \cdot \frac{a}{10} - \frac{k_eQq}{a^2} = 0}\]</div>
+<div class="spacer"></div>
+<p><strong>(3-2)</strong> 정전기력과 용수철 상수의 최솟값 계산</p>
+<div class="spacer"></div>
+<p>주어진 조건:</p>
+<p>- \(a = 30\) nm \(= 30 \times 10^{-9}\) m</p>
+<p>- \(Q = 1 \times 10^{-18}\) C</p>
+<p>- 탐침의 전자 수: 10000개</p>
+<p>- \(e = 1.6 \times 10^{-19}\) C</p>
+<div class="spacer"></div>
+<p>탐침의 전하량은 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[q = 10000 \times e = 10000 \times 1.6 \times 10^{-19} = 1.6 \times 10^{-15} \text{ C}\]</div>
+<div class="spacer"></div>
+<p>정전기력의 크기를 계산한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[F = k_e\frac{Qq}{a^2} = 9 \times 10^9 \times \frac{1 \times 10^{-18} \times 1.6 \times 10^{-15}}{(30 \times 10^{-9})^2}\]</div>
+<div class="spacer"></div>
+<p>분자를 계산하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[9 \times 10^9 \times 1.6 \times 10^{-33} = 14.4 \times 10^{-24} = 1.44 \times 10^{-23}\]</div>
+<div class="spacer"></div>
+<p>분모를 계산하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[(30 \times 10^{-9})^2 = 900 \times 10^{-18} = 9 \times 10^{-16}\]</div>
+<div class="spacer"></div>
+<p>따라서 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[F = \frac{1.44 \times 10^{-23}}{9 \times 10^{-16}} = 1.6 \times 10^{-8} \text{ N}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{F = 1.6 \times 10^{-8} \text{ N} = 16 \text{ nN}}\]</div>
+<div class="spacer"></div>
+<p>용수철 상수 \(k\)의 최솟값을 구하기 위해, 탐침의 변위 \(x\)가 나노 입자와 탐침 사이의 거리 \(a\)보다 충분히 작아야 한다. 변위가 \(a\)보다 작으려면 다음 조건이 필요하다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[x = \frac{F}{k} < a\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[k > \frac{F}{a} = \frac{1.6 \times 10^{-8}}{30 \times 10^{-9}} = \frac{1.6 \times 10^{-8}}{3 \times 10^{-8}} \approx 0.53 \text{ N/m}\]</div>
+<div class="spacer"></div>
+<p>보통 용수철 상수 \(k = 0.5\) N/m에서 변위는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[x = \frac{1.6 \times 10^{-8}}{0.5} = 3.2 \times 10^{-8} \text{ m} = 32 \text{ nm}\]</div>
+<div class="spacer"></div>
+<p>이 변위는 \(a = 30\) nm과 비슷한 크기이므로, 근사가 유효하려면 \(k\)가 충분히 커야 한다. \(k\)의 최솟값은 변위가 무시할 수 있을 정도로 작은 조건에서 결정되며, 대략적으로 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{k_{\min} \approx 0.53 \text{ N/m}}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-150</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -26,6 +26,62 @@ years.forEach(y => {
   filterYear.appendChild(opt);
 });
 
+let reviewed = JSON.parse(localStorage.getItem('hub_reviewed') || '{}');
+
+function applyReviewedStyles() {
+  cards.forEach(card => {
+    const uid = card.dataset.uid;
+    if (reviewed[uid]) {
+      card.classList.add('reviewed');
+    } else {
+      card.classList.remove('reviewed');
+    }
+  });
+}
+
+const tabBtns = document.querySelectorAll('.tab-btn');
+
+function switchTab(subj) {
+  filterSubject.value = subj;
+  tabBtns.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.subject === subj);
+  });
+  sections.subject.forEach(sec => {
+    sec.classList.toggle('active', sec.dataset.subject === subj);
+  });
+  applyFilters();
+}
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => switchTab(btn.dataset.subject));
+});
+
+document.querySelectorAll('.school-header').forEach(header => {
+  header.addEventListener('click', () => {
+    header.closest('.school-section').classList.toggle('collapsed');
+  });
+});
+
+let showUnreviewedOnly = false;
+document.getElementById('btn-unreviewed').addEventListener('click', () => {
+  showUnreviewedOnly = !showUnreviewedOnly;
+  const btn = document.getElementById('btn-unreviewed');
+  btn.classList.toggle('active', showUnreviewedOnly);
+  btn.textContent = showUnreviewedOnly ? '전체 보기' : '미검수만';
+  applyFilters();
+});
+
+let allExpanded = false;
+document.getElementById('btn-toggle-collapse').addEventListener('click', () => {
+  allExpanded = !allExpanded;
+  const activeSubj = document.querySelector('.subject-section.active');
+  if (!activeSubj) return;
+  activeSubj.querySelectorAll('.school-section').forEach(sec => {
+    sec.classList.toggle('collapsed', !allExpanded);
+  });
+  document.getElementById('btn-toggle-collapse').textContent = allExpanded ? '전체 접기' : '전체 펼치기';
+});
+
 function applyFilters() {
   const subj = filterSubject.value;
   const school = filterSchool.value;
@@ -45,6 +101,7 @@ function applyFilters() {
     if (school && dsc !== school) show = false;
     if (year && dy !== year) show = false;
     if (query && !text.includes(query) && !duid.includes(query)) show = false;
+    if (showUnreviewedOnly && reviewed[card.dataset.uid]) show = false;
 
     card.classList.toggle('hidden', !show);
     if (show) visible++;
@@ -55,19 +112,20 @@ function applyFilters() {
     sec.style.display = visCards.length ? '' : 'none';
   });
   sections.school.forEach(sec => {
-    const visYears = sec.querySelectorAll('.year-section[style=""],.year-section:not([style])');
     const hasVisible = [...sec.querySelectorAll('.card:not(.hidden)')].length > 0;
     sec.style.display = hasVisible ? '' : 'none';
   });
   sections.subject.forEach(sec => {
+    if (subj && sec.dataset.subject !== subj) return;
     const hasVisible = [...sec.querySelectorAll('.card:not(.hidden)')].length > 0;
-    sec.style.display = hasVisible ? '' : 'none';
+    if (!subj) sec.style.display = hasVisible ? '' : 'none';
   });
 
-  statsEl.textContent = `${visible}개 문제 표시 / 전체 ${cards.length}개`;
+  const totalInTab = [...cards].filter(c => c.dataset.subject === subj).length;
+  const reviewedInTab = [...cards].filter(c => c.dataset.subject === subj && reviewed[c.dataset.uid]).length;
+  statsEl.textContent = `${visible}개 표시 / ${totalInTab}개 중 검수 완료 ${reviewedInTab}개`;
 }
 
-filterSubject.addEventListener('change', applyFilters);
 filterSchool.addEventListener('change', applyFilters);
 filterYear.addEventListener('change', applyFilters);
 searchBox.addEventListener('input', applyFilters);
@@ -165,7 +223,8 @@ document.getElementById('btn-print').addEventListener('click', () => {
   });
 });
 
-applyFilters();
+switchTab('물리');
+applyReviewedStyles();
 
 const splitOverlay = document.getElementById('split-overlay');
 const splitTitle = document.getElementById('split-title');
@@ -201,16 +260,25 @@ function getSplitTitle(uid) {
   return uid;
 }
 
+function updateSplitUI() {
+  const v = viewList[viewIndex];
+  if (!v) return;
+  iframeProb.src = v.prob + '?v=' + cacheBust;
+  iframeSol.src = v.sol ? v.sol + '?v=' + cacheBust : 'about:blank';
+  splitTitle.textContent = getSplitTitle(v.uid);
+  document.getElementById('split-counter').textContent = (viewIndex + 1) + ' / ' + viewList.length;
+  const isReviewed = !!reviewed[v.uid];
+  document.getElementById('split-review-status').textContent = isReviewed ? '검수 완료' : '';
+  document.getElementById('split-review-status').style.display = isReviewed ? 'inline-block' : 'none';
+  preloadNext(5);
+}
+
 function openSplit(probUrl, solUrl, uid) {
   buildViewList();
   viewIndex = viewList.findIndex(v => v.uid === uid);
   if (viewIndex < 0) viewIndex = 0;
-  iframeProb.src = probUrl + '?v=' + cacheBust;
-  iframeSol.src = solUrl ? solUrl + '?v=' + cacheBust : 'about:blank';
-  splitTitle.textContent = getSplitTitle(uid);
   splitOverlay.classList.add('active');
-  document.getElementById('split-counter').textContent = (viewIndex + 1) + ' / ' + viewList.length;
-  preloadNext(5);
+  updateSplitUI();
 }
 
 function closeSplit() {
@@ -239,16 +307,26 @@ function preloadNext(count) {
   }
 }
 
+function markReviewed() {
+  const v = viewList[viewIndex];
+  if (!v) return;
+  reviewed[v.uid] = true;
+  localStorage.setItem('hub_reviewed', JSON.stringify(reviewed));
+  const card = document.querySelector(`.card[data-uid="${v.uid}"]`);
+  if (card) card.classList.add('reviewed');
+  applyFilters();
+}
+
 function navSplit(delta) {
   viewIndex += delta;
   if (viewIndex < 0) viewIndex = viewList.length - 1;
   if (viewIndex >= viewList.length) viewIndex = 0;
-  const v = viewList[viewIndex];
-  iframeProb.src = v.prob + '?v=' + cacheBust;
-  iframeSol.src = v.sol ? v.sol + '?v=' + cacheBust : 'about:blank';
-  splitTitle.textContent = getSplitTitle(v.uid);
-  document.getElementById('split-counter').textContent = (viewIndex + 1) + ' / ' + viewList.length;
-  preloadNext(5);
+  updateSplitUI();
+}
+
+function navAndReview() {
+  markReviewed();
+  navSplit(1);
 }
 
 document.addEventListener('click', e => {
@@ -272,6 +350,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeSplit();
   if (e.key === 'ArrowLeft') navSplit(-1);
   if (e.key === 'ArrowRight') navSplit(1);
+  if (e.key === 'Enter') { e.preventDefault(); navAndReview(); }
   if (e.key === 'Tab') { e.preventDefault(); openReportModal('문제'); }
 });
 

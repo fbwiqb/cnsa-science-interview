@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-152 | 2011_건국대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-152.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">파동, 정상파, 관악기의 물리</h2>
+<div class="spacer"></div>
+<p><strong>(3-1)</strong> 한쪽이 막힌 관에서 사람이 들을 수 있는 정상파의 수</p>
+<div class="spacer"></div>
+<p>한쪽이 막힌 관(폐관)에서 정상파가 형성되려면, 닫힌 쪽은 마디, 열린 쪽은 배가 되어야 한다. 따라서 관의 길이 \(L\)은 파장의 홀수 배의 \(\frac{1}{4}\)이어야 한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[L = \frac{(2n-1)\lambda}{4} \quad (n = 1, 2, 3, \ldots)\]</div>
+<div class="spacer"></div>
+<p>따라서 진동수는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[f_n = \frac{v}{\lambda_n} = \frac{(2n-1)v}{4L}\]</div>
+<div class="spacer"></div>
+<p>15°C에서 음속을 구한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[v = 331 + 0.6 \times 15 = 331 + 9 = 340 \text{ m/s}\]</div>
+<div class="spacer"></div>
+<p>\(L = 1\) m이므로 기본 진동수는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[f_1 = \frac{v}{4L} = \frac{340}{4 \times 1} = 85 \text{ Hz}\]</div>
+<div class="spacer"></div>
+<p>\(n\)번째 정상파의 진동수는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[f_n = (2n-1) \times 85 \text{ Hz}\]</div>
+<div class="spacer"></div>
+<p>사람이 들을 수 있는 범위는 20 ~ 20000 Hz이다.</p>
+<div class="spacer"></div>
+<p>하한 조건: \(f_n \geq 20\) Hz \(\Rightarrow\) \(f_1 = 85\) Hz \(\geq 20\)이므로 \(n = 1\)부터 가능하다.</p>
+<div class="spacer"></div>
+<p>상한 조건: \(f_n \leq 20000\) Hz</p>
+<div class="spacer"></div>
+<div class="math-block">\[(2n-1) \times 85 \leq 20000\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[2n-1 \leq \frac{20000}{85} \approx 235.3\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[n \leq \frac{236.3}{2} \approx 118.15\]</div>
+<div class="spacer"></div>
+<p>따라서 \(n = 1\)부터 \(n = 118\)까지 가능하다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{118 \text{개}}\]</div>
+<div class="spacer"></div>
+<p><strong>(3-2)</strong> 양 끝이 열린 관을 두 쪽으로 자른 경우</p>
+<div class="spacer"></div>
+<p>양 끝이 열린 관(개관)의 기본 진동수에서 양 끝이 배가 되므로 기본 진동의 파장은 \(\lambda = 2L'\)이고, 기본 진동수는 \(f = \frac{v}{2L'}\)이다.</p>
+<div class="spacer"></div>
+<p>원래 관의 길이를 \(L_{\text{total}}\)이라 하고, 두 조각의 길이를 각각 \(L_1\), \(L_2\)라 하자 (\(L_1 + L_2 = L_{\text{total}}\)).</p>
+<div class="spacer"></div>
+<p>각 조각은 양 끝이 열린 관이 되므로 기본 진동수는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[f_1 = \frac{v}{2L_1}, \quad f_2 = \frac{v}{2L_2}\]</div>
+<div class="spacer"></div>
+<p>한 쪽의 기본 진동수가 다른 쪽의 두 배이므로, \(f_2 = 2f_1\)이라 하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{v}{2L_2} = 2 \cdot \frac{v}{2L_1}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{L_2} = \frac{2}{L_1} \quad \Rightarrow \quad L_1 = 2L_2\]</div>
+<div class="spacer"></div>
+<p>\(L_1 + L_2 = L_{\text{total}}\)이므로 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[2L_2 + L_2 = L_{\text{total}} \quad \Rightarrow \quad L_2 = \frac{L_{\text{total}}}{3}, \quad L_1 = \frac{2L_{\text{total}}}{3}\]</div>
+<div class="spacer"></div>
+<p>진동수가 작은 쪽(\(f_1\))의 관 길이는 \(L_1 = \frac{2L_{\text{total}}}{3}\)이고, \(f = f_1 = \frac{v}{2L_1}\)이므로 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[L_1 = \frac{v}{2f} \quad \Rightarrow \quad L_{\text{total}} = \frac{3}{2}L_1 = \frac{3}{2} \cdot \frac{v}{2f}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{L_{\text{total}} = \frac{3v}{4f}}\]</div>
+<div class="spacer"></div>
+<p><strong>(3-3)</strong> 정상파 함수의 변환</p>
+<div class="spacer"></div>
+<p>\(L = 1\), \(A = B = 1\), \(c = 1\)일 때 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[u_n(x, t) = (\cos n\pi t + \sin n\pi t)\sin n\pi x\]</div>
+<div class="spacer"></div>
+<p>이를 \(C\cos(n\pi t + \alpha)\sin(n\pi x)\) 형태로 변환한다.</p>
+<div class="spacer"></div>
+<p>삼각함수의 합성 공식을 사용한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\cos\theta + \sin\theta = R\cos(\theta + \alpha)\]</div>
+<div class="spacer"></div>
+<p>여기서 \(R = \sqrt{1^2 + 1^2} = \sqrt{2}\)이고, \(\cos\theta + \sin\theta = \sqrt{2}\cos(\theta - \frac{\pi}{4})\)이다.</p>
+<div class="spacer"></div>
+<p>이를 확인하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\sqrt{2}\cos(\theta - \frac{\pi}{4}) = \sqrt{2}[\cos\theta\cos\frac{\pi}{4} + \sin\theta\sin\frac{\pi}{4}] = \sqrt{2} \cdot \frac{1}{\sqrt{2}}(\cos\theta + \sin\theta) = \cos\theta + \sin\theta\]</div>
+<div class="spacer"></div>
+<p>따라서 \(C\cos(n\pi t + \alpha) = \cos n\pi t + \sin n\pi t\)에서 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[C\cos(n\pi t + \alpha) = C[\cos n\pi t \cos\alpha - \sin n\pi t \sin\alpha]\]</div>
+<div class="spacer"></div>
+<p>이를 원래 식과 비교하면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[C\cos\alpha = 1, \quad -C\sin\alpha = 1\]</div>
+<div class="spacer"></div>
+<p>\(C^2\cos^2\alpha + C^2\sin^2\alpha = 1 + 1 = 2\)이므로 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[C^2 = 2 \quad \Rightarrow \quad C = \pm\sqrt{2}\]</div>
+<div class="spacer"></div>
+<p>\(C = \sqrt{2}\)일 때: \(\cos\alpha = \frac{1}{\sqrt{2}}\), \(\sin\alpha = -\frac{1}{\sqrt{2}}\)이므로 \(\alpha = -\frac{\pi}{4}\)</p>
+<div class="spacer"></div>
+<p>\(C = -\sqrt{2}\)일 때: \(\cos\alpha = -\frac{1}{\sqrt{2}}\), \(\sin\alpha = \frac{1}{\sqrt{2}}\)이므로 \(\alpha = \frac{3\pi}{4}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{C = \sqrt{2}, \quad \cos\alpha = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}}\]</div>
+<div class="spacer"></div>
+<p>또는</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{C = -\sqrt{2}, \quad \cos\alpha = -\frac{\sqrt{2}}{2}}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-152</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

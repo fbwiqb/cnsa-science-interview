@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-140 | 2018_건국대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-140.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">전자기 유도와 에너지 보존</h2>
+<div class="spacer"></div>
+<p><strong>(문제 1)</strong> 구리관 내 자석 낙하가 느린 이유</p>
+<div class="spacer"></div>
+<p>자석이 구리관 안에서 낙하할 때, 자석의 운동에 의해 구리관을 통과하는 자기력선속이 시간에 따라 변한다. 패러데이의 법칙에 의해 구리관에 유도 기전력이 발생하고, 이에 따라 유도 전류가 흐른다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\mathcal{E} = -\frac{\Delta\Phi}{\Delta t}\]</div>
+<div class="spacer"></div>
+<p>렌츠 법칙에 의해 유도 전류는 자기력선속의 변화를 방해하는 방향으로 흐르므로, 자석의 낙하를 방해하는 방향의 힘(위쪽 방향)이 자석에 작용한다.</p>
+<div class="spacer"></div>
+<p>에너지 보존 법칙의 관점에서 설명하면 다음과 같다. 자석이 구리관 안에서 낙하할 때, 자석의 중력 퍼텐셜 에너지가 감소한다. 이 에너지는 자석의 운동 에너지와 구리관에 유도된 전류에 의한 전기 에너지(줄 열)로 전환된다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[mgh = \frac{1}{2}mv^2 + Q_{\text{전기}}\]</div>
+<div class="spacer"></div>
+<p>자유낙하 시에는 중력 퍼텐셜 에너지가 모두 운동 에너지로 전환되지만, 구리관 내에서는 중력 퍼텐셜 에너지의 일부가 유도 전류에 의한 전기 에너지(열에너지)로 전환되므로, 운동 에너지가 더 작아진다. 따라서 자석의 속도가 자유낙하보다 느리고, 구리관을 통과하는 데 더 오래 걸린다.</p>
+<div class="spacer"></div>
+<p><strong>(문제 2)</strong> 구리관의 질량 계산</p>
+<div class="spacer"></div>
+<p>주어진 조건:</p>
+<p>- 자석 질량: \(m = 0.1\) kg</p>
+<p>- 낙하 높이: \(h = 5\) m</p>
+<p>- 구리관을 빠져나온 직후 자석의 속력: \(v = 8\) m/s</p>
+<p>- 구리관의 온도 상승: \(\Delta T = 0.5\) K</p>
+<p>- 구리의 비열: \(c = 360\) J/kg\(\cdot\)K</p>
+<p>- 중력가속도: \(g = 10\) m/s\(^2\)</p>
+<div class="spacer"></div>
+<p>에너지 보존 법칙을 적용한다. 자석의 초기 역학적 에너지(중력 퍼텐셜 에너지)가 최종 운동 에너지와 구리관에 전달된 열에너지의 합과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[mgh = \frac{1}{2}mv^2 + Q\]</div>
+<div class="spacer"></div>
+<p>전달된 열에너지를 구한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[Q = mgh - \frac{1}{2}mv^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[Q = 0.1 \times 10 \times 5 - \frac{1}{2} \times 0.1 \times 8^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[Q = 5 - \frac{1}{2} \times 0.1 \times 64\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[Q = 5 - 3.2 = 1.8 \text{ J}\]</div>
+<div class="spacer"></div>
+<p>이 열에너지가 구리관의 온도를 올리는 데 사용되었으므로 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[Q = M \cdot c \cdot \Delta T\]</div>
+<div class="spacer"></div>
+<p>여기서 \(M\)은 구리관의 질량이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[1.8 = M \times 360 \times 0.5\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[1.8 = 180M\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[M = \frac{1.8}{180} = 0.01 \text{ kg}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{M = 0.01 \text{ kg} = 10 \text{ g}}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-140</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

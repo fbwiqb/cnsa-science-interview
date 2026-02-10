@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-179 | 2005_한양대_물리학_해설7</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-179.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 7</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">시간에 따라 변하는 전기장 속 음전하의 운동</h2>
+<div class="spacer"></div>
+<p>주어진 조건:</p>
+<p>- 두 금속판 A(위, +)와 B(아래, -)의 전위차: \(V = \alpha t\) (\(t \leq 0\)일 때 \(V = 0\))</p>
+<p>- 금속판 사이 거리: \(d\)</p>
+<p>- 음전하의 전하량: \(-q\), 질량: \(m\)</p>
+<p>- \(t = 0\)일 때 A판에서 정지 상태, 양의 x축 방향이 아래쪽(B판 방향)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 전기장의 세기와 정전기력</p>
+<div class="spacer"></div>
+<p>시간 \(t > 0\)일 때, 두 금속판 사이의 전위차가 \(V = \alpha t\)이므로 전기장의 세기는:</p>
+<div class="spacer"></div>
+<div class="math-block">\[E = \frac{V}{d} = \frac{\alpha t}{d}\]</div>
+<div class="spacer"></div>
+<p>전기장의 방향은 A판(+)에서 B판(-) 방향, 즉 아래쪽(양의 x축 방향)이다.</p>
+<div class="spacer"></div>
+<p>음전하 \(-q\)에 작용하는 정전기력은:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\vec{F}_E = (-q)\vec{E}\]</div>
+<div class="spacer"></div>
+<p>전기장이 아래쪽이므로 음전하에 작용하는 정전기력의 방향은 <strong>위쪽(A판 방향, 음의 x축 방향)</strong> 이다.</p>
+<div class="spacer"></div>
+<p>정전기력의 크기:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{F_E = \frac{q\alpha t}{d}}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 음전하에 작용하는 중력</p>
+<div class="spacer"></div>
+<p>중력은 항상 아래쪽(양의 x축 방향)으로 작용한다.</p>
+<div class="spacer"></div>
+<p>방향: <strong>아래쪽(B판 방향, 양의 x축 방향)</strong></p>
+<div class="spacer"></div>
+<p>크기: \(\boxed{F_g = mg}\)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 음전하의 가속도와 \(t_0\)</p>
+<div class="spacer"></div>
+<p>양의 x축(아래쪽)을 양의 방향으로 잡으면, 뉴턴의 운동 제2법칙에 의해:</p>
+<div class="spacer"></div>
+<div class="math-block">\[ma = mg - \frac{q\alpha t}{d}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[a = g - \frac{q\alpha}{md}t\]</div>
+<div class="spacer"></div>
+<p>가속도가 0이 되는 시간 \(t_0\):</p>
+<div class="spacer"></div>
+<div class="math-block">\[g - \frac{q\alpha}{md}t_0 = 0\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{t_0 = \frac{mgd}{q\alpha}}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(4)</span> 음전하의 속도와 \(t_1\)</p>
+<div class="spacer"></div>
+<p>가속도 \(a = g - \frac{q\alpha}{md}t\)를 적분하여 속도를 구한다. 초기 조건 \(v(0) = 0\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[v(t) = \int_0^t a \, dt' = \int_0^t \left(g - \frac{q\alpha}{md}t'\right) dt' = gt - \frac{q\alpha}{2md}t^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{v(t) = gt - \frac{q\alpha}{2md}t^2}\]</div>
+<div class="spacer"></div>
+<p>속도가 0이 되는 시간 \(t_1\) (\(t_1 > 0\)):</p>
+<div class="spacer"></div>
+<div class="math-block">\[gt_1 - \frac{q\alpha}{2md}t_1^2 = 0\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[t_1\left(g - \frac{q\alpha}{2md}t_1\right) = 0\]</div>
+<div class="spacer"></div>
+<p>\(t_1 \neq 0\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{t_1 = \frac{2mgd}{q\alpha} = 2t_0}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(5)</span> 시간 \(t_1\) 이후의 운동 방향</p>
+<div class="spacer"></div>
+<p>\(t > t_1\)에서 가속도를 살펴보면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[a(t) = g - \frac{q\alpha}{md}t\]</div>
+<div class="spacer"></div>
+<p>\(t > t_1 = 2t_0\)이면, \(\frac{q\alpha}{md}t > 2g > g\)이므로 \(a < 0\)이다.</p>
+<div class="spacer"></div>
+<p>또한 \(t = t_1\)에서 속도가 0이고, \(t > t_1\)에서 가속도가 음수(위쪽)이므로, 음전하는 <strong>위쪽(A판 방향)으로 운동한다.</strong></p>
+<div class="spacer"></div>
+<p>이는 시간이 지남에 따라 전위차가 계속 증가하여 정전기력이 중력보다 점점 더 커지기 때문이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-179</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -157,6 +157,20 @@ p {
   font-weight: 700;
   color: #003366;
 }
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 6px 12px;
+  margin: 6px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
 .ai-disclaimer {
   background: #FFF9C4;
   border-left: 4px solid #F9A825;

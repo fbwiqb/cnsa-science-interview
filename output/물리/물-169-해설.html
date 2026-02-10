@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-169 | 2007_한양대_물리학_해설5</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-169.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 5</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">평행판 축전기와 유전체 — 에너지 비교</h2>
+<div class="spacer"></div>
+<p>주어진 조건:</p>
+<p>- 공기로 채워진 경우의 전기용량: \(C_{\text{공기}}\)</p>
+<p>- 나무토막으로 채워진 경우의 전기용량: \(C_{\text{나무}}\)</p>
+<p>- 나무의 유전율 \(\kappa > 1\)이므로: \(C_{\text{나무}} = \kappa C_{\text{공기}} > C_{\text{공기}}\)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 전하 \(Q\)로 충전할 때 더 많은 에너지가 필요한 경우</p>
+<div class="spacer"></div>
+<p>축전기에 저장되는 에너지는:</p>
+<div class="spacer"></div>
+<div class="math-block">\[U = \frac{Q^2}{2C}\]</div>
+<div class="spacer"></div>
+<p>전하 \(Q\)가 동일하므로, 전기용량 \(C\)가 작을수록 에너지가 크다.</p>
+<div class="spacer"></div>
+<p>\(C_{\text{공기}} < C_{\text{나무}}\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[U_{\text{공기}} = \frac{Q^2}{2C_{\text{공기}}} > \frac{Q^2}{2C_{\text{나무}}} = U_{\text{나무}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\text{공기로 채워진 경우에 더 많은 에너지가 필요하다}}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 나무토막을 빼내는 데 필요한 일</p>
+<div class="spacer"></div>
+<p>전하 \(Q\)로 충전된 축전기에서 나무토막을 빼내면, 전하 \(Q\)는 보존되면서(외부 회로가 연결되지 않았으므로) 전기용량이 \(C_{\text{나무}}\)에서 \(C_{\text{공기}}\)로 감소한다.</p>
+<div class="spacer"></div>
+<p>나무토막을 빼내기 전의 에너지:</p>
+<div class="spacer"></div>
+<div class="math-block">\[U_{\text{전}} = \frac{Q^2}{2C_{\text{나무}}}\]</div>
+<div class="spacer"></div>
+<p>나무토막을 빼낸 후의 에너지:</p>
+<div class="spacer"></div>
+<div class="math-block">\[U_{\text{후}} = \frac{Q^2}{2C_{\text{공기}}}\]</div>
+<div class="spacer"></div>
+<p>에너지 보존에 의해, 나무토막을 빼내는 데 필요한 일은:</p>
+<div class="spacer"></div>
+<div class="math-block">\[W = U_{\text{후}} - U_{\text{전}} = \frac{Q^2}{2C_{\text{공기}}} - \frac{Q^2}{2C_{\text{나무}}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{W = \frac{Q^2}{2}\left(\frac{1}{C_{\text{공기}}} - \frac{1}{C_{\text{나무}}}\right)}\]</div>
+<div class="spacer"></div>
+<p>\(C_{\text{공기}} < C_{\text{나무}}\)이므로 \(W > 0\)이다. 즉, 나무토막을 빼내려면 외부에서 일을 해주어야 한다.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 전위차 \(V\)로 충전할 때 더 많은 에너지가 필요한 경우</p>
+<div class="spacer"></div>
+<p>전위차 \(V\)가 동일할 때 축전기에 저장되는 에너지는:</p>
+<div class="spacer"></div>
+<div class="math-block">\[U = \frac{1}{2}CV^2\]</div>
+<div class="spacer"></div>
+<p>전기용량 \(C\)가 클수록 에너지가 크다.</p>
+<div class="spacer"></div>
+<p>\(C_{\text{나무}} > C_{\text{공기}}\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[U_{\text{나무}} = \frac{1}{2}C_{\text{나무}}V^2 > \frac{1}{2}C_{\text{공기}}V^2 = U_{\text{공기}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\text{나무토막으로 채워진 경우에 더 많은 에너지가 필요하다}}\]</div>
+<div class="spacer"></div>
+<p>(1)번과 (3)번의 결과가 반대인 이유는 조건이 다르기 때문이다. (1)은 전하량을 고정했고, (3)은 전위차를 고정했다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-169</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

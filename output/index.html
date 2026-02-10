@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CNSA 과학 면접 아카데미 - 문제 허브</title>
-<link rel="stylesheet" href="assets/hub.css?v=1770709263">
+<link rel="stylesheet" href="assets/hub.css?v=1770727480">
 </head>
 <body>
 
@@ -20,12 +20,7 @@
 
 <div class="toolbar">
   <div class="filters">
-    <select id="filter-subject">
-      <option value="">전체 과목</option>
-      <option value="물리">물리</option>
-      <option value="화학">화학</option>
-      <option value="생물">생물</option>
-    </select>
+    <input type="hidden" id="filter-subject" value="물리">
     <select id="filter-school">
       <option value="">전체 학교</option>
     </select>
@@ -35,6 +30,8 @@
     <input type="text" id="search-box" placeholder="검색..." />
   </div>
   <div class="actions">
+    <button id="btn-unreviewed" class="btn btn-unreviewed">미검수만</button>
+    <button id="btn-toggle-collapse" class="btn">전체 펼치기</button>
     <button id="btn-select-all" class="btn">전체 선택</button>
     <button id="btn-deselect" class="btn">선택 해제</button>
     <button id="btn-print" class="btn btn-primary">선택 인쇄</button>
@@ -43,13 +40,21 @@
   </div>
 </div>
 
+<div class="tab-bar">
+  <button class="tab-btn active" data-subject="물리">물리 <span class="tab-count">181</span></button>
+<button class="tab-btn" data-subject="화학">화학 <span class="tab-count">179</span></button>
+<button class="tab-btn" data-subject="생물">생물 <span class="tab-count">167</span></button>
+
+</div>
+
 <div class="stats" id="stats"></div>
 
 <main id="hub-content">
   <div class="subject-section" data-subject="물리">
 <h2 class="subject-header">물리 (181)</h2>
-<div class="school-section" data-school="DGIST">
+<div class="school-section collapsed" data-school="DGIST">
 <h3 class="school-header">DGIST (11)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2020">
 <h4 class="year-header">2020년</h4>
 <div class="card-grid">
@@ -165,8 +170,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="GIST">
+</div>
+<div class="school-section collapsed" data-school="GIST">
 <h3 class="school-header">GIST (20)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2020">
 <h4 class="year-header">2020년</h4>
 <div class="card-grid">
@@ -363,8 +370,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="KAIST">
+</div>
+<div class="school-section collapsed" data-school="KAIST">
 <h3 class="school-header">KAIST (16)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -535,8 +544,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="UNIST">
+</div>
+<div class="school-section collapsed" data-school="UNIST">
 <h3 class="school-header">UNIST (5)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2017">
 <h4 class="year-header">2017년</h4>
 <div class="card-grid">
@@ -593,8 +604,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="건국대">
+</div>
+<div class="school-section collapsed" data-school="건국대">
 <h3 class="school-header">건국대 (26)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2022">
 <h4 class="year-header">2022년</h4>
 <div class="card-grid">
@@ -627,8 +640,8 @@
     <span class="card-uid">물-130</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-130.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-130-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-130.html" data-sol="물리/물-130-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-131" data-subject="물리" data-school="건국대" data-year="2021">
   <input type="checkbox" class="card-check" value="물-131">
@@ -659,8 +672,8 @@
     <span class="card-uid">물-135</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-135.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-135-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-135.html" data-sol="물리/물-135-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-136" data-subject="물리" data-school="건국대" data-year="2020">
   <input type="checkbox" class="card-check" value="물-136">
@@ -682,8 +695,8 @@
     <span class="card-uid">물-138</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-138.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-138-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-138.html" data-sol="물리/물-138-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-139" data-subject="물리" data-school="건국대" data-year="2019">
   <input type="checkbox" class="card-check" value="물-139">
@@ -691,8 +704,8 @@
     <span class="card-uid">물-139</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-139.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-139-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-139.html" data-sol="물리/물-139-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -705,8 +718,8 @@
     <span class="card-uid">물-140</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-140.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-140-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-140.html" data-sol="물리/물-140-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -728,8 +741,8 @@
     <span class="card-uid">물-142</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-142.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-142-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-142.html" data-sol="물리/물-142-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -760,8 +773,8 @@
     <span class="card-uid">물-145</span>
     <span class="card-label">문제 3</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-145.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-145-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-145.html" data-sol="물리/물-145-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -774,8 +787,8 @@
     <span class="card-uid">물-146</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-146.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-146-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-146.html" data-sol="물리/물-146-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -788,8 +801,8 @@
     <span class="card-uid">물-147</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-147.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-147-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-147.html" data-sol="물리/물-147-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -802,8 +815,8 @@
     <span class="card-uid">물-148</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-148.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-148-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-148.html" data-sol="물리/물-148-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -825,8 +838,8 @@
     <span class="card-uid">물-150</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-150.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-150-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-150.html" data-sol="물리/물-150-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -839,8 +852,8 @@
     <span class="card-uid">물-151</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-151.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-151-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-151.html" data-sol="물리/물-151-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-152" data-subject="물리" data-school="건국대" data-year="2011">
   <input type="checkbox" class="card-check" value="물-152">
@@ -848,8 +861,8 @@
     <span class="card-uid">물-152</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-152.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-152-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-152.html" data-sol="물리/물-152-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -885,8 +898,8 @@
     <span class="card-uid">물-157</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-157.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-157-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-157.html" data-sol="물리/물-157-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -905,8 +918,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="경희대">
+</div>
+<div class="school-section collapsed" data-school="경희대">
 <h3 class="school-header">경희대 (10)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2026">
 <h4 class="year-header">2026년</h4>
 <div class="card-grid">
@@ -1028,8 +1043,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="서울대">
+</div>
+<div class="school-section collapsed" data-school="서울대">
 <h3 class="school-header">서울대 (23)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -1298,8 +1315,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="성균관대">
+</div>
+<div class="school-section collapsed" data-school="성균관대">
 <h3 class="school-header">성균관대 (14)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -1457,8 +1476,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="연세대">
+</div>
+<div class="school-section collapsed" data-school="연세대">
 <h3 class="school-header">연세대 (12)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2024">
 <h4 class="year-header">2024년</h4>
 <div class="card-grid">
@@ -1618,8 +1639,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="연세대미래">
+</div>
+<div class="school-section collapsed" data-school="연세대미래">
 <h3 class="school-header">연세대미래 (18)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -1838,8 +1861,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="한양대">
+</div>
+<div class="school-section collapsed" data-school="한양대">
 <h3 class="school-header">한양대 (26)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2026">
 <h4 class="year-header">2026년</h4>
 <div class="card-grid">
@@ -1849,8 +1874,8 @@
     <span class="card-uid">물-121</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-121.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-121-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-121.html" data-sol="물리/물-121-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -1872,8 +1897,8 @@
     <span class="card-uid">물-155</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-155.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-155-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-155.html" data-sol="물리/물-155-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -1886,8 +1911,8 @@
     <span class="card-uid">물-158</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-158.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-158-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-158.html" data-sol="물리/물-158-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-159" data-subject="물리" data-school="한양대" data-year="2009">
   <input type="checkbox" class="card-check" value="물-159">
@@ -1895,8 +1920,8 @@
     <span class="card-uid">물-159</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-159.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-159-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-159.html" data-sol="물리/물-159-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-160" data-subject="물리" data-school="한양대" data-year="2009">
   <input type="checkbox" class="card-check" value="물-160">
@@ -1904,8 +1929,8 @@
     <span class="card-uid">물-160</span>
     <span class="card-label">문제 3</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-160.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-160-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-160.html" data-sol="물리/물-160-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -1950,8 +1975,8 @@
     <span class="card-uid">물-165</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-165.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-165-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-165.html" data-sol="물리/물-165-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-166" data-subject="물리" data-school="한양대" data-year="2007">
   <input type="checkbox" class="card-check" value="물-166">
@@ -1959,8 +1984,8 @@
     <span class="card-uid">물-166</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-166.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-166-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-166.html" data-sol="물리/물-166-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-167" data-subject="물리" data-school="한양대" data-year="2007">
   <input type="checkbox" class="card-check" value="물-167">
@@ -1968,8 +1993,8 @@
     <span class="card-uid">물-167</span>
     <span class="card-label">문제 3</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-167.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-167-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-167.html" data-sol="물리/물-167-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-168" data-subject="물리" data-school="한양대" data-year="2007">
   <input type="checkbox" class="card-check" value="물-168">
@@ -1977,8 +2002,8 @@
     <span class="card-uid">물-168</span>
     <span class="card-label">문제 4</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-168.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-168-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-168.html" data-sol="물리/물-168-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-169" data-subject="물리" data-school="한양대" data-year="2007">
   <input type="checkbox" class="card-check" value="물-169">
@@ -1986,8 +2011,8 @@
     <span class="card-uid">물-169</span>
     <span class="card-label">문제 5</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-169.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-169-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-169.html" data-sol="물리/물-169-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-170" data-subject="물리" data-school="한양대" data-year="2007">
   <input type="checkbox" class="card-check" value="물-170">
@@ -1995,8 +2020,8 @@
     <span class="card-uid">물-170</span>
     <span class="card-label">문제 6</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-170.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-170-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-170.html" data-sol="물리/물-170-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2009,8 +2034,8 @@
     <span class="card-uid">물-171</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-171.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-171-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-171.html" data-sol="물리/물-171-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2023,8 +2048,8 @@
     <span class="card-uid">물-172</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-172.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-172-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-172.html" data-sol="물리/물-172-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-173" data-subject="물리" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="물-173">
@@ -2032,8 +2057,8 @@
     <span class="card-uid">물-173</span>
     <span class="card-label">문제 10</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-173.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-173-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-173.html" data-sol="물리/물-173-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-174" data-subject="물리" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="물-174">
@@ -2041,8 +2066,8 @@
     <span class="card-uid">물-174</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-174.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-174-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-174.html" data-sol="물리/물-174-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-175" data-subject="물리" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="물-175">
@@ -2050,8 +2075,8 @@
     <span class="card-uid">물-175</span>
     <span class="card-label">문제 3</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-175.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-175-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-175.html" data-sol="물리/물-175-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-176" data-subject="물리" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="물-176">
@@ -2059,8 +2084,8 @@
     <span class="card-uid">물-176</span>
     <span class="card-label">문제 4</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-176.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-176-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-176.html" data-sol="물리/물-176-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-177" data-subject="물리" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="물-177">
@@ -2068,8 +2093,8 @@
     <span class="card-uid">물-177</span>
     <span class="card-label">문제 5</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-177.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-177-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-177.html" data-sol="물리/물-177-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-178" data-subject="물리" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="물-178">
@@ -2077,8 +2102,8 @@
     <span class="card-uid">물-178</span>
     <span class="card-label">문제 6</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-178.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-178-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-178.html" data-sol="물리/물-178-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-179" data-subject="물리" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="물-179">
@@ -2086,8 +2111,8 @@
     <span class="card-uid">물-179</span>
     <span class="card-label">문제 7</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-179.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-179-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-179.html" data-sol="물리/물-179-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-180" data-subject="물리" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="물-180">
@@ -2095,8 +2120,8 @@
     <span class="card-uid">물-180</span>
     <span class="card-label">문제 8</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-180.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-180-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-180.html" data-sol="물리/물-180-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="물-181" data-subject="물리" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="물-181">
@@ -2104,8 +2129,9 @@
     <span class="card-uid">물-181</span>
     <span class="card-label">문제 9</span>
   </a>
-  
-  <button class="card-view" data-prob="물리/물-181.html" data-sol="" title="문제 보기">보기</button>
+  <a href="물리/물-181-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="물리/물-181.html" data-sol="물리/물-181-해설.html" title="문제+해설 나란히 보기">보기</button>
+</div>
 </div>
 </div>
 </div>
@@ -2113,8 +2139,9 @@
 </div>
 <div class="subject-section" data-subject="화학">
 <h2 class="subject-header">화학 (179)</h2>
-<div class="school-section" data-school="DGIST">
+<div class="school-section collapsed" data-school="DGIST">
 <h3 class="school-header">DGIST (11)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2020">
 <h4 class="year-header">2020년</h4>
 <div class="card-grid">
@@ -2230,8 +2257,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="GIST">
+</div>
+<div class="school-section collapsed" data-school="GIST">
 <h3 class="school-header">GIST (19)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2020">
 <h4 class="year-header">2020년</h4>
 <div class="card-grid">
@@ -2419,8 +2448,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="KAIST">
+</div>
+<div class="school-section collapsed" data-school="KAIST">
 <h3 class="school-header">KAIST (20)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -2627,8 +2658,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="UNIST">
+</div>
+<div class="school-section collapsed" data-school="UNIST">
 <h3 class="school-header">UNIST (5)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2017">
 <h4 class="year-header">2017년</h4>
 <div class="card-grid">
@@ -2685,8 +2718,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="건국대">
+</div>
+<div class="school-section collapsed" data-school="건국대">
 <h3 class="school-header">건국대 (24)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2022">
 <h4 class="year-header">2022년</h4>
 <div class="card-grid">
@@ -2719,8 +2754,8 @@
     <span class="card-uid">화-132</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-132.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-132-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-132.html" data-sol="화학/화-132-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-133" data-subject="화학" data-school="건국대" data-year="2021">
   <input type="checkbox" class="card-check" value="화-133">
@@ -2751,8 +2786,8 @@
     <span class="card-uid">화-137</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-137.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-137-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-137.html" data-sol="화학/화-137-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-138" data-subject="화학" data-school="건국대" data-year="2020">
   <input type="checkbox" class="card-check" value="화-138">
@@ -2774,8 +2809,8 @@
     <span class="card-uid">화-140</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-140.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-140-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-140.html" data-sol="화학/화-140-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-141" data-subject="화학" data-school="건국대" data-year="2019">
   <input type="checkbox" class="card-check" value="화-141">
@@ -2783,8 +2818,8 @@
     <span class="card-uid">화-141</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-141.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-141-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-141.html" data-sol="화학/화-141-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2797,8 +2832,8 @@
     <span class="card-uid">화-142</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-142.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-142-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-142.html" data-sol="화학/화-142-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2820,8 +2855,8 @@
     <span class="card-uid">화-144</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-144.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-144-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-144.html" data-sol="화학/화-144-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2834,8 +2869,8 @@
     <span class="card-uid">화-145</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-145.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-145-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-145.html" data-sol="화학/화-145-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2848,8 +2883,8 @@
     <span class="card-uid">화-146</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-146.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-146-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-146.html" data-sol="화학/화-146-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2862,8 +2897,8 @@
     <span class="card-uid">화-147</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-147.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-147-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-147.html" data-sol="화학/화-147-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2876,8 +2911,8 @@
     <span class="card-uid">화-148</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-148.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-148-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-148.html" data-sol="화학/화-148-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2899,8 +2934,8 @@
     <span class="card-uid">화-150</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-150.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-150-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-150.html" data-sol="화학/화-150-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2913,8 +2948,8 @@
     <span class="card-uid">화-151</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-151.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-151-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-151.html" data-sol="화학/화-151-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-152" data-subject="화학" data-school="건국대" data-year="2011">
   <input type="checkbox" class="card-check" value="화-152">
@@ -2922,8 +2957,8 @@
     <span class="card-uid">화-152</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-152.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-152-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-152.html" data-sol="화학/화-152-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2959,8 +2994,8 @@
     <span class="card-uid">화-157</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-157.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-157-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-157.html" data-sol="화학/화-157-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -2979,8 +3014,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="경희대">
+</div>
+<div class="school-section collapsed" data-school="경희대">
 <h3 class="school-header">경희대 (10)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2026">
 <h4 class="year-header">2026년</h4>
 <div class="card-grid">
@@ -3102,8 +3139,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="서울대">
+</div>
+<div class="school-section collapsed" data-school="서울대">
 <h3 class="school-header">서울대 (23)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -3372,8 +3411,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="성균관대">
+</div>
+<div class="school-section collapsed" data-school="성균관대">
 <h3 class="school-header">성균관대 (13)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -3522,8 +3563,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="연세대">
+</div>
+<div class="school-section collapsed" data-school="연세대">
 <h3 class="school-header">연세대 (12)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2024">
 <h4 class="year-header">2024년</h4>
 <div class="card-grid">
@@ -3683,8 +3726,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="연세대미래">
+</div>
+<div class="school-section collapsed" data-school="연세대미래">
 <h3 class="school-header">연세대미래 (18)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -3903,8 +3948,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="한양대">
+</div>
+<div class="school-section collapsed" data-school="한양대">
 <h3 class="school-header">한양대 (24)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2026">
 <h4 class="year-header">2026년</h4>
 <div class="card-grid">
@@ -3914,8 +3961,8 @@
     <span class="card-uid">화-124</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-124.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-124-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-124.html" data-sol="화학/화-124-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -3937,8 +3984,8 @@
     <span class="card-uid">화-155</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-155.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-155-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-155.html" data-sol="화학/화-155-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -3969,8 +4016,8 @@
     <span class="card-uid">화-160</span>
     <span class="card-label">문제 3</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-160.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-160-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-160.html" data-sol="화학/화-160-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4024,8 +4071,8 @@
     <span class="card-uid">화-166</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-166.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-166-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-166.html" data-sol="화학/화-166-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-167" data-subject="화학" data-school="한양대" data-year="2007">
   <input type="checkbox" class="card-check" value="화-167">
@@ -4033,8 +4080,8 @@
     <span class="card-uid">화-167</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-167.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-167-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-167.html" data-sol="화학/화-167-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-168" data-subject="화학" data-school="한양대" data-year="2007">
   <input type="checkbox" class="card-check" value="화-168">
@@ -4042,8 +4089,8 @@
     <span class="card-uid">화-168</span>
     <span class="card-label">문제 3</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-168.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-168-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-168.html" data-sol="화학/화-168-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4056,8 +4103,8 @@
     <span class="card-uid">화-169</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-169.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-169-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-169.html" data-sol="화학/화-169-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-170" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-170">
@@ -4065,8 +4112,8 @@
     <span class="card-uid">화-170</span>
     <span class="card-label">문제 10</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-170.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-170-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-170.html" data-sol="화학/화-170-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-171" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-171">
@@ -4074,8 +4121,8 @@
     <span class="card-uid">화-171</span>
     <span class="card-label">문제 11</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-171.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-171-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-171.html" data-sol="화학/화-171-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-172" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-172">
@@ -4083,8 +4130,8 @@
     <span class="card-uid">화-172</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-172.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-172-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-172.html" data-sol="화학/화-172-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-173" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-173">
@@ -4092,8 +4139,8 @@
     <span class="card-uid">화-173</span>
     <span class="card-label">문제 3</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-173.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-173-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-173.html" data-sol="화학/화-173-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-174" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-174">
@@ -4101,8 +4148,8 @@
     <span class="card-uid">화-174</span>
     <span class="card-label">문제 4</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-174.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-174-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-174.html" data-sol="화학/화-174-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-175" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-175">
@@ -4110,8 +4157,8 @@
     <span class="card-uid">화-175</span>
     <span class="card-label">문제 5</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-175.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-175-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-175.html" data-sol="화학/화-175-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-176" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-176">
@@ -4119,8 +4166,8 @@
     <span class="card-uid">화-176</span>
     <span class="card-label">문제 6</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-176.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-176-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-176.html" data-sol="화학/화-176-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-177" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-177">
@@ -4128,8 +4175,8 @@
     <span class="card-uid">화-177</span>
     <span class="card-label">문제 7</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-177.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-177-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-177.html" data-sol="화학/화-177-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-178" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-178">
@@ -4137,8 +4184,8 @@
     <span class="card-uid">화-178</span>
     <span class="card-label">문제 8</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-178.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-178-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-178.html" data-sol="화학/화-178-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="화-179" data-subject="화학" data-school="한양대" data-year="2005">
   <input type="checkbox" class="card-check" value="화-179">
@@ -4146,8 +4193,9 @@
     <span class="card-uid">화-179</span>
     <span class="card-label">문제 9</span>
   </a>
-  
-  <button class="card-view" data-prob="화학/화-179.html" data-sol="" title="문제 보기">보기</button>
+  <a href="화학/화-179-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="화학/화-179.html" data-sol="화학/화-179-해설.html" title="문제+해설 나란히 보기">보기</button>
+</div>
 </div>
 </div>
 </div>
@@ -4155,8 +4203,9 @@
 </div>
 <div class="subject-section" data-subject="생물">
 <h2 class="subject-header">생물 (167)</h2>
-<div class="school-section" data-school="DGIST">
+<div class="school-section collapsed" data-school="DGIST">
 <h3 class="school-header">DGIST (8)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2019">
 <h4 class="year-header">2019년</h4>
 <div class="card-grid">
@@ -4240,8 +4289,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="GIST">
+</div>
+<div class="school-section collapsed" data-school="GIST">
 <h3 class="school-header">GIST (18)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2020">
 <h4 class="year-header">2020년</h4>
 <div class="card-grid">
@@ -4420,8 +4471,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="KAIST">
+</div>
+<div class="school-section collapsed" data-school="KAIST">
 <h3 class="school-header">KAIST (20)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -4628,8 +4681,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="UNIST">
+</div>
+<div class="school-section collapsed" data-school="UNIST">
 <h3 class="school-header">UNIST (5)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2017">
 <h4 class="year-header">2017년</h4>
 <div class="card-grid">
@@ -4686,8 +4741,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="건국대">
+</div>
+<div class="school-section collapsed" data-school="건국대">
 <h3 class="school-header">건국대 (24)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2022">
 <h4 class="year-header">2022년</h4>
 <div class="card-grid">
@@ -4720,8 +4777,8 @@
     <span class="card-uid">생-133</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-133.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-133-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-133.html" data-sol="생물/생-133-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="생-134" data-subject="생물" data-school="건국대" data-year="2021">
   <input type="checkbox" class="card-check" value="생-134">
@@ -4752,8 +4809,8 @@
     <span class="card-uid">생-140</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-140.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-140-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-140.html" data-sol="생물/생-140-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="생-141" data-subject="생물" data-school="건국대" data-year="2020">
   <input type="checkbox" class="card-check" value="생-141">
@@ -4775,8 +4832,8 @@
     <span class="card-uid">생-143</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-143.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-143-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-143.html" data-sol="생물/생-143-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="생-144" data-subject="생물" data-school="건국대" data-year="2019">
   <input type="checkbox" class="card-check" value="생-144">
@@ -4784,8 +4841,8 @@
     <span class="card-uid">생-144</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-144.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-144-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-144.html" data-sol="생물/생-144-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4798,8 +4855,8 @@
     <span class="card-uid">생-145</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-145.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-145-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-145.html" data-sol="생물/생-145-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4821,8 +4878,8 @@
     <span class="card-uid">생-147</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-147.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-147-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-147.html" data-sol="생물/생-147-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4844,8 +4901,8 @@
     <span class="card-uid">생-149</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-149.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-149-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-149.html" data-sol="생물/생-149-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4858,8 +4915,8 @@
     <span class="card-uid">생-150</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-150.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-150-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-150.html" data-sol="생물/생-150-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4872,8 +4929,8 @@
     <span class="card-uid">생-151</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-151.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-151-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-151.html" data-sol="생물/생-151-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4886,8 +4943,8 @@
     <span class="card-uid">생-152</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-152.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-152-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-152.html" data-sol="생물/생-152-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4909,8 +4966,8 @@
     <span class="card-uid">생-154</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-154.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-154-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-154.html" data-sol="생물/생-154-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4923,8 +4980,8 @@
     <span class="card-uid">생-155</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-155.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-155-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-155.html" data-sol="생물/생-155-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="생-156" data-subject="생물" data-school="건국대" data-year="2011">
   <input type="checkbox" class="card-check" value="생-156">
@@ -4932,8 +4989,8 @@
     <span class="card-uid">생-156</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-156.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-156-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-156.html" data-sol="생물/생-156-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -4969,14 +5026,16 @@
     <span class="card-uid">생-161</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-161.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-161-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-161.html" data-sol="생물/생-161-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
 </div>
-<div class="school-section" data-school="경희대">
+</div>
+<div class="school-section collapsed" data-school="경희대">
 <h3 class="school-header">경희대 (13)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2026">
 <h4 class="year-header">2026년</h4>
 <div class="card-grid">
@@ -5125,8 +5184,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="서울대">
+</div>
+<div class="school-section collapsed" data-school="서울대">
 <h3 class="school-header">서울대 (26)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -5422,8 +5483,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="성균관대">
+</div>
+<div class="school-section collapsed" data-school="성균관대">
 <h3 class="school-header">성균관대 (14)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -5581,8 +5644,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="연세대">
+</div>
+<div class="school-section collapsed" data-school="연세대">
 <h3 class="school-header">연세대 (12)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2024">
 <h4 class="year-header">2024년</h4>
 <div class="card-grid">
@@ -5742,8 +5807,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="연세대미래">
+</div>
+<div class="school-section collapsed" data-school="연세대미래">
 <h3 class="school-header">연세대미래 (18)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2025">
 <h4 class="year-header">2025년</h4>
 <div class="card-grid">
@@ -5962,8 +6029,10 @@
 </div>
 </div>
 </div>
-<div class="school-section" data-school="한양대">
+</div>
+<div class="school-section collapsed" data-school="한양대">
 <h3 class="school-header">한양대 (9)</h3>
+<div class="school-body">
 <div class="year-section" data-year="2026">
 <h4 class="year-header">2026년</h4>
 <div class="card-grid">
@@ -5973,8 +6042,8 @@
     <span class="card-uid">생-124</span>
     <span class="card-label">문제 1</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-124.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-124-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-124.html" data-sol="생물/생-124-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -5996,8 +6065,8 @@
     <span class="card-uid">생-159</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-159.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-159-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-159.html" data-sol="생물/생-159-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -6019,8 +6088,8 @@
     <span class="card-uid">생-163</span>
     <span class="card-label">문제 2</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-163.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-163-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-163.html" data-sol="생물/생-163-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 <div class="card" data-uid="생-164" data-subject="생물" data-school="한양대" data-year="2009">
   <input type="checkbox" class="card-check" value="생-164">
@@ -6028,8 +6097,8 @@
     <span class="card-uid">생-164</span>
     <span class="card-label">문제 3</span>
   </a>
-  
-  <button class="card-view" data-prob="생물/생-164.html" data-sol="" title="문제 보기">보기</button>
+  <a href="생물/생-164-해설.html" class="card-sol" title="해설 보기">해설</a>
+  <button class="card-view" data-prob="생물/생-164.html" data-sol="생물/생-164-해설.html" title="문제+해설 나란히 보기">보기</button>
 </div>
 </div>
 </div>
@@ -6067,6 +6136,7 @@
 </div>
 </div>
 </div>
+</div>
 
 </main>
 
@@ -6075,6 +6145,7 @@
 <div class="split-overlay" id="split-overlay">
   <div class="split-toolbar">
     <h3 id="split-title">문제 / 해설</h3>
+    <span id="split-review-status" class="split-review-badge"></span>
     <div class="split-nav">
       <button id="btn-prev">&larr; 이전</button>
       <span id="split-counter"></span>
@@ -6122,6 +6193,6 @@
 <script>
 const ALL_DATA = [{"filename": "2025_KAIST_물리학_문제1", "year": "2025", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-1", "subject_category": "물리"}, {"filename": "2025_KAIST_물리학_문제2", "year": "2025", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-2", "subject_category": "물리"}, {"filename": "2025_서울대_물리학_문제2", "year": "2025", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 4, "figure_count": 2, "uid": "물-3", "subject_category": "물리"}, {"filename": "2025_서울대_물리학_문제1", "year": "2025", "school": "서울대", "subject": "물리학", "type": "문제1", "number": "", "pages": 5, "figure_count": 6, "uid": "물-4", "subject_category": "물리"}, {"filename": "2025_성균관대_물리학_문제1", "year": "2025", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-5", "subject_category": "물리"}, {"filename": "2025_성균관대_물리학_문제2", "year": "2025", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "물-6", "subject_category": "물리"}, {"filename": "2025_연세대미래_물리학_문제1", "year": "2025", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-7", "subject_category": "물리"}, {"filename": "2025_연세대미래_물리학_문제2", "year": "2025", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-8", "subject_category": "물리"}, {"filename": "2024_KAIST_물리학_문제1", "year": "2024", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-9", "subject_category": "물리"}, {"filename": "2024_KAIST_물리학_문제2", "year": "2024", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "물-10", "subject_category": "물리"}, {"filename": "2024_서울대_물리학_문제1", "year": "2024", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 5, "figure_count": 5, "uid": "물-11", "subject_category": "물리"}, {"filename": "2024_서울대_물리학_문제2", "year": "2024", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 6, "figure_count": 9, "uid": "물-12", "subject_category": "물리"}, {"filename": "2024_성균관대_물리학_문제1", "year": "2024", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-13", "subject_category": "물리"}, {"filename": "2024_성균관대_물리학_문제2", "year": "2024", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "물-14", "subject_category": "물리"}, {"filename": "2024_연세대_물리학_문제1", "year": "2024", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 8, "uid": "물-15", "subject_category": "물리"}, {"filename": "2024_연세대미래_물리학_문제1", "year": "2024", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "물-16", "subject_category": "물리"}, {"filename": "2024_연세대미래_물리학_문제2", "year": "2024", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-17", "subject_category": "물리"}, {"filename": "2023_서울대_물리학_문제1", "year": "2023", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 3, "figure_count": 5, "uid": "물-18", "subject_category": "물리"}, {"filename": "2023_서울대_물리학_문제2", "year": "2023", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 3, "uid": "물-19", "subject_category": "물리"}, {"filename": "2023_연세대_물리학_문제1", "year": "2023", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 10, "uid": "물-20", "subject_category": "물리"}, {"filename": "2023_연세대미래_물리학_문제1", "year": "2023", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "물-21", "subject_category": "물리"}, {"filename": "2023_연세대미래_물리학_문제2", "year": "2023", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-22", "subject_category": "물리"}, {"filename": "2022_서울대_물리학_문제1", "year": "2022", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 4, "figure_count": 4, "uid": "물-23", "subject_category": "물리"}, {"filename": "2022_서울대_물리학_문제2", "year": "2022", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "물-24", "subject_category": "물리"}, {"filename": "2022_성균관대_물리학_문제1", "year": "2022", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 4, "uid": "물-25", "subject_category": "물리"}, {"filename": "2022_성균관대_물리학_문제2", "year": "2022", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 3, "uid": "물-26", "subject_category": "물리"}, {"filename": "2022_성균관대_물리학_문제3", "year": "2022", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "3", "pages": 3, "figure_count": 7, "uid": "물-27", "subject_category": "물리"}, {"filename": "2022_연세대_물리학_문제1", "year": "2022", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 6, "uid": "물-28", "subject_category": "물리"}, {"filename": "2022_연세대미래_물리학_문제1", "year": "2022", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-29", "subject_category": "물리"}, {"filename": "2022_연세대미래_물리학_문제2", "year": "2022", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "물-30", "subject_category": "물리"}, {"filename": "2021_서울대_물리학_문제1", "year": "2021", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 3, "figure_count": 5, "uid": "물-31", "subject_category": "물리"}, {"filename": "2021_서울대_물리학_문제2", "year": "2021", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "물-32", "subject_category": "물리"}, {"filename": "2021_성균관대_물리학_문제1", "year": "2021", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "물-33", "subject_category": "물리"}, {"filename": "2021_성균관대_물리학_문제2", "year": "2021", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "물-34", "subject_category": "물리"}, {"filename": "2021_성균관대_물리학_문제3", "year": "2021", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "3", "pages": 2, "figure_count": 6, "uid": "물-35", "subject_category": "물리"}, {"filename": "2021_연세대_물리학_문제1", "year": "2021", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 10, "uid": "물-36", "subject_category": "물리"}, {"filename": "2021_연세대_물리학_문제2", "year": "2021", "school": "연세대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 12, "uid": "물-37", "subject_category": "물리"}, {"filename": "2021_연세대미래_물리학_문제1", "year": "2021", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "물-38", "subject_category": "물리"}, {"filename": "2021_연세대미래_물리학_문제2", "year": "2021", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "물-39", "subject_category": "물리"}, {"filename": "2020_DGIST_물리학_문제1", "year": "2020", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 3, "uid": "물-40", "subject_category": "물리"}, {"filename": "2020_DGIST_물리학_문제2", "year": "2020", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 4, "uid": "물-41", "subject_category": "물리"}, {"filename": "2020_DGIST_물리학_문제3", "year": "2020", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "물-42", "subject_category": "물리"}, {"filename": "2020_GIST_물리학_문제1", "year": "2020", "school": "GIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "물-43", "subject_category": "물리"}, {"filename": "2020_GIST_물리학_문제2", "year": "2020", "school": "GIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "물-44", "subject_category": "물리"}, {"filename": "2020_GIST_물리학_문제3", "year": "2020", "school": "GIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "물-45", "subject_category": "물리"}, {"filename": "2020_GIST_물리학_문제4", "year": "2020", "school": "GIST", "subject": "물리학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "물-46", "subject_category": "물리"}, {"filename": "2020_GIST_물리학_문제5", "year": "2020", "school": "GIST", "subject": "물리학", "type": "문제", "number": "5", "pages": 1, "figure_count": 0, "uid": "물-47", "subject_category": "물리"}, {"filename": "2020_GIST_물리학_문제6", "year": "2020", "school": "GIST", "subject": "물리학", "type": "문제", "number": "6", "pages": 1, "figure_count": 0, "uid": "물-48", "subject_category": "물리"}, {"filename": "2020_KAIST_물리학_문제1", "year": "2020", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-49", "subject_category": "물리"}, {"filename": "2020_KAIST_물리학_문제2", "year": "2020", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-50", "subject_category": "물리"}, {"filename": "2020_KAIST_물리학_문제3", "year": "2020", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "물-51", "subject_category": "물리"}, {"filename": "2020_KAIST_물리학_문제4", "year": "2020", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "물-52", "subject_category": "물리"}, {"filename": "2020_서울대_물리학_문제1", "year": "2020", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "물-53", "subject_category": "물리"}, {"filename": "2020_서울대_물리학_문제2", "year": "2020", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "물-54", "subject_category": "물리"}, {"filename": "2020_연세대_물리학_문제1", "year": "2020", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 41, "uid": "물-55", "subject_category": "물리"}, {"filename": "2020_연세대_물리학_문제2", "year": "2020", "school": "연세대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 23, "uid": "물-56", "subject_category": "물리"}, {"filename": "2020_연세대미래_물리학_문제1", "year": "2020", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 4, "uid": "물-57", "subject_category": "물리"}, {"filename": "2020_연세대미래_물리학_문제2", "year": "2020", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 4, "uid": "물-58", "subject_category": "물리"}, {"filename": "2019_DGIST_물리학_문제1", "year": "2019", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "물-59", "subject_category": "물리"}, {"filename": "2019_DGIST_물리학_문제2", "year": "2019", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "물-60", "subject_category": "물리"}, {"filename": "2019_DGIST_물리학_문제3", "year": "2019", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "물-61", "subject_category": "물리"}, {"filename": "2019_DGIST_물리학_문제4", "year": "2019", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "물-62", "subject_category": "물리"}, {"filename": "2019_GIST_물리학_문제1", "year": "2019", "school": "GIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "물-63", "subject_category": "물리"}, {"filename": "2019_GIST_물리학_문제2", "year": "2019", "school": "GIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "물-64", "subject_category": "물리"}, {"filename": "2019_GIST_물리학_문제3", "year": "2019", "school": "GIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 2, "figure_count": 1, "uid": "물-65", "subject_category": "물리"}, {"filename": "2019_GIST_물리학_문제4", "year": "2019", "school": "GIST", "subject": "물리학", "type": "문제", "number": "4", "pages": 2, "figure_count": 2, "uid": "물-66", "subject_category": "물리"}, {"filename": "2019_GIST_물리학_문제5", "year": "2019", "school": "GIST", "subject": "물리학", "type": "문제", "number": "5", "pages": 3, "figure_count": 4, "uid": "물-67", "subject_category": "물리"}, {"filename": "2019_GIST_물리학_문제6", "year": "2019", "school": "GIST", "subject": "물리학", "type": "문제", "number": "6", "pages": 1, "figure_count": 0, "uid": "물-68", "subject_category": "물리"}, {"filename": "2019_GIST_물리학_문제7", "year": "2019", "school": "GIST", "subject": "물리학", "type": "문제", "number": "7", "pages": 2, "figure_count": 1, "uid": "물-69", "subject_category": "물리"}, {"filename": "2019_GIST_물리학_문제8", "year": "2019", "school": "GIST", "subject": "물리학", "type": "문제", "number": "8", "pages": 1, "figure_count": 0, "uid": "물-70", "subject_category": "물리"}, {"filename": "2019_KAIST_물리학_문제1", "year": "2019", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-71", "subject_category": "물리"}, {"filename": "2019_KAIST_물리학_문제2", "year": "2019", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-72", "subject_category": "물리"}, {"filename": "2019_KAIST_물리학_문제3", "year": "2019", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "물-73", "subject_category": "물리"}, {"filename": "2019_KAIST_물리학_문제4", "year": "2019", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "물-74", "subject_category": "물리"}, {"filename": "2019_서울대_물리학_문제1", "year": "2019", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "물-75", "subject_category": "물리"}, {"filename": "2019_서울대_물리학_문제2", "year": "2019", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 3, "uid": "물-76", "subject_category": "물리"}, {"filename": "2019_성균관대_물리학_문제1", "year": "2019", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 6, "uid": "물-77", "subject_category": "물리"}, {"filename": "2019_성균관대_물리학_문제2", "year": "2019", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 5, "uid": "물-78", "subject_category": "물리"}, {"filename": "2019_연세대_물리학_문제1", "year": "2019", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-79", "subject_category": "물리"}, {"filename": "2019_연세대미래_물리학_문제1", "year": "2019", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "물-80", "subject_category": "물리"}, {"filename": "2019_연세대미래_물리학_문제2", "year": "2019", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "물-81", "subject_category": "물리"}, {"filename": "2018_DGIST_물리학_문제1", "year": "2018", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "물-82", "subject_category": "물리"}, {"filename": "2018_DGIST_물리학_문제2", "year": "2018", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-83", "subject_category": "물리"}, {"filename": "2018_DGIST_물리학_문제3", "year": "2018", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 2, "figure_count": 2, "uid": "물-84", "subject_category": "물리"}, {"filename": "2018_DGIST_물리학_문제4", "year": "2018", "school": "DGIST", "subject": "물리학", "type": "문제", "number": "4", "pages": 2, "figure_count": 4, "uid": "물-85", "subject_category": "물리"}, {"filename": "2018_GIST_물리학_문제1", "year": "2018", "school": "GIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "물-86", "subject_category": "물리"}, {"filename": "2018_GIST_물리학_문제2", "year": "2018", "school": "GIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "물-87", "subject_category": "물리"}, {"filename": "2018_GIST_물리학_문제3", "year": "2018", "school": "GIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "물-88", "subject_category": "물리"}, {"filename": "2018_GIST_물리학_문제4", "year": "2018", "school": "GIST", "subject": "물리학", "type": "문제", "number": "4", "pages": 2, "figure_count": 1, "uid": "물-89", "subject_category": "물리"}, {"filename": "2018_GIST_물리학_문제5", "year": "2018", "school": "GIST", "subject": "물리학", "type": "문제", "number": "5", "pages": 1, "figure_count": 0, "uid": "물-90", "subject_category": "물리"}, {"filename": "2018_GIST_물리학_문제6", "year": "2018", "school": "GIST", "subject": "물리학", "type": "문제", "number": "6", "pages": 1, "figure_count": 0, "uid": "물-91", "subject_category": "물리"}, {"filename": "2018_KAIST_물리학_문제1", "year": "2018", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-92", "subject_category": "물리"}, {"filename": "2018_KAIST_물리학_문제2", "year": "2018", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "물-93", "subject_category": "물리"}, {"filename": "2018_KAIST_물리학_문제3", "year": "2018", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 21, "uid": "물-94", "subject_category": "물리"}, {"filename": "2018_KAIST_물리학_문제4", "year": "2018", "school": "KAIST", "subject": "물리학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "물-95", "subject_category": "물리"}, {"filename": "2018_서울대_물리학_문제1", "year": "2018", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "물-96", "subject_category": "물리"}, {"filename": "2018_서울대_물리학_문제2", "year": "2018", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 3, "figure_count": 4, "uid": "물-97", "subject_category": "물리"}, {"filename": "2018_성균관대_물리학_문제1", "year": "2018", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-98", "subject_category": "물리"}, {"filename": "2018_성균관대_물리학_문제2", "year": "2018", "school": "성균관대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-99", "subject_category": "물리"}, {"filename": "2018_연세대_물리학_문제1", "year": "2018", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "물-100", "subject_category": "물리"}, {"filename": "2018_연세대미래_물리학_문제1", "year": "2018", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 3, "figure_count": 3, "uid": "물-101", "subject_category": "물리"}, {"filename": "2017_UNIST_물리학_문제1", "year": "2017", "school": "UNIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "물-102", "subject_category": "물리"}, {"filename": "2017_UNIST_물리학_문제2", "year": "2017", "school": "UNIST", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "물-103", "subject_category": "물리"}, {"filename": "2017_UNIST_물리학_문제3", "year": "2017", "school": "UNIST", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "물-104", "subject_category": "물리"}, {"filename": "2017_UNIST_물리학_문제4", "year": "2017", "school": "UNIST", "subject": "물리학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "물-105", "subject_category": "물리"}, {"filename": "2017_서울대_물리학_문제1", "year": "2017", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-106", "subject_category": "물리"}, {"filename": "2017_서울대_물리학_문제2", "year": "2017", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 3, "figure_count": 5, "uid": "물-107", "subject_category": "물리"}, {"filename": "2017_연세대_물리학_문제1", "year": "2017", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-108", "subject_category": "물리"}, {"filename": "2017_연세대미래_물리학_문제1", "year": "2017", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 3, "figure_count": 3, "uid": "물-109", "subject_category": "물리"}, {"filename": "2016_서울대_물리학_문제1", "year": "2016", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "물-110", "subject_category": "물리"}, {"filename": "2016_서울대_물리학_문제2", "year": "2016", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "물-111", "subject_category": "물리"}, {"filename": "2016_연세대_물리학_문제1", "year": "2016", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 4, "uid": "물-112", "subject_category": "물리"}, {"filename": "2016_연세대미래_물리학_문제1", "year": "2016", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "물-113", "subject_category": "물리"}, {"filename": "2015_UNIST_물리학_문제1", "year": "2015", "school": "UNIST", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-114", "subject_category": "물리"}, {"filename": "2015_서울대_물리학_문제", "year": "2015", "school": "서울대", "subject": "물리학", "type": "문제", "number": "", "pages": 3, "figure_count": 3, "uid": "물-115", "subject_category": "물리"}, {"filename": "2015_연세대_물리학_문제1", "year": "2015", "school": "연세대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 6, "uid": "물-116", "subject_category": "물리"}, {"filename": "2015_연세대미래_물리학_문제1", "year": "2015", "school": "연세대미래", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "물-117", "subject_category": "물리"}, {"filename": "2014_서울대_물리학_문제1", "year": "2014", "school": "서울대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-118", "subject_category": "물리"}, {"filename": "2014_서울대_물리학_문제2", "year": "2014", "school": "서울대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 3, "uid": "물-119", "subject_category": "물리"}, {"filename": "2025_KAIST_화학_문제2", "year": "2025", "school": "KAIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-1", "subject_category": "화학"}, {"filename": "2025_KAIST_화학_문제1", "year": "2025", "school": "KAIST", "subject": "화학", "type": "문제1", "number": "", "pages": 2, "figure_count": 1, "uid": "화-2", "subject_category": "화학"}, {"filename": "2025_서울대_화학_문제1", "year": "2025", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 4, "figure_count": 5, "uid": "화-3", "subject_category": "화학"}, {"filename": "2025_서울대_화학_문제2", "year": "2025", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 4, "figure_count": 5, "uid": "화-4", "subject_category": "화학"}, {"filename": "2025_성균관대_화학_문제1", "year": "2025", "school": "성균관대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-5", "subject_category": "화학"}, {"filename": "2025_성균관대_화학_문제2", "year": "2025", "school": "성균관대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "화-6", "subject_category": "화학"}, {"filename": "2025_연세대미래_화학_문제1", "year": "2025", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 3, "uid": "화-7", "subject_category": "화학"}, {"filename": "2025_연세대미래_화학_문제2", "year": "2025", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "화-8", "subject_category": "화학"}, {"filename": "2024_KAIST_화학_문제1", "year": "2024", "school": "KAIST", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-9", "subject_category": "화학"}, {"filename": "2024_KAIST_화학_문제2", "year": "2024", "school": "KAIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-10", "subject_category": "화학"}, {"filename": "2024_서울대_화학_문제1", "year": "2024", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 3, "figure_count": 1, "uid": "화-11", "subject_category": "화학"}, {"filename": "2024_서울대_화학_문제2", "year": "2024", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 3, "figure_count": 3, "uid": "화-12", "subject_category": "화학"}, {"filename": "2024_성균관대_화학_문제1", "year": "2024", "school": "성균관대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-13", "subject_category": "화학"}, {"filename": "2024_성균관대_화학_문제2", "year": "2024", "school": "성균관대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-14", "subject_category": "화학"}, {"filename": "2024_연세대_화학_문제1", "year": "2024", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "화-15", "subject_category": "화학"}, {"filename": "2024_연세대미래_화학_문제1", "year": "2024", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "화-16", "subject_category": "화학"}, {"filename": "2024_연세대미래_화학_문제2", "year": "2024", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "화-17", "subject_category": "화학"}, {"filename": "2023_서울대_화학_문제1", "year": "2023", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-18", "subject_category": "화학"}, {"filename": "2023_서울대_화학_문제2", "year": "2023", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "화-19", "subject_category": "화학"}, {"filename": "2023_연세대_화학_문제1", "year": "2023", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "화-20", "subject_category": "화학"}, {"filename": "2023_연세대미래_화학_문제1", "year": "2023", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 6, "uid": "화-21", "subject_category": "화학"}, {"filename": "2023_연세대미래_화학_문제2", "year": "2023", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "화-22", "subject_category": "화학"}, {"filename": "2022_서울대_화학_문제1", "year": "2022", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 4, "figure_count": 2, "uid": "화-23", "subject_category": "화학"}, {"filename": "2022_서울대_화학_문제2", "year": "2022", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-24", "subject_category": "화학"}, {"filename": "2022_성균관대_화학_문제2", "year": "2022", "school": "성균관대", "subject": "화학", "type": "문제", "number": "2", "pages": 3, "figure_count": 1, "uid": "화-25", "subject_category": "화학"}, {"filename": "2022_성균관대_화학_문제3", "year": "2022", "school": "성균관대", "subject": "화학", "type": "문제", "number": "3", "pages": 3, "figure_count": 0, "uid": "화-26", "subject_category": "화학"}, {"filename": "2022_연세대_화학_문제1", "year": "2022", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "화-27", "subject_category": "화학"}, {"filename": "2022_연세대미래_화학_문제1", "year": "2022", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "화-28", "subject_category": "화학"}, {"filename": "2022_연세대미래_화학_문제2", "year": "2022", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-29", "subject_category": "화학"}, {"filename": "2021_서울대_화학_문제1", "year": "2021", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-30", "subject_category": "화학"}, {"filename": "2021_서울대_화학_문제2", "year": "2021", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 3, "figure_count": 0, "uid": "화-31", "subject_category": "화학"}, {"filename": "2021_성균관대_화학_문제1", "year": "2021", "school": "성균관대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-32", "subject_category": "화학"}, {"filename": "2021_성균관대_화학_문제2", "year": "2021", "school": "성균관대", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "화-33", "subject_category": "화학"}, {"filename": "2021_성균관대_화학_문제3", "year": "2021", "school": "성균관대", "subject": "화학", "type": "문제", "number": "3", "pages": 2, "figure_count": 1, "uid": "화-34", "subject_category": "화학"}, {"filename": "2021_연세대_화학_문제1", "year": "2021", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "화-35", "subject_category": "화학"}, {"filename": "2021_연세대_화학_문제2", "year": "2021", "school": "연세대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "화-36", "subject_category": "화학"}, {"filename": "2021_연세대미래_화학_문제1", "year": "2021", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "화-37", "subject_category": "화학"}, {"filename": "2021_연세대미래_화학_문제2", "year": "2021", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "화-38", "subject_category": "화학"}, {"filename": "2020_DGIST_화학_문제1", "year": "2020", "school": "DGIST", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "화-39", "subject_category": "화학"}, {"filename": "2020_DGIST_화학_문제2", "year": "2020", "school": "DGIST", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "화-40", "subject_category": "화학"}, {"filename": "2020_DGIST_화학_문제3", "year": "2020", "school": "DGIST", "subject": "화학", "type": "문제", "number": "3", "pages": 2, "figure_count": 1, "uid": "화-41", "subject_category": "화학"}, {"filename": "2020_GIST_화학_문제1", "year": "2020", "school": "GIST", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-42", "subject_category": "화학"}, {"filename": "2020_GIST_화학_문제2", "year": "2020", "school": "GIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-43", "subject_category": "화학"}, {"filename": "2020_GIST_화학_문제3", "year": "2020", "school": "GIST", "subject": "화학", "type": "문제", "number": "3", "pages": 2, "figure_count": 1, "uid": "화-44", "subject_category": "화학"}, {"filename": "2020_GIST_화학_문제4", "year": "2020", "school": "GIST", "subject": "화학", "type": "문제", "number": "4", "pages": 2, "figure_count": 1, "uid": "화-45", "subject_category": "화학"}, {"filename": "2020_GIST_화학_문제5", "year": "2020", "school": "GIST", "subject": "화학", "type": "문제", "number": "5", "pages": 2, "figure_count": 1, "uid": "화-46", "subject_category": "화학"}, {"filename": "2020_GIST_화학_문제6", "year": "2020", "school": "GIST", "subject": "화학", "type": "문제", "number": "6", "pages": 1, "figure_count": 0, "uid": "화-47", "subject_category": "화학"}, {"filename": "2020_KAIST_화학_문제1", "year": "2020", "school": "KAIST", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-48", "subject_category": "화학"}, {"filename": "2020_KAIST_화학_문제2", "year": "2020", "school": "KAIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-49", "subject_category": "화학"}, {"filename": "2020_KAIST_화학_문제3", "year": "2020", "school": "KAIST", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "화-50", "subject_category": "화학"}, {"filename": "2020_KAIST_화학_문제4", "year": "2020", "school": "KAIST", "subject": "화학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "화-51", "subject_category": "화학"}, {"filename": "2020_KAIST_화학_문제5", "year": "2020", "school": "KAIST", "subject": "화학", "type": "문제", "number": "5", "pages": 1, "figure_count": 0, "uid": "화-52", "subject_category": "화학"}, {"filename": "2020_KAIST_화학_문제6", "year": "2020", "school": "KAIST", "subject": "화학", "type": "문제", "number": "6", "pages": 1, "figure_count": 1, "uid": "화-53", "subject_category": "화학"}, {"filename": "2020_서울대_화학_문제1", "year": "2020", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-54", "subject_category": "화학"}, {"filename": "2020_서울대_화학_문제2", "year": "2020", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 3, "figure_count": 5, "uid": "화-55", "subject_category": "화학"}, {"filename": "2020_연세대_화학_문제1", "year": "2020", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-56", "subject_category": "화학"}, {"filename": "2020_연세대_화학_문제2", "year": "2020", "school": "연세대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-57", "subject_category": "화학"}, {"filename": "2020_연세대미래_화학_문제1", "year": "2020", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "화-58", "subject_category": "화학"}, {"filename": "2020_연세대미래_화학_문제2", "year": "2020", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "화-59", "subject_category": "화학"}, {"filename": "2019_DGIST_화학_문제1", "year": "2019", "school": "DGIST", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-60", "subject_category": "화학"}, {"filename": "2019_DGIST_화학_문제2", "year": "2019", "school": "DGIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-61", "subject_category": "화학"}, {"filename": "2019_DGIST_화학_문제3", "year": "2019", "school": "DGIST", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "화-62", "subject_category": "화학"}, {"filename": "2019_DGIST_화학_문제4", "year": "2019", "school": "DGIST", "subject": "화학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "화-63", "subject_category": "화학"}, {"filename": "2019_GIST_화학_문제1", "year": "2019", "school": "GIST", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-64", "subject_category": "화학"}, {"filename": "2019_GIST_화학_문제2", "year": "2019", "school": "GIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-65", "subject_category": "화학"}, {"filename": "2019_GIST_화학_문제3", "year": "2019", "school": "GIST", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "화-66", "subject_category": "화학"}, {"filename": "2019_GIST_화학_문제4", "year": "2019", "school": "GIST", "subject": "화학", "type": "문제", "number": "4", "pages": 2, "figure_count": 19, "uid": "화-67", "subject_category": "화학"}, {"filename": "2019_GIST_화학_문제5", "year": "2019", "school": "GIST", "subject": "화학", "type": "문제", "number": "5", "pages": 2, "figure_count": 1, "uid": "화-68", "subject_category": "화학"}, {"filename": "2019_GIST_화학_문제6", "year": "2019", "school": "GIST", "subject": "화학", "type": "문제", "number": "6", "pages": 2, "figure_count": 2, "uid": "화-69", "subject_category": "화학"}, {"filename": "2019_GIST_화학_문제7", "year": "2019", "school": "GIST", "subject": "화학", "type": "문제", "number": "7", "pages": 1, "figure_count": 0, "uid": "화-70", "subject_category": "화학"}, {"filename": "2019_KAIST_화학_문제1", "year": "2019", "school": "KAIST", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-71", "subject_category": "화학"}, {"filename": "2019_KAIST_화학_문제2", "year": "2019", "school": "KAIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-72", "subject_category": "화학"}, {"filename": "2019_KAIST_화학_문제3", "year": "2019", "school": "KAIST", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "화-73", "subject_category": "화학"}, {"filename": "2019_KAIST_화학_문제4", "year": "2019", "school": "KAIST", "subject": "화학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "화-74", "subject_category": "화학"}, {"filename": "2019_KAIST_화학_문제5", "year": "2019", "school": "KAIST", "subject": "화학", "type": "문제", "number": "5", "pages": 1, "figure_count": 1, "uid": "화-75", "subject_category": "화학"}, {"filename": "2019_KAIST_화학_문제6", "year": "2019", "school": "KAIST", "subject": "화학", "type": "문제", "number": "6", "pages": 1, "figure_count": 1, "uid": "화-76", "subject_category": "화학"}, {"filename": "2019_서울대_화학_문제1", "year": "2019", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-77", "subject_category": "화학"}, {"filename": "2019_서울대_화학_문제2", "year": "2019", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 3, "figure_count": 1, "uid": "화-78", "subject_category": "화학"}, {"filename": "2019_성균관대_화학_문제1", "year": "2019", "school": "성균관대", "subject": "화학", "type": "문제", "number": "1", "pages": 3, "figure_count": 7, "uid": "화-79", "subject_category": "화학"}, {"filename": "2019_성균관대_화학_문제2", "year": "2019", "school": "성균관대", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 4, "uid": "화-80", "subject_category": "화학"}, {"filename": "2019_연세대_화학_문제1", "year": "2019", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "화-81", "subject_category": "화학"}, {"filename": "2019_연세대미래_화학_문제1", "year": "2019", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-82", "subject_category": "화학"}, {"filename": "2019_연세대미래_화학_문제2", "year": "2019", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "화-83", "subject_category": "화학"}, {"filename": "2018_DGIST_화학_문제1", "year": "2018", "school": "DGIST", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-84", "subject_category": "화학"}, {"filename": "2018_DGIST_화학_문제2", "year": "2018", "school": "DGIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-85", "subject_category": "화학"}, {"filename": "2018_DGIST_화학_문제3", "year": "2018", "school": "DGIST", "subject": "화학", "type": "문제", "number": "3", "pages": 2, "figure_count": 3, "uid": "화-86", "subject_category": "화학"}, {"filename": "2018_DGIST_화학_문제4", "year": "2018", "school": "DGIST", "subject": "화학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "화-87", "subject_category": "화학"}, {"filename": "2018_GIST_화학_문제1", "year": "2018", "school": "GIST", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "화-88", "subject_category": "화학"}, {"filename": "2018_GIST_화학_문제2", "year": "2018", "school": "GIST", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "화-89", "subject_category": "화학"}, {"filename": "2018_GIST_화학_문제3", "year": "2018", "school": "GIST", "subject": "화학", "type": "문제", "number": "3", "pages": 2, "figure_count": 1, "uid": "화-90", "subject_category": "화학"}, {"filename": "2018_GIST_화학_문제4", "year": "2018", "school": "GIST", "subject": "화학", "type": "문제", "number": "4", "pages": 2, "figure_count": 1, "uid": "화-91", "subject_category": "화학"}, {"filename": "2018_GIST_화학_문제5", "year": "2018", "school": "GIST", "subject": "화학", "type": "문제", "number": "5", "pages": 1, "figure_count": 0, "uid": "화-92", "subject_category": "화학"}, {"filename": "2018_GIST_화학_문제6", "year": "2018", "school": "GIST", "subject": "화학", "type": "문제", "number": "6", "pages": 1, "figure_count": 0, "uid": "화-93", "subject_category": "화학"}, {"filename": "2018_KAIST_화학_문제1", "year": "2018", "school": "KAIST", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 12, "uid": "화-94", "subject_category": "화학"}, {"filename": "2018_KAIST_화학_문제2", "year": "2018", "school": "KAIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-95", "subject_category": "화학"}, {"filename": "2018_KAIST_화학_문제3", "year": "2018", "school": "KAIST", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "화-96", "subject_category": "화학"}, {"filename": "2018_KAIST_화학_문제4", "year": "2018", "school": "KAIST", "subject": "화학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "화-97", "subject_category": "화학"}, {"filename": "2018_서울대_화학_문제1", "year": "2018", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-98", "subject_category": "화학"}, {"filename": "2018_서울대_화학_문제2", "year": "2018", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-99", "subject_category": "화학"}, {"filename": "2018_성균관대_화학_문제1", "year": "2018", "school": "성균관대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "화-100", "subject_category": "화학"}, {"filename": "2018_성균관대_화학_문제2", "year": "2018", "school": "성균관대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-101", "subject_category": "화학"}, {"filename": "2018_연세대_화학_문제1", "year": "2018", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "화-102", "subject_category": "화학"}, {"filename": "2018_연세대미래_화학_문제1", "year": "2018", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 3, "figure_count": 5, "uid": "화-103", "subject_category": "화학"}, {"filename": "2017_UNIST_화학_문제1", "year": "2017", "school": "UNIST", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-104", "subject_category": "화학"}, {"filename": "2017_UNIST_화학_문제2", "year": "2017", "school": "UNIST", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-105", "subject_category": "화학"}, {"filename": "2017_UNIST_화학_문제3", "year": "2017", "school": "UNIST", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "화-106", "subject_category": "화학"}, {"filename": "2017_UNIST_화학_문제4", "year": "2017", "school": "UNIST", "subject": "화학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "화-107", "subject_category": "화학"}, {"filename": "2017_서울대_화학_문제1", "year": "2017", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-108", "subject_category": "화학"}, {"filename": "2017_서울대_화학_문제2", "year": "2017", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "화-109", "subject_category": "화학"}, {"filename": "2017_연세대_화학_문제1", "year": "2017", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-110", "subject_category": "화학"}, {"filename": "2017_연세대미래_화학_문제1", "year": "2017", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 3, "figure_count": 2, "uid": "화-111", "subject_category": "화학"}, {"filename": "2016_서울대_화학_문제1", "year": "2016", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 3, "figure_count": 3, "uid": "화-112", "subject_category": "화학"}, {"filename": "2016_서울대_화학_문제2", "year": "2016", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 3, "figure_count": 4, "uid": "화-113", "subject_category": "화학"}, {"filename": "2016_연세대_화학_문제1", "year": "2016", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "화-114", "subject_category": "화학"}, {"filename": "2016_연세대미래_화학_문제1", "year": "2016", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "화-115", "subject_category": "화학"}, {"filename": "2015_UNIST_화학_문제1", "year": "2015", "school": "UNIST", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-116", "subject_category": "화학"}, {"filename": "2015_서울대_화학_문제1", "year": "2015", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-117", "subject_category": "화학"}, {"filename": "2015_연세대_화학_문제1", "year": "2015", "school": "연세대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 5, "uid": "화-118", "subject_category": "화학"}, {"filename": "2015_연세대미래_화학_문제1", "year": "2015", "school": "연세대미래", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 12, "uid": "화-119", "subject_category": "화학"}, {"filename": "2014_서울대_화학_문제1", "year": "2014", "school": "서울대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "화-120", "subject_category": "화학"}, {"filename": "2014_서울대_화학_문제2", "year": "2014", "school": "서울대", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "화-121", "subject_category": "화학"}, {"filename": "2025_KAIST_생명과학_문제1", "year": "2025", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 4, "uid": "생-1", "subject_category": "생물"}, {"filename": "2025_KAIST_생명과학_문제2", "year": "2025", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "생-2", "subject_category": "생물"}, {"filename": "2025_서울대_생명과학_문제1", "year": "2025", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 4, "figure_count": 5, "uid": "생-3", "subject_category": "생물"}, {"filename": "2025_서울대_생명과학_문제2", "year": "2025", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 3, "figure_count": 4, "uid": "생-4", "subject_category": "생물"}, {"filename": "2025_성균관대_생명과학_문제1", "year": "2025", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-5", "subject_category": "생물"}, {"filename": "2025_성균관대_생명과학_문제2", "year": "2025", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "생-6", "subject_category": "생물"}, {"filename": "2025_연세대미래_생명과학_문제2", "year": "2025", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "생-7", "subject_category": "생물"}, {"filename": "2025_연세대미래_생명과학_문제1", "year": "2025", "school": "연세대미래", "subject": "생명과학", "type": "문제1", "number": "", "pages": 1, "figure_count": 1, "uid": "생-8", "subject_category": "생물"}, {"filename": "2024_KAIST_생명과학_문제1", "year": "2024", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "생-9", "subject_category": "생물"}, {"filename": "2024_KAIST_생명과학_문제2", "year": "2024", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "생-10", "subject_category": "생물"}, {"filename": "2024_서울대_생명과학_문제1", "year": "2024", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-11", "subject_category": "생물"}, {"filename": "2024_서울대_생명과학_문제2", "year": "2024", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 3, "uid": "생-12", "subject_category": "생물"}, {"filename": "2024_서울대_생명과학_문제3", "year": "2024", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "3", "pages": 2, "figure_count": 3, "uid": "생-13", "subject_category": "생물"}, {"filename": "2024_성균관대_생명과학_문제1", "year": "2024", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-14", "subject_category": "생물"}, {"filename": "2024_성균관대_생명과학_문제2", "year": "2024", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-15", "subject_category": "생물"}, {"filename": "2024_연세대_생명과학_문제1", "year": "2024", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "생-16", "subject_category": "생물"}, {"filename": "2024_연세대미래_생명과학_문제1", "year": "2024", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-17", "subject_category": "생물"}, {"filename": "2024_연세대미래_생명과학_문제2", "year": "2024", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-18", "subject_category": "생물"}, {"filename": "2023_서울대_생명과학_문제1", "year": "2023", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "생-19", "subject_category": "생물"}, {"filename": "2023_서울대_생명과학_문제2", "year": "2023", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 3, "figure_count": 5, "uid": "생-20", "subject_category": "생물"}, {"filename": "2023_연세대_생명과학_문제1", "year": "2023", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 9, "uid": "생-21", "subject_category": "생물"}, {"filename": "2023_연세대미래_생명과학_문제1", "year": "2023", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "생-22", "subject_category": "생물"}, {"filename": "2023_연세대미래_생명과학_문제2", "year": "2023", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "생-23", "subject_category": "생물"}, {"filename": "2022_서울대_생명과학_문제1", "year": "2022", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 4, "figure_count": 4, "uid": "생-24", "subject_category": "생물"}, {"filename": "2022_서울대_생명과학_문제2", "year": "2022", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 3, "figure_count": 2, "uid": "생-25", "subject_category": "생물"}, {"filename": "2022_성균관대_생명과학_문제1", "year": "2022", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 4, "figure_count": 2, "uid": "생-26", "subject_category": "생물"}, {"filename": "2022_성균관대_생명과학_문제2", "year": "2022", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 5, "figure_count": 3, "uid": "생-27", "subject_category": "생물"}, {"filename": "2022_성균관대_생명과학_문제3", "year": "2022", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "3", "pages": 3, "figure_count": 0, "uid": "생-28", "subject_category": "생물"}, {"filename": "2022_연세대_생명과학_문제1", "year": "2022", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "생-29", "subject_category": "생물"}, {"filename": "2022_연세대미래_생명과학_문제1", "year": "2022", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-30", "subject_category": "생물"}, {"filename": "2022_연세대미래_생명과학_문제2", "year": "2022", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-31", "subject_category": "생물"}, {"filename": "2021_서울대_생명과학_문제1", "year": "2021", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "생-32", "subject_category": "생물"}, {"filename": "2021_서울대_생명과학_문제2", "year": "2021", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "생-33", "subject_category": "생물"}, {"filename": "2021_성균관대_생명과학_문제1", "year": "2021", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 5, "figure_count": 5, "uid": "생-34", "subject_category": "생물"}, {"filename": "2021_성균관대_생명과학_문제2", "year": "2021", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 4, "figure_count": 5, "uid": "생-35", "subject_category": "생물"}, {"filename": "2021_성균관대_생명과학_문제3", "year": "2021", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "3", "pages": 3, "figure_count": 2, "uid": "생-36", "subject_category": "생물"}, {"filename": "2021_연세대_생명과학_문제1", "year": "2021", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "생-37", "subject_category": "생물"}, {"filename": "2021_연세대_생명과학_문제2", "year": "2021", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "생-38", "subject_category": "생물"}, {"filename": "2021_연세대미래_생명과학_문제1", "year": "2021", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "생-39", "subject_category": "생물"}, {"filename": "2021_연세대미래_생명과학_문제2", "year": "2021", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-40", "subject_category": "생물"}, {"filename": "2020_GIST_생명과학_문제1", "year": "2020", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "생-41", "subject_category": "생물"}, {"filename": "2020_GIST_생명과학_문제2", "year": "2020", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "생-42", "subject_category": "생물"}, {"filename": "2020_GIST_생명과학_문제3", "year": "2020", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "3", "pages": 2, "figure_count": 2, "uid": "생-43", "subject_category": "생물"}, {"filename": "2020_GIST_생명과학_문제4", "year": "2020", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "생-44", "subject_category": "생물"}, {"filename": "2020_GIST_생명과학_문제5", "year": "2020", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "5", "pages": 1, "figure_count": 0, "uid": "생-45", "subject_category": "생물"}, {"filename": "2020_GIST_생명과학_문제6", "year": "2020", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "6", "pages": 2, "figure_count": 2, "uid": "생-46", "subject_category": "생물"}, {"filename": "2020_KAIST_생명과학_문제1", "year": "2020", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-47", "subject_category": "생물"}, {"filename": "2020_KAIST_생명과학_문제2", "year": "2020", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-48", "subject_category": "생물"}, {"filename": "2020_KAIST_생명과학_문제3", "year": "2020", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "3", "pages": 2, "figure_count": 0, "uid": "생-49", "subject_category": "생물"}, {"filename": "2020_KAIST_생명과학_문제4", "year": "2020", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "생-50", "subject_category": "생물"}, {"filename": "2020_KAIST_생명과학_문제5", "year": "2020", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "5", "pages": 1, "figure_count": 0, "uid": "생-51", "subject_category": "생물"}, {"filename": "2020_KAIST_생명과학_문제6", "year": "2020", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "6", "pages": 2, "figure_count": 2, "uid": "생-52", "subject_category": "생물"}, {"filename": "2020_서울대_생명과학_문제1", "year": "2020", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 3, "uid": "생-53", "subject_category": "생물"}, {"filename": "2020_서울대_생명과학_문제2", "year": "2020", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-54", "subject_category": "생물"}, {"filename": "2020_연세대_생명과학_문제1", "year": "2020", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-55", "subject_category": "생물"}, {"filename": "2020_연세대_생명과학_문제2", "year": "2020", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-56", "subject_category": "생물"}, {"filename": "2020_연세대미래_생명과학_문제1", "year": "2020", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "생-57", "subject_category": "생물"}, {"filename": "2020_연세대미래_생명과학_문제2", "year": "2020", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-58", "subject_category": "생물"}, {"filename": "2019_DGIST_생명과학_문제1", "year": "2019", "school": "DGIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-59", "subject_category": "생물"}, {"filename": "2019_DGIST_생명과학_문제2", "year": "2019", "school": "DGIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-60", "subject_category": "생물"}, {"filename": "2019_DGIST_생명과학_문제3", "year": "2019", "school": "DGIST", "subject": "생명과학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "생-61", "subject_category": "생물"}, {"filename": "2019_DGIST_생명과학_문제4", "year": "2019", "school": "DGIST", "subject": "생명과학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "생-62", "subject_category": "생물"}, {"filename": "2019_GIST_생명과학_문제1", "year": "2019", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-63", "subject_category": "생물"}, {"filename": "2019_GIST_생명과학_문제2", "year": "2019", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "생-64", "subject_category": "생물"}, {"filename": "2019_GIST_생명과학_문제3", "year": "2019", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "3", "pages": 2, "figure_count": 1, "uid": "생-65", "subject_category": "생물"}, {"filename": "2019_GIST_생명과학_문제4", "year": "2019", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "4", "pages": 2, "figure_count": 1, "uid": "생-66", "subject_category": "생물"}, {"filename": "2019_GIST_생명과학_문제5", "year": "2019", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "5", "pages": 2, "figure_count": 2, "uid": "생-67", "subject_category": "생물"}, {"filename": "2019_GIST_생명과학_문제6", "year": "2019", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "6", "pages": 2, "figure_count": 7, "uid": "생-68", "subject_category": "생물"}, {"filename": "2019_KAIST_생명과학_문제1", "year": "2019", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "생-69", "subject_category": "생물"}, {"filename": "2019_KAIST_생명과학_문제2", "year": "2019", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "생-70", "subject_category": "생물"}, {"filename": "2019_KAIST_생명과학_문제3", "year": "2019", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "생-71", "subject_category": "생물"}, {"filename": "2019_KAIST_생명과학_문제4", "year": "2019", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "생-72", "subject_category": "생물"}, {"filename": "2019_KAIST_생명과학_문제5", "year": "2019", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "5", "pages": 1, "figure_count": 2, "uid": "생-73", "subject_category": "생물"}, {"filename": "2019_KAIST_생명과학_문제6", "year": "2019", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "6", "pages": 1, "figure_count": 0, "uid": "생-74", "subject_category": "생물"}, {"filename": "2019_서울대_생명과학_문제1", "year": "2019", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 3, "figure_count": 5, "uid": "생-75", "subject_category": "생물"}, {"filename": "2019_서울대_생명과학_문제2", "year": "2019", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "생-76", "subject_category": "생물"}, {"filename": "2019_성균관대_생명과학_문제1", "year": "2019", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 5, "uid": "생-77", "subject_category": "생물"}, {"filename": "2019_성균관대_생명과학_문제2", "year": "2019", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 3, "figure_count": 4, "uid": "생-78", "subject_category": "생물"}, {"filename": "2019_연세대_생명과학_문제1", "year": "2019", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-79", "subject_category": "생물"}, {"filename": "2019_연세대미래_생명과학_문제1", "year": "2019", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-80", "subject_category": "생물"}, {"filename": "2019_연세대미래_생명과학_문제2", "year": "2019", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-81", "subject_category": "생물"}, {"filename": "2018_DGIST_생명과학_문제1", "year": "2018", "school": "DGIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-82", "subject_category": "생물"}, {"filename": "2018_DGIST_생명과학_문제2", "year": "2018", "school": "DGIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "생-83", "subject_category": "생물"}, {"filename": "2018_DGIST_생명과학_문제3", "year": "2018", "school": "DGIST", "subject": "생명과학", "type": "문제", "number": "3", "pages": 2, "figure_count": 1, "uid": "생-84", "subject_category": "생물"}, {"filename": "2018_DGIST_생명과학_문제4", "year": "2018", "school": "DGIST", "subject": "생명과학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "생-85", "subject_category": "생물"}, {"filename": "2018_GIST_생명과학_문제1", "year": "2018", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "생-86", "subject_category": "생물"}, {"filename": "2018_GIST_생명과학_문제2", "year": "2018", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "생-87", "subject_category": "생물"}, {"filename": "2018_GIST_생명과학_문제3", "year": "2018", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "3", "pages": 2, "figure_count": 2, "uid": "생-88", "subject_category": "생물"}, {"filename": "2018_GIST_생명과학_문제4", "year": "2018", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "4", "pages": 2, "figure_count": 0, "uid": "생-89", "subject_category": "생물"}, {"filename": "2018_GIST_생명과학_문제5", "year": "2018", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "5", "pages": 2, "figure_count": 0, "uid": "생-90", "subject_category": "생물"}, {"filename": "2018_GIST_생명과학_문제6", "year": "2018", "school": "GIST", "subject": "생명과학", "type": "문제", "number": "6", "pages": 2, "figure_count": 2, "uid": "생-91", "subject_category": "생물"}, {"filename": "2018_KAIST_생명과학_문제1", "year": "2018", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-92", "subject_category": "생물"}, {"filename": "2018_KAIST_생명과학_문제2", "year": "2018", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-93", "subject_category": "생물"}, {"filename": "2018_KAIST_생명과학_문제3", "year": "2018", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "생-94", "subject_category": "생물"}, {"filename": "2018_KAIST_생명과학_문제4", "year": "2018", "school": "KAIST", "subject": "생명과학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "생-95", "subject_category": "생물"}, {"filename": "2018_서울대_생명과학_문제1", "year": "2018", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 3, "uid": "생-96", "subject_category": "생물"}, {"filename": "2018_서울대_생명과학_문제2", "year": "2018", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "생-97", "subject_category": "생물"}, {"filename": "2018_성균관대_생명과학_문제1", "year": "2018", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "생-98", "subject_category": "생물"}, {"filename": "2018_성균관대_생명과학_문제2", "year": "2018", "school": "성균관대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "생-99", "subject_category": "생물"}, {"filename": "2018_연세대_생명과학_문제1", "year": "2018", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-100", "subject_category": "생물"}, {"filename": "2018_연세대미래_생명과학_문제1", "year": "2018", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 3, "figure_count": 4, "uid": "생-101", "subject_category": "생물"}, {"filename": "2017_UNIST_생명과학_문제1", "year": "2017", "school": "UNIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-102", "subject_category": "생물"}, {"filename": "2017_UNIST_생명과학_문제2", "year": "2017", "school": "UNIST", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-103", "subject_category": "생물"}, {"filename": "2017_UNIST_생명과학_문제3", "year": "2017", "school": "UNIST", "subject": "생명과학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "생-104", "subject_category": "생물"}, {"filename": "2017_UNIST_생명과학_문제4", "year": "2017", "school": "UNIST", "subject": "생명과학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "생-105", "subject_category": "생물"}, {"filename": "2017_서울대_생명과학_문제1", "year": "2017", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "생-106", "subject_category": "생물"}, {"filename": "2017_서울대_생명과학_문제2", "year": "2017", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 3, "uid": "생-107", "subject_category": "생물"}, {"filename": "2017_서울대_생명과학_문제3", "year": "2017", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "생-108", "subject_category": "생물"}, {"filename": "2017_서울대_생명과학_문제4", "year": "2017", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "4", "pages": 1, "figure_count": 0, "uid": "생-109", "subject_category": "생물"}, {"filename": "2017_연세대_생명과학_문제1", "year": "2017", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-110", "subject_category": "생물"}, {"filename": "2017_연세대미래_생명과학_문제1", "year": "2017", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 3, "figure_count": 3, "uid": "생-111", "subject_category": "생물"}, {"filename": "2016_서울대_생명과학_문제1", "year": "2016", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "생-112", "subject_category": "생물"}, {"filename": "2016_서울대_생명과학_문제2", "year": "2016", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 2, "uid": "생-113", "subject_category": "생물"}, {"filename": "2016_연세대_생명과학_문제1", "year": "2016", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "생-114", "subject_category": "생물"}, {"filename": "2016_연세대미래_생명과학_문제1", "year": "2016", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 3, "figure_count": 2, "uid": "생-115", "subject_category": "생물"}, {"filename": "2015_UNIST_생명과학_문제1", "year": "2015", "school": "UNIST", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-116", "subject_category": "생물"}, {"filename": "2015_서울대_생명과학_문제1", "year": "2015", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 3, "uid": "생-117", "subject_category": "생물"}, {"filename": "2015_연세대_생명과학_문제1", "year": "2015", "school": "연세대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 5, "uid": "생-118", "subject_category": "생물"}, {"filename": "2015_연세대미래_생명과학_문제1", "year": "2015", "school": "연세대미래", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "생-119", "subject_category": "생물"}, {"filename": "2014_서울대_생명과학_문제1", "year": "2014", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-120", "subject_category": "생물"}, {"filename": "2014_서울대_생명과학_문제2", "year": "2014", "school": "서울대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-121", "subject_category": "생물"}, {"filename": "2005_한양대_물리학_문제1", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-172", "subject_category": "물리"}, {"filename": "2005_한양대_물리학_문제10", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "10", "pages": 1, "figure_count": 1, "uid": "물-173", "subject_category": "물리"}, {"filename": "2005_한양대_물리학_문제2", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-174", "subject_category": "물리"}, {"filename": "2005_한양대_물리학_문제3", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "물-175", "subject_category": "물리"}, {"filename": "2005_한양대_물리학_문제4", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "물-176", "subject_category": "물리"}, {"filename": "2005_한양대_물리학_문제5", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "5", "pages": 1, "figure_count": 1, "uid": "물-177", "subject_category": "물리"}, {"filename": "2005_한양대_물리학_문제6", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "6", "pages": 1, "figure_count": 1, "uid": "물-178", "subject_category": "물리"}, {"filename": "2005_한양대_물리학_문제7", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "7", "pages": 1, "figure_count": 0, "uid": "물-179", "subject_category": "물리"}, {"filename": "2005_한양대_물리학_문제8", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "8", "pages": 1, "figure_count": 1, "uid": "물-180", "subject_category": "물리"}, {"filename": "2005_한양대_물리학_문제9", "year": "2005", "school": "한양대", "subject": "물리학", "type": "문제", "number": "9", "pages": 1, "figure_count": 1, "uid": "물-181", "subject_category": "물리"}, {"filename": "2006_한양대_물리학_문제1", "year": "2006", "school": "한양대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-171", "subject_category": "물리"}, {"filename": "2007_한양대_물리학_문제1", "year": "2007", "school": "한양대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-165", "subject_category": "물리"}, {"filename": "2007_한양대_물리학_문제2", "year": "2007", "school": "한양대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-166", "subject_category": "물리"}, {"filename": "2007_한양대_물리학_문제3", "year": "2007", "school": "한양대", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "물-167", "subject_category": "물리"}, {"filename": "2007_한양대_물리학_문제4", "year": "2007", "school": "한양대", "subject": "물리학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "물-168", "subject_category": "물리"}, {"filename": "2007_한양대_물리학_문제5", "year": "2007", "school": "한양대", "subject": "물리학", "type": "문제", "number": "5", "pages": 1, "figure_count": 1, "uid": "물-169", "subject_category": "물리"}, {"filename": "2007_한양대_물리학_문제6", "year": "2007", "school": "한양대", "subject": "물리학", "type": "문제", "number": "6", "pages": 1, "figure_count": 2, "uid": "물-170", "subject_category": "물리"}, {"filename": "2008_건국대_물리학_문제1", "year": "2008", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "물-161", "subject_category": "물리"}, {"filename": "2008_한양대_물리학_문제1", "year": "2008", "school": "한양대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "물-162", "subject_category": "물리"}, {"filename": "2008_한양대_물리학_문제2", "year": "2008", "school": "한양대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "물-163", "subject_category": "물리"}, {"filename": "2008_한양대_물리학_문제3", "year": "2008", "school": "한양대", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "물-164", "subject_category": "물리"}, {"filename": "2009_건국대_물리학_문제1", "year": "2009", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "물-156", "subject_category": "물리"}, {"filename": "2009_건국대_물리학_문제2", "year": "2009", "school": "건국대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 3, "uid": "물-157", "subject_category": "물리"}, {"filename": "2009_한양대_물리학_문제1", "year": "2009", "school": "한양대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "물-158", "subject_category": "물리"}, {"filename": "2009_한양대_물리학_문제2", "year": "2009", "school": "한양대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 3, "uid": "물-159", "subject_category": "물리"}, {"filename": "2009_한양대_물리학_문제3", "year": "2009", "school": "한양대", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 2, "uid": "물-160", "subject_category": "물리"}, {"filename": "2010_건국대_물리학_문제1", "year": "2010", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "물-153", "subject_category": "물리"}, {"filename": "2010_한양대_물리학_문제1", "year": "2010", "school": "한양대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-154", "subject_category": "물리"}, {"filename": "2010_한양대_물리학_문제2", "year": "2010", "school": "한양대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "물-155", "subject_category": "물리"}, {"filename": "2011_건국대_물리학_문제1", "year": "2011", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-151", "subject_category": "물리"}, {"filename": "2011_건국대_물리학_문제2", "year": "2011", "school": "건국대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "물-152", "subject_category": "물리"}, {"filename": "2012_건국대_물리학_문제1", "year": "2012", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-149", "subject_category": "물리"}, {"filename": "2012_건국대_물리학_문제2", "year": "2012", "school": "건국대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-150", "subject_category": "물리"}, {"filename": "2013_건국대_물리학_문제1", "year": "2013", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-148", "subject_category": "물리"}, {"filename": "2014_건국대_물리학_문제1", "year": "2014", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-147", "subject_category": "물리"}, {"filename": "2015_건국대_물리학_문제1", "year": "2015", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "물-146", "subject_category": "물리"}, {"filename": "2016_건국대_물리학_문제1", "year": "2016", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "물-143", "subject_category": "물리"}, {"filename": "2016_건국대_물리학_문제2", "year": "2016", "school": "건국대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-144", "subject_category": "물리"}, {"filename": "2016_건국대_물리학_문제3", "year": "2016", "school": "건국대", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 3, "uid": "물-145", "subject_category": "물리"}, {"filename": "2017_건국대_물리학_문제1", "year": "2017", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-141", "subject_category": "물리"}, {"filename": "2017_건국대_물리학_문제2", "year": "2017", "school": "건국대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-142", "subject_category": "물리"}, {"filename": "2018_건국대_물리학_문제1", "year": "2018", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "물-140", "subject_category": "물리"}, {"filename": "2019_건국대_물리학_문제1", "year": "2019", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-138", "subject_category": "물리"}, {"filename": "2019_건국대_물리학_문제2", "year": "2019", "school": "건국대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "물-139", "subject_category": "물리"}, {"filename": "2020_건국대_물리학_문제1", "year": "2020", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "물-135", "subject_category": "물리"}, {"filename": "2020_건국대_물리학_문제2", "year": "2020", "school": "건국대", "subject": "물리학", "type": "문제", "number": "2", "pages": 2, "figure_count": 4, "uid": "물-136", "subject_category": "물리"}, {"filename": "2020_경희대_물리학_문제1", "year": "2020", "school": "경희대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "물-137", "subject_category": "물리"}, {"filename": "2021_건국대_물리학_문제1", "year": "2021", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "물-130", "subject_category": "물리"}, {"filename": "2021_건국대_물리학_문제2", "year": "2021", "school": "건국대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-131", "subject_category": "물리"}, {"filename": "2021_건국대_물리학_문제3", "year": "2021", "school": "건국대", "subject": "물리학", "type": "문제", "number": "3", "pages": 1, "figure_count": 3, "uid": "물-132", "subject_category": "물리"}, {"filename": "2021_경희대_물리학_문제1", "year": "2021", "school": "경희대", "subject": "물리학", "type": "문제", "number": "1", "pages": 2, "figure_count": 3, "uid": "물-133", "subject_category": "물리"}, {"filename": "2021_경희대_물리학_문제2", "year": "2021", "school": "경희대", "subject": "물리학", "type": "문제", "number": "2", "pages": 4, "figure_count": 4, "uid": "물-134", "subject_category": "물리"}, {"filename": "2022_건국대_물리학_문제1", "year": "2022", "school": "건국대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "물-126", "subject_category": "물리"}, {"filename": "2022_건국대_물리학_문제2", "year": "2022", "school": "건국대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "물-127", "subject_category": "물리"}, {"filename": "2022_경희대_물리학_문제1", "year": "2022", "school": "경희대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-128", "subject_category": "물리"}, {"filename": "2022_경희대_물리학_문제2", "year": "2022", "school": "경희대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-129", "subject_category": "물리"}, {"filename": "2023_경희대_물리학_문제1", "year": "2023", "school": "경희대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-124", "subject_category": "물리"}, {"filename": "2023_경희대_물리학_문제2", "year": "2023", "school": "경희대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "물-125", "subject_category": "물리"}, {"filename": "2025_경희대_물리학_문제1", "year": "2025", "school": "경희대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-122", "subject_category": "물리"}, {"filename": "2025_경희대_물리학_문제2", "year": "2025", "school": "경희대", "subject": "물리학", "type": "문제", "number": "2", "pages": 1, "figure_count": 9, "uid": "물-123", "subject_category": "물리"}, {"filename": "2026_경희대_물리학_문제1", "year": "2026", "school": "경희대", "subject": "물리학", "type": "문제", "number": "1", "pages": 3, "figure_count": 2, "uid": "물-120", "subject_category": "물리"}, {"filename": "2026_한양대_물리학_문제1", "year": "2026", "school": "한양대", "subject": "물리학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "물-121", "subject_category": "물리"}, {"filename": "2005_한양대_화학_문제1", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-169", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제10", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "10", "pages": 1, "figure_count": 1, "uid": "화-170", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제11", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "11", "pages": 1, "figure_count": 1, "uid": "화-171", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제2", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-172", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제3", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "화-173", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제4", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "화-174", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제5", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "5", "pages": 1, "figure_count": 1, "uid": "화-175", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제6", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "6", "pages": 1, "figure_count": 1, "uid": "화-176", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제7", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "7", "pages": 1, "figure_count": 1, "uid": "화-177", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제8", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "8", "pages": 1, "figure_count": 1, "uid": "화-178", "subject_category": "화학"}, {"filename": "2005_한양대_화학_문제9", "year": "2005", "school": "한양대", "subject": "화학", "type": "문제", "number": "9", "pages": 1, "figure_count": 1, "uid": "화-179", "subject_category": "화학"}, {"filename": "2007_한양대_화학_문제1", "year": "2007", "school": "한양대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-166", "subject_category": "화학"}, {"filename": "2007_한양대_화학_문제2", "year": "2007", "school": "한양대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-167", "subject_category": "화학"}, {"filename": "2007_한양대_화학_문제3", "year": "2007", "school": "한양대", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "화-168", "subject_category": "화학"}, {"filename": "2008_건국대_화학_문제1", "year": "2008", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-161", "subject_category": "화학"}, {"filename": "2008_한양대_화학_문제1", "year": "2008", "school": "한양대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "화-162", "subject_category": "화학"}, {"filename": "2008_한양대_화학_문제2", "year": "2008", "school": "한양대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 3, "uid": "화-163", "subject_category": "화학"}, {"filename": "2008_한양대_화학_문제3", "year": "2008", "school": "한양대", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 2, "uid": "화-164", "subject_category": "화학"}, {"filename": "2008_한양대_화학_문제4", "year": "2008", "school": "한양대", "subject": "화학", "type": "문제", "number": "4", "pages": 1, "figure_count": 1, "uid": "화-165", "subject_category": "화학"}, {"filename": "2009_건국대_화학_문제1", "year": "2009", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-156", "subject_category": "화학"}, {"filename": "2009_건국대_화학_문제2", "year": "2009", "school": "건국대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-157", "subject_category": "화학"}, {"filename": "2009_한양대_화학_문제1", "year": "2009", "school": "한양대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "화-158", "subject_category": "화학"}, {"filename": "2009_한양대_화학_문제2", "year": "2009", "school": "한양대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 3, "uid": "화-159", "subject_category": "화학"}, {"filename": "2009_한양대_화학_문제3", "year": "2009", "school": "한양대", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 2, "uid": "화-160", "subject_category": "화학"}, {"filename": "2010_건국대_화학_문제1", "year": "2010", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-153", "subject_category": "화학"}, {"filename": "2010_한양대_화학_문제1", "year": "2010", "school": "한양대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-154", "subject_category": "화학"}, {"filename": "2010_한양대_화학_문제2", "year": "2010", "school": "한양대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 3, "uid": "화-155", "subject_category": "화학"}, {"filename": "2011_건국대_화학_문제1", "year": "2011", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-151", "subject_category": "화학"}, {"filename": "2011_건국대_화학_문제2", "year": "2011", "school": "건국대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-152", "subject_category": "화학"}, {"filename": "2012_건국대_화학_문제1", "year": "2012", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-149", "subject_category": "화학"}, {"filename": "2012_건국대_화학_문제2", "year": "2012", "school": "건국대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-150", "subject_category": "화학"}, {"filename": "2013_건국대_화학_문제1", "year": "2013", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 4, "uid": "화-148", "subject_category": "화학"}, {"filename": "2014_건국대_화학_문제1", "year": "2014", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-147", "subject_category": "화학"}, {"filename": "2015_건국대_화학_문제1", "year": "2015", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-146", "subject_category": "화학"}, {"filename": "2016_건국대_화학_문제1", "year": "2016", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "화-145", "subject_category": "화학"}, {"filename": "2017_건국대_화학_문제1", "year": "2017", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-143", "subject_category": "화학"}, {"filename": "2017_건국대_화학_문제2", "year": "2017", "school": "건국대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-144", "subject_category": "화학"}, {"filename": "2018_건국대_화학_문제1", "year": "2018", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-142", "subject_category": "화학"}, {"filename": "2019_건국대_화학_문제1", "year": "2019", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-140", "subject_category": "화학"}, {"filename": "2019_건국대_화학_문제2", "year": "2019", "school": "건국대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "화-141", "subject_category": "화학"}, {"filename": "2020_건국대_화학_문제1", "year": "2020", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-137", "subject_category": "화학"}, {"filename": "2020_건국대_화학_문제2", "year": "2020", "school": "건국대", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 4, "uid": "화-138", "subject_category": "화학"}, {"filename": "2020_경희대_화학_문제1", "year": "2020", "school": "경희대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "화-139", "subject_category": "화학"}, {"filename": "2021_건국대_화학_문제1", "year": "2021", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "화-132", "subject_category": "화학"}, {"filename": "2021_건국대_화학_문제2", "year": "2021", "school": "건국대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-133", "subject_category": "화학"}, {"filename": "2021_건국대_화학_문제3", "year": "2021", "school": "건국대", "subject": "화학", "type": "문제", "number": "3", "pages": 1, "figure_count": 1, "uid": "화-134", "subject_category": "화학"}, {"filename": "2021_경희대_화학_문제1", "year": "2021", "school": "경희대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 1, "uid": "화-135", "subject_category": "화학"}, {"filename": "2021_경희대_화학_문제2", "year": "2021", "school": "경희대", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "화-136", "subject_category": "화학"}, {"filename": "2022_건국대_화학_문제1", "year": "2022", "school": "건국대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 7, "uid": "화-128", "subject_category": "화학"}, {"filename": "2022_건국대_화학_문제2", "year": "2022", "school": "건국대", "subject": "화학", "type": "문제", "number": "2", "pages": 2, "figure_count": 1, "uid": "화-129", "subject_category": "화학"}, {"filename": "2022_경희대_화학_문제1", "year": "2022", "school": "경희대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 4, "uid": "화-130", "subject_category": "화학"}, {"filename": "2022_경희대_화학_문제2", "year": "2022", "school": "경희대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-131", "subject_category": "화학"}, {"filename": "2023_경희대_화학_문제1", "year": "2023", "school": "경희대", "subject": "화학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "화-127", "subject_category": "화학"}, {"filename": "2025_경희대_화학_문제1", "year": "2025", "school": "경희대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "화-125", "subject_category": "화학"}, {"filename": "2025_경희대_화학_문제2", "year": "2025", "school": "경희대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "화-126", "subject_category": "화학"}, {"filename": "2026_경희대_화학_문제1", "year": "2026", "school": "경희대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-122", "subject_category": "화학"}, {"filename": "2026_경희대_화학_문제2", "year": "2026", "school": "경희대", "subject": "화학", "type": "문제", "number": "2", "pages": 1, "figure_count": 3, "uid": "화-123", "subject_category": "화학"}, {"filename": "2026_한양대_화학_문제1", "year": "2026", "school": "한양대", "subject": "화학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "화-124", "subject_category": "화학"}, {"filename": "2008_한양대_생명과학_문제1", "year": "2008", "school": "한양대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "생-165", "subject_category": "생물"}, {"filename": "2008_한양대_생명과학_문제2", "year": "2008", "school": "한양대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 3, "uid": "생-166", "subject_category": "생물"}, {"filename": "2008_한양대_생명과학_문제3", "year": "2008", "school": "한양대", "subject": "생명과학", "type": "문제", "number": "3", "pages": 1, "figure_count": 2, "uid": "생-167", "subject_category": "생물"}, {"filename": "2009_건국대_생명과학_문제1", "year": "2009", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 0, "uid": "생-160", "subject_category": "생물"}, {"filename": "2009_건국대_생명과학_문제2", "year": "2009", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-161", "subject_category": "생물"}, {"filename": "2009_한양대_생명과학_문제1", "year": "2009", "school": "한양대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "생-162", "subject_category": "생물"}, {"filename": "2009_한양대_생명과학_문제2", "year": "2009", "school": "한양대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "생-163", "subject_category": "생물"}, {"filename": "2009_한양대_생명과학_문제3", "year": "2009", "school": "한양대", "subject": "생명과학", "type": "문제", "number": "3", "pages": 1, "figure_count": 0, "uid": "생-164", "subject_category": "생물"}, {"filename": "2010_건국대_생명과학_문제1", "year": "2010", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "생-157", "subject_category": "생물"}, {"filename": "2010_한양대_생명과학_문제1", "year": "2010", "school": "한양대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-158", "subject_category": "생물"}, {"filename": "2010_한양대_생명과학_문제2", "year": "2010", "school": "한양대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-159", "subject_category": "생물"}, {"filename": "2011_건국대_생명과학_문제1", "year": "2011", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-155", "subject_category": "생물"}, {"filename": "2011_건국대_생명과학_문제2", "year": "2011", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-156", "subject_category": "생물"}, {"filename": "2012_건국대_생명과학_문제1", "year": "2012", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-153", "subject_category": "생물"}, {"filename": "2012_건국대_생명과학_문제2", "year": "2012", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "생-154", "subject_category": "생물"}, {"filename": "2013_건국대_생명과학_문제1", "year": "2013", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-152", "subject_category": "생물"}, {"filename": "2014_건국대_생명과학_문제1", "year": "2014", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-151", "subject_category": "생물"}, {"filename": "2015_건국대_생명과학_문제1", "year": "2015", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-150", "subject_category": "생물"}, {"filename": "2016_건국대_생명과학_문제1", "year": "2016", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-148", "subject_category": "생물"}, {"filename": "2016_건국대_생명과학_문제2", "year": "2016", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-149", "subject_category": "생물"}, {"filename": "2017_건국대_생명과학_문제1", "year": "2017", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-146", "subject_category": "생물"}, {"filename": "2017_건국대_생명과학_문제2", "year": "2017", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "생-147", "subject_category": "생물"}, {"filename": "2018_건국대_생명과학_문제1", "year": "2018", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-145", "subject_category": "생물"}, {"filename": "2019_건국대_생명과학_문제1", "year": "2019", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-143", "subject_category": "생물"}, {"filename": "2019_건국대_생명과학_문제2", "year": "2019", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-144", "subject_category": "생물"}, {"filename": "2020_건국대_생명과학_문제1", "year": "2020", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-140", "subject_category": "생물"}, {"filename": "2020_건국대_생명과학_문제2", "year": "2020", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 3, "uid": "생-141", "subject_category": "생물"}, {"filename": "2020_경희대_생명과학_문제1", "year": "2020", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 2, "uid": "생-142", "subject_category": "생물"}, {"filename": "2021_건국대_생명과학_문제1", "year": "2021", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 3, "uid": "생-133", "subject_category": "생물"}, {"filename": "2021_건국대_생명과학_문제2", "year": "2021", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "생-134", "subject_category": "생물"}, {"filename": "2021_건국대_생명과학_문제3", "year": "2021", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "3", "pages": 1, "figure_count": 2, "uid": "생-135", "subject_category": "생물"}, {"filename": "2021_경희대_생명과학_문제1", "year": "2021", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-136", "subject_category": "생물"}, {"filename": "2021_경희대_생명과학_문제2", "year": "2021", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 2, "uid": "생-137", "subject_category": "생물"}, {"filename": "2021_경희대_생명과학_문제3", "year": "2021", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "3", "pages": 1, "figure_count": 2, "uid": "생-138", "subject_category": "생물"}, {"filename": "2021_경희대_생명과학_문제4", "year": "2021", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "4", "pages": 1, "figure_count": 2, "uid": "생-139", "subject_category": "생물"}, {"filename": "2022_건국대_생명과학_문제1", "year": "2022", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 2, "figure_count": 6, "uid": "생-129", "subject_category": "생물"}, {"filename": "2022_건국대_생명과학_문제2", "year": "2022", "school": "건국대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 3, "uid": "생-130", "subject_category": "생물"}, {"filename": "2022_경희대_생명과학_문제1", "year": "2022", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-131", "subject_category": "생물"}, {"filename": "2022_경희대_생명과학_문제2", "year": "2022", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-132", "subject_category": "생물"}, {"filename": "2023_경희대_생명과학_문제1", "year": "2023", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "생-127", "subject_category": "생물"}, {"filename": "2023_경희대_생명과학_문제2", "year": "2023", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 0, "uid": "생-128", "subject_category": "생물"}, {"filename": "2025_경희대_생명과학_문제1", "year": "2025", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 2, "uid": "생-125", "subject_category": "생물"}, {"filename": "2025_경희대_생명과학_문제2", "year": "2025", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 2, "figure_count": 0, "uid": "생-126", "subject_category": "생물"}, {"filename": "2026_경희대_생명과학_문제1", "year": "2026", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 0, "uid": "생-122", "subject_category": "생물"}, {"filename": "2026_경희대_생명과학_문제2", "year": "2026", "school": "경희대", "subject": "생명과학", "type": "문제", "number": "2", "pages": 1, "figure_count": 1, "uid": "생-123", "subject_category": "생물"}, {"filename": "2026_한양대_생명과학_문제1", "year": "2026", "school": "한양대", "subject": "생명과학", "type": "문제", "number": "1", "pages": 1, "figure_count": 1, "uid": "생-124", "subject_category": "생물"}];
 </script>
-<script src="assets/hub.js?v=1770709263"></script>
+<script src="assets/hub.js?v=1770727480"></script>
 </body>
 </html>

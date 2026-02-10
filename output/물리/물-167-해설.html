@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-167 | 2007_한양대_물리학_해설3</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-167.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 3</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">공기저항을 받는 낙하 운동 — 종단속도와 차원 분석</h2>
+<div class="spacer"></div>
+<p>주어진 조건:</p>
+<p>- 질량 \(m\)인 물체가 정지 상태에서 낙하</p>
+<p>- 공기저항력: \(-bv^2\) (속력의 제곱에 비례)</p>
+<p>- 중력가속도: \(g\), \(b\)는 상수</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 종단속도</p>
+<div class="spacer"></div>
+<p>종단속도 \(v_t\)에서는 가속도가 0이므로, 중력과 공기저항력이 평형을 이룬다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[mg = bv_t^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_t = \sqrt{\frac{mg}{b}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{v_t = \sqrt{\frac{mg}{b}}}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 상수 \(b\)의 차원</p>
+<div class="spacer"></div>
+<p>\(mg = bv^2\)에서 \(b\)의 차원을 구하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[[b] = \frac{[mg]}{[v^2]} = \frac{MLT^{-2}}{(LT^{-1})^2} = \frac{MLT^{-2}}{L^2T^{-2}} = \frac{M}{L}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{[b] = ML^{-1}}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 종단속도에 도달할 때까지 낙하한 거리 \(S\)의 \(g, m, b\) 의존성</p>
+<div class="spacer"></div>
+<p>차원 분석을 이용하여 \(S\)가 \(g, m, b\)에 어떻게 의존하는지 구한다.</p>
+<div class="spacer"></div>
+<p>\(S = g^a m^b b^c\)로 놓으면, 각 물리량의 차원은:</p>
+<div class="spacer"></div>
+<p>- \([S] = L\)</p>
+<p>- \([g] = LT^{-2}\)</p>
+<p>- \([m] = M\)</p>
+<p>- \([b] = ML^{-1}\)</p>
+<div class="spacer"></div>
+<p>차원 방정식:</p>
+<div class="spacer"></div>
+<div class="math-block">\[L = (LT^{-2})^a \cdot M^b \cdot (ML^{-1})^c\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[L^1 M^0 T^0 = L^{a-c} \cdot M^{b+c} \cdot T^{-2a}\]</div>
+<div class="spacer"></div>
+<p>각 차원에 대해:</p>
+<div class="spacer"></div>
+<p>- \(T\): \(-2a = 0 \implies a = 0\)</p>
+<p>- \(L\): \(a - c = 1 \implies c = -1\)</p>
+<p>- \(M\): \(b + c = 0 \implies b = 1\)</p>
+<div class="spacer"></div>
+<p>따라서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[S \propto g^0 \cdot m^1 \cdot b^{-1} = \frac{m}{b}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{S \propto \frac{m}{b}}\]</div>
+<div class="spacer"></div>
+<p>\(S\)는 \(g\)에 무관하고, \(m\)에 비례하며, \(b\)에 반비례한다. 이는 물리적으로도 타당하다. 질량이 클수록 종단속도에 도달하기까지 더 많이 가속되어야 하므로 낙하 거리가 길어지고, 공기저항 상수 \(b\)가 클수록 빨리 종단속도에 도달하므로 낙하 거리가 짧아진다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-167</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

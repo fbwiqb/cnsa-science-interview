@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-135 | 2020_건국대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-135.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">전자기 유도, 다이오드, 솔레노이드</h2>
+<div class="spacer"></div>
+<p><strong>(문제 1)</strong> 다이오드 추가 및 S극 사용 시 오실로스코프 파형</p>
+<div class="spacer"></div>
+<p>제시문에서 N극이 솔레노이드에 접근하면 자기력선속이 증가하여 유도 전류가 B에서 A로 흐르고(양의 전압), N극이 멀어지면 자기력선속이 감소하여 유도 전류가 A에서 B로 흐른다(음의 전압).</p>
+<div class="spacer"></div>
+<p><strong>자석을 S극으로 바꾸면:</strong></p>
+<div class="spacer"></div>
+<p>S극이 접근할 때 솔레노이드 내부에 N극 접근 시와 반대 방향의 자기력선속이 증가한다. 따라서 유도 전류의 방향이 N극 때와 반대가 된다.</p>
+<div class="spacer"></div>
+<p>- S극 접근 시: 유도 전류가 A에서 B로 흐름 → 저항에 음(-)의 전압</p>
+<p>- S극 이탈 시: 유도 전류가 B에서 A로 흐름 → 저항에 양(+)의 전압</p>
+<div class="spacer"></div>
+<p>즉, N극일 때의 파형(양 → 음)이 S극에서는 (음 → 양)으로 뒤집힌다.</p>
+<div class="spacer"></div>
+<p><strong>다이오드를 추가하면:</strong></p>
+<div class="spacer"></div>
+<p>그림에서 다이오드는 p형이 아래, n형이 위로 연결되어 있다. 순방향 전압일 때(전류가 p에서 n으로 흐를 때)만 전류가 통과한다.</p>
+<div class="spacer"></div>
+<p>S극 운동 시 접근할 때 음의 전압이 유도되고, 멀어질 때 양의 전압이 유도된다. 다이오드의 방향에 따라 한쪽 전류만 통과하므로, 오실로스코프에는 <strong>양의 반파(S극이 멀어질 때)만 나타나고, 음의 반파(S극이 접근할 때)는 차단</strong>된다.</p>
+<div class="spacer"></div>
+<p><strong>(문제 2)</strong> 반지름이 두 배인 솔레노이드의 기전력 변화</p>
+<div class="spacer"></div>
+<p>원래 솔레노이드의 반지름: \(r\), 감은 횟수: \(N\)</p>
+<div class="spacer"></div>
+<p>동일한 길이의 전선으로 반지름 \(2r\)인 솔레노이드를 만들면:</p>
+<div class="spacer"></div>
+<p>한 바퀴의 둘레: \(2\pi(2r) = 2 \times (2\pi r)\)</p>
+<div class="spacer"></div>
+<p>따라서 감은 횟수는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[N' = \frac{N}{2}\]</div>
+<div class="spacer"></div>
+<p>단면적의 변화는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[A' = \pi(2r)^2 = 4\pi r^2 = 4A\]</div>
+<div class="spacer"></div>
+<p>유도 기전력의 크기는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[|\mathcal{E}| = N \cdot A \cdot \left|\frac{\Delta B}{\Delta t}\right|\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[|\mathcal{E}'| = N' \cdot A' \cdot \left|\frac{\Delta B}{\Delta t}\right| = \frac{N}{2} \cdot 4A \cdot \left|\frac{\Delta B}{\Delta t}\right| = 2 \cdot N \cdot A \cdot \left|\frac{\Delta B}{\Delta t}\right| = 2|\mathcal{E}|\]</div>
+<div class="spacer"></div>
+<p>감은 횟수가 절반으로 줄었지만, 단면적이 4배로 증가하여 자기력선속의 변화량이 4배 커지므로, 유도 기전력의 크기는 원래의 <strong>2배로 증가</strong>한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{|\mathcal{E}'| = 2|\mathcal{E}|}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-135</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

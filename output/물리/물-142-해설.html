@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-142 | 2017_건국대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-142.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">아르키메데스 원리와 데카르트의 잠수부</h2>
+<div class="spacer"></div>
+<p><strong>(문제 1)</strong> 잠수부가 완전히 잠기기 위한 최소 물 유입 부피</p>
+<div class="spacer"></div>
+<p>주어진 조건:</p>
+<p>- \(V_1\)의 치수: 가로 1.0 cm, 세로 1.0 cm, 높이 1.5 cm</p>
+<p>- \(V_1 = 1.0 \times 1.0 \times 1.5 = 1.5\) cm\(^3\)</p>
+<p>- \(V_2 = 1.0\) cm\(^3\)</p>
+<p>- \(m = 2.0\) g (추의 질량)</p>
+<p>- \(\rho_{\text{물}} = 1.0\) g/cm\(^3\)</p>
+<p>- 직육면체의 두께와 질량은 무시</p>
+<div class="spacer"></div>
+<p>잠수부의 총 부피는 \(V_1 + V_2 = 1.5 + 1.0 = 2.5\) cm\(^3\)이다.</p>
+<div class="spacer"></div>
+<p>잠수부가 완전히 물에 잠기려면, 잠수부에 작용하는 중력이 부력 이상이어야 한다.</p>
+<div class="spacer"></div>
+<p>잠수부의 총 질량은 추의 질량 \(m\)에 직육면체 내부로 들어온 물의 질량을 더한 것이다. 직육면체 안으로 물이 \(V_w\)만큼 들어오면 공기가 차지하는 부피는 \(V_1 - V_w\)가 된다. 기체의 질량은 무시한다.</p>
+<div class="spacer"></div>
+<p>잠수부의 총 질량: \(m_{\text{total}} = m + \rho_{\text{물}} \cdot V_w = 2.0 + 1.0 \times V_w\) (g)</p>
+<div class="spacer"></div>
+<p>잠수부가 완전히 잠겼을 때 부력은 다음과 같다. 잠수부의 외형 부피에서 물이 차지하는 부분은 부력에 기여하지 않으므로, 잠수부가 배제하는 물의 부피는 잠수부 전체 부피에서 내부에 들어온 물의 부피를 뺀 것이 아니라, 잠수부의 외형 전체 부피이다.</p>
+<div class="spacer"></div>
+<p>잠수부의 외형 부피: \(V_{\text{total}} = V_1 + V_2 = 2.5\) cm\(^3\)</p>
+<div class="spacer"></div>
+<p>부력: \(F_{\text{부력}} = \rho_{\text{물}} \cdot V_{\text{total}} \cdot g = 1.0 \times 2.5 \times g = 2.5g\) (dyne 단위에서 g 단위로, 2.5 g중)</p>
+<div class="spacer"></div>
+<p>잠수부가 물에 완전히 잠기기 위한 조건: 중력 \(\geq\) 부력</p>
+<div class="spacer"></div>
+<div class="math-block">\[m_{\text{total}} \geq \rho_{\text{물}} \cdot V_{\text{total}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[(2.0 + V_w) \geq 2.5\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[V_w \geq 0.5 \text{ cm}^3\]</div>
+<div class="spacer"></div>
+<p>따라서 직육면체 안으로 들어가는 물의 최소 부피는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{V_w = 0.5 \text{ cm}^3}\]</div>
+<div class="spacer"></div>
+<p><strong>(문제 2)</strong> 잠수부 내의 공기 부피와 가라앉는 이유</p>
+<div class="spacer"></div>
+<p>잠수부가 깊이 \(h\)에 잠겨 있을 때, 잠수부 내부의 공기에 작용하는 압력을 구한다.</p>
+<div class="spacer"></div>
+<p>물 표면에 작용하는 압력이 \(P\)이고, 깊이 \(h\)에서의 압력은 파스칼의 법칙에 의해 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_h = P + \rho_{\text{물}} g h\]</div>
+<div class="spacer"></div>
+<p>잠수부 내부의 공기는 이상 기체 방정식을 따르며, 기체 분자 수 \(N\)과 온도 \(T\)는 일정하다.</p>
+<div class="spacer"></div>
+<p>초기 상태(물 표면, 압력 \(P_0\)): 공기 부피 = \(V_1\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_0 V_1 = Nk_BT\]</div>
+<div class="spacer"></div>
+<p>깊이 \(h\)에서의 상태(압력 \(P_h = P + \rho_{\text{물}} g h\)): 공기 부피 = \(V_h\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_h V_h = Nk_BT\]</div>
+<div class="spacer"></div>
+<p>두 식을 나누면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_0 V_1 = (P + \rho_{\text{물}} g h) V_h\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{V_h = \frac{P_0 V_1}{P + \rho_{\text{물}} g h}}\]</div>
+<div class="spacer"></div>
+<p><strong>잠수부가 가라앉는 이유:</strong></p>
+<div class="spacer"></div>
+<p>물 표면에 충분한 압력 \(P\)를 가하면, 잠수부 내부의 공기가 압축되어 \(V_h < V_1\)이 된다. 공기가 압축된 만큼 물이 직육면체 내부로 유입된다. 유입된 물의 부피는 \(V_1 - V_h\)이다.</p>
+<div class="spacer"></div>
+<p>잠수부의 외형 부피는 \(V_1 + V_2\)로 변하지 않지만, 내부에 유입된 물의 질량만큼 잠수부의 총 질량이 증가한다. 즉, 부력은 일정(\(\rho_{\text{물}}(V_1 + V_2)g\))하지만 중력은 증가한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{중력} = (m + \rho_{\text{물}}(V_1 - V_h))g\]</div>
+<div class="spacer"></div>
+<p>충분한 압력을 가하면 \(V_h\)가 충분히 작아져서 유입된 물의 질량이 커지고, 중력이 부력을 초과하게 되어 잠수부가 가라앉는다.</p>
+<div class="spacer"></div>
+<p>또한, 잠수부가 가라앉을수록 깊이 \(h\)가 증가하여 \(P + \rho_{\text{물}}gh\)가 더 커지고, \(V_h\)는 더 작아진다. 이는 양의 되먹임(positive feedback) 효과로, 한번 가라앉기 시작하면 더 빠르게 가라앉게 된다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-142</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

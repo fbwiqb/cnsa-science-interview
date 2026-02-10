@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-165 | 2007_한양대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-165.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<div class="ai-disclaimer">이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">상자 밀기와 당기기의 비교 — 힘의 분해와 마찰력</h2>
+<div class="spacer"></div>
+<p>주어진 조건:</p>
+<p>- 상자의 질량: \(m\), 중력가속도: \(g\)</p>
+<p>- 힘의 크기: \(F\), 바닥면과의 각도: \(\theta\) (미는 경우와 당기는 경우 동일)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 마찰력이 없을 때 수평 방향 가속도 비교</p>
+<div class="spacer"></div>
+<p><strong>미는 경우</strong>: 힘 \(F\)를 각도 \(\theta\)로 아래쪽 방향으로 가하므로, 수평 성분은 \(F\cos\theta\)이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[ma_{\text{밀기}} = F\cos\theta \implies a_{\text{밀기}} = \frac{F\cos\theta}{m}\]</div>
+<div class="spacer"></div>
+<p><strong>당기는 경우</strong>: 힘 \(F\)를 각도 \(\theta\)로 위쪽 방향으로 가하므로, 수평 성분은 역시 \(F\cos\theta\)이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[ma_{\text{당기기}} = F\cos\theta \implies a_{\text{당기기}} = \frac{F\cos\theta}{m}\]</div>
+<div class="spacer"></div>
+<p>마찰력이 없을 때, <strong>두 경우의 수평 방향 가속도는 같다.</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{a_{\text{밀기}} = a_{\text{당기기}} = \frac{F\cos\theta}{m}}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 수직 항력</p>
+<div class="spacer"></div>
+<p><strong>미는 경우</strong>: 수직 방향 힘의 평형에서, 힘 \(F\)의 수직 성분이 아래로 작용하므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[N_{\text{밀기}} = mg + F\sin\theta\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{N_{\text{밀기}} = mg + F\sin\theta}\]</div>
+<div class="spacer"></div>
+<p><strong>당기는 경우</strong>: 수직 방향 힘의 평형에서, 힘 \(F\)의 수직 성분이 위로 작용하므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[N_{\text{당기기}} = mg - F\sin\theta\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{N_{\text{당기기}} = mg - F\sin\theta}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 마찰력이 있을 때 수평 방향 가속도 비교</p>
+<div class="spacer"></div>
+<p>운동 마찰력의 크기는 \(f = \mu N\)이므로:</p>
+<div class="spacer"></div>
+<p><strong>미는 경우</strong>:</p>
+<div class="spacer"></div>
+<div class="math-block">\[ma_{\text{밀기}} = F\cos\theta - \mu N_{\text{밀기}} = F\cos\theta - \mu(mg + F\sin\theta)\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[a_{\text{밀기}} = \frac{F\cos\theta - \mu(mg + F\sin\theta)}{m}\]</div>
+<div class="spacer"></div>
+<p><strong>당기는 경우</strong>:</p>
+<div class="spacer"></div>
+<div class="math-block">\[ma_{\text{당기기}} = F\cos\theta - \mu N_{\text{당기기}} = F\cos\theta - \mu(mg - F\sin\theta)\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[a_{\text{당기기}} = \frac{F\cos\theta - \mu(mg - F\sin\theta)}{m}\]</div>
+<div class="spacer"></div>
+<p>두 가속도의 차이:</p>
+<div class="spacer"></div>
+<div class="math-block">\[a_{\text{당기기}} - a_{\text{밀기}} = \frac{2\mu F\sin\theta}{m} > 0\]</div>
+<div class="spacer"></div>
+<p>따라서 <strong>당기는 경우의 가속도가 미는 경우보다 크다.</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{a_{\text{당기기}} > a_{\text{밀기}}}\]</div>
+<div class="spacer"></div>
+<p>이는 당기는 경우 수직 항력이 작아져서 마찰력도 작아지기 때문이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-165</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>
