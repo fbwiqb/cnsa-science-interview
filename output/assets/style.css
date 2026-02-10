@@ -160,12 +160,21 @@ p {
 .passage-box {
   background: #f8f9fb;
   border-left: 3px solid #003366;
-  padding: 6px 12px;
-  margin: 6px 0;
+  padding: 10px 14px;
+  margin: 8px 0;
   border-radius: 0 4px 4px 0;
 }
 .passage-box p {
-  margin-bottom: 0;
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
 }
 .passage-marker {
   font-weight: 700;
