@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-99 | 2018_성균관대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-99.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">케플러 제3법칙과 베르누이 법칙</h2>
+<div class="spacer"></div>
+<p><strong>[물리 I-i] 케플러 제3법칙 증명</strong></p>
+<div class="spacer"></div>
+<p><strong>(가)</strong> \(T^2 = A r^3\)에서 \(A\) 구하기:</p>
+<div class="spacer"></div>
+<p>원운동에서 만유인력 = 구심력:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{G M_s M_e}{r^2} = M_e \cdot \frac{(2\pi)^2 r}{T^2}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{G M_s}{r^2} = \frac{4\pi^2 r}{T^2}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[T^2 = \frac{4\pi^2}{G M_s} \cdot r^3\]</div>
+<div class="spacer"></div>
+<p>따라서 \(A = \frac{4\pi^2}{G M_s}\)</p>
+<div class="spacer"></div>
+<p><strong>(나)</strong> \(M_s / M_e\) 구하기:</p>
+<div class="spacer"></div>
+<p>지구 주위 달의 운동: \(T_m^2 = \frac{4\pi^2}{G M_e} \cdot r_m^3\)</p>
+<div class="spacer"></div>
+<p>태양 주위 지구의 운동: \(T_e^2 = \frac{4\pi^2}{G M_s} \cdot r_e^3\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{M_s}{M_e} = \frac{r_e^3 / T_e^2}{r_m^3 / T_m^2} = \frac{r_e^3 \cdot T_m^2}{r_m^3 \cdot T_e^2}\]</div>
+<div class="spacer"></div>
+<p><strong>(다)</strong> 수치 계산:</p>
+<div class="spacer"></div>
+<p>\(r_e = 400 \cdot r_m\), \(T_e = 12 \cdot T_m\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{M_s}{M_e} = \frac{(400 r_m)^3 \cdot T_m^2}{r_m^3 \cdot (12 T_m)^2} = \frac{400^3}{12^2} = \frac{64{,}000{,}000}{144} \approx 444{,}444\]</div>
+<div class="spacer"></div>
+<p>따라서 태양의 질량은 지구 질량의 약 44만 배이다.</p>
+<div class="spacer"></div>
+<p><strong>[물리 I-ii] 베르누이 법칙과 수은기둥</strong></p>
+<div class="spacer"></div>
+<p><strong>(가)</strong> 베르누이 법칙 적용:</p>
+<div class="spacer"></div>
+<p>넓은 관: \(P_1 + \frac{1}{2}\rho_A v_1^2\) = 좁은 관: \(P_2 + \frac{1}{2}\rho_A v_2^2\)</p>
+<div class="spacer"></div>
+<p>(같은 높이이므로 위치 에너지 항 동일)</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_1 - P_2 = \frac{1}{2}\rho_A (v_2^2 - v_1^2)\]</div>
+<div class="spacer"></div>
+<p>연속 방정식: \(A_1 v_1 = A_2 v_2\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\pi R_1^2 v_1 = \pi R_2^2 v_2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_2 = v_1 \cdot \left(\frac{R_1}{R_2}\right)^2\]</div>
+<div class="spacer"></div>
+<p>수은기둥 높이 차:</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_1 - P_2 = \rho_{Hg} \cdot g \cdot h\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[h = \frac{P_1 - P_2}{\rho_{Hg} \cdot g} = \frac{\rho_A (v_2^2 - v_1^2)}{2 \rho_{Hg} \cdot g}\]</div>
+<div class="spacer"></div>
+<p><strong>(나)</strong> 수치 대입:</p>
+<div class="spacer"></div>
+<p>\(\rho_A = 1\,\text{kg/m}^3\), \(\rho_{Hg} = 1.36 \times 10^4\,\text{kg/m}^3\), \(g = 10\,\text{m/s}^2\), \(R_1 = 4\,\text{cm}\), \(R_2 = 2\,\text{cm}\), \(v_1 = 2\,\text{m/s}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[v_2 = 2 \times \left(\frac{4}{2}\right)^2 = 2 \times 4 = 8\,\text{m/s}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[h = \frac{1 \times (8^2 - 2^2)}{2 \times 1.36 \times 10^4 \times 10} = \frac{1 \times 60}{2.72 \times 10^5} = \frac{60}{272000} \approx 0.00022\,\text{m} \approx 0.22\,\text{mm}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-99</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

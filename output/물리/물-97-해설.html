@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-97 | 2018_서울대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-97.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">RLC 회로와 유전체</h2>
+<div class="spacer"></div>
+<p><strong>2-1.</strong> 축전기의 전기 용량</p>
+<div class="spacer"></div>
+<p>평행판 축전기의 전기 용량은 \(C = \frac{\epsilon A}{d}\)이다.</p>
+<div class="spacer"></div>
+<p>유전율 \(\epsilon\)인 마디가 극판 사이에 위치할 때:</p>
+<div class="spacer"></div>
+<div class="math-block">\[C_1 = \frac{\epsilon A}{d}\]</div>
+<div class="spacer"></div>
+<p>유전율 \(2\epsilon\)인 마디가 극판 사이에 위치할 때:</p>
+<div class="spacer"></div>
+<div class="math-block">\[C_2 = \frac{2\epsilon A}{d}\]</div>
+<div class="spacer"></div>
+<p>따라서 \(C_2 = 2C_1\)이다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>2-2.</strong> 공진 주파수와 전류 진폭</p>
+<div class="spacer"></div>
+<p>RLC 직렬 회로에서 교류 전류의 진폭은</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_0 = \frac{V_0}{\sqrt{R^2 + \left(2\pi f L - \frac{1}{2\pi f C}\right)^2}}\]</div>
+<div class="spacer"></div>
+<p>공진 주파수는 \(2\pi f L = \frac{1}{2\pi f C}\), 즉</p>
+<div class="spacer"></div>
+<div class="math-block">\[f_{\text{res}} = \frac{1}{2\pi\sqrt{LC}}\]</div>
+<div class="spacer"></div>
+<p>\(C = C_1\)일 때: \(f_1 = \frac{1}{2\pi\sqrt{LC_1}}\)</p>
+<div class="spacer"></div>
+<p>\(C = C_2\)일 때: \(f_2 = \frac{1}{2\pi\sqrt{LC_2}} = \frac{1}{2\pi\sqrt{2LC_1}} = \frac{f_1}{\sqrt{2}}\)</p>
+<div class="spacer"></div>
+<p>\(C_2 = 2C_1\)이므로 \(f_2 < f_1\)이다.</p>
+<div class="spacer"></div>
+<p>공진 시 \(I_0\)의 최댓값은 두 경우 모두 같으며:</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_{0,\max} = \frac{V_0}{R}\]</div>
+<div class="spacer"></div>
+<p>그래프는 각 경우 공진 주파수에서 최대값 \(V_0/R\)을 가지는 종 모양의 곡선이다. \(C = C_2\)의 공진 주파수가 \(C = C_1\)보다 더 낮은 주파수에 위치한다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>2-3.</strong> 유전체 이동 시 전류 변화 (0~5초)</p>
+<div class="spacer"></div>
+<p>유전체가 1초에 한 마디씩 이동하면, 축전기에 위치하는 유전체 마디의 유전율이 매초 \(\epsilon\)과 \(2\epsilon\) 사이에서 교대로 바뀐다.</p>
+<div class="spacer"></div>
+<p>그림에서 초기 배열을 보면:</p>
+<p>- 0~1초: \(C = C_2\) (유전율 \(2\epsilon\)) → 공진 상태, \(I_0 = V_0/R\) (최대 전류)</p>
+<p>- 1~2초: \(C = C_1\) (유전율 \(\epsilon\)) → 비공진, 전류 감소</p>
+<p>- 2~3초: \(C = C_1\) (유전율 \(\epsilon\)) → 비공진</p>
+<p>- 3~4초: \(C = C_2\) (유전율 \(2\epsilon\)) → 공진 상태, 전류 최대</p>
+<p>- 4~5초: \(C = C_1\) (유전율 \(\epsilon\)) → 비공진</p>
+<div class="spacer"></div>
+<p>교류 주파수가 \(f_2\)로 고정되어 있으므로, \(C = C_2\)일 때 공진 조건이 만족되어 전류 진폭이 최대(\(V_0/R\))이고, \(C = C_1\)일 때는 비공진이므로 전류 진폭이 감소한다.</p>
+<div class="spacer"></div>
+<p>\(C = C_1\)일 때의 전류 진폭:</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_0' = \frac{V_0}{\sqrt{R^2 + \left(2\pi f_2 L - \frac{1}{2\pi f_2 C_1}\right)^2}}\]</div>
+<div class="spacer"></div>
+<p>\(f_2 = \frac{1}{2\pi\sqrt{LC_2}} = \frac{1}{2\pi\sqrt{2LC_1}}\)이므로</p>
+<div class="spacer"></div>
+<div class="math-block">\[2\pi f_2 L = \frac{L}{{\sqrt{2LC_1}}} = \sqrt{\frac{L}{2C_1}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{2\pi f_2 C_1} = \frac{\sqrt{2LC_1}}{C_1} = \sqrt{\frac{2L}{C_1}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[2\pi f_2 L - \frac{1}{2\pi f_2 C_1} = \sqrt{\frac{L}{2C_1}} - \sqrt{\frac{2L}{C_1}} = \sqrt{\frac{L}{2C_1}}\left(1 - 2\right) = -\sqrt{\frac{L}{2C_1}}\]</div>
+<div class="spacer"></div>
+<p>따라서 비공진 시 전류 진폭은</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_0' = \frac{V_0}{\sqrt{R^2 + \frac{L}{2C_1}}}\]</div>
+<div class="spacer"></div>
+<p>이 값은 \(V_0/R\)보다 작다.</p>
+<div class="spacer"></div>
+<p>그래프: \(I(t) = I_0(t)\sin(2\pi f_2 t)\) 형태로, \(f_2 \gg 1\) Hz이므로 빠른 진동을 하되, 진폭이 1초 단위로 변한다. 공진 구간에서는 큰 진폭, 비공진 구간에서는 작은 진폭의 사인파가 나타난다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>2-4.</strong> 2차 코일 전압 \(V_2(t)\)</p>
+<div class="spacer"></div>
+<p>1차 코일과 2차 코일의 감은 수가 같으므로 이상적인 변압기에서 \(V_2(t) = V_1(t)\)이다.</p>
+<div class="spacer"></div>
+<p>\(V_1(t) = 2\pi f_2 L I_0 \sin(2\pi f_2 t)\)에서, 유전체 이동에 따라 전류 진폭 \(I_0\)가 변하므로 \(V_1(t)\)의 진폭도 변한다.</p>
+<div class="spacer"></div>
+<p>\(C = C_2\) (공진) 구간: \(I_0 = V_0/R\)이므로</p>
+<div class="spacer"></div>
+<div class="math-block">\[V_2 = 2\pi f_2 L \times \frac{V_0}{R}\]</div>
+<div class="spacer"></div>
+<p>\(C = C_1\) (비공진) 구간: \(I_0 = I_0'\)이므로</p>
+<div class="spacer"></div>
+<div class="math-block">\[V_2' = 2\pi f_2 L \times I_0'\]</div>
+<div class="spacer"></div>
+<p>그래프는 문제 2-3과 유사하게 1초 단위로 진폭이 변하는 사인파이다. 공진 구간에서 진폭이 크고, 비공진 구간에서 진폭이 작다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>2-5.</strong> 다이오드와 축전기를 지난 출력 전압 \(V_{out}(t)\)</p>
+<div class="spacer"></div>
+<p>다이오드는 한 방향으로만 전류를 통과시키므로, \(V_2(t)\)의 양의 반주기 동안만 축전기 \(C'\)이 충전된다. 축전기는 피크 전압까지 충전되며, 방전이 천천히 일어나므로 출력 전압은 대략 피크 전압 근처를 유지한다(반파 정류 + 평활 회로).</p>
+<div class="spacer"></div>
+<p>0~1초: 공진 상태, \(V_{out} \approx V_2\)(큰 값)으로 빠르게 충전</p>
+<p>1~2초: 비공진, \(V_2'\)가 작아지지만 이전 충전 전압보다 작으면 방전되며 서서히 \(V_2'\)까지 감소</p>
+<p>2~3초: 비공진 유지</p>
+<p>3~4초: 다시 공진, 큰 \(V_2\)로 다시 충전</p>
+<p>4~5초: 비공진, 다시 서서히 감소</p>
+<div class="spacer"></div>
+<p>전체적으로 \(V_{out}(t)\)는 유전체가 \(2\epsilon\) 마디일 때 높은 DC 전압을 유지하고, \(\epsilon\) 마디일 때 감소하는 계단식 파형을 보인다. \(f_2\)가 충분히 크므로 리플은 작고, 주로 1초 단위의 느린 변동이 나타난다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-97</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

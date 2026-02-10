@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-100 | 2018_연세대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-100.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">진자, 열역학, 교류 회로, 양자역학</h2>
+<div class="spacer"></div>
+<p><strong>1.</strong> 진자의 운동과 장력</p>
+<div class="spacer"></div>
+<p>최저점에서의 장력:</p>
+<div class="spacer"></div>
+<p>최저점에서 추는 원운동을 하므로 구심력이 필요하다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[T_{\text{bottom}} - mg = \frac{mv^2}{l}\]</div>
+<div class="spacer"></div>
+<p>에너지 보존에 의해 \(\frac{1}{2}mv^2 = mgl(1-\cos\theta)\)이므로 \(v^2 = 2gl(1-\cos\theta)\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[T_{\text{bottom}} = mg + \frac{m \times 2gl(1-\cos\theta)}{l} = mg(3 - 2\cos\theta)\]</div>
+<div class="spacer"></div>
+<p>최고점(최대 변위)에서의 장력:</p>
+<div class="spacer"></div>
+<p>최고점에서 속도는 0이고, 추는 원호 위에서 중력의 줄 방향 성분과 장력이 균형을 이룬다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[T_{\text{top}} = mg\cos\theta\]</div>
+<div class="spacer"></div>
+<p>비교: \(T_{\text{bottom}} > T_{\text{top}}\)이다. 최저점에서는 구심력 성분이 추가되고, 최고점에서는 중력의 줄 방향 성분만 장력과 균형을 이룬다.</p>
+<div class="spacer"></div>
+<p>\(\theta\)가 작을 때의 알짜힘과 가속도:</p>
+<div class="spacer"></div>
+<p>추에 작용하는 알짜힘은 접선 방향으로 \(F = -mg\sin\theta\)이다. \(\theta\)가 작으면 \(\sin\theta \approx \theta\)이고, 호의 변위 \(x = l\theta\)이므로</p>
+<div class="spacer"></div>
+<div class="math-block">\[F \approx -mg\theta = -\frac{mg}{l}x\]</div>
+<div class="spacer"></div>
+<p>이는 단진동의 복원력 형태(\(F = -kx\), \(k = mg/l\))이다.</p>
+<div class="spacer"></div>
+<p>가속도: \(a = -\frac{g}{l}x\) (진동 중심으로 향하며 변위에 비례)</p>
+<div class="spacer"></div>
+<p>주기:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T = 2\pi\sqrt{\frac{l}{g}}\]</div>
+<div class="spacer"></div>
+<p>주기에 영향을 주는 변인은 실의 길이 \(l\)과 중력가속도 \(g\)이다. 질량 \(m\)과 진폭(작은 경우)은 주기에 영향을 주지 않는다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>2.</strong> 이상 기체의 상태 변화</p>
+<div class="spacer"></div>
+<p>단원자 이상 기체: 내부 에너지 \(U = \frac{3}{2}NkT = \frac{3}{2}PV\)</p>
+<div class="spacer"></div>
+<p>초기 상태: 압력 \(P\), 부피 \(V\), 온도 \(T\)</p>
+<div class="spacer"></div>
+<p><strong>과정 1: 등압 팽창 ($V \to 4V$, 압력 $P$ 일정)</strong></p>
+<div class="spacer"></div>
+<p>\(PV = NkT\)에서 부피가 4배이므로 온도도 4배: \(T_1 = 4T\)</p>
+<div class="spacer"></div>
+<p>내부 에너지 변화: \(\Delta U_1 = \frac{3}{2}P(4V - V) = \frac{9}{2}PV\)</p>
+<div class="spacer"></div>
+<p>기체가 한 일: \(W_1 = P(4V - V) = 3PV\)</p>
+<div class="spacer"></div>
+<p>열역학 제1법칙: \(Q_1 = \Delta U_1 + W_1 = \frac{9}{2}PV + 3PV = \frac{15}{2}PV\) (열 흡수)</p>
+<div class="spacer"></div>
+<p><strong>과정 2: 등적 가압 ($P \to 5P$, 부피 $4V$ 일정)</strong></p>
+<div class="spacer"></div>
+<p>온도: \(T_2 = \frac{5P \times 4V}{Nk} = \frac{20PV}{Nk} = 20T\)</p>
+<div class="spacer"></div>
+<p>내부 에너지 변화: \(\Delta U_2 = \frac{3}{2} \times 4V \times (5P - P) = \frac{3}{2} \times 16PV = 24PV\)</p>
+<div class="spacer"></div>
+<p>기체가 한 일: \(W_2 = 0\) (등적 과정)</p>
+<div class="spacer"></div>
+<p>흡수한 열: \(Q_2 = 24PV\) (열 흡수)</p>
+<div class="spacer"></div>
+<p><strong>과정 3: 등압 압축 ($4V \to 2V$, 압력 $5P$ 일정)</strong></p>
+<div class="spacer"></div>
+<p>온도: \(T_3 = \frac{5P \times 2V}{Nk} = 10T\)</p>
+<div class="spacer"></div>
+<p>내부 에너지 변화: \(\Delta U_3 = \frac{3}{2} \times 5P \times (2V - 4V) = \frac{3}{2} \times (-10PV) = -15PV\)</p>
+<div class="spacer"></div>
+<p>기체가 한 일: \(W_3 = 5P(2V - 4V) = -10PV\) (외부에서 일을 받음)</p>
+<div class="spacer"></div>
+<p>열: \(Q_3 = \Delta U_3 + W_3 = -15PV + (-10PV) = -25PV\) (열 방출)</p>
+<div class="spacer"></div>
+<p><strong>과정 4: 등적 감압 ($5P \to 2.5P$, 부피 $2V$ 일정)</strong></p>
+<div class="spacer"></div>
+<p>온도: \(T_4 = \frac{2.5P \times 2V}{Nk} = 5T\)</p>
+<div class="spacer"></div>
+<p>내부 에너지 변화: \(\Delta U_4 = \frac{3}{2} \times 2V \times (2.5P - 5P) = \frac{3}{2} \times (-5PV) = -7.5PV\)</p>
+<div class="spacer"></div>
+<p>기체가 한 일: \(W_4 = 0\)</p>
+<div class="spacer"></div>
+<p>열: \(Q_4 = -7.5PV\) (열 방출)</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>3.</strong> 교류 회로의 전류</p>
+<div class="spacer"></div>
+<p><strong>코일만 있는 회로:</strong></p>
+<div class="spacer"></div>
+<p>코일의 유도 리액턴스: \(X_L = 2\pi f L\)</p>
+<div class="spacer"></div>
+<p>전류 진폭: \(I_0 = \frac{V_0}{X_L} = \frac{V_0}{2\pi f L}\)</p>
+<div class="spacer"></div>
+<p>전류는 전압보다 위상이 \(\frac{\pi}{2}\) 뒤진다. 주파수가 높을수록 전류 진폭이 감소한다.</p>
+<div class="spacer"></div>
+<p><strong>축전기만 있는 회로:</strong></p>
+<div class="spacer"></div>
+<p>축전기의 용량 리액턴스: \(X_C = \frac{1}{2\pi f C}\)</p>
+<div class="spacer"></div>
+<p>전류 진폭: \(I_0 = \frac{V_0}{X_C} = 2\pi f C V_0\)</p>
+<div class="spacer"></div>
+<p>전류는 전압보다 위상이 \(\frac{\pi}{2}\) 앞선다. 주파수가 높을수록 전류 진폭이 증가한다.</p>
+<div class="spacer"></div>
+<p><strong>RLC 직렬 회로:</strong></p>
+<div class="spacer"></div>
+<p>임피던스: \(Z = \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{R^2 + \left(2\pi f L - \frac{1}{2\pi f C}\right)^2}\)</p>
+<div class="spacer"></div>
+<p>전류 진폭: \(I_0 = \frac{V_0}{Z}\)</p>
+<div class="spacer"></div>
+<p>공진 주파수 \(f_0 = \frac{1}{2\pi\sqrt{LC}}\)에서 \(X_L = X_C\)이므로 \(Z = R\), 전류 최대 \(I_0 = \frac{V_0}{R}\)</p>
+<div class="spacer"></div>
+<p>공진 주파수보다 낮으면 용량성(\(X_C > X_L\)), 높으면 유도성(\(X_L > X_C\)) 특성을 보인다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>4.</strong> 1차원 상자 속 입자의 양자역학</p>
+<div class="spacer"></div>
+<p>파동 함수: \(\psi_n(x) = \sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right)\)</p>
+<div class="spacer"></div>
+<p>확률 밀도: \(|\psi_n(x)|^2 = \frac{2}{L}\sin^2\left(\frac{n\pi x}{L}\right)\)</p>
+<div class="spacer"></div>
+<p><strong>$n = 1$ (가장 낮은 에너지 준위):</strong> 파동 함수는 반파장 정상파. 확률 밀도는 상자 중앙(\(x = L/2\))에서 최대이고 양 끝(\(x = 0, L\))에서 0이다. 입자가 중앙 부근에서 발견될 확률이 가장 높다.</p>
+<div class="spacer"></div>
+<p><strong>$n$이 높은 에너지 준위:</strong> \(n\)개의 배 (antinode)와 \(n+1\)개의 마디가 있다. 확률 밀도는 \(n\)개의 극대를 가지며, 위치에 따른 확률 분포가 더 균일해진다. 마디 위치에서는 입자가 발견될 확률이 0이다.</p>
+<div class="spacer"></div>
+<p><strong>흡수/방출 가능한 에너지 (작은 것부터):</strong></p>
+<div class="spacer"></div>
+<p>에너지 준위: \(E_n = \frac{n^2 h^2}{8mL^2}\), \(E_0 = \frac{h^2}{8mL^2}\)로 놓으면</p>
+<div class="spacer"></div>
+<p>전이 에너지: \(\Delta E = (n_f^2 - n_i^2) E_0\)</p>
+<div class="spacer"></div>
+<p>가능한 전이 에너지를 작은 순으로 나열:</p>
+<div class="spacer"></div>
+<p>1. \(E_2 - E_1 = (4 - 1)E_0 = 3E_0\)</p>
+<p>2. \(E_3 - E_2 = (9 - 4)E_0 = 5E_0\)</p>
+<p>3. \(E_4 - E_3 = (16 - 9)E_0 = 7E_0\)</p>
+<p>4. \(E_3 - E_1 = (9 - 1)E_0 = 8E_0\)</p>
+<p>5. \(E_5 - E_4 = (25 - 16)E_0 = 9E_0\)</p>
+<div class="spacer"></div>
+<p>따라서 처음 5개의 에너지는 \(3E_0, 5E_0, 7E_0, 8E_0, 9E_0\)이다. 여기서 \(E_0 = \frac{h^2}{8mL^2}\)이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-100</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

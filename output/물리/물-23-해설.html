@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-23 | 2022_서울대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-23.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-1. 볼록 렌즈에 의한 물체 a, b의 상</h2>
+<div class="spacer"></div>
+<p>렌즈 방정식: \(\frac{1}{a} + \frac{1}{b} = \frac{1}{f}\)</p>
+<div class="spacer"></div>
+<p>여기서 \(a\)는 물체 거리, \(b\)는 상 거리, \(f = 6\,\text{cm}\)는 초점 거리이다.</p>
+<div class="spacer"></div>
+<p><strong>물체 a ($y$축 방향, 3 cm)</strong></p>
+<div class="spacer"></div>
+<p>물체 a의 시작점은 점 A(렌즈로부터 8 cm)에 있으며, \(y\)축 방향으로 3 cm 길이이다.</p>
+<div class="spacer"></div>
+<p>시작점(점 A)의 물체 거리: \(a = 8\,\text{cm}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{8} + \frac{1}{b} = \frac{1}{6}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{b} = \frac{1}{6} - \frac{1}{8} = \frac{4-3}{24} = \frac{1}{24}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[b = 24\,\text{cm}\]</div>
+<div class="spacer"></div>
+<p>배율: \(m = -\frac{b}{a} = -\frac{24}{8} = -3\)</p>
+<div class="spacer"></div>
+<p>따라서:</p>
+<p>- <strong>시작점 위치</strong>: 렌즈 중심(O)으로부터 \(+x\) 방향 24 cm 지점</p>
+<p>- <strong>상의 크기</strong>: \(|m| \times 3 = 9\,\text{cm}\)</p>
+<p>- <strong>상의 방향</strong>: 배율이 음수이므로 <strong>도립(뒤집힘)</strong></p>
+<p>- <strong>상의 종류</strong>: \(b > 0\)이므로 <strong>실상</strong></p>
+<div class="spacer"></div>
+<p><strong>물체 b ($x$축 방향, 2 cm)</strong></p>
+<div class="spacer"></div>
+<p>물체 b의 시작점도 점 A(8 cm)에 있으며, \(x\)축 방향(\(+x\) 방향)으로 2 cm 길이이다. 따라서 물체 b의 끝점은 렌즈로부터 6 cm 지점(초점)에 있다.</p>
+<div class="spacer"></div>
+<p>시작점(8 cm)의 상 위치: 위에서 구한 대로 \(b_1 = 24\,\text{cm}\)</p>
+<div class="spacer"></div>
+<p>끝점(6 cm, 초점)의 상 위치: 물체가 초점에 있으므로 상은 무한대에 맺힌다 (\(b_2 \to \infty\)).</p>
+<div class="spacer"></div>
+<p>따라서:</p>
+<p>- <strong>시작점 위치</strong>: 렌즈 중심으로부터 \(+x\) 방향 24 cm 지점</p>
+<p>- <strong>상의 크기</strong>: 시작점의 상은 24 cm에, 끝점의 상은 무한대에 맺히므로 상의 길이는 <strong>무한대</strong></p>
+<p>- <strong>상의 방향</strong>: \(+x\) 방향으로 24 cm부터 무한대까지 뻗어나감 (같은 방향, <strong>정립</strong>)</p>
+<p>- <strong>상의 종류</strong>: <strong>실상</strong> (렌즈 반대편에 형성)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-2. 또렷한 상의 한계 물체 좌표</h2>
+<div class="spacer"></div>
+<p>물체가 점 A에 있을 때 스크린(거리 \(b\))에 완벽한 상이 맺힌다. 렌즈 방정식에서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{a} + \frac{1}{b} = \frac{1}{f}\]</div>
+<div class="spacer"></div>
+<p>물체를 점 A에서 \(+x\) 방향으로 \(\Delta a\)만큼 이동하면, 새 물체 거리는 \(a' = a - \Delta a\) (렌즈에 가까워짐)이고, 새 상 거리는:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{b'} = \frac{1}{f} - \frac{1}{a'} = \frac{1}{f} - \frac{1}{a - \Delta a}\]</div>
+<div class="spacer"></div>
+<p>스크린은 여전히 거리 \(b\)에 있으므로, 상은 \(b'\)에 맺히지만 스크린은 \(b\)에 있다. 이 차이 \(\Delta b = b' - b\)로 인해 스크린에는 흐릿한 원형 상이 생긴다.</p>
+<div class="spacer"></div>
+<p>기하학적으로, 원형 상의 지름은:</p>
+<div class="spacer"></div>
+<div class="math-block">\[l_{\text{screen}} = D \cdot \frac{|b' - b|}{b'} = D \cdot \frac{\Delta b}{b'}\]</div>
+<div class="spacer"></div>
+<p>물체가 \(+x\) 방향으로 이동하면 (\(a\)가 감소하면) \(b'\)가 증가하므로 \(b' > b\)이다. 이때 스크린의 원형 상 지름:</p>
+<div class="spacer"></div>
+<div class="math-block">\[l_{\text{screen}} = D \cdot \frac{b' - b}{b'}\]</div>
+<div class="spacer"></div>
+<p>이것이 \(l\) 이하이면 또렷하다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[D \cdot \frac{b' - b}{b'} \leq l\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{b' - b}{b'} \leq \frac{l}{D}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[1 - \frac{b}{b'} \leq \frac{l}{D}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{b}{b'} \geq 1 - \frac{l}{D} = \frac{D - l}{D}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[b' \leq \frac{bD}{D - l}\]</div>
+<div class="spacer"></div>
+<p>렌즈 방정식으로 \(a'\)를 구한다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{a'} = \frac{1}{f} - \frac{1}{b'}\]</div>
+<div class="spacer"></div>
+<p>\(b' = \frac{bD}{D-l}\)일 때:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{a'} = \frac{1}{f} - \frac{D-l}{bD}\]</div>
+<div class="spacer"></div>
+<p>원래 \(\frac{1}{a} = \frac{1}{f} - \frac{1}{b}\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{a'} = \frac{1}{f} - \frac{D-l}{bD} = \frac{1}{f} - \frac{1}{b} + \frac{1}{b} - \frac{D-l}{bD} = \frac{1}{a} + \frac{1}{b} - \frac{D-l}{bD}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{1}{a} + \frac{D - (D-l)}{bD} = \frac{1}{a} + \frac{l}{bD}\]</div>
+<div class="spacer"></div>
+<p>따라서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[a' = \frac{1}{\frac{1}{a} + \frac{l}{bD}} = \frac{abD}{bD + al}\]</div>
+<div class="spacer"></div>
+<p>점 O를 원점으로 할 때, 점 A의 좌표는 \(-a\) (렌즈 왼쪽)이고, 물체의 좌표는 \(-a'\)이다.</p>
+<div class="spacer"></div>
+<p>가장 멀리 떨어진 물체의 좌표:</p>
+<div class="spacer"></div>
+<div class="math-block">\[x = -a' = -\frac{abD}{bD + al}\]</div>
+<div class="spacer"></div>
+<p>점 A로부터의 거리: \(\Delta a = a - a' = a - \frac{abD}{bD + al} = a \cdot \frac{al}{bD + al}= \frac{a^2 l}{bD + al}\)</p>
+<div class="spacer"></div>
+<p>물체의 좌표 (점 O 원점):</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{x = -\frac{abD}{bD + al}}\]</div>
+<div class="spacer"></div>
+<p>\(\frac{1}{a} = \frac{1}{f} - \frac{1}{b}\)이므로 \(a = \frac{bf}{b-f}\)를 대입하면 \(b, f, l, D\)로 표현할 수 있다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[a = \frac{bf}{b - f}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[x = -\frac{\frac{bf}{b-f} \cdot bD}{bD + \frac{bf}{b-f} \cdot l} = -\frac{\frac{b^2fD}{b-f}}{bD + \frac{bfl}{b-f}} = -\frac{\frac{b^2fD}{b-f}}{\frac{bD(b-f) + bfl}{b-f}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= -\frac{b^2fD}{bD(b-f) + bfl} = -\frac{bfD}{D(b-f) + fl} = -\frac{bfD}{bD - fD + fl}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{x = -\frac{bfD}{bD - f(D - l)}}\]</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-3. 현미경의 배율</h2>
+<div class="spacer"></div>
+<p>현미경은 대물 렌즈와 접안 렌즈로 구성된다.</p>
+<div class="spacer"></div>
+<p><strong>대물 렌즈의 배율:</strong></p>
+<div class="spacer"></div>
+<p>그림에서 두 렌즈 사이의 거리가 \(L\)이다. 물체가 대물 렌즈 초점 \(f_o\) 바로 밖에 있고, 첫 번째 상이 접안 렌즈 초점 \(f_e\) 바로 안쪽(오른쪽)에 맺힌다.</p>
+<div class="spacer"></div>
+<p>대물 렌즈의 상 거리: \(b_o \approx L - f_e\)</p>
+<div class="spacer"></div>
+<p>대물 렌즈의 배율:</p>
+<div class="spacer"></div>
+<div class="math-block">\[m_o = -\frac{b_o}{a_o}\]</div>
+<div class="spacer"></div>
+<p>\(a_o \approx f_o\), \(b_o \approx L - f_e\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[m_o \approx -\frac{L - f_e}{f_o}\]</div>
+<div class="spacer"></div>
+<p><strong>접안 렌즈의 배율:</strong></p>
+<div class="spacer"></div>
+<p>첫 번째 상이 접안 렌즈의 초점 거리 \(f_e\) 바로 안쪽에 있으므로, 접안 렌즈는 이를 거리 \(D\)만큼 떨어진 곳에 허상으로 만든다.</p>
+<div class="spacer"></div>
+<p>접안 렌즈에 대해, 상 거리가 \(-(D - L_e)\) (허상이므로 음수, 접안 렌즈에서 상까지의 거리는 \(D - L_e\))이다.</p>
+<div class="spacer"></div>
+<p>접안 렌즈의 배율:</p>
+<div class="spacer"></div>
+<div class="math-block">\[m_e = -\frac{b_e}{a_e}\]</div>
+<div class="spacer"></div>
+<p>여기서 \(b_e = -(D - L_e)\) (허상), \(a_e \approx f_e\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[m_e = -\frac{-(D - L_e)}{f_e} = \frac{D - L_e}{f_e}\]</div>
+<div class="spacer"></div>
+<p><strong>전체 배율:</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{M = m_o \times m_e = -\frac{(L - f_e)(D - L_e)}{f_o f_e}}\]</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-4. 두 볼록 렌즈에 의한 상 관찰</h2>
+<div class="spacer"></div>
+<p>배치: 물체 A → (\(a = 60\,\text{cm}\)) → 렌즈1 → (\(b = 20\,\text{cm}\)) → 렌즈2(지름 \(W = 8\,\text{cm}\)) → (\(c + d = 50\,\text{cm}\)) → 스크린.</p>
+<div class="spacer"></div>
+<p>점 A에서 스크린에 완벽한 상이 맺히는 정합 조건으로 각 렌즈의 초점 거리를 결정한다.</p>
+<div class="spacer"></div>
+<p>\(f_2 = 10\,\text{cm}\)으로 설정:</p>
+<div class="spacer"></div>
+<p>정합 조건에서 렌즈2: \(\frac{1}{a_2} + \frac{1}{c} = \frac{1}{f_2}\), 즉 \(\frac{1}{a_2} + \frac{1}{50} = \frac{1}{10}\) → \(a_2 = 12.5\,\text{cm}\)</p>
+<div class="spacer"></div>
+<p>렌즈1의 상은 렌즈2로부터 왼쪽 12.5 cm, 즉 렌즈1로부터 오른쪽 \(20 - 12.5 = 7.5\,\text{cm}\).</p>
+<div class="spacer"></div>
+<p>\(b_1 = 7.5\,\text{cm}\)</p>
+<div class="spacer"></div>
+<p>첫 번째 렌즈: \(\frac{1}{60} + \frac{1}{7.5} = \frac{1}{f_1}\) → \(\frac{1}{f_1} = \frac{1}{60} + \frac{2}{15} = \frac{1+8}{60} = \frac{9}{60}\) → \(f_1 = \frac{60}{9} = 6.67\,\text{cm}\)</p>
+<div class="spacer"></div>
+<p>물체가 무한대에서 오면: \(b_1' = f_1 = 6.67\,\text{cm}\)</p>
+<div class="spacer"></div>
+<p>렌즈2의 물체 거리: \(a_2' = 20 - 6.67 = 13.33\,\text{cm}\)</p>
+<div class="spacer"></div>
+<p>렌즈2의 상 거리: \(\frac{1}{13.33} + \frac{1}{b_2'} = \frac{1}{10}\) → \(\frac{1}{b_2'} = 0.1 - 0.075 = 0.025\) → \(b_2' = 40\,\text{cm}\)</p>
+<div class="spacer"></div>
+<p>스크린까지 50 cm인데 상이 40 cm에 맺히면, 차이 = 10 cm.</p>
+<div class="spacer"></div>
+<p>원형 상 지름: \(l_{\text{screen}} = W \cdot \frac{50 - 40}{50} = 8 \times \frac{10}{50} = 1.6\,\text{cm}\)</p>
+<div class="spacer"></div>
+<p>이것은 \(l = 0.008\,\text{cm}\)보다 훨씬 크다. 무한대에서 오면 당연히 매우 흐릴 것이다.</p>
+<div class="spacer"></div>
+<p>\(l_{\text{screen}} = l\)이 되는 조건을 구한다. 물체를 \(-x\) 방향 무한대에서 A를 향해 이동시킬 때, 물체가 A에 가까워질수록 상이 또렷해진다. 상의 지름이 \(l\)이 되는 순간의 물체와 A 사이의 거리를 구한다.</p>
+<div class="spacer"></div>
+<p>물체 거리: \(a_1 = 60 + \Delta a\) (A보다 왼쪽으로 \(\Delta a\)만큼)</p>
+<div class="spacer"></div>
+<p>첫 번째 렌즈 상: \(\frac{1}{60 + \Delta a} + \frac{1}{b_1} = \frac{1}{f_1}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[b_1 = \frac{f_1(60 + \Delta a)}{60 + \Delta a - f_1}\]</div>
+<div class="spacer"></div>
+<p>\(f_1 = 60/9\,\text{cm}\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[b_1 = \frac{\frac{60}{9}(60 + \Delta a)}{60 + \Delta a - \frac{60}{9}} = \frac{\frac{60}{9}(60 + \Delta a)}{\frac{9(60 + \Delta a) - 60}{9}} = \frac{60(60 + \Delta a)}{9(60 + \Delta a) - 60}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{60(60 + \Delta a)}{540 + 9\Delta a - 60} = \frac{60(60 + \Delta a)}{480 + 9\Delta a}\]</div>
+<div class="spacer"></div>
+<p>\(\Delta a = 0\)일 때: \(b_1 = \frac{60 \times 60}{480} = 7.5\,\text{cm}\) (확인)</p>
+<div class="spacer"></div>
+<p>두 번째 렌즈 물체 거리: \(a_2 = 20 - b_1\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[a_2 = 20 - \frac{60(60 + \Delta a)}{480 + 9\Delta a} = \frac{20(480 + 9\Delta a) - 60(60 + \Delta a)}{480 + 9\Delta a}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{9600 + 180\Delta a - 3600 - 60\Delta a}{480 + 9\Delta a} = \frac{6000 + 120\Delta a}{480 + 9\Delta a}\]</div>
+<div class="spacer"></div>
+<p>\(\Delta a = 0\): \(a_2 = 6000/480 = 12.5\) (확인)</p>
+<div class="spacer"></div>
+<p>두 번째 렌즈 상 거리: \(\frac{1}{b_2} = \frac{1}{f_2} - \frac{1}{a_2} = \frac{1}{10} - \frac{480 + 9\Delta a}{6000 + 120\Delta a}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{(6000 + 120\Delta a) - 10(480 + 9\Delta a)}{10(6000 + 120\Delta a)} = \frac{6000 + 120\Delta a - 4800 - 90\Delta a}{10(6000 + 120\Delta a)}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{1200 + 30\Delta a}{10(6000 + 120\Delta a)} = \frac{30(40 + \Delta a)}{10 \cdot 120(50 + \Delta a)} = \frac{40 + \Delta a}{4(50 + \Delta a) \cdot 10}\]</div>
+<div class="spacer"></div>
+<p>정리하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[b_2 = \frac{10(6000 + 120\Delta a)}{1200 + 30\Delta a} = \frac{10 \cdot 120(50 + \Delta a)}{30(40 + \Delta a)} = \frac{40(50 + \Delta a)}{40 + \Delta a}\]</div>
+<div class="spacer"></div>
+<p>\(\Delta a = 0\): \(b_2 = \frac{40 \times 50}{40} = 50\) (확인, 스크린에 정확히 맺힘)</p>
+<div class="spacer"></div>
+<p>스크린은 렌즈2로부터 \(50\,\text{cm}\)에 위치한다.</p>
+<div class="spacer"></div>
+<p>원형 상 지름: \(l_{\text{screen}} = W \cdot \frac{|b_2 - 50|}{b_2}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[b_2 - 50 = \frac{40(50 + \Delta a)}{40 + \Delta a} - 50 = \frac{40(50 + \Delta a) - 50(40 + \Delta a)}{40 + \Delta a} = \frac{2000 + 40\Delta a - 2000 - 50\Delta a}{40 + \Delta a}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{-10\Delta a}{40 + \Delta a}\]</div>
+<div class="spacer"></div>
+<p>\(b_2 > 50\) 또는 \(b_2 < 50\): 물체가 A보다 멀면 (\(\Delta a > 0\)), \(b_2 - 50 < 0\)이므로 \(b_2 < 50\). 상이 스크린보다 가까이 맺힌다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[|b_2 - 50| = \frac{10\Delta a}{40 + \Delta a}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[l_{\text{screen}} = W \cdot \frac{10\Delta a}{(40 + \Delta a) \cdot b_2} = 8 \cdot \frac{10\Delta a}{(40 + \Delta a) \cdot \frac{40(50 + \Delta a)}{40 + \Delta a}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= 8 \cdot \frac{10\Delta a(40 + \Delta a)}{(40 + \Delta a) \cdot 40(50 + \Delta a)} = 8 \cdot \frac{10\Delta a}{40(50 + \Delta a)} = \frac{2\Delta a}{50 + \Delta a}\]</div>
+<div class="spacer"></div>
+<p>\(l_{\text{screen}} = l = 8 \times 10^{-3}\,\text{cm}\)로 놓으면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{2\Delta a}{50 + \Delta a} = 8 \times 10^{-3}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[2\Delta a = 8 \times 10^{-3}(50 + \Delta a) = 0.4 + 8 \times 10^{-3}\Delta a\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[(2 - 0.008)\Delta a = 0.4\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[1.992\Delta a = 0.4\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta a = \frac{0.4}{1.992} \approx 0.2\,\text{cm}\]</div>
+<div class="spacer"></div>
+<p>근사: \(\Delta a \ll 50\)이므로 \(50 + \Delta a \approx 50\):</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta a \approx \frac{0.008 \times 50}{2} = 0.2\,\text{cm}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\Delta a \approx 0.2\,\text{cm}}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-23</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-114 | 2015_UNIST_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-114.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[1차] 공기 저항이 속력에 비례하는 낙하 운동</h2>
+<div class="spacer"></div>
+<p>물체에 작용하는 힘:</p>
+<p>- 중력: \(mg\) (아래 방향)</p>
+<p>- 공기 저항: \(-bv\) (위 방향, \(b\)는 비례상수, \(v\)는 속력)</p>
+<p>- 알짜힘: \(F = mg - bv\)</p>
+<div class="spacer"></div>
+<p>운동 방정식: \(ma = mg - bv\)</p>
+<div class="spacer"></div>
+<p>초기(\(t=0\)): \(v=0\)이므로 공기 저항\(=0\), 가속도 \(a=g\) (최대)</p>
+<div class="spacer"></div>
+<p>시간이 지남에 따라:</p>
+<p>- 속력 \(v\)가 증가하면 공기 저항 \(bv\)도 증가</p>
+<p>- 알짜힘 (\(mg - bv\))가 감소하므로 가속도도 감소</p>
+<p>- 속력은 계속 증가하지만 증가율(가속도)은 점점 줄어듦</p>
+<div class="spacer"></div>
+<p>종단 속도(terminal velocity):</p>
+<p>- 충분한 시간이 지나면 \(mg = bv\)가 되어 알짜힘\(=0\), 가속도\(=0\)</p>
+<p>- 이때의 속도가 종단 속도: \(v_t = mg/b\)</p>
+<p>- 이후 물체는 등속 운동</p>
+<div class="spacer"></div>
+<p>정리:</p>
+<p>- 힘: 시간에 따라 알짜힘이 \(mg\)에서 \(0\)으로 감소</p>
+<p>- 가속도: \(g\)에서 \(0\)으로 감소</p>
+<p>- 속도: \(0\)에서 \(mg/b\)(종단 속도)로 증가하며 수렴</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[2차] 균일한 자기장 속 대전 입자의 운동</h2>
+<div class="spacer"></div>
+<p>자기력(로렌츠 힘): \(F = qv \times B\) (크기: \(F = qvB \sin\theta\))</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 진입 방향이 자기장과 나란한 경우:</p>
+<p>- \(\theta = 0\)이므로 \(\sin(0) = 0\)</p>
+<p>- 자기력 \(F = qvB \times 0 = 0\)</p>
+<p>- 대전 입자는 힘을 받지 않으므로 직선 등속 운동을 계속함</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 진입 방향이 자기장에 수직인 경우:</p>
+<p>- \(\theta = 90°\)이므로 \(\sin(90°) = 1\)</p>
+<p>- 자기력 \(F = qvB\) (최대)</p>
+<p>- 힘의 방향: 속도와 자기장 모두에 수직 (오른손 법칙 적용)</p>
+<p>- 자기력은 항상 속도에 수직이므로 속력은 변하지 않음</p>
+<p>- 속력이 일정하고 힘이 항상 속도에 수직 \(\rightarrow\) 등속 원운동</p>
+<p>- 원운동 반지름: \(r = mv/(qB)\) (구심력 = 자기력에서 유도)</p>
+<p>- 운동 궤적: 원 (등속 원운동)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-114</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

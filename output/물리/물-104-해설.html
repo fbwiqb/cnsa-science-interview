@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-104 | 2017_UNIST_물리학_해설3</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-104.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 3</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[문항 D] 금속 원형디스크의 완전 비탄성 충돌과 전하</h2>
+<div class="spacer"></div>
+<p>조건: 마찰 없는 평면, 크기와 질량(\(m\)) 동일, 동일한 속력(\(v\))으로 서로를 향해 이동. 하나는 (+) 대전, 다른 하나는 대전되지 않은 금속.</p>
+<div class="spacer"></div>
+<p><strong>1. 두 금속 원형디스크의 완전 비탄성 충돌:</strong></p>
+<div class="spacer"></div>
+<p>운동량 보존:</p>
+<p>- 디스크1: \(mv\) (오른쪽), 디스크2: \(-mv\) (왼쪽)</p>
+<p>- 총 운동량 \(= mv + (-mv) = 0\)</p>
+<p>- 완전 비탄성 충돌 후 두 디스크는 합쳐져 정지 (속도 = 0)</p>
+<div class="spacer"></div>
+<p>전하 분포:</p>
+<p>- 충돌 전: (+) 대전 금속이 대전되지 않은 금속에 접근</p>
+<p>\(\rightarrow\) 정전기 유도: 대전되지 않은 금속의 가까운 쪽에 (-) 전하, 먼 쪽에 (+) 전하가 유도됨</p>
+<p>- 충돌 후(접촉): 두 금속이 합쳐져 전하가 재분배</p>
+<p>\(\rightarrow\) 총 전하 \(Q\)가 합쳐진 물체 전체에 균일하게 분포</p>
+<p>- 결론: 충돌 후 두 디스크는 정지 상태, 전하 \(Q/2\)씩 공유</p>
+<div class="spacer"></div>
+<p><strong>2. (+) 대전 금속 디스크와 대전되지 않은 절연체 디스크:</strong></p>
+<div class="spacer"></div>
+<p>운동량 보존은 동일:</p>
+<p>- 총 운동량 \(= 0\) \(\rightarrow\) 충돌 후 정지</p>
+<div class="spacer"></div>
+<p>전하 분포의 차이:</p>
+<p>- 절연체는 전하가 자유롭게 이동하지 못함</p>
+<p>- 충돌 시 접촉하더라도 금속의 전하가 절연체로 자유롭게 이동하지 않음</p>
+<p>- 대신 절연체에는 유전 분극이 발생: 분자 수준에서 전하 분포가 약간 치우침 (분자 내 전하 편극)</p>
+<p>- 충돌 후: 금속 디스크에는 대부분의 (+) 전하가 남아있고, 절연체 디스크는 표면에 유전 분극만 존재</p>
+<p>- 결론: 충돌 후 정지하지만, 전하 분포는 금속-금속 경우와 다름. 금속에 대부분의 전하가 남아 있음</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-104</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

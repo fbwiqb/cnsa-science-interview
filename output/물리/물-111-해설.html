@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-111 | 2016_서울대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-111.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">자기장 속 반원형 도체판의 운동과 전자기 현상</h2>
+<div class="spacer"></div>
+<p><strong>(2-1)</strong> 금속 막대에 흐르는 초기 전류</p>
+<div class="spacer"></div>
+<p>물체가 \(+x\) 방향으로 속력 \(v\)로 움직일 때, 도체판 내의 자유 전하들도 함께 \(+x\) 방향으로 운동한다. 자기장 \(\vec{B} = B\hat{z}\) (\(+z\) 방향)에서 \(+x\) 방향으로 속력 \(v\)로 운동하는 양전하에 작용하는 로렌츠 힘:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\vec{F} = q\vec{v} \times \vec{B} = qvB(\hat{x} \times \hat{z}) = -qvB\hat{y}\]</div>
+<div class="spacer"></div>
+<p>즉, 양전하는 \(-y\) 방향으로 힘을 받는다. 반원형 도체판을 위에서 보면 두 판이 \(y\) 방향으로 간격 \(d\)만큼 떨어져 있으므로, 전하가 한쪽 판에서 금속 막대를 통해 다른 판으로 이동하게 된다.</p>
+<div class="spacer"></div>
+<p>유도 기전력의 크기: 각 도체판의 지름 \(D\)를 가로질러 발생하는 기전력을 고려한다. 반원형 도체판에서 유효 기전력은 지름 방향으로 발생한다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\mathcal{E} = BvD\]</div>
+<div class="spacer"></div>
+<p>이 기전력이 세 개의 금속 막대(아래 양 꼭짓점 2개 + 꼭대기 1개 = 총 3개)에 병렬로 연결된 회로를 구동한다. 세 막대의 병렬 합성 저항:</p>
+<div class="spacer"></div>
+<div class="math-block">\[R_{\text{total}} = \frac{R}{3}\]</div>
+<div class="spacer"></div>
+<p>각 금속 막대에 흐르는 초기 전류:</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_{\text{total}} = \frac{\mathcal{E}}{R_{\text{total}}} = \frac{3BvD}{R}\]</div>
+<div class="spacer"></div>
+<p>대칭성에 의해 각 막대에 균등하게 흐르므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{I_{\text{each}} = \frac{BvD}{R}}\]</div>
+<div class="spacer"></div>
+<p>전류의 방향: 양전하가 \(-y\) 방향으로 힘을 받으므로, 전류는 \(-y\) 방향으로 흐른다 (즉, 뒤쪽 도체판에서 앞쪽 도체판 방향). 따라서 각 금속 막대에서 전류는 뒤쪽 판(\(-y\))에서 앞쪽 판(\(+y\)) 방향으로 흐른다. (실제 전자의 이동은 반대 방향이다.)</p>
+<div class="spacer"></div>
+<p><strong>(2-2)</strong> 충분히 오랜 시간 후의 전류, 전하량, 외부 힘</p>
+<div class="spacer"></div>
+<p>충분히 오랜 시간이 지나면, 두 도체판에 전하가 축적되어 도체판 사이에 전기장이 형성된다. 이 전기장에 의한 전기력이 로렌츠 힘과 평형을 이루면 전류가 멈춘다.</p>
+<div class="spacer"></div>
+<p><strong>전류:</strong> 평형 상태에서 도체판 사이의 전기장 \(E\)에 의한 힘이 로렌츠 힘과 상쇄되므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[qE = qvB\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[E = vB\]</div>
+<div class="spacer"></div>
+<p>따라서 <strong>전류는 $0$</strong>이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{I = 0}\]</div>
+<div class="spacer"></div>
+<p><strong>대전된 전하량:</strong> 두 도체판은 평행판 축전기와 유사하게 작용한다. 반원형 도체판의 면적은 \(\frac{1}{2}\pi\left(\frac{D}{2}\right)^2 = \frac{\pi D^2}{8}\)이다.</p>
+<div class="spacer"></div>
+<p>평행판 축전기의 전기용량:</p>
+<div class="spacer"></div>
+<div class="math-block">\[C = \varepsilon_0 \frac{S}{d} = \varepsilon_0 \frac{\pi D^2}{8d}\]</div>
+<div class="spacer"></div>
+<p>도체판 사이의 전위차: \(V = Ed = vBd\)</p>
+<div class="spacer"></div>
+<p>대전된 전하량:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{Q = CV = \frac{\varepsilon_0 \pi D^2 vB}{8}}\]</div>
+<div class="spacer"></div>
+<p><strong>외부 힘:</strong> 전류가 흐르지 않으므로 자기장에 의한 제동력은 없다. 또한 축전기에 저장된 에너지는 일정하므로 추가적인 일이 필요 없다. 따라서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{F_{\text{ext}} = 0}\]</div>
+<div class="spacer"></div>
+<p><strong>(2-3)</strong> 탄성 금속 막대의 경우 (탄성계수 \(k\))</p>
+<div class="spacer"></div>
+<p>금속 막대가 탄성계수 \(k\)를 가지면, 두 도체판 사이에 쿨롱 인력이 작용하여 판 간격이 줄어든다. 동시에 로렌츠 힘에 의해 전하 분리가 일어나 전기장이 형성된다.</p>
+<div class="spacer"></div>
+<p>평형 상태에서:</p>
+<p>- 로렌츠 힘 = 전기력: \(vB = E\) (도체판 내부에서, 전류 \(= 0\))</p>
+<p>- 전기장: \(E = \frac{\sigma}{\varepsilon_0} = \frac{Q}{\varepsilon_0 S}\) (여기서 \(S = \frac{\pi D^2}{8}\))</p>
+<p>- 축전기 양 판 사이 인력: \(F_{\text{elec}} = \frac{Q^2}{2\varepsilon_0 S}\)</p>
+<p>- 용수철 복원력: \(F_{\text{spring}} = k(d - d')\) (여기서 \(d'\)는 새로운 간격)</p>
+<div class="spacer"></div>
+<p>도체판 사이의 전위차: \(V = Ed' = vBd'\)</p>
+<div class="spacer"></div>
+<p>전하량: \(Q = CV = \varepsilon_0 \frac{S}{d'} \cdot vBd' = \varepsilon_0 S vB = \frac{\varepsilon_0 \pi D^2 vB}{8}\)</p>
+<div class="spacer"></div>
+<p>흥미롭게도 전하량은 간격 \(d'\)에 무관하다(전기장이 \(E = vB\)로 고정되므로).</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{Q = \frac{\varepsilon_0 \pi D^2 vB}{8}}\]</div>
+<div class="spacer"></div>
+<p>두 판 사이의 인력:</p>
+<div class="spacer"></div>
+<div class="math-block">\[F_{\text{elec}} = \frac{Q^2}{2\varepsilon_0 S} = \frac{Q E}{2} = \frac{\varepsilon_0 S (vB)^2}{2} = \frac{\varepsilon_0 \pi D^2 v^2 B^2}{16}\]</div>
+<div class="spacer"></div>
+<p>각 금속 막대는 \(\frac{1}{3}\)의 힘을 분담하므로, 3개의 막대 전체에 대한 평형:</p>
+<div class="spacer"></div>
+<div class="math-block">\[k(d - d') = F_{\text{elec}} = \frac{\varepsilon_0 \pi D^2 v^2 B^2}{16}\]</div>
+<div class="spacer"></div>
+<p>(여기서 \(k\)는 3개의 막대 전체의 합산 탄성계수. 각 막대의 탄성계수가 \(k\)라면 병렬이므로 합산은 \(3k\)이다.)</p>
+<div class="spacer"></div>
+<p>3개의 막대가 병렬로 연결되어 있으므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[3k(d - d') = \frac{\varepsilon_0 \pi D^2 v^2 B^2}{16}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{d' = d - \frac{\varepsilon_0 \pi D^2 v^2 B^2}{48k}}\]</div>
+<div class="spacer"></div>
+<p><strong>(2-4)</strong> 절연이 손상되어 접지된 경우</p>
+<div class="spacer"></div>
+<p>두 도체판이 지면과 전기적으로 연결(접지)되면, 도체판에 축적된 전하가 지면으로 빠져나갈 수 있다. 따라서 도체판 사이에 전하가 축적되어도 지면을 통해 방전되므로, 전기장이 로렌츠 힘을 상쇄할 수 없다.</p>
+<div class="spacer"></div>
+<p><strong>전하량:</strong></p>
+<div class="spacer"></div>
+<p>접지된 상태에서 로렌츠 힘에 의해 분리된 전하는 지면을 통해 순환한다. 정상 상태에서 두 도체판 사이에 전위차가 형성되지 않으므로:</p>
+<div class="spacer"></div>
+<p>뒤쪽 판(\(-y\) 방향)에는 양전하가, 앞쪽 판(\(+y\) 방향)에는 음전하가 유도되지만, 접지에 의해 전하가 계속 빠져나간다. 정상 상태에서는 전위차가 \(0\)이 되어야 하므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{Q = 0 \text{ (각 판의 대전 전하량)}}\]</div>
+<div class="spacer"></div>
+<p><strong>전류:</strong></p>
+<div class="spacer"></div>
+<p>접지 경로를 통해 전류가 순환한다. 도체판 사이에 전기장이 없으므로(\(V = 0\), 접지), 로렌츠 힘에 의한 기전력이 온전히 금속 막대에 전류를 흘린다.</p>
+<div class="spacer"></div>
+<p>기전력: \(\mathcal{E} = BvD\)</p>
+<div class="spacer"></div>
+<p>3개의 금속 막대가 병렬: 합성 저항 \(\frac{R}{3}\)</p>
+<div class="spacer"></div>
+<p>총 전류: \(I_{\text{total}} = \frac{3BvD}{R}\)</p>
+<div class="spacer"></div>
+<p>각 금속 막대에 흐르는 전류:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{I_{\text{each}} = \frac{BvD}{R}}\]</div>
+<div class="spacer"></div>
+<p>이는 초기 전류(2-1)와 동일한 값이지만, 이번에는 정상 상태에서 지속적으로 흐른다.</p>
+<div class="spacer"></div>
+<p><strong>외부 힘:</strong></p>
+<div class="spacer"></div>
+<p>전류가 지속적으로 흐르므로, 전류가 흐르는 도체판이 자기장에서 받는 힘을 외부 힘으로 상쇄해야 한다. 전류가 흐르는 도체(길이 \(D\))가 자기장 \(B\) 속에서 받는 힘:</p>
+<div class="spacer"></div>
+<div class="math-block">\[F = BID\]</div>
+<div class="spacer"></div>
+<p>총 전류 \(I_{\text{total}} = \frac{3BvD}{R}\)이 도체판을 통해 흐르므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[F_{\text{ext}} = BI_{\text{total}}D = B \cdot \frac{3BvD}{R} \cdot D = \frac{3B^2D^2v}{R}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{F_{\text{ext}} = \frac{3B^2D^2v}{R}}\]</div>
+<div class="spacer"></div>
+<p>이 힘은 운동 방향(\(+x\))으로 작용해야 등속을 유지할 수 있다. 이 외부 힘이 공급하는 에너지(일률 \(= F_{\text{ext}} \cdot v\))는 금속 막대의 저항에서 열로 소산된다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-111</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

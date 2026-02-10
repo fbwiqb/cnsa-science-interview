@@ -1,0 +1,29 @@
+# Source PDFs (root level only)
+/물리/
+/화학/
+/생물/
+
+# Pipeline tools
+/scripts/
+/테스트/
+/docs/
+/학교 로고 모음/
+
+# Root-level temp files
+/CLAUDE.md
+nul
+/*.py
+/*.txt
+/*.json
+
+# Data folder: only keep images
+data/**/*.md
+data/**/*.json
+data/**/*.txt
+data/*.json
+data/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

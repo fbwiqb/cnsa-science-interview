@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-109 | 2017_연세대미래_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-109.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">역학: 힘과 운동, 마찰, 원운동</h2>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-1. 세 물체 A, B, C의 연결 운동</h2>
+<div class="spacer"></div>
+<p><strong>(가)</strong> 마찰력 무시 시 가속도와 장력</p>
+<div class="spacer"></div>
+<p>A(1 kg)가 한쪽에, C(4 kg)가 반대쪽에 매달려 있고, B(5 kg)는 수평면 위에 있다. C가 더 무거우므로 C가 내려가고 A가 올라가는 방향으로 운동한다.</p>
+<div class="spacer"></div>
+<p>전체 계에 대한 운동방정식:</p>
+<div class="spacer"></div>
+<div class="math-block">\[m_C g - m_A g = (m_A + m_B + m_C)a\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[a = \frac{(m_C - m_A)g}{m_A + m_B + m_C} = \frac{(4 - 1) \times 10}{1 + 5 + 4} = \frac{30}{10} = 3 \text{ m/s}^2\]</div>
+<div class="spacer"></div>
+<p>A 쪽 줄의 장력 \(T_1\) (A에 대한 운동방정식):</p>
+<div class="spacer"></div>
+<div class="math-block">\[T_1 - m_A g = m_A a\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[T_1 = m_A(g + a) = 1 \times (10 + 3) = 13 \text{ N}\]</div>
+<div class="spacer"></div>
+<p>C 쪽 줄의 장력 \(T_2\) (C에 대한 운동방정식):</p>
+<div class="spacer"></div>
+<div class="math-block">\[m_C g - T_2 = m_C a\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[T_2 = m_C(g - a) = 4 \times (10 - 3) = 28 \text{ N}\]</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(나)</strong> 역학적 에너지 보존 증명</p>
+<div class="spacer"></div>
+<p>\(\Delta t\) 시간 동안 세 물체가 거리 \(s = \frac{1}{2}a(\Delta t)^2\)만큼 이동한다고 하자(초기 정지 상태에서).</p>
+<div class="spacer"></div>
+<p>시간 \(t\)에서의 속력: \(v = at\)</p>
+<div class="spacer"></div>
+<p>운동에너지의 합:</p>
+<div class="spacer"></div>
+<div class="math-block">\[K = \frac{1}{2}(m_A + m_B + m_C)v^2 = \frac{1}{2} \times 10 \times v^2 = 5v^2\]</div>
+<div class="spacer"></div>
+<p>위치에너지의 변화: C는 \(s\)만큼 내려가고 A는 \(s\)만큼 올라간다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta U = m_A g s - m_C g s = (m_A - m_C)gs = (1 - 4) \times 10 \times s = -30s\]</div>
+<div class="spacer"></div>
+<p>(위치에너지가 감소)</p>
+<div class="spacer"></div>
+<p>역학적 에너지 보존: \(K + \Delta U = 0\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[5v^2 - 30s = 0\]</div>
+<div class="spacer"></div>
+<p>\(v^2 = 2as = 2 \times 3 \times s = 6s\)이므로</p>
+<div class="spacer"></div>
+<div class="math-block">\[5 \times 6s - 30s = 30s - 30s = 0 \quad \checkmark\]</div>
+<div class="spacer"></div>
+<p>따라서 역학적 에너지가 보존된다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(다)</strong> 마찰이 있을 때 B에 작용하는 마찰력</p>
+<div class="spacer"></div>
+<p>\(\mu_s = 1\), \(\mu_k = 0.5\)</p>
+<div class="spacer"></div>
+<p>B의 수직항력: \(N = m_B g = 5 \times 10 = 50\) N</p>
+<div class="spacer"></div>
+<p>최대 정지 마찰력: \(f_{s,\max} = \mu_s N = 1 \times 50 = 50\) N</p>
+<div class="spacer"></div>
+<p>마찰 없이 B에 작용하는 알짜 외력(줄이 당기는 힘의 차이): \(T_2 - T_1\)</p>
+<div class="spacer"></div>
+<p>그런데 정지 상태에서 세 물체가 모두 정지해 있을 때, A와 C에 의한 줄의 장력 차이를 보면:</p>
+<div class="spacer"></div>
+<p>A 쪽: \(T_1 = m_A g = 10\) N</p>
+<p>C 쪽: \(T_2 = m_C g = 40\) N</p>
+<div class="spacer"></div>
+<p>B에 작용하는 순 외력: \(T_2 - T_1 = 40 - 10 = 30\) N</p>
+<div class="spacer"></div>
+<p>이 값이 최대 정지 마찰력(50 N)보다 작으므로 B는 움직이지 않는다.</p>
+<div class="spacer"></div>
+<p>따라서 B에 작용하는 정지 마찰력은 \(f = 30\) N이다(C 방향의 반대, 즉 A 방향으로 작용).</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(라)</strong> C에 추가 질량과 운동</p>
+<div class="spacer"></div>
+<p>B가 움직이려면 순 외력이 최대 정지 마찰력을 초과해야 한다.</p>
+<div class="spacer"></div>
+<p>C에 추가 질량 \(\Delta m\)을 붙이면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[(m_C + \Delta m)g - m_A g > \mu_s m_B g\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[(4 + \Delta m) \times 10 - 10 > 50\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[40 + 10\Delta m - 10 > 50\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[10\Delta m > 20\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta m > 2 \text{ kg}\]</div>
+<div class="spacer"></div>
+<p>따라서 2 kg을 초과하는 질량을 추가해야 한다. 정확히 2 kg을 추가하면 균형이므로, 2 kg보다 큰 질량이 필요하다.</p>
+<div class="spacer"></div>
+<p>\(\Delta m = 2\) kg을 초과하여 움직이기 시작하면 운동 마찰 적용. \(\Delta m \to 2\) kg에서의 운동을 분석한다(약간 초과한 경우):</p>
+<div class="spacer"></div>
+<p>\(m_C' = 6\) kg으로 놓으면 (최소 조건), 움직이기 시작한 후:</p>
+<div class="spacer"></div>
+<div class="math-block">\[a = \frac{m_C' g - m_A g - \mu_k m_B g}{m_A + m_B + m_C'}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{6 \times 10 - 1 \times 10 - 0.5 \times 5 \times 10}{1 + 5 + 6}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{60 - 10 - 25}{12} = \frac{25}{12} \approx 2.08 \text{ m/s}^2\]</div>
+<div class="spacer"></div>
+<p>A 쪽 장력:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T_1 = m_A(g + a) = 1 \times (10 + 2.08) = 12.08 \text{ N}\]</div>
+<div class="spacer"></div>
+<p>C 쪽 장력:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T_2 = m_C'(g - a) = 6 \times (10 - 2.08) = 47.5 \text{ N}\]</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-2. 빗면 위의 두 물체 연결 운동</h2>
+<div class="spacer"></div>
+<p>\(\theta = 30°\), \(\mu_s = 0.5\), \(\mu_k = 0.4\), \(g = 10\) m/s\(^2\)</p>
+<div class="spacer"></div>
+<p><strong>(가)</strong> \(m_1 = 0.4\) kg, \(m_2 = 1\) kg</p>
+<div class="spacer"></div>
+<p>\(m_1\)에 의한 장력 방향 힘: \(m_1 g = 4\) N (아래로)</p>
+<p>\(m_2\)의 빗면 방향 중력 성분: \(m_2 g \sin 30° = 5\) N (아래로)</p>
+<p>\(m_2\)의 수직항력: \(N = m_2 g \cos 30° = 1 \times 10 \times 0.866 = 8.66\) N</p>
+<p>최대 정지 마찰력: \(f_s = \mu_s N = 0.5 \times 8.66 = 4.33\) N</p>
+<div class="spacer"></div>
+<p>\(m_2\)가 빗면 아래로 내려가려 하고, \(m_1\)이 올라가려 하는 방향을 가정한다:</p>
+<div class="spacer"></div>
+<p>순 구동력: \(m_2 g \sin 30° - m_1 g = 5 - 4 = 1\) N</p>
+<div class="spacer"></div>
+<p>이 값이 최대 정지 마찰력(4.33 N)보다 작으므로, 물체들은 움직이지 않는다.</p>
+<div class="spacer"></div>
+<p>반대로 \(m_1\)이 내려가려 하는 경우: \(m_1 g - m_2 g \sin 30° = 4 - 5 = -1\) N (불가능)</p>
+<div class="spacer"></div>
+<p>따라서 <strong>두 물체는 정지 상태를 유지</strong>한다. 가속도 \(a = 0\), 장력 \(T = m_1 g = 4\) N (정지 상태에서 \(m_1\)의 무게와 평형)</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(나)</strong> \(m_1 = 2\) kg, \(m_2 = 1\) kg</p>
+<div class="spacer"></div>
+<p>\(m_1 g = 20\) N, \(m_2 g \sin 30° = 5\) N</p>
+<div class="spacer"></div>
+<p>\(m_1\)이 내려가고 \(m_2\)가 빗면을 올라가는 방향이다.</p>
+<div class="spacer"></div>
+<p>순 구동력: \(20 - 5 = 15\) N</p>
+<p>최대 정지 마찰력: 4.33 N (빗면 올라가는 방향 반대)</p>
+<div class="spacer"></div>
+<p>\(15 > 4.33\)이므로 물체가 움직인다.</p>
+<div class="spacer"></div>
+<p>운동 마찰력: \(f_k = \mu_k N = 0.4 \times 8.66 = 3.46\) N (빗면 아래 방향, 운동 반대)</p>
+<div class="spacer"></div>
+<div class="math-block">\[m_1 g - m_2 g \sin 30° - f_k = (m_1 + m_2)a\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[20 - 5 - 3.46 = 3 \times a\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[a = \frac{11.54}{3} = 3.85 \text{ m/s}^2\]</div>
+<div class="spacer"></div>
+<p>\(m_1\)은 아래로, \(m_2\)는 빗면 위로 운동한다.</p>
+<div class="spacer"></div>
+<p>장력: \(T = m_1(g - a) = 2(10 - 3.85) = 12.3\) N</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(다)</strong> \(m_1 = 0.1\) kg, \(m_2 = 2\) kg</p>
+<div class="spacer"></div>
+<p>\(m_1 g = 1\) N, \(m_2 g \sin 30° = 10\) N</p>
+<div class="spacer"></div>
+<p>\(m_2\)가 빗면을 내려가고 \(m_1\)이 올라가는 방향이다.</p>
+<div class="spacer"></div>
+<p>순 구동력: \(10 - 1 = 9\) N</p>
+<p>\(N = m_2 g \cos 30° = 2 \times 10 \times 0.866 = 17.32\) N</p>
+<p>최대 정지 마찰력: \(\mu_s N = 0.5 \times 17.32 = 8.66\) N</p>
+<div class="spacer"></div>
+<p>\(9 > 8.66\)이므로 물체가 움직인다.</p>
+<div class="spacer"></div>
+<p>운동 마찰력: \(f_k = 0.4 \times 17.32 = 6.93\) N (빗면 위 방향, 운동 반대)</p>
+<div class="spacer"></div>
+<div class="math-block">\[m_2 g \sin 30° - m_1 g - f_k = (m_1 + m_2)a\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[10 - 1 - 6.93 = 2.1 \times a\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[a = \frac{2.07}{2.1} = 0.986 \text{ m/s}^2 \approx 0.99 \text{ m/s}^2\]</div>
+<div class="spacer"></div>
+<p>\(m_2\)는 빗면 아래로, \(m_1\)은 위로 운동한다.</p>
+<div class="spacer"></div>
+<p>장력: \(T = m_1(g + a) = 0.1 \times (10 + 0.99) = 1.1\) N</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-3. 나무못이 있는 진자 운동</h2>
+<div class="spacer"></div>
+<p><strong>(가)</strong> 처음 높이까지 올라감 증명과 \(\cos\phi\)</p>
+<div class="spacer"></div>
+<p>처음 출발점 높이가 나무못보다 낮다. 에너지 보존에 의해, 마찰이 없으므로 추는 반대쪽에서도 같은 높이까지 올라간다.</p>
+<div class="spacer"></div>
+<p>처음 출발점의 높이(최저점 기준): \(h = L(1 - \cos\theta)\)</p>
+<div class="spacer"></div>
+<p>실이 나무못에 걸린 후 진자의 유효 길이는 \(L' = L - x\)이다. 추가 각도 \(\phi\)만큼 올라가면:</p>
+<div class="spacer"></div>
+<p>높이: \(h' = (L - x)(1 - \cos\phi)\)</p>
+<div class="spacer"></div>
+<p>에너지 보존: \(h = h'\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[L(1 - \cos\theta) = (L - x)(1 - \cos\phi)\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\cos\phi = 1 - \frac{L(1 - \cos\theta)}{L - x}\]</div>
+<div class="spacer"></div>
+<p>처음 높이가 나무못보다 낮다는 조건에서 \(L(1 - \cos\theta) < x\)이면... 실제로 처음 출발점 높이가 나무못의 높이(최저점에서 \(L - x\))보다 낮으므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[L(1 - \cos\theta) \leq L - x\]</div>
+<div class="spacer"></div>
+<p>이 경우 \(\cos\phi \geq 0\)이므로 \(\phi \leq 90°\)이고, 나무못에 걸린 후에도 반대쪽에서 같은 높이까지 도달 가능하다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\cos\phi = 1 - \frac{L(1 - \cos\theta)}{L - x}}\]</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(나)</strong> \(\theta = 90°\)에서 완전 원 궤도를 위한 \(x\)의 최솟값</p>
+<div class="spacer"></div>
+<p>\(\theta = 90°\)이면 처음 높이: \(h = L(1 - \cos 90°) = L\)</p>
+<div class="spacer"></div>
+<p>나무못에 걸린 후 유효 길이 \(L' = L - x\)로 완전 원운동을 해야 한다.</p>
+<div class="spacer"></div>
+<p>최고점(나무못 위 \(L'\))에서 구심력 조건:</p>
+<div class="spacer"></div>
+<div class="math-block">\[mg = \frac{mv_{\text{top}}^2}{L'}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_{\text{top}}^2 = gL'\]</div>
+<div class="spacer"></div>
+<p>에너지 보존(최저점에서 최고점까지):</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{2}mv_{\text{bottom}}^2 = \frac{1}{2}mv_{\text{top}}^2 + mg(2L')\]</div>
+<div class="spacer"></div>
+<p>최저점에서의 속력(에너지 보존, 원래 높이 \(L\)에서):</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{2}mv_{\text{bottom}}^2 = mgL\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_{\text{bottom}}^2 = 2gL\]</div>
+<div class="spacer"></div>
+<p>따라서</p>
+<div class="spacer"></div>
+<div class="math-block">\[2gL = gL' + 2g(2L') = gL' + 4gL' = 5gL'\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[L' = \frac{2L}{5}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[L - x = \frac{2L}{5}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[x = L - \frac{2L}{5} = \frac{3L}{5}\]</div>
+<div class="spacer"></div>
+<p>따라서 \(x\)의 최솟값은 \(\frac{3L}{5}\)이다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(다)</strong> 나무못에 걸리기 직전의 장력</p>
+<div class="spacer"></div>
+<p>\(\theta = 90°\)에서 가만히 놓았을 때, 최저점에서의 속력:</p>
+<div class="spacer"></div>
+<div class="math-block">\[v^2 = 2gL\]</div>
+<div class="spacer"></div>
+<p>최저점에서 원운동하므로 구심력 방정식:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T - mg = \frac{mv^2}{L}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[T = mg + \frac{mv^2}{L} = mg + \frac{m \times 2gL}{L} = mg + 2mg = 3mg\]</div>
+<div class="spacer"></div>
+<p>따라서 나무못에 걸리기 직전 줄의 장력은 \(T = 3mg\)이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-109</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-49 | 2020_KAIST_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-49.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<p>두 점 A, B에 대해 베르누이 법칙을 적용하면,</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_A + \frac{1}{2}\rho v_A^2 + \rho g h_A = P_B + \frac{1}{2}\rho v_B^2 + \rho g h_B \quad (\rho: \text{물의 밀도, } g: \text{중력 가속도})\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[P_A = P_B = P, \quad v_A = 0, \quad h_A - h_B = H_2 + H_3 + H_4 \quad \rightarrow \quad v_B = \sqrt{2g(H_2 + H_3 + H_4)}\]</div>
+<div class="spacer"></div>
+<p>또는 두 점 A, B에서의 압력이 서로 같으므로, 역학적 에너지 보존의 법칙을 바로 적용하면, \(mg(H_2 + H_3 + H_4) = \dfrac{1}{2}mv_B^2\) (m: 물의 질량, g: 중력 가속도)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\rightarrow v_B = \sqrt{2g(H_2 + H_3 + H_4)}\]</div>
+<div class="spacer"></div>
+<div class="figure"><img src="../../data/물리/2020_KAIST_물리학_해설1/fig1.jpeg" /></div>
+<div class="spacer"></div>
+<p>경우(1) : \(H_1 = H_2 = H_3 = H_4 = h\) \(\rightarrow\) \(H_2 + H_3 + H_4 = 3h\)</p>
+<div class="spacer"></div>
+<p>점 B에서 물이 속도 \(v_{B1}\)로 빠져나오고 1시간 동안 총 질량 \(M_1\)의 물이 피스톤 위에 쌓여서 이상 기체의 압력이 \(\Delta P_1 = \dfrac{M_1 g}{A} = \dfrac{P}{2}\) 만큼 증가하였다면,</p>
+<div class="spacer"></div>
+<p>경우(2) : \(H_1 = h\), \(H_2 = 2h\), \(H_3 = 3h\), \(H_4 = 4h\) \(\rightarrow\) \(H_2 + H_3 + H_4 = 9h\)</p>
+<div class="spacer"></div>
+<p>점 B에서 물이 속도 \(v_{B2} = \sqrt{3}\,v_{B1}\)로 빠져나오므로, 1시간 동안 총 질량 \(M_2 = \sqrt{3}\,M_1\)의 물이 피스톤 위에 쌓여 이상 기체의 압력이</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta P_2 = \frac{M_2 g}{A} = \sqrt{3}\,\Delta P_1 = \frac{\sqrt{3}\,P}{2}\]</div>
+<div class="spacer"></div>
+<p>만큼 증가하게 된다.</p>
+<div class="spacer"></div>
+<p>경우(2)의 등적 과정에서 이상 기체가 한 일은 0이고 이상 기체의 내부 에너지 변화량은 \(\dfrac{3}{2}nR\Delta T = \dfrac{3}{2}V\Delta P_2 = \dfrac{3\sqrt{3}}{4}PV\)이다. (n: 이상 기체 몰 수, R: 기체 상수, \(\Delta T\): 온도 변화) 열역학 제1법칙에 의하여 이상 기체에 공급된 열은 내부 에너지 변화량 \(\dfrac{3\sqrt{3}}{4}PV\)와 같다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-49</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-62 | 2019_DGIST_물리학_해설4</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-62.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 4</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">평행판 축전기 내부의 전하 진자 운동</h2>
+<div class="spacer"></div>
+<p>전기 용량 \(C\), 극판 간격 \(d\)인 평행판 축전기에 전압 \(V\)의 배터리가 연결되어 있다. 축전기 내부에 질량 \(m\), 전하량 \(q\)인 물체가 길이 \(l\)인 절연체 실에 매달려 있다. 중력 가속도 \(g\).</p>
+<div class="spacer"></div>
+<p><strong>(가)</strong> 평형 각도 \(\theta\) 구하기</p>
+<div class="spacer"></div>
+<p>축전기 내부의 균일한 전기장의 크기:</p>
+<div class="spacer"></div>
+<div class="math-block">\[E = \frac{V}{d}\]</div>
+<div class="spacer"></div>
+<p>물체에 작용하는 힘은 세 가지이다:</p>
+<p>- 중력: \(mg\) (연직 아래 방향)</p>
+<p>- 전기력: \(qE = \frac{qV}{d}\) (극판에 수직인 수평 방향)</p>
+<p>- 실의 장력: \(T\) (실 방향)</p>
+<div class="spacer"></div>
+<p>평형 상태에서 합력이 0이므로, 실 방향과 수직인 방향의 힘 성분을 분석한다. 물체가 극판에 대해 각도 \(\theta\)를 이루며 평형에 있으려면, 중력과 전기력의 합력 방향이 실의 방향과 일치해야 한다.</p>
+<div class="spacer"></div>
+<p>수평 방향 평형:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T\sin\theta = \frac{qV}{d}\]</div>
+<div class="spacer"></div>
+<p>연직 방향 평형:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T\cos\theta = mg\]</div>
+<div class="spacer"></div>
+<p>두 식을 나누면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\tan\theta = \frac{qV}{mgd}}\]</div>
+<div class="spacer"></div>
+<p><strong>(나)</strong> 단진동 운동과 주기</p>
+<div class="spacer"></div>
+<p>평형 위치 \(\theta\)에서 물체를 약간 변위시키면, 중력과 전기력의 합력이 복원력으로 작용하여 단진동이 가능하다.</p>
+<div class="spacer"></div>
+<p>중력과 전기력의 합력(유효 중력)의 크기를 구하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[F_{\text{eff}} = \sqrt{(mg)^2 + \left(\frac{qV}{d}\right)^2}\]</div>
+<div class="spacer"></div>
+<p>이를 유효 중력 가속도 \(g_{\text{eff}}\)로 표현하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[g_{\text{eff}} = \frac{F_{\text{eff}}}{m} = \sqrt{g^2 + \left(\frac{qV}{md}\right)^2}\]</div>
+<div class="spacer"></div>
+<p>이 상황은 중력이 \(g_{\text{eff}}\)이고, 유효 중력 방향이 실의 평형 방향인 단진자와 동일하다. 평형 각도 \(\theta\)를 중심으로 작은 진동을 할 때, 실의 길이가 \(l\)이므로 단진자의 주기 공식을 적용할 수 있다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{T = 2\pi\sqrt{\frac{l}{g_{\text{eff}}}} = 2\pi\sqrt{\frac{l}{\sqrt{g^2 + \left(\frac{qV}{md}\right)^2}}}}\]</div>
+<div class="spacer"></div>
+<p>유도 과정: 평형 위치에서 미소 각도 \(\phi\)만큼 벗어났을 때, 유효 중력 방향에 수직인 복원력 성분은:</p>
+<div class="spacer"></div>
+<div class="math-block">\[F_{\text{restore}} = -F_{\text{eff}} \sin\phi \approx -F_{\text{eff}} \phi \quad (\phi \ll 1)\]</div>
+<div class="spacer"></div>
+<p>호 방향 운동 방정식:</p>
+<div class="spacer"></div>
+<div class="math-block">\[ml\ddot{\phi} = -F_{\text{eff}}\phi = -mg_{\text{eff}}\phi\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\ddot{\phi} = -\frac{g_{\text{eff}}}{l}\phi\]</div>
+<div class="spacer"></div>
+<p>이는 각진동수 \(\omega = \sqrt{\frac{g_{\text{eff}}}{l}}\)인 단진동이므로, 주기는 위와 같다.</p>
+<div class="spacer"></div>
+<p><strong>(다)</strong> 배터리 연결 상태에서 극판 간격을 \(d/2\)로 줄인 경우의 주기 변화</p>
+<div class="spacer"></div>
+<p>배터리가 계속 연결되어 있으므로 극판 사이의 <strong>전압 $V$는 일정하게 유지</strong>된다.</p>
+<div class="spacer"></div>
+<p>극판 간격이 \(d' = d/2\)로 줄어들면:</p>
+<div class="spacer"></div>
+<p>- 전기 용량: \(C' = \frac{\varepsilon_0 A}{d/2} = 2C\) (2배로 증가)</p>
+<p>- 전기장: \(E' = \frac{V}{d/2} = \frac{2V}{d}\) (2배로 증가)</p>
+<p>- 전기력: \(F_E' = qE' = \frac{2qV}{d}\) (2배로 증가)</p>
+<div class="spacer"></div>
+<p>새로운 유효 중력 가속도:</p>
+<div class="spacer"></div>
+<div class="math-block">\[g_{\text{eff}}' = \sqrt{g^2 + \left(\frac{2qV}{md}\right)^2} = \sqrt{g^2 + 4\left(\frac{qV}{md}\right)^2}\]</div>
+<div class="spacer"></div>
+<p>새로운 주기:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{T' = 2\pi\sqrt{\frac{l}{\sqrt{g^2 + 4\left(\frac{qV}{md}\right)^2}}}}\]</div>
+<div class="spacer"></div>
+<p>원래 주기와 비교하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[g_{\text{eff}}' = \sqrt{g^2 + 4\left(\frac{qV}{md}\right)^2} > \sqrt{g^2 + \left(\frac{qV}{md}\right)^2} = g_{\text{eff}}\]</div>
+<div class="spacer"></div>
+<p>따라서 \(g_{\text{eff}}' > g_{\text{eff}}\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T' = 2\pi\sqrt{\frac{l}{g_{\text{eff}}'}} < 2\pi\sqrt{\frac{l}{g_{\text{eff}}}} = T\]</div>
+<div class="spacer"></div>
+<p><strong>주기는 감소한다.</strong> 전기장이 강해져 유효 중력이 커지므로, 진자가 더 빠르게 진동하게 된다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-62</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-94 | 2018_KAIST_물리학_해설3</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-94.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 3</h1>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 이 문제에서는 시스템의 운동에너지는 보존되지 않는다. x, y 방향에 대해 각각 운동량 보존 법칙을 적용한다. 충돌 후 입자 B의 속력을 \(V_2\)라 하면,</p>
+<div class="spacer"></div>
+<div class="math-block">\[mV_0 = mV_1\cos\theta + mV_2\cos\phi\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[0 = mV_1\sin\theta - mV_2\sin\phi\]</div>
+<div class="spacer"></div>
+<p>식을 풀어 다음의 결과를 얻는다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\phi = \tan^{-1}\frac{V_1\sin\theta}{V_0 - V_1\cos\theta}\]</div>
+<div class="spacer"></div>
+<p>각도 \(\phi\)는 질량 m에 의존하지 않는다.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 주어진 정보 (각도 \(\theta = 30°\) 와 속력 \(V_1 = \frac{V_0}{\sqrt{3}}\)) 를 이용하면 B 입자의 정보</p>
+<div class="spacer"></div>
+<p>\(\phi = 30°\) 와 \(V_2 = \frac{V_0}{\sqrt{3}}\) 를 얻게 된다</p>
+<div class="spacer"></div>
+<p>따라서, 운동에너지의 변화는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta U = U_{\text{충돌전}} - U_{\text{충돌후}} = \frac{mV_0^2}{2} - \left(\frac{mV_0^2}{6} + \frac{mV_0^2}{6}\right) = \frac{mV_0^2}{6}\]</div>
+<div class="spacer"></div>
+<p>큰 증가한 이유는 보존되지 않은 운동 에너지가 열에너지로 바뀐 것이고, 열역학 제1법칙을 이용하면 두 입자로 이루어진 시스템의 비열을 구할 수 있다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta U = Q = C\Delta T = \frac{mV_0^2}{6}, \quad C = \frac{\Delta U}{\Delta T} = \frac{mV_0^2}{6\Delta T}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-94</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

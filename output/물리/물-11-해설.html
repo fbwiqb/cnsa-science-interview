@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-11 | 2024_서울대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-11.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-1. 45도 경사면에서의 공 충돌</h2>
+<div class="spacer"></div>
+<p>경사면 각도 45°, 높이 \(h\)에서 공을 가만히 놓아 떨어뜨린다.</p>
+<div class="spacer"></div>
+<p>경사면 좌표계를 설정한다: 경사면을 따라 아래 방향을 \(x\)축, 경사면에 수직으로 위쪽을 \(y\)축으로 잡는다.</p>
+<div class="spacer"></div>
+<p>중력가속도 성분:</p>
+<p>- 경사면 따라 아래: \(g_x = g\sin 45° = \frac{g}{\sqrt{2}}\)</p>
+<p>- 경사면에 수직 아래: \(g_y = g\cos 45° = \frac{g}{\sqrt{2}}\)</p>
+<div class="spacer"></div>
+<p><strong>A 지점에서의 충돌:</strong></p>
+<div class="spacer"></div>
+<p>공이 높이 \(h\)에서 자유낙하하여 A에 도달할 때의 속도:</p>
+<div class="spacer"></div>
+<p>수직 낙하 속도: \(v = \sqrt{2gh}\) (수직 아래 방향)</p>
+<div class="spacer"></div>
+<p>경사면 좌표계에서:</p>
+<p>- 경사면 평행 성분: \(v_{//} = v\sin 45° = \sqrt{gh}\)</p>
+<p>- 경사면 수직 성분: \(v_\perp = v\cos 45° = \sqrt{gh}\)</p>
+<div class="spacer"></div>
+<p>탄성충돌 후: \(v_\perp\)는 방향 반전(경사면에서 튀어오름), \(v_{//}\)는 유지.</p>
+<div class="spacer"></div>
+<p>A 충돌 직후 속도:</p>
+<p>- \(v_{x0} = \sqrt{gh}\) (경사면 아래)</p>
+<p>- \(v_{y0} = \sqrt{gh}\) (경사면 수직 위)</p>
+<div class="spacer"></div>
+<p><strong>A → B 구간 (포물체 운동, 경사면 좌표계):</strong></p>
+<div class="spacer"></div>
+<p>경사면 수직 방향: \(y = v_{y0}t - \frac{1}{2}g_y t^2 = \sqrt{gh}\,t - \frac{g}{2\sqrt{2}}t^2\)</p>
+<div class="spacer"></div>
+<p>경사면에 다시 충돌: \(y = 0\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\sqrt{gh}\,t_1 = \frac{g}{2\sqrt{2}}t_1^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[t_1 = \frac{2\sqrt{2}\sqrt{gh}}{g} = \frac{2\sqrt{2gh}}{g}\]</div>
+<div class="spacer"></div>
+<p>B의 경사면 따라 위치:</p>
+<div class="spacer"></div>
+<div class="math-block">\[x_B = v_{x0}t_1 + \frac{1}{2}g_x t_1^2 = \sqrt{gh} \cdot \frac{2\sqrt{2gh}}{g} + \frac{g}{2\sqrt{2}} \cdot \frac{8gh}{g^2}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{2\sqrt{2}gh}{g} + \frac{4h}{\sqrt{2}} = 2\sqrt{2}h + 2\sqrt{2}h = 4\sqrt{2}h\]</div>
+<div class="spacer"></div>
+<p>B에서의 속도:</p>
+<p>- \(v_{x,B} = v_{x0} + g_x t_1 = \sqrt{gh} + \frac{g}{\sqrt{2}} \cdot \frac{2\sqrt{2gh}}{g} = \sqrt{gh} + 2\sqrt{gh} = 3\sqrt{gh}\)</p>
+<p>- \(v_{y,B} = v_{y0} - g_y t_1 = \sqrt{gh} - \frac{g}{\sqrt{2}} \cdot \frac{2\sqrt{2gh}}{g} = \sqrt{gh} - 2\sqrt{gh} = -\sqrt{gh}\)</p>
+<div class="spacer"></div>
+<p>B 충돌 후: \(v_{y,B}\)가 반전 → \(v_{y,B}' = \sqrt{gh}\), \(v_{x,B}' = 3\sqrt{gh}\)</p>
+<div class="spacer"></div>
+<p><strong>B → C 구간:</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[t_2 = \frac{2\sqrt{2}\sqrt{gh}}{g} = t_1\]</div>
+<div class="spacer"></div>
+<p>C의 B로부터의 경사면 따라 위치:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta x_{BC} = 3\sqrt{gh} \cdot t_2 + \frac{1}{2}g_x t_2^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= 3\sqrt{gh} \cdot \frac{2\sqrt{2gh}}{g} + \frac{g}{2\sqrt{2}} \cdot \frac{8gh}{g^2}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{6\sqrt{2}gh}{g} + 2\sqrt{2}h = 6\sqrt{2}h + 2\sqrt{2}h = 8\sqrt{2}h\]</div>
+<div class="spacer"></div>
+<p>B와 C 사이의 직선거리: 경사면을 따른 거리이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{BC = 8\sqrt{2}h}\]</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-2. 사각 우물에서의 공 충돌</h2>
+<div class="spacer"></div>
+<p>사각 우물: 폭 \(W\), 깊이 \(H\). 공이 수평 속력 \(v\)로 P 지점(왼쪽 모서리)에서 출발.</p>
+<div class="spacer"></div>
+<p>공이 우물 왼쪽 모서리에서 수평 속력 \(v\)로 낙하하여 바닥에 도달한다.</p>
+<div class="spacer"></div>
+<p>낙하 시간: \(t_1 = \sqrt{\frac{2H}{g}}\)</p>
+<div class="spacer"></div>
+<p>바닥 도달 시 속도: \(v_x = v\) (오른쪽), \(v_y = \sqrt{2gH}\) (아래)</p>
+<div class="spacer"></div>
+<p>바닥과의 탄성충돌: \(v_y\) 반전, \(v_x\) 유지.</p>
+<p>충돌 후: \(v_x = v\) (오른쪽), \(v_y = \sqrt{2gH}\) (위)</p>
+<div class="spacer"></div>
+<p>바닥에서 높이 \(H\)까지 올라가는 시간: \(t_2 = \sqrt{\frac{2H}{g}} = t_1\)</p>
+<div class="spacer"></div>
+<p>공은 오른쪽으로만 이동하므로 P로 돌아오려면 오른쪽 벽에서의 반사가 필요하다 (벽은 수직이므로 \(v_x\) 반전, \(v_y\) 유지).</p>
+<div class="spacer"></div>
+<p><strong>(a) 바닥 1회 충돌 후 P로 복귀하는 최소 속력:</strong></p>
+<div class="spacer"></div>
+<p>최소 조건: 바닥 충돌 후 포물선 비행으로 정확히 높이 \(H\)에서 오른쪽 벽에 도달하고, 반사 후 왼쪽 모서리에 도달.</p>
+<div class="spacer"></div>
+<p>총 수평 이동(바닥 충돌 후 높이 \(H\) 도달까지): \(vt_2 = v\sqrt{2H/g}\)</p>
+<div class="spacer"></div>
+<p>바닥 충돌 위치 + 상승 이동 = 오른쪽 벽: \(v(t_1 + t_2) = 2v\sqrt{2H/g} = W\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{v_{\min,1} = \frac{W}{2}\sqrt{\frac{g}{2H}}}\]</div>
+<div class="spacer"></div>
+<p><strong>(b) 바닥 2회 충돌:</strong></p>
+<div class="spacer"></div>
+<p>각 포물선 비행 구간의 수평 이동은 \(2v\sqrt{2H/g}\)이다. 바닥 2회 충돌 + 벽 반사 경로에서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[4v\sqrt{2H/g} = W\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{v_{\min,2} = \frac{W}{4}\sqrt{\frac{g}{2H}}}\]</div>
+<div class="spacer"></div>
+<p><strong>(c) 바닥 3회 충돌:</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{v_{\min,3} = \frac{W}{6}\sqrt{\frac{g}{2H}}}\]</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-3. 줄에 매달린 공</h2>
+<div class="spacer"></div>
+<p>줄 양 끝 A, B가 벽에 고정. AB 선분 길이 5 m, 수평과 30° 각도. 줄 길이 \(L\), 공 질량 \(m\).</p>
+<div class="spacer"></div>
+<p><strong>(a) 줄이 A, B에 가하는 힘</strong></p>
+<div class="spacer"></div>
+<p>공에 작용하는 힘: 중력 \(mg\) (아래), A 방향 장력 \(T_A\), B 방향 장력 \(T_B\).</p>
+<div class="spacer"></div>
+<p>줄의 A쪽 부분이 수직과 이루는 각도를 \(\alpha\), B쪽 부분이 수직과 이루는 각도를 \(\beta\)라 하면:</p>
+<div class="spacer"></div>
+<p>평형 조건:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T_A \sin\alpha = T_B \sin\beta \quad (x \text{방향})\]</div>
+<div class="math-block">\[T_A \cos\alpha + T_B \cos\beta = mg \quad (y \text{방향})\]</div>
+<div class="spacer"></div>
+<p>(구체적인 수치는 그림에서 주어진 각도 정보에 따라 결정된다.)</p>
+<div class="spacer"></div>
+<p><strong>(b) 고정장치를 풀면 공이 움직이는가?</strong></p>
+<div class="spacer"></div>
+<p>고정장치를 풀면 공은 <strong>움직인다</strong>.</p>
+<div class="spacer"></div>
+<p>고정 상태에서 줄의 양쪽 부분은 일반적으로 서로 다른 각도를 이루고 있다. 이 경우 줄의 두 부분의 장력이 같더라도(줄 위에서 마찰이 없으면 장력은 같다), 두 부분의 방향이 다르므로 공에 대한 줄 방향의 알짜힘이 0이 아닐 수 있다.</p>
+<div class="spacer"></div>
+<p>실제로 마찰이 없는 줄 위에서 공이 자유롭게 미끄러질 수 있다면, 공은 줄을 따라 이동한다. 줄의 장력은 양쪽이 같지만(도르래 원리), 두 장력의 합력이 중력과 정확히 균형을 이루는 위치(평형점)로 이동한다.</p>
+<div class="spacer"></div>
+<p>고정 상태에서는 장력이 양쪽이 다를 수 있지만, 고정장치를 풀면 장력이 같아져야 하므로 공은 새로운 평형 위치로 이동한다.</p>
+<div class="spacer"></div>
+<p><strong>(c) 새 평형 위치의 높이 비교</strong></p>
+<div class="spacer"></div>
+<p>줄 위에서 자유롭게 이동하여 정지한 위치(새 평형)는 역학적 에너지가 최소인 위치이다. 중력 퍼텐셜 에너지가 최소인 위치, 즉 공의 높이가 가장 <strong>낮은</strong> 위치이다.</p>
+<div class="spacer"></div>
+<p>따라서 새 평형 위치에서의 공의 높이는 (b)의 고정 위치보다 <strong>낮다</strong> (또는 같다).</p>
+<div class="spacer"></div>
+<p>에너지 관점: 고정장치를 풀면 공이 중력에 의해 아래로 이동하며 운동 에너지를 얻는다. 마찰이 없으므로 진동하지만, 결국 에너지가 최소인 위치가 평형이다. 이 위치는 원래 고정 위치보다 낮거나 같다.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-4. 두 구조물에서의 공 이동 시간 비교</h2>
+<div class="spacer"></div>
+<p>구조물 (ㄱ): 수평, 길이 \(L\)</p>
+<p>구조물 (ㄴ): 30° 내리막 + 30° 오르막, 좌우 대칭, 수평 길이 \(L\)</p>
+<div class="spacer"></div>
+<p><strong>(ㄱ)의 이동 시간:</strong></p>
+<div class="spacer"></div>
+<p>수평면에서 등속: \(t_{\text{ㄱ}} = \frac{L}{v_0}\)</p>
+<div class="spacer"></div>
+<p><strong>(ㄴ)의 이동 시간:</strong></p>
+<div class="spacer"></div>
+<p>내리막 구간(수평 길이 \(L/2\)): 경사면 길이 \(\frac{L/2}{\cos 30°} = \frac{L}{\sqrt{3}}\)</p>
+<div class="spacer"></div>
+<p>경사면 가속도: \(a = g\sin 30° = \frac{g}{2}\)</p>
+<div class="spacer"></div>
+<p>에너지 보존으로 내리막 깊이: \(h = \frac{L}{2}\tan 30° = \frac{L}{2\sqrt{3}}\)</p>
+<div class="spacer"></div>
+<p>내리막 끝 속력: \(v_1 = \sqrt{v_0^2 + 2g \cdot \frac{L}{2\sqrt{3}}} = \sqrt{v_0^2 + \frac{gL}{\sqrt{3}}}\)</p>
+<div class="spacer"></div>
+<p>대칭이므로 오르막 끝 속력은 다시 \(v_0\).</p>
+<div class="spacer"></div>
+<p>경사면 따라 움직이는 시간(내리막):</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{L}{\sqrt{3}} = v_0 t_{\text{down}} + \frac{1}{2} \cdot \frac{g}{2} \cdot t_{\text{down}}^2\]</div>
+<div class="spacer"></div>
+<p>대칭이므로 총 시간: \(t_{\text{ㄴ}} = 2t_{\text{down}}\)</p>
+<div class="spacer"></div>
+<p>(ㄴ)이 (ㄱ)보다 빠르려면: \(t_{\text{ㄴ}} < t_{\text{ㄱ}}\)</p>
+<div class="spacer"></div>
+<p>\(L_{\min}\)을 구하기 위해, 두 시간이 같아지는 조건:</p>
+<div class="spacer"></div>
+<p>\(t_{\text{ㄱ}} = t_{\text{ㄴ}}\)</p>
+<div class="spacer"></div>
+<p>\(v_0\)가 작고 \(L\)이 크면, (ㄴ)의 가속 효과가 커지므로 (ㄴ)이 더 빨라진다.</p>
+<div class="spacer"></div>
+<p>내리막에서 평균 속도: \(\bar{v} = \frac{v_0 + v_1}{2}\)</p>
+<div class="spacer"></div>
+<p>내리막 시간: \(t_{\text{down}} = \frac{2 \cdot L/\sqrt{3}}{v_0 + v_1}\)</p>
+<div class="spacer"></div>
+<p>총 시간: \(t_{\text{ㄴ}} = 2t_{\text{down}} = \frac{4L/\sqrt{3}}{v_0 + v_1}\)</p>
+<div class="spacer"></div>
+<p>\(t_{\text{ㄱ}} = t_{\text{ㄴ}}\) 조건:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{L}{v_0} = \frac{4L/\sqrt{3}}{v_0 + v_1}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_0 + v_1 = \frac{4v_0}{\sqrt{3}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_1 = v_0\left(\frac{4}{\sqrt{3}} - 1\right)\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_1^2 = v_0^2\left(\frac{4}{\sqrt{3}} - 1\right)^2 = v_0^2 + \frac{gL}{\sqrt{3}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_0^2\left[\left(\frac{4}{\sqrt{3}} - 1\right)^2 - 1\right] = \frac{gL}{\sqrt{3}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{4}{\sqrt{3}} - 1 = \frac{4\sqrt{3} - 3}{3} \approx \frac{6.928 - 3}{3} \approx 1.309\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[1.309^2 - 1 = 1.714 - 1 = 0.714\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[L = \frac{\sqrt{3}v_0^2 \times 0.714}{g}\]</div>
+<div class="spacer"></div>
+<p>경사면 위의 등가속 운동이므로 평균 속도 근사가 정확하다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[L_{\min} = \frac{\sqrt{3}v_0^2}{g}\left[\left(\frac{4}{\sqrt{3}} - 1\right)^2 - 1\right]\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{\sqrt{3}v_0^2}{g}\left[\frac{(4-\sqrt{3})^2}{3} - 1\right] = \frac{\sqrt{3}v_0^2}{g} \cdot \frac{(4-\sqrt{3})^2 - 3}{3}\]</div>
+<div class="spacer"></div>
+<p>\((4-\sqrt{3})^2 = 16 - 8\sqrt{3} + 3 = 19 - 8\sqrt{3}\)</p>
+<div class="spacer"></div>
+<p>\((4-\sqrt{3})^2 - 3 = 16 - 8\sqrt{3}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[L_{\min} = \frac{\sqrt{3}v_0^2}{g} \cdot \frac{16 - 8\sqrt{3}}{3} = \frac{8\sqrt{3}(2-\sqrt{3})}{3} \cdot \frac{v_0^2}{g}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{L_{\min} = \frac{8\sqrt{3}(2-\sqrt{3})}{3} \cdot \frac{v_0^2}{g}}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-11</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

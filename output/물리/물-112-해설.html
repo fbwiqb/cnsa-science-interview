@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-112 | 2016_연세대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-112.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">NaCl 결정과 이온 물리</h2>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> NaCl 정육면체 배열의 전기적 위치 에너지</p>
+<div class="spacer"></div>
+<p>한 변의 길이가 \(a = 0.28\) nm인 정육면체의 꼭짓점에 \(\text{Na}^+\) 이온 4개와 \(\text{Cl}^-\) 이온 4개를 NaCl 구조와 같이 교대로 배치한다. 전하량은 \(q = 1.6 \times 10^{-19}\) C이다.</p>
+<div class="spacer"></div>
+<p>정육면체에서 이온 쌍 사이의 거리와 전하 관계를 분석한다.</p>
+<div class="spacer"></div>
+<p>꼭짓점 8개에서 같은 종류의 이온은 면대각선 거리(\(a\sqrt{2}\))이거나 체대각선 거리(\(a\sqrt{3}\))만큼 떨어져 있고, 다른 종류의 이온은 변(\(a\))이나 체대각선(\(a\sqrt{3}\))만큼 떨어져 있다.</p>
+<div class="spacer"></div>
+<p>정육면체의 꼭짓점 쌍의 수는 \(\binom{8}{2} = 28\)개이다. 각 쌍의 거리와 전하 부호를 정리하면:</p>
+<div class="spacer"></div>
+<p>- 변을 공유하는 쌍 (거리 \(a\)): 12쌍 → 모두 이종 이온(인력, \(-\))</p>
+<p>- 면대각선 쌍 (거리 \(a\sqrt{2}\)): 12쌍 → 모두 동종 이온(반발, \(+\))</p>
+<p>- 체대각선 쌍 (거리 \(a\sqrt{3}\)): 4쌍 → 모두 이종 이온(인력, \(-\))</p>
+<div class="spacer"></div>
+<p>총 위치 에너지:</p>
+<div class="spacer"></div>
+<div class="math-block">\[U = k\frac{q^2}{a}\left(-12 \times \frac{1}{1} + 12 \times \frac{1}{\sqrt{2}} - 4 \times \frac{1}{\sqrt{3}}\right)\]</div>
+<div class="spacer"></div>
+<p>\(\sqrt{2} \approx 1.414\), \(\sqrt{3} \approx 1.732\)이므로</p>
+<div class="spacer"></div>
+<div class="math-block">\[U = k\frac{q^2}{a}\left(-12 + \frac{12}{1.414} - \frac{4}{1.732}\right)\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= k\frac{q^2}{a}\left(-12 + 8.485 - 2.309\right)\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= k\frac{q^2}{a} \times (-5.824)\]</div>
+<div class="spacer"></div>
+<p>수치 대입:</p>
+<div class="spacer"></div>
+<div class="math-block">\[k\frac{q^2}{a} = \frac{9 \times 10^9 \times (1.6 \times 10^{-19})^2}{0.28 \times 10^{-9}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{9 \times 10^9 \times 2.56 \times 10^{-38}}{2.8 \times 10^{-10}} = \frac{23.04 \times 10^{-29}}{2.8 \times 10^{-10}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= 8.23 \times 10^{-19} \text{ J}\]</div>
+<div class="spacer"></div>
+<p>따라서</p>
+<div class="spacer"></div>
+<div class="math-block">\[U = -5.824 \times 8.23 \times 10^{-19} \approx -4.79 \times 10^{-18} \text{ J}\]</div>
+<div class="spacer"></div>
+<p>무한히 떨어진 상태에서 이 배열로 모으는 데 필요한 일은 위치 에너지의 변화량과 같으므로</p>
+<div class="spacer"></div>
+<div class="math-block">\[W = U \approx -4.79 \times 10^{-18} \text{ J}\]</div>
+<div class="spacer"></div>
+<p>음수값은 에너지가 방출됨을 의미한다. 따라서 이 배열을 만드는 데 약 \(4.8 \times 10^{-18}\) J의 에너지가 방출된다(외부에서 한 일은 약 \(-4.8 \times 10^{-18}\) J).</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> NaCl 고체의 부피 변화와 일</p>
+<div class="spacer"></div>
+<p>한 변 \(L = 2.8\) cm \(= 0.028\) m인 정육면체 NaCl 고체에 한 면에 수직으로 압력 \(P = 1.0 \times 10^7\) N/m\(^2\)를 가한다.</p>
+<div class="spacer"></div>
+<p>이온 간 거리가 \(a = 0.28\) nm이므로, 한 변 \(L = 0.028\) m를 따라 이온의 수는</p>
+<div class="spacer"></div>
+<div class="math-block">\[N = \frac{L}{a} = \frac{0.028}{0.28 \times 10^{-9}} = 10^8\]</div>
+<div class="spacer"></div>
+<p>압력을 받는 면의 면적은 \(A = L^2 = (0.028)^2 = 7.84 \times 10^{-4}\) m\(^2\)이다.</p>
+<div class="spacer"></div>
+<p>이 면에 작용하는 총 힘:</p>
+<div class="spacer"></div>
+<div class="math-block">\[F_{\text{total}} = PA = 1.0 \times 10^7 \times 7.84 \times 10^{-4} = 7840 \text{ N}\]</div>
+<div class="spacer"></div>
+<p>압력 방향을 따라 면 위의 용수철 수는 \(N^2 = 10^{16}\)개(면에 수직 방향의 이온 열의 수)이고, 각 열에는 \(N - 1 \approx N = 10^8\)개의 용수철이 직렬로 연결되어 있다.</p>
+<div class="spacer"></div>
+<p>각 용수철의 탄성계수는 \(k_0 = 10\) N/m이다.</p>
+<div class="spacer"></div>
+<p>한 열의 등가 탄성계수: 직렬 \(N\)개이므로</p>
+<div class="spacer"></div>
+<div class="math-block">\[k_{\text{열}} = \frac{k_0}{N} = \frac{10}{10^8} = 10^{-7} \text{ N/m}\]</div>
+<div class="spacer"></div>
+<p>\(N^2\)개의 열이 병렬이므로 전체 등가 탄성계수:</p>
+<div class="spacer"></div>
+<div class="math-block">\[k_{\text{total}} = N^2 \times k_{\text{열}} = 10^{16} \times 10^{-7} = 10^9 \text{ N/m}\]</div>
+<div class="spacer"></div>
+<p>압축 변위:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta L = \frac{F_{\text{total}}}{k_{\text{total}}} = \frac{7840}{10^9} = 7.84 \times 10^{-6} \text{ m} = 7.84 \text{ } \mu\text{m}\]</div>
+<div class="spacer"></div>
+<p>부피의 변화량:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta V = A \times \Delta L = 7.84 \times 10^{-4} \times 7.84 \times 10^{-6} = 6.15 \times 10^{-9} \text{ m}^3\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\approx 6.1 \times 10^{-9} \text{ m}^3\]</div>
+<div class="spacer"></div>
+<p>NaCl 고체에 한 일(탄성 에너지):</p>
+<div class="spacer"></div>
+<div class="math-block">\[W = \frac{1}{2}k_{\text{total}}(\Delta L)^2 = \frac{1}{2} \times 10^9 \times (7.84 \times 10^{-6})^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= \frac{1}{2} \times 10^9 \times 6.15 \times 10^{-11} = 3.07 \times 10^{-2} \text{ J} \approx 0.031 \text{ J}\]</div>
+<div class="spacer"></div>
+<p>또는 \(W = \frac{1}{2}F\Delta L = \frac{1}{2} \times 7840 \times 7.84 \times 10^{-6} \approx 0.031\) J이다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 이온의 종단 속력과 드브로이 파장</p>
+<div class="spacer"></div>
+<p>빗면 각도 \(30°\), 저항력 \(\vec{F} = -\gamma \vec{p}\) (\(\gamma = 100\) Hz)</p>
+<div class="spacer"></div>
+<p>\(\text{Na}^+\) 이온의 질량: \(m_{\text{Na}} = 23 \times 1.7 \times 10^{-27} = 3.91 \times 10^{-26}\) kg</p>
+<p>\(\text{Cl}^-\) 이온의 질량: \(m_{\text{Cl}} = 35 \times 1.7 \times 10^{-27} = 5.95 \times 10^{-26}\) kg</p>
+<div class="spacer"></div>
+<p>종단 속력에서 알짜힘이 0이므로(빗면 방향):</p>
+<div class="spacer"></div>
+<div class="math-block">\[mg\sin\theta - \gamma m v = 0\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v = \frac{g\sin\theta}{\gamma} = \frac{10 \times \sin 30°}{100} = \frac{10 \times 0.5}{100} = 0.05 \text{ m/s}\]</div>
+<div class="spacer"></div>
+<p>종단 속력은 질량에 무관하므로, \(\text{Na}^+\)와 \(\text{Cl}^-\) 이온 모두 \(v = 0.05\) m/s이다.</p>
+<div class="spacer"></div>
+<p>드브로이 파장 \(\lambda = \frac{h}{mv}\):</p>
+<div class="spacer"></div>
+<p>\(\text{Na}^+\) 이온:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\lambda_{\text{Na}} = \frac{6.6 \times 10^{-34}}{3.91 \times 10^{-26} \times 0.05} = \frac{6.6 \times 10^{-34}}{1.955 \times 10^{-27}} = 3.38 \times 10^{-7} \text{ m} \approx 338 \text{ nm}\]</div>
+<div class="spacer"></div>
+<p>\(\text{Cl}^-\) 이온:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\lambda_{\text{Cl}} = \frac{6.6 \times 10^{-34}}{5.95 \times 10^{-26} \times 0.05} = \frac{6.6 \times 10^{-34}}{2.975 \times 10^{-27}} = 2.22 \times 10^{-7} \text{ m} \approx 222 \text{ nm}\]</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(4)</span> 자기장 영역에서의 이온 운동</p>
+<div class="spacer"></div>
+<p>이온이 일정 속력 \(v = 0.05\) m/s로 자기장 영역(\(B = 1.0\) T, 빗면에 수직 방향)에 들어간다.</p>
+<div class="spacer"></div>
+<p>자기장 속에서 전하를 띤 이온은 로렌츠 힘을 받는다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\vec{F} = q\vec{v} \times \vec{B}\]</div>
+<div class="spacer"></div>
+<p>이 힘은 속도에 수직이므로 이온은 원운동(또는 나선운동)을 하려 한다. 그러나 저항력 \(\vec{F} = -\gamma \vec{p}\)도 동시에 작용한다.</p>
+<div class="spacer"></div>
+<p>\(\text{Na}^+\) 이온(\(q = +e\))과 \(\text{Cl}^-\) 이온(\(q = -e\))은 전하의 부호가 반대이므로, 자기력의 방향이 서로 반대이다. 따라서 두 이온은 자기장 영역에서 서로 반대쪽으로 휘어진다.</p>
+<div class="spacer"></div>
+<p>원운동 반지름(사이클로트론 반지름):</p>
+<div class="spacer"></div>
+<div class="math-block">\[r = \frac{mv}{|q|B}\]</div>
+<div class="spacer"></div>
+<p>\(\text{Na}^+\): \(r_{\text{Na}} = \frac{3.91 \times 10^{-26} \times 0.05}{1.6 \times 10^{-19} \times 1.0} = 1.22 \times 10^{-8}\) m</p>
+<div class="spacer"></div>
+<p>\(\text{Cl}^-\): \(r_{\text{Cl}} = \frac{5.95 \times 10^{-26} \times 0.05}{1.6 \times 10^{-19} \times 1.0} = 1.86 \times 10^{-8}\) m</p>
+<div class="spacer"></div>
+<p>그러나 저항력이 크기 때문에(\(\gamma = 100\) Hz) 이온은 완전한 원운동을 하지 못하고, 자기력에 의해 한쪽으로 편향되면서 저항력에 의해 감속되고, 동시에 중력에 의해 빗면 아래쪽으로 가속된다. 결과적으로 이온은 빗면을 따라 내려가면서 자기력에 의해 좌우로 분리된다. 이것은 자기장을 이용한 이온 분리 원리이며, \(\text{Na}^+\) 이온과 \(\text{Cl}^-\) 이온은 서로 반대 방향으로 편향되어 분리된다.</p>
+<div class="spacer"></div>
+<p>정상 상태에서는 자기력과 저항력이 균형을 이루며, 이온은 빗면 방향에서 약간 기울어진 방향으로 일정 속력으로 운동하게 된다. \(\text{Na}^+\)와 \(\text{Cl}^-\)는 질량과 전하 부호가 다르므로 편향 방향과 정도가 다르다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-112</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-31 | 2021_서울대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-31.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-1. 기타 줄의 구성 물질 선택</h2>
+<div class="spacer"></div>
+<p>그림 (나)를 보면, 물질 1은 외부 자기장이 없는 상태에서 자기 도메인(자구)이 큰 영역으로 정렬되어 있고, 물질 2는 자기 도메인이 작고 무질서하게 배열되어 있다.</p>
+<div class="spacer"></div>
+<p><strong>물질 1이 더 적절하다.</strong></p>
+<div class="spacer"></div>
+<p>물질 1은 <strong>강자성체(ferromagnet)</strong>의 특성을 보인다. 강자성체는 외부 자기장이 없어도 자기 도메인이 크게 형성되어 있으며, 외부 자기장에 의해 쉽게 자화된다. 반면 물질 2는 자기 도메인이 매우 작고 무질서하게 배열되어 있어 <strong>상자성체</strong> 또는 자화가 약한 물질의 특성을 보인다.</p>
+<div class="spacer"></div>
+<p>픽업 앰프는 영구 자석과 코일로 구성되어 있으며, 전자기 유도를 이용한다. 기타 줄이 진동하면 줄과 자석 사이의 거리가 변하여, 코일을 통과하는 자기 선속이 변한다. 이때 기타 줄이 강자성체로 만들어져 있으면, 줄 자체가 자석의 자기장에 의해 강하게 자화되어 자기장의 분포에 큰 영향을 준다. 따라서 줄이 진동할 때 코일을 통과하는 자기 선속의 변화가 크게 나타나고, 패러데이 법칙에 의해 큰 유도 기전력이 발생한다.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-2. 유도 교류 신호의 형태</h2>
+<div class="spacer"></div>
+<p>\(N\)번 감은 코일을 통과하는 자기 선속 \(N\Phi\)가 시간 \(t\)에 따라 삼각파 형태로 변화한다. 그래프에서:</p>
+<p>- 진폭은 \(A\)이고, \(-A\)에서 \(A\) 사이를 왕복한다.</p>
+<p>- 주기는 \(2\tau\)이다 (0에서 \(\tau\)까지 \(-A\)에서 \(A\)로 증가, \(\tau\)에서 \(2\tau\)까지 \(A\)에서 \(-A\)로 감소).</p>
+<div class="spacer"></div>
+<p>패러데이 유도 법칙에 의해 유도 기전력은:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\mathcal{E} = -\frac{d(N\Phi)}{dt}\]</div>
+<div class="spacer"></div>
+<p>\(N\Phi\)가 삼각파이므로 그 시간 미분은 <strong>구형파(사각파)</strong>가 된다.</p>
+<div class="spacer"></div>
+<p>- \(0 < t < \tau\) 구간: \(N\Phi\)가 \(-A\)에서 \(A\)로 선형 증가하므로 기울기는 \(\frac{2A}{\tau}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\mathcal{E} = -\frac{2A}{\tau}\]</div>
+<div class="spacer"></div>
+<p>- \(\tau < t < 2\tau\) 구간: \(N\Phi\)가 \(A\)에서 \(-A\)로 선형 감소하므로 기울기는 \(-\frac{2A}{\tau}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\mathcal{E} = +\frac{2A}{\tau}\]</div>
+<div class="spacer"></div>
+<p>따라서 유도 기전력은 <strong>구형파</strong> 형태이며:</p>
+<p>- <strong>진폭</strong>: \(\frac{2A}{\tau}\)</p>
+<p>- <strong>진동수</strong>: \(f = \frac{1}{2\tau}\)</p>
+<div class="spacer"></div>
+<p><strong>기타 음과의 관계:</strong></p>
+<p>- 기타 음의 <strong>높이(음높이)</strong>는 줄의 진동수에 해당하며, 이는 픽업 앰프에서 유도된 교류 신호의 <strong>진동수</strong>를 결정한다. 음이 높을수록 진동수가 크다.</p>
+<p>- 기타 음의 <strong>세기(음량)</strong>는 줄의 진동 진폭에 해당하며, 이는 자기 선속 변화의 진폭 \(A\)를 크게 만들어 교류 신호의 <strong>진폭</strong> \(\frac{2A}{\tau}\)를 증가시킨다. 음이 클수록 진폭이 크다.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-3. 트랜지스터 종류 판별</h2>
+<div class="spacer"></div>
+<p>회로를 분석하면:</p>
+<p>- LED 1은 n|p (위쪽이 n, 아래쪽이 p) 구조이다.</p>
+<p>- LED 2는 p|n (위쪽이 p, 아래쪽이 n) 구조이다.</p>
+<p>- 트랜지스터 영역 A(위), B(중간), C(아래)가 있다.</p>
+<div class="spacer"></div>
+<p>전류가 위에서 아래로 흐르는 회로에서 2번 LED에만 불이 켜지려면, 전류가 LED 2(p→n 방향, 즉 순방향)로 흐르고, LED 1(n→p 방향, 즉 역방향)으로는 흐르지 않아야 한다.</p>
+<div class="spacer"></div>
+<p><strong>이 트랜지스터는 n-p-n형이다.</strong></p>
+<div class="spacer"></div>
+<p>n-p-n형 트랜지스터에서:</p>
+<p>- A 영역 = n형 (컬렉터)</p>
+<p>- B 영역 = p형 (베이스)</p>
+<p>- C 영역 = n형 (이미터)</p>
+<div class="spacer"></div>
+<p>회로에서 전지의 양극이 위쪽, 음극이 아래쪽에 연결되어 있다고 하면:</p>
+<div class="spacer"></div>
+<p>- A(n형)-B(p형) 접합: 위쪽에서 양극이 연결되어 A(n)에 (+)가 가해지므로, n-p 접합에 <strong>역방향 바이어스</strong>가 걸린다.</p>
+<p>- B(p형)-C(n형) 접합: 아래쪽에서 음극이 연결되어 C(n)에 (-)가 가해지므로, p-n 접합에 <strong>순방향 바이어스</strong>가 걸린다.</p>
+<div class="spacer"></div>
+<p>n-p-n 트랜지스터가 동작할 때:</p>
+<p>- C(이미터)에서 전자가 B(베이스)로 주입된다.</p>
+<p>- B 영역이 매우 얇으므로 대부분의 전자가 B를 통과하여 A(컬렉터)로 이동한다.</p>
+<p>- 소수의 전자만이 B 영역의 정공과 재결합한다.</p>
+<div class="spacer"></div>
+<p>이로 인해 주 전류는 C→A 방향(전자는 반대)으로 흐르게 된다. 이 전류 경로에서:</p>
+<p>- LED 2(p|n 구조)는 전류 흐름 방향에서 순방향이므로 불이 켜진다.</p>
+<p>- LED 1(n|p 구조)은 전류 흐름 방향에서 역방향이므로 불이 켜지지 않는다.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-4. 클리핑 현상과 해결 방법</h2>
+<div class="spacer"></div>
+<p><strong>(발생 원인)</strong></p>
+<div class="spacer"></div>
+<p>트랜지스터 증폭 회로에서 입력 신호가 큰 경우(격렬한 곡 연주 시), 신호의 일부 구간에서 트랜지스터가 <strong>포화 상태</strong> 또는 <strong>차단 상태</strong>에 들어간다.</p>
+<div class="spacer"></div>
+<p>- 격렬한 곡 연주 시 픽업 앰프의 출력 교류 신호 진폭이 크다.</p>
+<p>- 증폭된 신호의 크기가 전원 전압 \(V\)에 도달하면, 트랜지스터가 포화되어 더 이상 출력이 증가하지 않는다 (ON 상태 고정).</p>
+<p>- 신호가 너무 작아지면 트랜지스터가 완전히 차단되어 출력이 0이 된다 (OFF 상태 고정).</p>
+<div class="spacer"></div>
+<p>이것이 트랜지스터의 <strong>스위칭 작용</strong>으로, 증폭기가 선형 영역을 벗어나 ON/OFF 스위치처럼 동작하는 것이다. 결과적으로 출력 파형의 위아래가 잘려나가는 <strong>클리핑(clipping)</strong> 현상이 발생하여 그림 (다)와 같은 파형이 된다.</p>
+<div class="spacer"></div>
+<p><strong>(해결 방법)</strong></p>
+<div class="spacer"></div>
+<p>저항 \(R_2\)의 값을 <strong>증가</strong>시켜야 한다.</p>
+<div class="spacer"></div>
+<p>\(R_1\)과 \(R_2\)로 이루어진 분압 회로에서, 트랜지스터 베이스에 걸리는 바이어스 전압은 \(R_2\)에 걸리는 전압에 비례한다. 증폭 이득(gain)은 대략 \(\frac{R_1}{R_2}\)에 비례하므로, \(R_2\)를 증가시키면:</p>
+<div class="spacer"></div>
+<p>- 증폭 이득이 감소한다.</p>
+<p>- 입력 신호가 크더라도 증폭된 출력 신호가 전원 전압 \(V\)를 초과하지 않게 된다.</p>
+<p>- 트랜지스터가 포화/차단 상태에 들어가지 않아 선형 증폭 영역에 머문다.</p>
+<div class="spacer"></div>
+<p>따라서 클리핑이 방지되어 기타의 음색 변질을 막을 수 있다.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-5. 축전기 $C_2$의 금속판 거리 조정</h2>
+<div class="spacer"></div>
+<p><strong>거리 $d$를 줄여야 한다.</strong></p>
+<div class="spacer"></div>
+<p>축전기의 전기 용량은:</p>
+<div class="spacer"></div>
+<div class="math-block">\[C = \frac{\varepsilon_0 A_{\text{plate}}}{d}\]</div>
+<div class="spacer"></div>
+<p>여기서 \(A_{\text{plate}}\)는 금속판의 넓이, \(d\)는 판 사이 거리이다. \(d\)를 줄이면 \(C_2\)의 전기 용량이 증가한다.</p>
+<div class="spacer"></div>
+<p>축전기의 임피던스(교류 저항)는:</p>
+<div class="spacer"></div>
+<div class="math-block">\[Z_C = \frac{1}{2\pi f C_2}\]</div>
+<div class="spacer"></div>
+<p>여기서 \(f\)는 신호의 진동수이다. 베이스 기타의 낮은 음은 진동수 \(f\)가 작으므로 \(Z_C\)가 크다. 이로 인해 축전기 \(C_2\)에서 신호가 크게 감쇄되어 스피커에 전달되는 낮은 음의 크기가 작아진다.</p>
+<div class="spacer"></div>
+<p>\(d\)를 줄여 \(C_2\)를 증가시키면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[Z_C = \frac{1}{2\pi f C_2}\]</div>
+<div class="spacer"></div>
+<p>에서 \(C_2\)가 커지므로 \(Z_C\)가 감소한다. 특히 낮은 진동수에서의 임피던스가 크게 줄어들어, 저음역 신호가 축전기를 더 잘 통과하게 된다. 따라서 베이스 기타의 낮은 음이 스피커에 효과적으로 전달되어 소리가 보다 잘 들리게 된다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-31</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

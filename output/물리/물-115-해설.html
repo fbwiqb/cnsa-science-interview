@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-115 | 2015_서울대_물리학_해설</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-115.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">전자기 유도, 감쇠 진동, 고무줄 열역학</h2>
+<div class="spacer"></div>
+<p><strong>(문제 1)</strong> 도체 막대에 작용하는 알짜힘</p>
+<div class="spacer"></div>
+<p>도체 막대가 자기장 \(\vec{B} = B_0\hat{y}\) 속에서 \(x\) 방향으로 속도 \(v_x\)로 움직이면, 길이 \(D\)인 막대에 유도 기전력이 발생한다.</p>
+<div class="spacer"></div>
+<p>유도 기전력(패러데이 법칙):</p>
+<div class="spacer"></div>
+<div class="math-block">\[\mathcal{E} = B_0 D v_x\]</div>
+<div class="spacer"></div>
+<p>이 기전력에 의해 저항 \(R\)을 통해 흐르는 전류:</p>
+<div class="spacer"></div>
+<div class="math-block">\[I = \frac{\mathcal{E}}{R} = \frac{B_0 D v_x}{R}\]</div>
+<div class="spacer"></div>
+<p>전류가 흐르는 도체 막대가 자기장 속에서 받는 힘(렌츠의 법칙에 의해 운동을 방해하는 방향):</p>
+<div class="spacer"></div>
+<div class="math-block">\[F_{\text{mag}} = BID = B_0 \cdot \frac{B_0 D v_x}{R} \cdot D = \frac{B_0^2 D^2}{R} v_x = b v_x\]</div>
+<div class="spacer"></div>
+<p>여기서 \(b = \frac{B_0^2 D^2}{R}\)이다. 이 힘은 운동 방향과 반대이므로 \(-bv_x\)이다.</p>
+<div class="spacer"></div>
+<p>고무줄(용수철)에 의한 복원력은 평형위치 \(x = 0\) 기준으로 \(-kx\)이다.</p>
+<div class="spacer"></div>
+<p>따라서 도체 막대에 작용하는 알짜힘은:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{F = -kx - bv_x, \quad b = \frac{B_0^2 D^2}{R}}\]</div>
+<div class="spacer"></div>
+<p><strong>(문제 2)</strong> 역학에너지 감소 비율의 일정성</p>
+<div class="spacer"></div>
+<p>\(b\)가 충분히 작을 때, 한 주기 동안 진폭이 거의 변하지 않으므로 \(x(t) = A\cos\omega t\)로 근사한다. 여기서 \(\omega = \sqrt{\frac{k}{m}}\)이다.</p>
+<div class="spacer"></div>
+<p>속도: \(v_x = \dot{x} = -A\omega\sin\omega t\)</p>
+<div class="spacer"></div>
+<p>총 역학에너지:</p>
+<div class="spacer"></div>
+<div class="math-block">\[E = \frac{1}{2}kA^2\]</div>
+<div class="spacer"></div>
+<p>한 주기 동안 저항에서 소산되는 에너지는 감쇠력 \(-bv_x\)가 하는 일의 크기와 같다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta E = \int_0^{\tau} bv_x^2 \, dt = b \int_0^{\tau} A^2\omega^2\sin^2\omega t \, dt\]</div>
+<div class="spacer"></div>
+<p>\(\sin^2\omega t\)의 한 주기 평균은 \(\frac{1}{2}\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta E = bA^2\omega^2 \cdot \frac{\tau}{2}\]</div>
+<div class="spacer"></div>
+<p>주기 \(\tau = \frac{2\pi}{\omega}\)를 대입하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\Delta E = bA^2\omega^2 \cdot \frac{\pi}{\omega} = \pi b A^2 \omega\]</div>
+<div class="spacer"></div>
+<p>따라서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{\Delta E}{E} = \frac{\pi b A^2 \omega}{\frac{1}{2}kA^2} = \frac{2\pi b \omega}{k}\]</div>
+<div class="spacer"></div>
+<p>\(\omega = \sqrt{\frac{k}{m}}\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\frac{\Delta E}{E} = \frac{2\pi b}{m\omega} = \frac{2\pi b}{\sqrt{mk}}}\]</div>
+<div class="spacer"></div>
+<p>이 비율은 진폭 \(A\)에 무관한 상수이므로, <strong>$\frac{\Delta E}{E}$는 일정하다.</strong></p>
+<div class="spacer"></div>
+<p><strong>(문제 3)</strong> 고무줄의 엔트로피와 용수철 상수의 온도 의존성</p>
+<div class="spacer"></div>
+<p>고무줄의 내부에너지 \(U(T, L) = U_0\) (상수)이고, 엔트로피 \(S(T, L) = S(L)\) (온도 무관)이다.</p>
+<div class="spacer"></div>
+<p>열역학 제1법칙을 고무줄에 적용한다. 고무줄이 외부 힘 \(F\)에 의해 \(dL\)만큼 늘어날 때:</p>
+<div class="spacer"></div>
+<div class="math-block">\[dU = \delta Q - \delta W\]</div>
+<div class="spacer"></div>
+<p>여기서 고무줄이 외부에 하는 일은 \(\delta W = -F\,dL\)이다 (고무줄이 수축하려는 방향이 양의 일). 즉 외부 힘 \(F\)가 고무줄을 \(dL\)만큼 늘릴 때 외부가 고무줄에 하는 일은 \(F\,dL\)이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[dU = \delta Q + F\,dL\]</div>
+<div class="spacer"></div>
+<p>(여기서 부호 관례: 고무줄을 늘리는 힘 \(F > 0\), 늘어남 \(dL > 0\)일 때 외부가 고무줄에 일을 한다.)</p>
+<div class="spacer"></div>
+<p>\(dU = 0\) (내부에너지가 상수)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\delta Q = -F\,dL\]</div>
+<div class="spacer"></div>
+<p>가역과정에서 \(\delta Q = T\,dS\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T\,dS = -F\,dL\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[F = -T\frac{dS}{dL}\]</div>
+<div class="spacer"></div>
+<p>고무줄의 복원력은 용수철 법칙 \(F = k \cdot L\) (자연길이로부터의 변위에 비례)을 따른다고 가정하면, 엔트로피를 \(L\)의 함수로 구할 수 있다.</p>
+<div class="spacer"></div>
+<p>\(F = -T\frac{dS}{dL}\)에서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{dS}{dL} = -\frac{F}{T}\]</div>
+<div class="spacer"></div>
+<p>\(F = kL\)이고 \(k = \alpha T\)를 보여야 하므로, 이를 자기 무착순으로(self-consistently) 유도한다.</p>
+<div class="spacer"></div>
+<p>\(S\)가 \(L\)만의 함수이므로 \(\frac{dS}{dL}\)도 \(L\)만의 함수이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[F = -T\frac{dS}{dL}\]</div>
+<div class="spacer"></div>
+<p>\(\frac{dS}{dL}\)이 \(T\)에 무관하므로, \(F\)는 \(T\)에 비례한다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[F = T \cdot \left(-\frac{dS}{dL}\right)\]</div>
+<div class="spacer"></div>
+<p>고무줄의 복원력이 \(F = kL\)의 형태(훅의 법칙)를 따른다고 하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[kL = -T\frac{dS}{dL}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{dS}{dL} = -\frac{kL}{T}\]</div>
+<div class="spacer"></div>
+<p>\(S\)가 \(T\)에 무관하므로 \(\frac{kL}{T}\)도 \(T\)에 무관해야 한다. 따라서 \(\frac{k}{T}\)는 상수이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{k = \alpha T}\]</div>
+<div class="spacer"></div>
+<p>여기서 \(\alpha\)는 상수이다. 즉 <strong>고무줄의 용수철 상수는 온도에 비례하여 증가한다.</strong></p>
+<div class="spacer"></div>
+<p>엔트로피:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{dS}{dL} = -\alpha L\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{S(L) = S_0 - \frac{1}{2}\alpha L^2}\]</div>
+<div class="spacer"></div>
+<p>여기서 \(S_0\)은 \(L = 0\)에서의 엔트로피이다. 고무줄이 늘어날수록 엔트로피가 감소하는데, 이는 중합체 사슬이 정렬되면서 무질서도가 줄어드는 것과 일치한다.</p>
+<div class="spacer"></div>
+<p><strong>(문제 4)</strong> 고무줄 카르노 기관의 F-L 그래프와 열효율</p>
+<div class="spacer"></div>
+<p>고무줄의 힘-길이 관계: \(F = kL = \alpha T L\)</p>
+<div class="spacer"></div>
+<p><strong>각 과정의 분석:</strong></p>
+<div class="spacer"></div>
+<p><strong>a → b (단열과정, $T_1 \to T_2$, $L = L_2$ 일정):</strong></p>
+<p>길이가 \(L_2\)로 일정하고 온도가 \(T_1\)에서 \(T_2\)로 상승한다. \(F = \alpha T L_2\)이므로 힘이 \(\alpha T_1 L_2\)에서 \(\alpha T_2 L_2\)로 증가한다. \(F\)-\(L\) 그래프에서 \(L = L_2\)인 수직선이다.</p>
+<div class="spacer"></div>
+<p><strong>b → c (등온수축, $T = T_2$, $L_2 \to L_1$, $Q_2$ 흡수):</strong></p>
+<p>온도 \(T_2\) 일정, \(F = \alpha T_2 L\). 열을 흡수하면 고무줄이 수축한다(\(L_2 \to L_1\), \(L_1 < L_2\)). \(F\)-\(L\) 그래프에서 기울기 \(\alpha T_2\)인 직선의 일부이다.</p>
+<div class="spacer"></div>
+<p><strong>c → d (단열과정, $T_2 \to T_1$, $L = L_1$ 일정):</strong></p>
+<p>길이가 \(L_1\)으로 일정하고 온도가 \(T_2\)에서 \(T_1\)으로 하강한다. 힘이 \(\alpha T_2 L_1\)에서 \(\alpha T_1 L_1\)으로 감소한다. \(F\)-\(L\) 그래프에서 \(L = L_1\)인 수직선이다.</p>
+<div class="spacer"></div>
+<p><strong>d → a (등온팽창, $T = T_1$, $L_1 \to L_2$, $Q_1$ 방출):</strong></p>
+<p>온도 \(T_1\) 일정, \(F = \alpha T_1 L\). 열을 방출하면 고무줄이 늘어난다(\(L_1 \to L_2\)). \(F\)-\(L\) 그래프에서 기울기 \(\alpha T_1\)인 직선의 일부이다.</p>
+<div class="spacer"></div>
+<p>\(F\)-\(L\) 그래프는 두 직선(기울기 \(\alpha T_1\), \(\alpha T_2\))과 두 수직선(\(L = L_1\), \(L = L_2\))으로 둘러싸인 사다리꼴 형태이다.</p>
+<div class="spacer"></div>
+<p><strong>열효율 계산:</strong></p>
+<div class="spacer"></div>
+<p>b → c 과정에서 흡수하는 열 \(Q_2\):</p>
+<div class="spacer"></div>
+<p>\(dU = 0\)이므로 \(\delta Q = -F\,dL\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[Q_2 = -\int_{L_2}^{L_1} \alpha T_2 L \, dL = \alpha T_2 \int_{L_1}^{L_2} L \, dL = \frac{1}{2}\alpha T_2(L_2^2 - L_1^2)\]</div>
+<div class="spacer"></div>
+<p>d → a 과정에서 방출하는 열 \(Q_1\):</p>
+<div class="spacer"></div>
+<div class="math-block">\[Q_1 = -\int_{L_1}^{L_2} \alpha T_1 L \, dL = -\frac{1}{2}\alpha T_1(L_2^2 - L_1^2)\]</div>
+<div class="spacer"></div>
+<p>부호를 정리하면, 방출되는 열의 크기: \(|Q_1| = \frac{1}{2}\alpha T_1(L_2^2 - L_1^2)\)</p>
+<div class="spacer"></div>
+<p>열효율:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\eta = 1 - \frac{|Q_1|}{Q_2} = 1 - \frac{\frac{1}{2}\alpha T_1(L_2^2 - L_1^2)}{\frac{1}{2}\alpha T_2(L_2^2 - L_1^2)}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\eta = 1 - \frac{T_1}{T_2}}\]</div>
+<div class="spacer"></div>
+<p>이는 카르노 효율과 동일하며, 가역과정에서의 이론적 최대 효율이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-115</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

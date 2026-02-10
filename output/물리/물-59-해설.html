@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-59 | 2019_DGIST_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-59.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">문항 해설</h2>
+<div class="spacer"></div>
+<p>운동량의 정의, 운동량과 힘의 관계, 운동량 보존법칙 및 에너지 보존법칙을 이해하고 있는지 알아보는 문항임.</p>
+<div class="spacer"></div>
+<p>가. 운동량의 정의에 대한 문제</p>
+<p>나. 뉴턴의 운동 제3법칙 및 운동량과 힘의 관계를 이용하여 운동량 보존을 유도하는 문제</p>
+<p>다. 운동량 보존법칙과 에너지 보존법칙을 응용하여 운동에너지를 정량적으로 구하는 문제</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">예시 답안</h2>
+<div class="spacer"></div>
+<p><strong>(가)</strong> 운동량 = 질량 \(\times\) 속도 (\(\vec{p} = m\vec{v}\))</p>
+<div class="spacer"></div>
+<p><strong>(나)</strong> 두 물체 A, B가 상호작용(충돌 등)하는 경우, A가 B에 작용하는 힘 \(\vec{F}_{AB}\)와 B가 A에 작용하는 힘 \(\vec{F}_{BA}\)는 뉴턴의 운동 제3법칙에 의해 \(\vec{F}_{AB} = -\vec{F}_{BA}\)이다. 즉 \(\vec{F}_{AB} + \vec{F}_{BA} = 0\)이다.</p>
+<div class="spacer"></div>
+<p>힘 \(\vec{F}_{AB}\)에 의해 \(\Delta t\) 시간 동안 변화하는 B의 운동량을 \(\Delta\vec{p}_B\)라 하면 \(\vec{F}_{AB} = \frac{\Delta\vec{p}_B}{\Delta t}\)이고, 힘 \(\vec{F}_{BA}\)에 의해 \(\Delta t\) 시간 동안 변화하는 A의 운동량을 \(\Delta\vec{p}_A\)라 하면 \(\vec{F}_{BA} = \frac{\Delta\vec{p}_A}{\Delta t}\)이다.</p>
+<div class="spacer"></div>
+<p>따라서 \(\vec{F}_{AB} + \vec{F}_{BA} = 0 = \frac{\Delta\vec{p}_B}{\Delta t} + \frac{\Delta\vec{p}_A}{\Delta t} = \frac{\Delta(\vec{p}_A + \vec{p}_B)}{\Delta t} = \Delta\vec{p}\)</p>
+<div class="spacer"></div>
+<p>즉 \(\Delta\vec{p} = 0\)이기 때문에 두 물체의 총 운동량은 시간에 대해 일정하고, 따라서 보존된다.</p>
+<div class="spacer"></div>
+<p><strong>(다)</strong> 질량수 4인 \(\alpha\) 입자의 질량을 \(m_1\), 속력을 \(v_1\)이라 하고, 질량수 206인 원자핵의 질량을 \(m_2\), 속력을 \(v_2\)라 하면,</p>
+<div class="spacer"></div>
+<p>운동량 보존법칙: \(0 = m_1 v_1 + m_2 v_2\)이므로 \(v_2 = -\frac{m_1}{m_2}v_1 = -\frac{4}{206}v_1\)</p>
+<div class="spacer"></div>
+<p>\(\alpha\) 입자의 운동에너지: \(E = \frac{1}{2}m_1 v_1^2 = \frac{1}{2} \times 4u \times v_1^2 = 2u \cdot v_1^2\)</p>
+<div class="spacer"></div>
+<p>질량수 206인 원자핵의 운동에너지:</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_{206} = \frac{1}{2}m_2 v_2^2 = \frac{1}{2} \times 206u \times v_2^2 = \frac{1}{2} \times 206u \times \left(\frac{4u}{206u}\right)^2 v_1^2 = \frac{4}{206} \times 2u \times v_1^2 = \frac{2}{103}E\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-59</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

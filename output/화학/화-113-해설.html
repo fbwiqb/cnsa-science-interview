@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-113 | 2016_서울대_화학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-113.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[이상기체 상태방정식과 아보가드로수]</h2>
+<div class="spacer"></div>
+<p><strong>(2-1)</strong> 기체 법칙, 기체 상수, 아보가드로수</p>
+<div class="spacer"></div>
+<p><strong>1) 절대 온도와 섭씨 온도의 관계, 이상기체 상태방정식 유도</strong></p>
+<div class="spacer"></div>
+<p>샤를 법칙에 의하면 기체의 부피가 0이 되는 온도가 절대 0도이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[V = V_0\left(1 + \frac{t}{273}\right) = V_0 \cdot \frac{273 + t}{273}\]</div>
+<div class="spacer"></div>
+<p>\(V = 0\)이 되려면 \(t = -273\,^\circ\text{C}\)이므로, 절대 온도 \(T\)와 섭씨 온도 \(t\)의 관계는:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{T(\text{K}) = t(^\circ\text{C}) + 273}\]</div>
+<div class="spacer"></div>
+<p>이상기체 상태방정식 유도:</p>
+<div class="spacer"></div>
+<p>- 보일 법칙: 일정 \(T\), \(n\)에서 \(V \propto \frac{1}{P}\)</p>
+<p>- 샤를 법칙: 일정 \(P\), \(n\)에서 \(V \propto T\)</p>
+<p>- 아보가드로 법칙: 일정 \(T\), \(P\)에서 \(V \propto n\)</p>
+<div class="spacer"></div>
+<p>이 세 법칙을 결합하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[V \propto \frac{nT}{P}\]</div>
+<div class="spacer"></div>
+<p>비례상수를 \(R\)(기체상수)로 놓으면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{PV = nRT}\]</div>
+<div class="spacer"></div>
+<p><strong>2) 기체 상수 $R$의 값 계산</strong></p>
+<div class="spacer"></div>
+<p>\(0\,^\circ\text{C} = 273\,\text{K}\), \(1\,\text{atm}\)에서 기체 1몰의 부피 = \(22.4\,\text{L}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[R = \frac{PV}{nT} = \frac{1 \times 22.4}{1 \times 273} = 0.082\,\text{L} \cdot \text{atm} / (\text{mol} \cdot \text{K})\]</div>
+<div class="spacer"></div>
+<p>SI 단위로 변환하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[R = \frac{1.013 \times 10^5 \times 22.4 \times 10^{-3}}{1 \times 273} = \frac{2269.12}{273} \approx 8.31\,\text{J}/(\text{mol} \cdot \text{K})\]</div>
+<div class="spacer"></div>
+<p>따라서 <strong>$R \approx 0.082\,\text{L} \cdot \text{atm}/(\text{mol} \cdot \text{K})$</strong> 또는 <strong>$R \approx 8.31\,\text{J}/(\text{mol} \cdot \text{K})$</strong></p>
+<div class="spacer"></div>
+<p><strong>3) 아보가드로수 $N_A$ 계산</strong></p>
+<div class="spacer"></div>
+<p>단원자 기체 1개의 평균 운동에너지: \(\epsilon = \frac{3k_BT}{2}\)</p>
+<div class="spacer"></div>
+<p>단원자 기체 1몰의 평균 운동에너지: \(E = \frac{3RT}{2}\)</p>
+<div class="spacer"></div>
+<p>1몰에 \(N_A\)개의 원자가 있으므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[E = N_A \cdot \epsilon\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{3RT}{2} = N_A \cdot \frac{3k_BT}{2}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[R = N_A \cdot k_B\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[N_A = \frac{R}{k_B} = \frac{8.31}{1.38 \times 10^{-23}} \approx 6.02 \times 10^{23}\]</div>
+<div class="spacer"></div>
+<p>따라서 <strong>$N_A \approx 6.0 \times 10^{23}$</strong></p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[동위원소와 질량 스펙트럼]</h2>
+<div class="spacer"></div>
+<p><strong>(2-2)</strong> 동위원소의 종류, 상대 존재비, 평균 원자량</p>
+<div class="spacer"></div>
+<p>질량 스펙트럼에서 \(\text{A}^+\) 이온의 전하량은 전자 1개의 전하이므로 \(e = 1\)이다. 따라서 \(m/e = m\)이며, 각 피크의 \(m/e\) 값은 동위원소의 질량(amu)과 같다.</p>
+<div class="spacer"></div>
+<p>스펙트럼 데이터: \((28, 0.92)\), \((29, 0.05)\), \((30, 0.03)\)</p>
+<div class="spacer"></div>
+<p>A 원자는 <strong>3종류의 동위원소</strong>를 가진다:</p>
+<p>- 질량수 28인 동위원소</p>
+<p>- 질량수 29인 동위원소</p>
+<p>- 질량수 30인 동위원소</p>
+<div class="spacer"></div>
+<p>상대적인 존재량의 비:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{28\text{A} : 29\text{A} : 30\text{A} = 0.92 : 0.05 : 0.03}\]</div>
+<div class="spacer"></div>
+<p>평균 원자량:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\bar{M} = 28 \times 0.92 + 29 \times 0.05 + 30 \times 0.03\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= 25.76 + 1.45 + 0.90 = 28.11 \text{ amu}\]</div>
+<div class="spacer"></div>
+<p>따라서 평균 원자량은 <strong>28.11 amu</strong>이다. (이는 규소(Si)에 해당한다.)</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[이원자 분자의 질량 스펙트럼 예측]</h2>
+<div class="spacer"></div>
+<p><strong>(2-3)</strong> \(\text{A}_2^+\) 이온의 질량 스펙트럼</p>
+<div class="spacer"></div>
+<p>\(\text{A}_2\) 분자는 두 개의 A 원자로 이루어지므로, 가능한 동위원소 조합과 그 확률을 계산한다.</p>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th>조합</th><th>\(m/e\)</th><th>상대세기</th></tr>
+<tr><td>\(28 + 28\)</td><td>56</td><td>\(0.92 \times 0.92 = 0.8464\)</td></tr>
+<tr><td>\(28 + 29\)</td><td>57</td><td>\(2 \times 0.92 \times 0.05 = 0.0920\)</td></tr>
+<tr><td>\(28 + 30\)</td><td>58</td><td>\(2 \times 0.92 \times 0.03 = 0.0552\)</td></tr>
+<tr><td>\(29 + 29\)</td><td>58</td><td>\(0.05 \times 0.05 = 0.0025\)</td></tr>
+<tr><td>\(29 + 30\)</td><td>59</td><td>\(2 \times 0.05 \times 0.03 = 0.0030\)</td></tr>
+<tr><td>\(30 + 30\)</td><td>60</td><td>\(0.03 \times 0.03 = 0.0009\)</td></tr>
+</table>
+<div class="spacer"></div>
+<p>\(m/e = 58\)의 경우 두 조합이 겹치므로: \(0.0552 + 0.0025 = 0.0577\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{(56,\, 0.8464),\; (57,\, 0.0920),\; (58,\, 0.0577),\; (59,\, 0.0030),\; (60,\, 0.0009)}\]</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[다이아몬드 구조의 단위격자]</h2>
+<div class="spacer"></div>
+<p><strong>(2-4)</strong> 다이아몬드 단위격자 내의 원자 수</p>
+<div class="spacer"></div>
+<p>다이아몬드 구조는 면심 입방(FCC) 격자를 기본으로 하며, FCC 격자 내부에 추가적인 원자가 위치하는 구조이다.</p>
+<div class="spacer"></div>
+<p><strong>FCC 격자의 원자 수 계산:</strong></p>
+<p>- 꼭짓점 원자: \(8 \times \frac{1}{8} = 1\)개</p>
+<p>- 면 중심 원자: \(6 \times \frac{1}{2} = 3\)개</p>
+<p>- FCC 총: \(1 + 3 = 4\)개</p>
+<div class="spacer"></div>
+<p><strong>다이아몬드 구조의 추가 원자:</strong></p>
+<div class="spacer"></div>
+<p>다이아몬드 구조는 FCC 격자를 체대각선 방향으로 \(\frac{1}{4}\)만큼 평행이동한 동일한 FCC 격자를 겹쳐놓은 것과 같다. 이 추가 FCC 격자에서 단위격자 내부에 완전히 포함되는 원자가 <strong>4개</strong> 있다.</p>
+<div class="spacer"></div>
+<p>따라서 다이아몬드 단위격자 내의 총 원자 수:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{4 + 4 = 8 \text{개}}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-113</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

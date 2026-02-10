@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-20 | 2023_연세대_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-20.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">문제 1. 정육각형 전하 배치에서의 알짜힘</h2>
+<div class="spacer"></div>
+<p>정육각형 한 변의 길이 \(a = 3\,\text{cm} = 0.03\,\text{m}\), 전하량 \(q = 10^{-1}\,\text{C}\), \(k = 9 \times 10^9\,\text{N·m}^2/\text{C}^2\).</p>
+<div class="spacer"></div>
+<p>3개의 정육각형 틀의 가운데 지점에 양(+)전하가 있고, 이미 배치된 양전하 2개와 음전하 1개가 있으며, 나머지 4자리에 양(+)전하 2개와 음(-)전하 2개를 배치한다.</p>
+<div class="spacer"></div>
+<p>정육각형에서 중심과 꼭지점 사이의 거리는 한 변의 길이 \(a\)와 같다.</p>
+<div class="spacer"></div>
+<p>각 전하가 가운데 전하에 미치는 쿨롱 힘의 크기:</p>
+<div class="spacer"></div>
+<div class="math-block">\[F_0 = \frac{kq^2}{a^2} = \frac{9 \times 10^9 \times (10^{-1})^2}{(0.03)^2} = 10^{11}\,\text{N}\]</div>
+<div class="spacer"></div>
+<p><strong>알짜힘 최대 배치:</strong></p>
+<div class="spacer"></div>
+<p>같은 부호의 전하가 한쪽으로 모이고, 반대 부호가 반대쪽에 모이면 알짜힘이 한 방향으로 합쳐져 최대가 된다.</p>
+<div class="spacer"></div>
+<p>구체적인 배치는 그림의 기하학에 따라 결정되지만, 원리적으로:</p>
+<p>- 모든 양전하를 한쪽에, 모든 음전하를 반대쪽에 배치하면, 척력과 인력이 같은 방향으로 합쳐진다.</p>
+<div class="spacer"></div>
+<p><strong>알짜힘 최소 배치:</strong></p>
+<div class="spacer"></div>
+<p>대칭적으로 배치하여 힘들이 서로 상쇄되도록 한다.</p>
+<div class="spacer"></div>
+<p>정육각형의 대칭성을 이용하여 대향하는 위치에 같은 전하를 배치하면 힘이 상쇄된다.</p>
+<div class="spacer"></div>
+<p>가운데 전하에서 거리 \(a\)에 있는 전하의 쿨롱 힘:</p>
+<div class="spacer"></div>
+<div class="math-block">\[F_0 = \frac{kq^2}{a^2} = \frac{9 \times 10^9 \times (0.1)^2}{(0.03)^2} = \frac{9 \times 10^7}{9 \times 10^{-4}} = 1.0 \times 10^{11}\,\text{N}\]</div>
+<div class="spacer"></div>
+<p>대칭적 배치(최소)에서 벡터 합이 0에 가까울수록 좋고, 비대칭적 배치(최대)에서 벡터 합이 최대가 된다.</p>
+<div class="spacer"></div>
+<p>최대 알짜힘은 대략 \(6F_0\) 이하(모든 힘이 같은 방향), 최소는 \(0\) 또는 작은 값이 된다.</p>
+<div class="spacer"></div>
+<p>구체적 수치는 정확한 기하학적 배치에 따라:</p>
+<p>- 최대 배치의 알짜힘: 양전하는 가운데를 밀고 음전하는 당기므로, 같은 방향으로 배치하면 알짜힘이 합산된다.</p>
+<p>- 최소 배치의 알짜힘: 대칭 배치로 힘이 최대한 상쇄된다.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">문제 2. 드론과 쇠공의 충돌</h2>
+<div class="spacer"></div>
+<p>\(v_1 = 10\,\text{m/s}\), \(h = 1000\,\text{m}\), \(d = 1100\,\text{m}\), \(m = 6 \times 10^{-3}\,\text{kg}\), \(g = 10\,\text{m/s}^2\).</p>
+<div class="spacer"></div>
+<p><strong>드론의 운동 (연직 아래 방향):</strong></p>
+<div class="spacer"></div>
+<p>드론은 높이 \(h\)에서 초기 속도 \(v_1 = 10\,\text{m/s}\) (아래), 가속도 \(0.8g = 8\,\text{m/s}^2\) (아래).</p>
+<div class="spacer"></div>
+<p>시간 \(t\)에서 드론의 높이:</p>
+<div class="spacer"></div>
+<div class="math-block">\[y_{\text{drone}} = h - v_1 t - \frac{1}{2}(0.8g)t^2 = 1000 - 10t - 4t^2\]</div>
+<div class="spacer"></div>
+<p>드론의 수평 위치: 일정 (낙하 지점)</p>
+<div class="spacer"></div>
+<p><strong>쇠공의 운동 (포물선):</strong></p>
+<div class="spacer"></div>
+<p>발사각 45°, 초기 속도 \(v_2\):</p>
+<p>- 수평 성분: \(v_{2x} = v_2 \cos 45° = \frac{v_2}{\sqrt{2}}\)</p>
+<p>- 연직 성분: \(v_{2y} = v_2 \sin 45° = \frac{v_2}{\sqrt{2}}\)</p>
+<div class="spacer"></div>
+<p>시간 \(t\)에서 쇠공의 위치:</p>
+<p>- 수평: \(x_{\text{ball}} = \frac{v_2}{\sqrt{2}}t\)</p>
+<p>- 연직: \(y_{\text{ball}} = \frac{v_2}{\sqrt{2}}t - \frac{1}{2}gt^2\)</p>
+<div class="spacer"></div>
+<p><strong>명중 조건:</strong></p>
+<div class="spacer"></div>
+<p>수평 조건: \(\frac{v_2}{\sqrt{2}}t = d = 1100\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[v_2 = \frac{1100\sqrt{2}}{t}\]</div>
+<div class="spacer"></div>
+<p>연직 조건: \(y_{\text{ball}} = y_{\text{drone}}\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{v_2}{\sqrt{2}}t - \frac{1}{2}gt^2 = 1000 - 10t - 4t^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{v_2 t}{\sqrt{2}} = d = 1100\]</div>이므로:
+<div class="spacer"></div>
+<div class="math-block">\[1100 - 5t^2 = 1000 - 10t - 4t^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[1100 - 5t^2 = 1000 - 10t - 4t^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[100 + 10t - t^2 = 0\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[t^2 - 10t - 100 = 0\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[t = \frac{10 \pm \sqrt{100 + 400}}{2} = \frac{10 \pm \sqrt{500}}{2} = \frac{10 \pm 10\sqrt{5}}{2} = 5 \pm 5\sqrt{5}\]</div>
+<div class="spacer"></div>
+<p>\(t > 0\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[t = 5 + 5\sqrt{5} \approx 5 + 11.18 \approx 16.18\,\text{s}\]</div>
+<div class="spacer"></div>
+<p>이것은 매우 긴 시간이다. \(\sqrt{5} \approx 2.236\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{t = 5(1 + \sqrt{5}) \approx 16.2\,\text{s}}\]</div>
+<div class="spacer"></div>
+<p><strong>쇠공의 초기 속도:</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[v_2 = \frac{1100\sqrt{2}}{t} = \frac{1100\sqrt{2}}{5(1+\sqrt{5})} = \frac{220\sqrt{2}}{1+\sqrt{5}}\]</div>
+<div class="spacer"></div>
+<p>유리화: \(\frac{220\sqrt{2}}{1+\sqrt{5}} \cdot \frac{\sqrt{5}-1}{(\sqrt{5}-1)} = \frac{220\sqrt{2}(\sqrt{5}-1)}{4} = 55\sqrt{2}(\sqrt{5}-1)\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[v_2 = 55\sqrt{2}(\sqrt{5} - 1) \approx 55 \times 1.414 \times 1.236 \approx 96.1\,\text{m/s}\]</div>
+<div class="spacer"></div>
+<p><strong>운동 에너지:</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[E_k = \frac{1}{2}mv_2^2 = \frac{1}{2} \times 6 \times 10^{-3} \times v_2^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v_2^2 = \frac{1100^2 \times 2}{t^2} = \frac{2 \times 1.21 \times 10^6}{(5+5\sqrt{5})^2} = \frac{2.42 \times 10^6}{25(1+\sqrt{5})^2}\]</div>
+<div class="spacer"></div>
+<p>\((1+\sqrt{5})^2 = 1 + 2\sqrt{5} + 5 = 6 + 2\sqrt{5} \approx 10.472\)</p>
+<div class="spacer"></div>
+<div class="math-block">\[v_2^2 \approx \frac{2.42 \times 10^6}{25 \times 10.472} \approx \frac{2.42 \times 10^6}{261.8} \approx 9246\,\text{m}^2/\text{s}^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[E_k = \frac{1}{2} \times 6 \times 10^{-3} \times 9246 \approx 27.7\,\text{J}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{E_k \approx 27.7\,\text{J}}\]</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">문제 3. ㄷ자 도선에서의 도체 막대 운동</h2>
+<div class="spacer"></div>
+<p>\(w = 0.5\,\text{m}\), \(R = 10\,\Omega\), \(B = 0.4\,\text{T}\).</p>
+<div class="spacer"></div>
+<p>전류-시간 그래프에서 도체 막대의 속도를 추정한다.</p>
+<div class="spacer"></div>
+<p>유도 기전력: \(\mathcal{E} = Bwv\)</p>
+<div class="spacer"></div>
+<p>전류: \(I = \frac{\mathcal{E}}{R} = \frac{Bwv}{R}\)</p>
+<div class="spacer"></div>
+<p>따라서 속도: \(v = \frac{IR}{Bw} = \frac{I \times 10}{0.4 \times 0.5} = 50I\)</p>
+<div class="spacer"></div>
+<p>그래프에서 전류값을 읽어 속도를 계산하고, 속도를 적분하여 위치와 이동 거리를 구한다.</p>
+<div class="spacer"></div>
+<p>그래프의 전류가 시간에 따라 변하는 패턴에서:</p>
+<p>- 전류가 양(+)이면 반시계 방향, 즉 막대가 오른쪽으로 이동</p>
+<p>- 전류가 음(-)이면 시계 방향, 즉 막대가 왼쪽으로 이동</p>
+<div class="spacer"></div>
+<p>구체적인 수치는 그래프의 정확한 값에 의존한다.</p>
+<div class="spacer"></div>
+<p>그래프에서 전류가 \(I(t)\)이면:</p>
+<p>- 위치: \(x(t) = x_0 + \int_0^t v\,dt' = x_0 + \frac{R}{Bw}\int_0^t I\,dt'\)</p>
+<p>- 이동 거리: \(\int_0^t |v|\,dt' = \frac{R}{Bw}\int_0^t |I|\,dt'\)</p>
+<div class="spacer"></div>
+<p>그래프에서 0~2초 구간 전류가 +4 mA이고 2~5초 구간 전류가 -2 mA라고 가정하면:</p>
+<div class="spacer"></div>
+<p>\(v_1 = 50 \times 4 \times 10^{-3} = 0.2\,\text{m/s}\) (오른쪽)</p>
+<p>\(v_2 = 50 \times 2 \times 10^{-3} = 0.1\,\text{m/s}\) (왼쪽)</p>
+<div class="spacer"></div>
+<p>위치: \(x(5) = 0.2 \times 2 - 0.1 \times 3 = 0.4 - 0.3 = 0.1\,\text{m}\) (오른쪽)</p>
+<p>이동 거리: \(0.2 \times 2 + 0.1 \times 3 = 0.4 + 0.3 = 0.7\,\text{m}\)</p>
+<div class="spacer"></div>
+<p>(실제 답은 그래프의 정확한 전류값에 따라 달라진다.)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">문제 4. 원형 도선의 합성 저항과 연결 고리의 속력</h2>
+<div class="spacer"></div>
+<p>\(r = 6/\pi\,\text{m}\), \(R_0 = 1/6\,\Omega\), \(V = 7\,\text{V}\), \(I_t = 10/3\,\text{A}\).</p>
+<div class="spacer"></div>
+<p>36개의 동일한 저항이 원형 도선에 등간격으로 배치되어 있다.</p>
+<div class="spacer"></div>
+<p><strong>합성 저항:</strong></p>
+<div class="spacer"></div>
+<p>연결 고리 O와 P가 각각 이웃한 두 저항의 가운데에 위치한다. O와 P 사이에 있는 저항의 수를 \(n\)이라 하면, 두 경로가 병렬:</p>
+<div class="spacer"></div>
+<div class="math-block">\[R_{\text{total}} = \frac{n(36-n)}{36}R_0 = \frac{n(36-n)}{216}\,\Omega\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[I = \frac{V}{R_{\text{total}}} = \frac{1512}{n(36-n)}\,\text{A}\]</div>
+<div class="spacer"></div>
+<p><strong>P의 이동과 속력:</strong></p>
+<div class="spacer"></div>
+<p>원형 도선의 전체 원주 길이: \(C = 2\pi r = 2\pi \times \frac{6}{\pi} = 12\,\text{m}\)</p>
+<div class="spacer"></div>
+<p>저항 사이 간격: \(\frac{12}{36} = \frac{1}{3}\,\text{m}\)</p>
+<div class="spacer"></div>
+<p>P가 2초 동안 다음 이웃한 두 저항 사이의 중간에 도달했으므로 한 칸(1개 저항분)을 이동했다.</p>
+<div class="spacer"></div>
+<p>이동 거리 = \(\frac{1}{3}\,\text{m}\)</p>
+<div class="spacer"></div>
+<p><strong>평균 속력:</strong></p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{v_{\text{avg}} = \frac{1/3}{2} = \frac{1}{6}\,\text{m/s}}\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-20</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

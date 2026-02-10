@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-102 | 2017_UNIST_물리학_해설1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-102.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 1</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[문항 B] 회전 원판 위의 물체 (마찰력과 원운동)</h2>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 물체에 가해지는 힘:</p>
+<p>- 중력 (\(mg\), 아래 방향)</p>
+<p>- 수직항력 (\(N\), 위 방향) \(\rightarrow\) 중력과 평형: \(N = mg\)</p>
+<p>- 정지마찰력 (\(f\), 원판 중심 방향)</p>
+<div class="spacer"></div>
+<p>알짜힘:</p>
+<p>- 연직 방향: \(N - mg = 0\) (평형)</p>
+<p>- 수평 방향: 정지마찰력 \(f\)가 알짜힘</p>
+<p>- 이 정지마찰력이 구심력 역할을 함: \(f = m\omega^2 r\)</p>
+<p>(\(\omega\): 각속도, \(r\): 원판 반지름)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 회전 각속도를 점차 증가시키면:</p>
+<p>- 필요한 구심력 \(= m\omega^2 r\) 이 증가</p>
+<p>- 정지마찰력에는 최대값이 있음: \(f_{\max} = \mu_s N = \mu_s mg\)</p>
+<p>- \(\omega\)가 증가하여 \(m\omega^2 r > \mu_s mg\) 가 되면 정지마찰력만으로 구심력을 제공할 수 없게 됨</p>
+<p>- 이 임계 각속도: \(\omega_c = \sqrt{\mu_s g / r}\)</p>
+<p>- \(\omega > \omega_c\) 이면 물체는 원판 바깥으로 미끄러져 나감</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-102</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

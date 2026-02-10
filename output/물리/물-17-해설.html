@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-17 | 2024_연세대미래_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-17.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<p>트랜지스터의 증폭 작용을 이해하는 문제이다. 저항 값의 변화에 따른 베이스, 이미터, 컬렉터에 흐르는 전류의 값을 증폭률을 이용하여 구하는 능력을 평가하는 문제이다.</p>
+<div class="spacer"></div>
+<p>(문제2-1) 트랜지스터의 증폭 작용을 이해하여, 컬렉터 전류 값을 알 때 이미터와 베이스 전류 값을 추론하여 적절한 저항 값을 유추하는 문제이다.</p>
+<div class="spacer"></div>
+<p>(문제2-2) 컬렉터 전류 값의 범위를 알 때, 트랜지스터의 증폭 작용을 이해하여, 베이스 전류 값을 범위를 추론하여 적절한 가변 저항기의 저항 값의 범위를 유추하는 문제이다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="../../data/물리/2024_연세대미래_물리학_해설2/fig1.jpeg" /></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-1</h2>
+<div class="spacer"></div>
+<p>증폭률을 이용한 식을 구한다. (5점)</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_B = \frac{I_C}{\beta} = \frac{20}{100} \text{ mA}\]</div>
+<div class="spacer"></div>
+<p>순방향 바이어스 쪽 회로로부터 아래 식을 구한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[3V = 1400 I_B + V_{BE} + R_1 I_E = 1400 \frac{I_C}{100} + 0.7 + R_1(I_C + I_B)\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[= 14I_C + 0.7 + R_1\left(I_C + \frac{I_C}{100}\right)\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[2.3 = 20 \times 10^{-3}(14 + 1.01R_1)\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\therefore R_1 = 100 \; \Omega\]</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-2</h2>
+<div class="spacer"></div>
+<p>전류가 최대로 걸릴 때 \(R_2\)를 구한다. (5점)</p>
+<div class="spacer"></div>
+<p>베이스에 걸리는 전류를 전압과 저항의 식으로부터 구한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_B = \frac{12 - 0.6}{R_2 + R_3}\]</div>
+<div class="spacer"></div>
+<p>컬렉터에 걸리는 전류는 증폭률을 이용하여 식을 세울 수 있다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_C = \beta I_B = 100 \frac{11.4}{R_2 + R_3}\]</div>
+<div class="spacer"></div>
+<p>\(I_C\)의 범위는 190mA부터 570mA이기에 \(I_C\)의 최댓값인 570mA가 흐르기 위해서는 가변저항이 0 이어야 한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_C = 570 \times 10^{-3} = \frac{1140}{R_2} \text{ A}, \qquad \therefore R_2 = 2 \text{ k}\Omega\]</div>
+<div class="spacer"></div>
+<p>전류가 최소로 걸릴 때 \(R_{3\text{max}}\)를 구한다. (5점)</p>
+<div class="spacer"></div>
+<p>\(I_C\)의 최솟값인 190mA가 흐르기 위해서는 가변저항이 최댓값이어야 한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[I_C = \beta I_B = 100 \frac{11.4}{R_2 + R_3} = \frac{1140}{2000 + R_{3\text{max}}} = 190 \times 10^{-3} \text{ A}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\therefore R_{3\text{max}} = 4 \text{ k}\Omega\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-17</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

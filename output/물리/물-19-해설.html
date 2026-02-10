@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-19 | 2023_서울대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-19.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-1. 이중슬릿 간섭무늬의 간격</h2>
+<div class="spacer"></div>
+<p>입자 X의 드브로이 파장:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\lambda = \frac{h}{p} = \frac{h}{mv_0}\]</div>
+<div class="spacer"></div>
+<p>이중슬릿 간섭의 보강간섭 조건: \(d\sin\theta = n\lambda\) (\(n\)은 정수)</p>
+<div class="spacer"></div>
+<p>\(L \gg d\)이므로 \(\sin\theta \approx \tan\theta = \frac{y}{L}\)로 근사할 수 있다.</p>
+<div class="spacer"></div>
+<p>이웃한 보강간섭 지점 간의 간격:</p>
+<div class="spacer"></div>
+<div class="math-block">\[x = \frac{\lambda L}{d} = \frac{hL}{mv_0 d}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{x = \frac{hL}{mv_0 d}}\]</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-2. 전기장 통과 후 간섭무늬 변화</h2>
+<div class="spacer"></div>
+<p>입자 X(전하량 \(Q > 0\))가 간격 \(s\)인 평행판 축전기를 통과한다. 전기장 \(E\)가 이동 방향과 같은 방향으로 걸려 있으므로, 입자에 작용하는 힘은 \(F = QE\) (이동 방향)이다.</p>
+<div class="spacer"></div>
+<p><strong>축전기 통과 후의 속력:</strong></p>
+<div class="spacer"></div>
+<p>에너지 보존 (또는 일-에너지 정리):</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{2}mv'^2 = \frac{1}{2}mv_0^2 + QEs\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v' = \sqrt{v_0^2 + \frac{2QEs}{m}}\]</div>
+<div class="spacer"></div>
+<p><strong>간섭무늬 간격 변화:</strong></p>
+<div class="spacer"></div>
+<p>새로운 드브로이 파장:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\lambda' = \frac{h}{mv'}\]</div>
+<div class="spacer"></div>
+<p>새로운 보강간섭 간격:</p>
+<div class="spacer"></div>
+<div class="math-block">\[x' = \frac{\lambda' L}{d} = \frac{hL}{mv'd} = \frac{hL}{d\sqrt{m^2v_0^2 + 2mQEs}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{x' = \frac{hL}{d\sqrt{m^2v_0^2 + 2mQEs}}}\]</div>
+<div class="spacer"></div>
+<p>전기장에 의해 입자가 가속되어 \(v' > v_0\)이므로 \(\lambda' < \lambda\)이고, 따라서 \(x' < x\)이다. 간섭무늬의 간격이 <strong>줄어든다</strong>.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-3. 입자 X의 등속 원운동 조건</h2>
+<div class="spacer"></div>
+<p><strong>(a) UFO까지의 거리 $R$</strong></p>
+<div class="spacer"></div>
+<p>입자 X가 지구 주위를 등속 원운동하려면, 중력이 구심력을 제공해야 한다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{GM_E m}{R^2} = \frac{mv_0^2}{R}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{GM_E}{R} = v_0^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{R = \frac{GM_E}{v_0^2}}\]</div>
+<div class="spacer"></div>
+<p><strong>(b) 입자가 방출되는 방향</strong></p>
+<div class="spacer"></div>
+<p>등속 원운동을 하려면 속도는 궤도의 접선 방향, 즉 반지름에 수직해야 한다. UFO가 궤도 위의 한 점이므로, 입자는 <strong>지구 중심과 UFO를 잇는 직선에 수직인 방향</strong>으로 방출되어야 한다.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-4. 입자 X가 UFO로 돌아오는 최소 시간</h2>
+<div class="spacer"></div>
+<p>UFO에서 방출 방향은 2-3(b)와 같이 반지름에 수직이지만, 속력이 \(v_0\)와 다르다.</p>
+<div class="spacer"></div>
+<p>입자가 지구에 충돌하거나 통과하지 않고 UFO로 돌아와야 한다. 이는 타원 궤도의 경우이다.</p>
+<div class="spacer"></div>
+<p><strong>궤도 분석:</strong></p>
+<div class="spacer"></div>
+<p>UFO 위치에서 속력 \(v\)로 접선 방향으로 방출된 입자는 타원(또는 원, 포물선, 쌍곡선) 궤도를 따른다. UFO로 돌아오려면 닫힌 궤도(타원)여야 한다.</p>
+<div class="spacer"></div>
+<p>UFO 위치(반지름 \(R\))에서 접선 방향 속도 \(v\)일 때:</p>
+<div class="spacer"></div>
+<p>- \(v = v_0 = \sqrt{GM_E/R}\): 원궤도</p>
+<div class="spacer"></div>
+<p>- \(v < v_0\): UFO가 원일점인 타원궤도</p>
+<div class="spacer"></div>
+<p>- \(v_0 < v < \sqrt{2}v_0\): UFO가 근일점인 타원궤도</p>
+<div class="spacer"></div>
+<p>지구에 충돌하지 않으려면 근일점 거리가 \(R_E\)보다 커야 한다.</p>
+<div class="spacer"></div>
+<p><strong>UFO가 원일점인 경우 ($v < v_0$):</strong></p>
+<div class="spacer"></div>
+<p>각운동량 보존: \(Rv = r_{\min}v_{\max}\)</p>
+<div class="spacer"></div>
+<p>에너지 보존:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{2}v^2 - \frac{GM_E}{R} = \frac{1}{2}v_{\max}^2 - \frac{GM_E}{r_{\min}}\]</div>
+<div class="spacer"></div>
+<p>\(v_{\max} = \frac{Rv}{r_{\min}}\) 대입:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{2}v^2 - \frac{GM_E}{R} = \frac{R^2v^2}{2r_{\min}^2} - \frac{GM_E}{r_{\min}}\]</div>
+<div class="spacer"></div>
+<p>지구에 충돌하지 않는 조건: \(r_{\min} \geq R_E\)</p>
+<div class="spacer"></div>
+<p>충돌 경계: \(r_{\min} = R_E\)</p>
+<div class="spacer"></div>
+<p>각운동량 보존으로부터:</p>
+<div class="spacer"></div>
+<div class="math-block">\[v_{\max} = \frac{Rv}{R_E}\]</div>
+<div class="spacer"></div>
+<p>에너지 보존:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{2}v^2 - \frac{GM_E}{R} = \frac{R^2v^2}{2R_E^2} - \frac{GM_E}{R_E}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{1}{2}v^2\left(1 - \frac{R^2}{R_E^2}\right) = \frac{GM_E}{R_E} - \frac{GM_E}{R} = GM_E\frac{R - R_E}{RR_E}\]</div>
+<div class="spacer"></div>
+<p>\(R > R_E\)이므로 왼변을 정리하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{v^2}{2} \cdot \frac{-(R + R_E)(R - R_E)}{R_E^2} = GM_E\frac{R - R_E}{RR_E}\]</div>
+<div class="spacer"></div>
+<p>\(R \neq R_E\)이므로 \(R - R_E\)로 나누면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[-\frac{v^2(R + R_E)}{2R_E^2} = \frac{GM_E}{RR_E}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v^2 = \frac{2GM_E R_E}{R(R + R_E)}\]</div>
+<div class="spacer"></div>
+<p>이것이 근일점이 정확히 \(R_E\)가 되는 속력이다.</p>
+<div class="spacer"></div>
+<p>최소 시간으로 돌아오려면, 타원의 주기가 최소여야 한다. 주기는 장반경에 의해 결정된다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T = 2\pi\sqrt{\frac{a^3}{GM_E}}\]</div>
+<div class="spacer"></div>
+<p>타원의 장반경:</p>
+<div class="spacer"></div>
+<div class="math-block">\[a = \frac{R + r_{\min}}{2}\]</div>
+<div class="spacer"></div>
+<p>지구에 부딪히지 않는 조건에서 \(r_{\min} \geq R_E\)이므로, 주기를 최소화하려면 \(r_{\min}\)을 최소화, 즉 \(r_{\min} = R_E\)로 설정한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[a = \frac{R + R_E}{2}\]</div>
+<div class="spacer"></div>
+<p>타원 궤도의 주기:</p>
+<div class="spacer"></div>
+<div class="math-block">\[T_{\text{orbit}} = 2\pi\sqrt{\frac{a^3}{GM_E}} = 2\pi\sqrt{\frac{(R + R_E)^3}{8GM_E}}\]</div>
+<div class="spacer"></div>
+<p>입자가 UFO에서 출발하여 UFO로 돌아오는 시간은 한 바퀴, 즉 \(T_{\text{orbit}}\)이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{T_{\min} = 2\pi\sqrt{\frac{(R + R_E)^3}{8GM_E}} = \frac{\pi(R + R_E)}{2}\sqrt{\frac{R + R_E}{2GM_E}}}\]</div>
+<div class="spacer"></div>
+<p>또는 정리하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{T_{\min} = \pi\sqrt{\frac{(R + R_E)^3}{2GM_E}}}\]</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-19</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

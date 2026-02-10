@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-95 | 2018_KAIST_물리학_해설4</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-95.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 4</h1>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 전하를 띤 입자가 균일한 자기장이 작용하는 반원형 상자에 입사하면 자기력 (로렌츠 힘) \(\vec{F} = q\vec{v} \times \vec{B}\)에 의해 운동방향이 휘어지게 된다. 이 경우, 로렌츠 힘이 구심력으로 작용하면서 입자가 등속 원운동을 하게 된다. 즉, \(qvB = \frac{mv^2}{r}\). 따라서</p>
+<div class="spacer"></div>
+<div class="math-block">\[r_{\max} = \frac{mv_{\max}}{qB} = \frac{(1.6 \times 10^{-27}\,\text{kg})(3 \times 10^8\,\text{m/s})}{(1.6 \times 10^{-19}\,\text{C})(1\,\text{T})} = 3\,\text{m}\]</div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 입자가 한 번 회전하는 동안 두 반원형 상자 사이를 두 번 통과하므로, 두 반원형 상자 사이의 전압이 \(V\)일 경우 입자가 한 번 회전하면서 얻는 운동 에너지는 \(K = 2qV\). 즉</p>
+<div class="spacer"></div>
+<p>1 회전시 획득한 에너지 : \(K = 2qV\)</p>
+<div class="spacer"></div>
+<p>n 회전시 획득한 에너지 : \(n \times K = 2nqV\)</p>
+<div class="spacer"></div>
+<p>n 회전후 최대속력을 가지고 사이클로트론을 빠져나올 때의 운동에너지 :</p>
+<div class="spacer"></div>
+<p>\(\frac{1}{2}mv_{\max}^2\)</p>
+<div class="spacer"></div>
+<p>n 회전시 획득한 에너지와 운동에너지가 같아야 함으로</p>
+<div class="spacer"></div>
+<p>\(nK = 2nqV = \frac{1}{2}mv_{\max}^2\) 성립한다.</p>
+<div class="spacer"></div>
+<p>따라서 최대 에너지를 가지고 나오기 전까지 겪는 총 회전수는</p>
+<div class="spacer"></div>
+<div class="math-block">\[n = \frac{\frac{1}{2}mv_{\max}^2}{K} = \frac{\frac{1}{2}\frac{q^2B^2r_{\max}^2}{m}}{2qV} = \frac{qB^2r_{\max}^2}{4mV} \text{로 주어진다.}\]</div>
+<div class="spacer"></div>
+<p>전하량이 2배가 되면 총 회전수도 2배로 늘어 2n 이 된다. 자기장이 2배가 되면 총 회전수는 4배로 늘어 4n이 된다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-95</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

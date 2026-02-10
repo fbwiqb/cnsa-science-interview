@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-121 | 2014_서울대_화학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-121.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[이상기체와 화학 평형 - 준투과막 반응실]</h2>
+<div class="spacer"></div>
+<p><strong>(2-1)</strong> 평형 상태에서 \(P_A\)와 \(P_B\) 구하기</p>
+<div class="spacer"></div>
+<p>반응: \(A \rightleftharpoons B\), 평형 상수 \(K = \frac{P_B}{P_A}\)</p>
+<div class="spacer"></div>
+<p>초기에 \(n_A^0\) 몰의 A를 반응실 1(\(V_1\))에 넣고 반응이 진행되어 평형에 도달한다고 하자. 평형 상태에서 A의 몰수를 \(n_A\), 반응실 1에서의 B의 몰수를 \(n_{B1}\), 반응실 2에서의 B의 몰수를 \(n_{B2}\)라 하면:</p>
+<div class="spacer"></div>
+<p>물질 수지: \(n_A^0 = n_A + n_{B1} + n_{B2}\)</p>
+<div class="spacer"></div>
+<p>A는 준투과막을 통과하지 못하므로 반응실 1에만 존재한다.</p>
+<div class="spacer"></div>
+<p>이상기체 상태방정식을 적용하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_A = \frac{n_A RT}{V_1}\]</div>
+<div class="spacer"></div>
+<p>반응실 1에서의 B의 분압: \(P_{B1} = \frac{n_{B1} RT}{V_1}\)</p>
+<div class="spacer"></div>
+<p>반응실 2에서의 B의 분압: \(P_{B2} = \frac{n_{B2} RT}{V_2}\)</p>
+<div class="spacer"></div>
+<p>물질 평형 조건에 의해 \(P_{B1} = P_{B2} = P_B\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{n_{B1} RT}{V_1} = \frac{n_{B2} RT}{V_2}\]</div>
+<div class="spacer"></div>
+<p>따라서 \(n_{B1} = \frac{V_1}{V_2} n_{B2}\)</p>
+<div class="spacer"></div>
+<p>또한 \(K = \frac{P_B}{P_A}\)이므로 \(P_B = K \cdot P_A\)</p>
+<div class="spacer"></div>
+<p>물질 수지를 분압으로 변환한다. B의 총 몰수: \(n_{B1} + n_{B2} = \frac{P_B V_1}{RT} + \frac{P_B V_2}{RT} = \frac{P_B(V_1 + V_2)}{RT}\)</p>
+<div class="spacer"></div>
+<p>A의 몰수: \(n_A = \frac{P_A V_1}{RT}\)</p>
+<div class="spacer"></div>
+<p>물질 수지:</p>
+<div class="spacer"></div>
+<div class="math-block">\[n_A^0 = \frac{P_A V_1}{RT} + \frac{P_B(V_1 + V_2)}{RT}\]</div>
+<div class="spacer"></div>
+<p>\(P_B = KP_A\)를 대입하면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[n_A^0 = \frac{P_A V_1 + KP_A(V_1 + V_2)}{RT}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[n_A^0 RT = P_A [V_1 + K(V_1 + V_2)]\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{P_A = \frac{n_A^0 RT}{V_1 + K(V_1 + V_2)}}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{P_B = \frac{K n_A^0 RT}{V_1 + K(V_1 + V_2)}}\]</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(2-2)</strong> 이동 벽면이 있을 때 \(n_A^0\)의 최소값과 \(V_2\)</p>
+<div class="spacer"></div>
+<p>반응실 2의 오른쪽 벽면이 자유롭게 움직이며, 외부 대기 압력 \(P\)가 작용한다. 반응실 2의 부피 \(V_2 > 0\)이려면 반응실 2 내부의 B 기체 압력이 외부 압력 \(P\)와 같아야 한다.</p>
+<div class="spacer"></div>
+<p>반응실 2에서: \(P_{B2} = P\)</p>
+<div class="spacer"></div>
+<p>물질 평형 조건에 의해: \(P_B = P\)</p>
+<div class="spacer"></div>
+<p>평형 상수로부터: \(P_A = \frac{P_B}{K} = \frac{P}{K}\)</p>
+<div class="spacer"></div>
+<p>반응실 1에서 A의 몰수: \(n_A = \frac{P_A V_1}{RT} = \frac{PV_1}{KRT}\)</p>
+<div class="spacer"></div>
+<p>반응실 1에서 B의 몰수: \(n_{B1} = \frac{P_B V_1}{RT} = \frac{PV_1}{RT}\)</p>
+<div class="spacer"></div>
+<p>\(V_2 > 0\)이면 반응실 2에 B가 존재해야 하므로, 총 B의 몰수가 반응실 1에 들어갈 수 있는 양보다 많아야 한다. \(V_2 \to 0\)의 극한에서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[n_A^0 = n_A + n_{B1} = \frac{PV_1}{KRT} + \frac{PV_1}{RT} = \frac{PV_1}{RT}\left(\frac{1}{K} + 1\right) = \frac{PV_1(1+K)}{KRT}\]</div>
+<div class="spacer"></div>
+<p>따라서 \(n_A^0\)의 <strong>최소값</strong>:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{(n_A^0)_{\min} = \frac{PV_1(1+K)}{KRT}}\]</div>
+<div class="spacer"></div>
+<p>이때 새로운 평형에서 반응실 2의 부피 \(V_2\)는 초과 B의 양으로 결정된다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[n_{B2} = n_A^0 - \frac{PV_1(1+K)}{KRT}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[V_2 = \frac{n_{B2} RT}{P}\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{V_2 = \frac{n_A^0 RT}{P} - \frac{V_1(1+K)}{K}}\]</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">[평형 상수의 극한과 평형 이동]</h2>
+<div class="spacer"></div>
+<p><strong>(2-3)</strong> \(K\)가 아주 클 때 \(P_B\)의 값</p>
+<div class="spacer"></div>
+<p>\(K \to \infty\)이면, 2-1의 결과에서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_B = \frac{K n_A^0 RT}{V_1 + K(V_1 + V_2)}\]</div>
+<div class="spacer"></div>
+<p>분자, 분모를 \(K\)로 나누면:</p>
+<div class="spacer"></div>
+<div class="math-block">\[P_B = \frac{n_A^0 RT}{\frac{V_1}{K} + V_1 + V_2}\]</div>
+<div class="spacer"></div>
+<p>\(K \to \infty\)이면 \(\frac{V_1}{K} \to 0\)이므로:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{P_B = \frac{n_A^0 RT}{V_1 + V_2}}\]</div>
+<div class="spacer"></div>
+<p>이는 A가 거의 모두 B로 전환되어 전체 부피 \((V_1 + V_2)\)에 \(n_A^0\) 몰의 B가 분포하는 상황에 해당한다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(2-4)</strong> 반응실 2의 부피 \(V_2\) 증가 시 평형 이동 방향</p>
+<div class="spacer"></div>
+<p>\(V_2\)를 증가시키면 반응실 2에서 B의 분압(\(P_{B2}\))이 감소한다. 물질 평형 조건에 의해 반응실 1에서도 \(P_B\)가 감소해야 한다.</p>
+<div class="spacer"></div>
+<p>반응지수 \(Q = \frac{P_B'}{P_A}\)를 생각하면, \(P_B\)가 감소하므로 \(Q < K\)가 된다.</p>
+<div class="spacer"></div>
+<p>\(Q < K\)이므로, 평형을 회복하기 위해 <strong>정반응(A $\to$ B) 방향으로 평형이 이동</strong>한다.</p>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p><strong>(2-5)</strong> 칸막이 제거 시 평형 이동 방향</p>
+<div class="spacer"></div>
+<p>칸막이를 제거하면 A와 B가 전체 부피 \((V_1 + V_2)\)에 걸쳐 고르게 분포하게 된다.</p>
+<div class="spacer"></div>
+<p>칸막이 제거 전: A는 \(V_1\)에만, B는 \(V_1 + V_2\) 전체에 분포</p>
+<div class="spacer"></div>
+<p>칸막이 제거 후: A가 \(V_1\)에서 \((V_1 + V_2)\)로 확산되므로 \(P_A\)가 감소한다. B의 분압은 변하지 않는다(이미 전체에 고르게 분포).</p>
+<div class="spacer"></div>
+<p>따라서:</p>
+<div class="spacer"></div>
+<div class="math-block">\[Q = \frac{P_B}{P_A'} > \frac{P_B}{P_A} = K\]</div>
+<div class="spacer"></div>
+<p>\(Q > K\)이므로 <strong>역반응(B $\to$ A) 방향으로 평형이 이동</strong>한다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-121</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-54 | 2020_서울대_물리학_해설2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="../assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학 &nbsp;|&nbsp; 해설</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-54.html" style="color:#003366;font-size:9pt;text-decoration:none;">&larr; 문제 보기</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">해설 2</h1>
+<div class="spacer"></div>
+<p>> *이 해설은 AI(Claude)가 작성하고 검수하였습니다. 오류가 있을 수 있으므로 참고용으로만 활용하세요.*</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">이중슬릿의 음파 간섭과 물질파</h2>
+<div class="spacer"></div>
+<p>슬릿 사이의 거리 \(d\), 스크린까지의 거리 \(L\) (\(L \gg d\)). 각 슬릿의 폭은 무시한다.</p>
+<div class="spacer"></div>
+<p><strong>(2-1)</strong> 한쪽 끝이 닫힌 관의 기본 진동수와 이중슬릿 극대점 간격</p>
+<div class="spacer"></div>
+<p>한쪽 끝이 닫힌(폐관) 길이 \(l\)의 관에서는 닫힌 끝이 마디(node), 열린 끝이 배(antinode)가 된다. 기본 진동(1차 공명)에서 관의 길이는 파장의 \(\frac{1}{4}\)에 해당한다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[l = \frac{\lambda}{4} \quad \Rightarrow \quad \lambda = 4l\]</div>
+<div class="spacer"></div>
+<p>기본 진동수:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{f = \frac{v}{\lambda} = \frac{v}{4l}}\]</div>
+<div class="spacer"></div>
+<p>이 음파의 파장 \(\lambda = 4l\)로 이중슬릿 간섭 실험을 수행하면, 보강 간섭 조건:</p>
+<div class="spacer"></div>
+<div class="math-block">\[d\sin\theta = m\lambda \quad (m = 0, \pm 1, \pm 2, \ldots)\]</div>
+<div class="spacer"></div>
+<p>\(L \gg d\)이므로 \(\sin\theta \approx \tan\theta = \frac{x}{L}\) 근사를 적용:</p>
+<div class="spacer"></div>
+<div class="math-block">\[x_m = \frac{m\lambda L}{d} = \frac{4mlL}{d}\]</div>
+<div class="spacer"></div>
+<p>인접한 극대점 사이의 거리:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\Delta x = \frac{\lambda L}{d} = \frac{4lL}{d}}\]</div>
+<div class="spacer"></div>
+<p><strong>(2-2)</strong> 음원이 \(v_s\)의 속력으로 스크린을 향해 움직일 때의 극대점 간격 변화</p>
+<div class="spacer"></div>
+<p>음원이 속력 \(v_s\)로 슬릿을 향해 접근하면, 도플러 효과에 의해 슬릿에서 관측되는 진동수가 변한다:</p>
+<div class="spacer"></div>
+<div class="math-block">\[f' = \frac{v}{v - v_s} f = \frac{v}{v - v_s} \cdot \frac{v}{4l} = \frac{v^2}{4l(v - v_s)}\]</div>
+<div class="spacer"></div>
+<p>슬릿에 도달하는 음파의 파장:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\lambda' = \frac{v}{f'} = \frac{4l(v - v_s)}{v}\]</div>
+<div class="spacer"></div>
+<p>음원이 \(d\)에 비해 충분히 먼 곳에서 접근하므로, 두 슬릿에 도달하는 음파는 거의 평면파로 간주할 수 있고, 두 슬릿에서의 파장은 모두 \(\lambda'\)이다.</p>
+<div class="spacer"></div>
+<p>슬릿과 스크린 사이에서 음파의 속력은 여전히 \(v\)이다. 슬릿을 통과한 음파의 파장은 \(\lambda'\)이다(도플러 효과는 음원-관측자 사이에서만 발생하고, 슬릿이 음파를 재방출하는 점파원 역할을 하므로, 슬릿에서 스크린까지는 파장 \(\lambda'\)이 유지된다).</p>
+<div class="spacer"></div>
+<p>스크린 위 극대점 사이의 거리:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\Delta x' = \frac{\lambda' L}{d} = \frac{4l(v - v_s)L}{vd}}\]</div>
+<div class="spacer"></div>
+<p>\(v_s > 0\)이므로 \(\lambda' < \lambda\)이고, 따라서 \(\Delta x' < \Delta x\)이다. <strong>극대점 사이의 거리가 줄어든다.</strong></p>
+<div class="spacer"></div>
+<p>원래 간격과의 비교:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\frac{\Delta x'}{\Delta x} = \frac{\lambda'}{\lambda} = \frac{v - v_s}{v} = 1 - \frac{v_s}{v}\]</div>
+<div class="spacer"></div>
+<p><strong>(2-3)</strong> 전압 \(V\)로 가속된 전자의 이중슬릿 간섭 극대점 간격</p>
+<div class="spacer"></div>
+<p>정지 상태의 전자가 전압 \(V\)로 가속되면, 에너지 보존에 의해:</p>
+<div class="spacer"></div>
+<div class="math-block">\[eV = \frac{1}{2}mv^2\]</div>
+<div class="spacer"></div>
+<div class="math-block">\[v = \sqrt{\frac{2eV}{m}}\]</div>
+<div class="spacer"></div>
+<p>드브로이 물질파 파장:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\lambda_{\text{dB}} = \frac{h}{mv} = \frac{h}{m\sqrt{\frac{2eV}{m}}} = \frac{h}{\sqrt{2meV}}\]</div>
+<div class="spacer"></div>
+<p>이중슬릿에서의 간섭 극대점 간격:</p>
+<div class="spacer"></div>
+<div class="math-block">\[\boxed{\Delta x = \frac{\lambda_{\text{dB}} L}{d} = \frac{hL}{d\sqrt{2meV}}}\]</div>
+<div class="spacer"></div>
+<p>전자를 하나씩 보내는 실험을 무수히 반복하면, 개별 전자는 스크린에 점으로 도착하지만, 많은 전자가 축적되면 보강간섭 위치에 전자가 많이, 상쇄간섭 위치에 전자가 적게 분포하는 간섭 패턴이 나타난다.</p>
+<div class="spacer"></div>
+<p><strong>(2-4)</strong> 전자선 결정 회절을 통한 파동성 증명</p>
+<div class="spacer"></div>
+<p>동일한 에너지를 가진 전자선을 결정에 쏘면, 결정의 규칙적인 원자 배열이 회절 격자 역할을 한다.</p>
+<div class="spacer"></div>
+<p>결정 내 원자 사이의 간격을 \(d_{\text{crystal}}\)이라 하면, 브래그 회절 조건(Bragg's law)에 의해:</p>
+<div class="spacer"></div>
+<div class="math-block">\[2d_{\text{crystal}} \sin\theta = n\lambda_{\text{dB}} \quad (n = 1, 2, 3, \ldots)\]</div>
+<div class="spacer"></div>
+<p>여기서 \(\theta\)는 결정면과 입사 전자선이 이루는 각도이고, \(\lambda_{\text{dB}}\)는 전자의 드브로이 파장이다.</p>
+<div class="spacer"></div>
+<p>결정에서 튀어 나온(회절된) 전자의 각도 분포를 측정하면, 특정 각도에서 전자의 수가 극대를 보이는 <strong>회절 패턴</strong>이 나타난다. 이 패턴은 파동의 보강간섭에 의한 것이다.</p>
+<div class="spacer"></div>
+<p>핵심 논증:</p>
+<p>1. 전자의 운동 에너지로부터 드브로이 파장 \(\lambda_{\text{dB}} = \frac{h}{\sqrt{2mE}}\)를 계산한다.</p>
+<p>2. 회절 패턴의 극대 각도 \(\theta\)를 측정한다.</p>
+<p>3. 브래그 조건 \(2d_{\text{crystal}}\sin\theta = n\lambda\)에서, X선 회절 등으로 이미 알려진 \(d_{\text{crystal}}\) 값을 사용하여 \(\lambda\)를 계산한다.</p>
+<p>4. 이렇게 실험적으로 구한 \(\lambda\)가 드브로이 파장 \(\lambda_{\text{dB}}\)와 일치하면, 전자가 파동으로서 행동한다는 것이 증명된다.</p>
+<div class="spacer"></div>
+<p>이것이 바로 1927년 데이비슨과 저머(Davisson-Germer)가 수행한 실험의 원리이며, 니켈 결정에 전자를 쏘아 회절 패턴을 관측함으로써 전자의 파동성을 최초로 실험적으로 입증하였다. 회절 극대의 각도에서 계산한 파장이 드브로이가 예측한 \(\lambda = h/p\)와 정확히 일치하였다.</p>
+<div class="spacer"></div>
+<p>만약 전자가 순수한 입자라면 결정에서 산란된 전자는 모든 방향으로 균일하게 분포해야 하지만, 실제로는 특정 각도에서만 강한 신호가 나타나는 것이 파동성의 결정적 증거이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-54</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>
