@@ -237,6 +237,7 @@ def is_question_line(raw):
         re.match(r'\*\*\d+\.\*\*', raw) or
         re.match(r'\*\*\(\d+\)\*\*', raw) or
         re.match(r'(?:\*\*)?[\[\(]문제', raw) or
+        re.match(r'\[사례', raw) or
         re.match(r'\*\*문제\s*\d+', raw) or
         re.match(r'문제\s*\d+', raw) or
         re.match(r'(?:\*\*)?\[?\s*논제', raw) or
@@ -249,6 +250,7 @@ def is_question_line(raw):
 
 def prescan_for_passage(lines):
     has_jesimun = False
+    has_angle_korean = False
     korean_positions = []
     clear_question_positions = []
     numbered_positions = []
@@ -257,7 +259,10 @@ def prescan_for_passage(lines):
         raw = line.strip()
         if '제시문' in raw:
             has_jesimun = True
-        if re.match(r'^(?:\*\*)?(?:[\[\(]([가나다라마바사아자차카타파하])[\]\)]|(?:<|&lt;)([가나다라마바사아자차카타파하])(?:>|&gt;))(?:\*\*)?', raw):
+        if re.match(r'^(?:\*\*)?(?:<|&lt;)([가나다라마바사아자차카타파하])(?:>|&gt;)(?:\*\*)?', raw):
+            korean_positions.append(i)
+            has_angle_korean = True
+        elif re.match(r'^(?:\*\*)?[\[\(]([가나다라마바사아자차카타파하])[\]\)](?:\*\*)?', raw):
             korean_positions.append(i)
         if is_question_line(raw) and not re.match(r'\*\*\(\d+\)\*\*', raw):
             clear_question_positions.append(i)
@@ -267,7 +272,7 @@ def prescan_for_passage(lines):
     should_box = False
     number_passage = False
 
-    if has_jesimun:
+    if has_jesimun or has_angle_korean:
         should_box = True
 
     if korean_positions:
