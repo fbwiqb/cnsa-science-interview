@@ -14,6 +14,7 @@ def md_to_html(md, fig_dir_rel):
     in_table = False
     table_rows = []
     in_passage = False
+    past_first_question = False
 
     def flush_section():
         if current_section:
@@ -49,9 +50,12 @@ def md_to_html(md, fig_dir_rel):
         elif in_table:
             flush_table()
 
-        if in_passage and (re.match(r'\*\*\d+\.\*\*', raw) or re.match(r'\*\*\[문제', raw) or re.match(r'\*\*\[(물리|화학|생명)', raw)):
-            current_section.append('</div>')
-            in_passage = False
+        is_q = re.match(r'\*\*\d+\.\*\*', raw) or re.match(r'\*\*\[문제', raw) or re.match(r'\*\*\[(물리|화학|생명)', raw) or re.match(r'\*\*문제\s*\d+', raw) or re.match(r'문제\s*\d+', raw)
+        if is_q:
+            past_first_question = True
+            if in_passage:
+                current_section.append('</div>')
+                in_passage = False
 
         if not raw:
             current_section.append('<div class="spacer"></div>')
@@ -61,6 +65,7 @@ def md_to_html(md, fig_dir_rel):
             if in_passage:
                 current_section.append('</div>')
                 in_passage = False
+            past_first_question = False
             flush_section()
             title = raw[3:]
             current_section.append(f'<h1 class="main-title">{title}</h1>')
@@ -70,6 +75,7 @@ def md_to_html(md, fig_dir_rel):
             if in_passage:
                 current_section.append('</div>')
                 in_passage = False
+            past_first_question = True
             flush_section()
             label = raw[4:]
             current_section.append(f'<h2 class="sub-title">{label}</h2>')
@@ -95,24 +101,41 @@ def md_to_html(md, fig_dir_rel):
             current_section.append(f'<p style="text-align:center;font-size:9pt;color:#666;">{process_inline(raw)}</p>')
             continue
 
-        passage_match = re.match(r'^(?:\*\*)?(\[[가나다라마바사아자차카타파하]\])(?:\*\*)?\s+(.*)', raw)
-        if passage_match:
+        passage_bracket = re.match(r'^(?:\*\*)?(\[[가나다라마바사아자차카타파하]\])(?:\*\*)?\s*(.*)', raw)
+        if passage_bracket:
+            if not in_passage and not past_first_question:
+                current_section.append('<div class="passage-box">')
+                in_passage = True
+            if in_passage:
+                marker = passage_bracket.group(1)
+                rest = passage_bracket.group(2).strip()
+                rest_html = process_inline(rest) if rest else ''
+                line_html = f'<p><span class="passage-marker">{marker}</span> {rest_html}</p>' if rest_html else f'<p><span class="passage-marker">{marker}</span></p>'
+                current_section.append(line_html)
+                continue
+
+        passage_paren = re.match(r'^(?:\*\*)?\(([가나다라마바사아자차카타파하])\)(?:\*\*)?\s*(.*)', raw)
+        if passage_paren and not past_first_question:
             if not in_passage:
                 current_section.append('<div class="passage-box">')
                 in_passage = True
-            marker = passage_match.group(1)
-            rest = process_inline(passage_match.group(2))
-            current_section.append(f'<p><span class="passage-marker">{marker}</span> {rest}</p>')
+            letter = passage_paren.group(1)
+            rest = passage_paren.group(2).strip()
+            rest_html = process_inline(rest) if rest else ''
+            marker = f'({letter})'
+            line_html = f'<p><span class="passage-marker">{marker}</span> {rest_html}</p>' if rest_html else f'<p><span class="passage-marker">{marker}</span></p>'
+            current_section.append(line_html)
             continue
 
-        jesimun_match = re.match(r'^(?:\*\*)?<제시문\s*(\d+)>(?:\*\*)?$', raw)
+        jesimun_match = re.match(r'^(?:\*\*)?(?:<|&lt;)제시문\s*(\d*)(?:>|&gt;)(?:\*\*)?$', raw) or re.match(r'^\[제시문(?:\s*\d+)?\]$', raw)
         if jesimun_match:
-            if not in_passage:
+            if not in_passage and not past_first_question:
                 current_section.append('<div class="passage-box">')
                 in_passage = True
-            num = jesimun_match.group(1)
-            current_section.append(f'<p><span class="passage-marker">&lt;제시문{num}&gt;</span></p>')
-            continue
+            if in_passage:
+                display = process_inline(raw).replace('<strong>', '').replace('</strong>', '')
+                current_section.append(f'<p><span class="passage-marker">{display}</span></p>')
+                continue
 
         bold_match = re.match(r'\*\*\((\d+)\)\*\*\s*(.*)', raw)
         if bold_match:
