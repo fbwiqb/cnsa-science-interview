@@ -187,6 +187,38 @@ def escape_html(text):
     return text
 
 
+def fix_corrupted_latex(text):
+    text = text.replace('\x07', '\\a')
+    text = text.replace('\x08', '\\b')
+    text = text.replace('\x0c', '\\f')
+    text = text.replace('\t', '\\t')
+    return text
+
+
+def smart_cdot_replace(formula):
+    result = []
+    i = 0
+    while i < len(formula):
+        if formula[i:].startswith('\\text{'):
+            brace_count = 1
+            j = i + 6
+            while j < len(formula) and brace_count > 0:
+                if formula[j] == '{':
+                    brace_count += 1
+                elif formula[j] == '}':
+                    brace_count -= 1
+                j += 1
+            result.append(formula[i:j])
+            i = j
+        elif formula[i] == '·':
+            result.append('\\cdot ')
+            i += 1
+        else:
+            result.append(formula[i])
+            i += 1
+    return ''.join(result)
+
+
 def process_inline(text):
     parts = []
     i = 0
@@ -195,7 +227,7 @@ def process_inline(text):
             if i + 1 < len(text) and text[i+1] == '$':
                 end = text.find('$$', i+2)
                 if end != -1:
-                    formula = text[i+2:end].replace('·', '\\cdot ')
+                    formula = smart_cdot_replace(text[i+2:end])
                     formula = formula.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
                     parts.append(f'<div class="math-block">\\[{formula}\\]</div>')
                     i = end + 2
@@ -203,7 +235,7 @@ def process_inline(text):
             else:
                 end = text.find('$', i+1)
                 if end != -1:
-                    formula = text[i+1:end].replace('·', '\\cdot ')
+                    formula = smart_cdot_replace(text[i+1:end])
                     formula = formula.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
                     parts.append(f'\\({formula}\\)')
                     i = end + 1
@@ -212,7 +244,7 @@ def process_inline(text):
             end = text.find('**', i+2)
             if end != -1:
                 inner = text[i+2:end]
-                parts.append(f'<strong>{inner}</strong>')
+                parts.append(f'<strong>{process_inline(inner)}</strong>')
                 i = end + 2
                 continue
         if text[i] == '<' and not text[i:].startswith('<div') and not text[i:].startswith('<span') and not text[i:].startswith('<strong') and not text[i:].startswith('<table') and not text[i:].startswith('<p'):
@@ -503,6 +535,7 @@ def main():
 
         with open(vision_path, 'r', encoding='utf-8') as f:
             vision_md = f.read()
+        vision_md = fix_corrupted_latex(vision_md)
 
         has_solution = uid in solutions_set
         html = generate_problem_html(item, vision_md, subject, is_solution, problem_uid, has_solution)
