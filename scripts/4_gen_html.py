@@ -14,7 +14,7 @@ def md_to_html(md, fig_dir_rel):
     in_table = False
     table_rows = []
     in_passage = False
-    past_first_question = False
+    should_box, number_passage = prescan_for_passage(lines)
 
     def flush_section():
         if current_section:
@@ -50,18 +50,10 @@ def md_to_html(md, fig_dir_rel):
         elif in_table:
             flush_table()
 
-        is_q = (re.match(r'\*\*\d+\.\*\*', raw) or
-                re.match(r'\*\*\(\d+\)\*\*', raw) or
-                re.match(r'\*\*\[문제', raw) or
-                re.match(r'\[문제\s*\d+\]', raw) or
-                re.match(r'\*\*\[(물리|화학|생명)', raw) or
-                re.match(r'\[(물리학|화학|생명과학)', raw) or
-                re.match(r'\*\*문제\s*\d+', raw) or
-                re.match(r'문제\s*\d+', raw) or
-                re.match(r'\[?\s*논제', raw) or
-                re.match(r'\[\d+-[ivxⅰⅱⅲIVX\d]+\]', raw))
+        is_q = is_question_line(raw)
+        if number_passage and re.match(r'\*\*\(\d+\)\*\*', raw):
+            is_q = False
         if is_q:
-            past_first_question = True
             if in_passage:
                 current_section.append('</div>')
                 in_passage = False
@@ -74,7 +66,6 @@ def md_to_html(md, fig_dir_rel):
             if in_passage:
                 current_section.append('</div>')
                 in_passage = False
-            past_first_question = False
             flush_section()
             title = raw[3:]
             current_section.append(f'<h1 class="main-title">{title}</h1>')
@@ -83,7 +74,7 @@ def md_to_html(md, fig_dir_rel):
         if raw.startswith('### '):
             label = raw[4:]
             if '제시문' in label:
-                if not in_passage and not past_first_question:
+                if not in_passage and should_box:
                     current_section.append('<div class="passage-box">')
                     in_passage = True
                 if in_passage:
@@ -92,7 +83,6 @@ def md_to_html(md, fig_dir_rel):
             if in_passage:
                 current_section.append('</div>')
                 in_passage = False
-            past_first_question = True
             flush_section()
             current_section.append(f'<h2 class="sub-title">{label}</h2>')
             continue
@@ -119,35 +109,47 @@ def md_to_html(md, fig_dir_rel):
 
         passage_bracket = re.match(r'^(?:\*\*)?(\[[가나다라마바사아자차카타파하]\])(?:\*\*)?\s*(.*)', raw)
         if passage_bracket:
-            if not in_passage and not past_first_question:
-                current_section.append('<div class="passage-box">')
-                in_passage = True
-            if in_passage:
-                marker = passage_bracket.group(1)
-                rest = passage_bracket.group(2).strip()
+            if number_passage:
+                if in_passage:
+                    current_section.append('</div>')
+                    in_passage = False
+            elif should_box:
+                if not in_passage:
+                    current_section.append('<div class="passage-box">')
+                    in_passage = True
+                if in_passage:
+                    marker = passage_bracket.group(1)
+                    rest = passage_bracket.group(2).strip()
+                    rest_html = process_inline(rest) if rest else ''
+                    line_html = f'<p><span class="passage-marker">{marker}</span> {rest_html}</p>' if rest_html else f'<p><span class="passage-marker">{marker}</span></p>'
+                    current_section.append(line_html)
+                    continue
+
+        passage_paren = re.match(r'^(?:\*\*)?\(([가나다라마바사아자차카타파하])\)(?:\*\*)?\s*(.*)', raw)
+        if passage_paren:
+            if number_passage:
+                if in_passage:
+                    current_section.append('</div>')
+                    in_passage = False
+            elif should_box:
+                if not in_passage:
+                    current_section.append('<div class="passage-box">')
+                    in_passage = True
+                letter = passage_paren.group(1)
+                rest = passage_paren.group(2).strip()
                 rest_html = process_inline(rest) if rest else ''
+                marker = f'({letter})'
                 line_html = f'<p><span class="passage-marker">{marker}</span> {rest_html}</p>' if rest_html else f'<p><span class="passage-marker">{marker}</span></p>'
                 current_section.append(line_html)
                 continue
 
-        passage_paren = re.match(r'^(?:\*\*)?\(([가나다라마바사아자차카타파하])\)(?:\*\*)?\s*(.*)', raw)
-        if passage_paren and not past_first_question:
-            if not in_passage:
-                current_section.append('<div class="passage-box">')
-                in_passage = True
-            letter = passage_paren.group(1)
-            rest = passage_paren.group(2).strip()
-            rest_html = process_inline(rest) if rest else ''
-            marker = f'({letter})'
-            line_html = f'<p><span class="passage-marker">{marker}</span> {rest_html}</p>' if rest_html else f'<p><span class="passage-marker">{marker}</span></p>'
-            current_section.append(line_html)
-            continue
-
         jesimun_match = re.match(r'^(?:\*\*)?(?:<|&lt;)(제시문\s*\d*)(?:>|&gt;)(?:\*\*)?\s*(.*)', raw)
         if not jesimun_match:
             jesimun_match = re.match(r'^\[(제시문(?:\s*\d+)?)\]\s*(.*)', raw)
+        if not jesimun_match:
+            jesimun_match = re.match(r'^\*\*(제시문(?:\s*\d+)?)\*\*\s*(.*)', raw)
         if jesimun_match:
-            if not in_passage and not past_first_question:
+            if not in_passage and should_box:
                 current_section.append('<div class="passage-box">')
                 in_passage = True
             if in_passage:
@@ -161,9 +163,17 @@ def md_to_html(md, fig_dir_rel):
 
         bold_match = re.match(r'\*\*\((\d+)\)\*\*\s*(.*)', raw)
         if bold_match:
-            num = bold_match.group(1)
-            rest = process_inline(bold_match.group(2))
-            current_section.append(f'<p class="sub-question"><span class="sq-num">({num})</span> {rest}</p>')
+            if number_passage and should_box:
+                if not in_passage:
+                    current_section.append('<div class="passage-box">')
+                    in_passage = True
+                num = bold_match.group(1)
+                rest = process_inline(bold_match.group(2))
+                current_section.append(f'<p><span class="passage-marker">({num})</span> {rest}</p>')
+            else:
+                num = bold_match.group(1)
+                rest = process_inline(bold_match.group(2))
+                current_section.append(f'<p class="sub-question"><span class="sq-num">({num})</span> {rest}</p>')
         else:
             text = process_inline(raw)
             if '<div class="math-block">' in text:
@@ -195,6 +205,66 @@ def fix_corrupted_latex(text):
     return text
 
 
+def is_question_line(raw):
+    if re.match(r'^(?:\*\*)?[\[\(](?:물리학?|화학|생명과학|생물)\s*[IⅠⅡⅢⅣⅤViⅰⅱⅲ\d]*[\]\)](?:\*\*)?\s*$', raw):
+        return False
+    return bool(
+        re.match(r'\*\*\d+\.\*\*', raw) or
+        re.match(r'\*\*\(\d+\)\*\*', raw) or
+        re.match(r'(?:\*\*)?\[문제', raw) or
+        re.match(r'\*\*문제\s*\d+', raw) or
+        re.match(r'문제\s*\d+', raw) or
+        re.match(r'(?:\*\*)?\[?\s*논제', raw) or
+        re.match(r'### \d+-', raw) or
+        re.match(r'### \[?논제', raw) or
+        re.match(r'\[\d+-[ivxⅰⅱⅲIVX\d]+\]', raw) or
+        re.match(r'(?:\*\*)?[\[\(](?:물리학?|화학|생명과학).+-', raw)
+    )
+
+
+def prescan_for_passage(lines):
+    has_jesimun = False
+    korean_positions = []
+    clear_question_positions = []
+    numbered_positions = []
+
+    for i, line in enumerate(lines):
+        raw = line.strip()
+        if '제시문' in raw:
+            has_jesimun = True
+        if re.match(r'^(?:\*\*)?[\[\(]([가나다라마바사아자차카타파하])[\]\)](?:\*\*)?', raw):
+            korean_positions.append(i)
+        if is_question_line(raw) and not re.match(r'\*\*\(\d+\)\*\*', raw):
+            clear_question_positions.append(i)
+        if re.match(r'\*\*\(\d+\)\*\*', raw):
+            numbered_positions.append(i)
+
+    should_box = False
+    number_passage = False
+
+    if has_jesimun:
+        should_box = True
+
+    if korean_positions:
+        first_korean = korean_positions[0]
+        if clear_question_positions:
+            first_question = min(clear_question_positions)
+            if first_korean < first_question:
+                should_box = True
+        elif not has_jesimun:
+            numbered_before = any(n < first_korean for n in numbered_positions)
+            if numbered_before:
+                number_passage = True
+                should_box = True
+
+    return should_box, number_passage
+
+
+def fix_katex_compat(formula):
+    formula = formula.replace('\\,^', '\\,{}^')
+    return formula
+
+
 def smart_cdot_replace(formula):
     result = []
     i = 0
@@ -221,6 +291,12 @@ def smart_cdot_replace(formula):
     return ''.join(result)
 
 
+def process_formula(formula):
+    formula = fix_katex_compat(formula)
+    formula = smart_cdot_replace(formula)
+    return formula
+
+
 def process_inline(text):
     parts = []
     i = 0
@@ -229,7 +305,7 @@ def process_inline(text):
             if i + 1 < len(text) and text[i+1] == '$':
                 end = text.find('$$', i+2)
                 if end != -1:
-                    formula = smart_cdot_replace(text[i+2:end])
+                    formula = process_formula(text[i+2:end])
                     formula = formula.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
                     parts.append(f'<div class="math-block">\\[{formula}\\]</div>')
                     i = end + 2
@@ -237,7 +313,7 @@ def process_inline(text):
             else:
                 end = text.find('$', i+1)
                 if end != -1:
-                    formula = smart_cdot_replace(text[i+1:end])
+                    formula = process_formula(text[i+1:end])
                     formula = formula.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
                     parts.append(f'\\({formula}\\)')
                     i = end + 1
