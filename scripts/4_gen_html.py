@@ -87,6 +87,13 @@ def md_to_html(md, fig_dir_rel):
             current_section.append(f'<h2 class="sub-title">{label}</h2>')
             continue
 
+        if raw.startswith('<!-- IMAGE_ROW:'):
+            imgs = re.findall(r'[\w.\-]+\.(?:png|jpe?g|gif|svg)', raw)
+            if imgs:
+                inner = ''.join(f'<img src="{fig_dir_rel}/{im}" />' for im in imgs)
+                current_section.append(f'<div class="figure-row">{inner}</div>')
+            continue
+
         if raw.startswith('<!-- IMAGE:'):
             match = re.search(r'IMAGE:\s*(\S+)', raw)
             if match:
@@ -139,6 +146,24 @@ def md_to_html(md, fig_dir_rel):
                 rest = passage_paren.group(2).strip()
                 rest_html = process_inline(rest) if rest else ''
                 marker = f'({letter})'
+                line_html = f'<p><span class="passage-marker">{marker}</span> {rest_html}</p>' if rest_html else f'<p><span class="passage-marker">{marker}</span></p>'
+                current_section.append(line_html)
+                continue
+
+        passage_angle = re.match(r'^(?:\*\*)?(?:<|&lt;)([가나다라마바사아자차카타파하])(?:>|&gt;)(?:\*\*)?\s*(.*)', raw)
+        if passage_angle:
+            if number_passage:
+                if in_passage:
+                    current_section.append('</div>')
+                    in_passage = False
+            elif should_box:
+                if not in_passage:
+                    current_section.append('<div class="passage-box">')
+                    in_passage = True
+                letter = passage_angle.group(1)
+                rest = passage_angle.group(2).strip()
+                rest_html = process_inline(rest) if rest else ''
+                marker = f'&lt;{letter}&gt;'
                 line_html = f'<p><span class="passage-marker">{marker}</span> {rest_html}</p>' if rest_html else f'<p><span class="passage-marker">{marker}</span></p>'
                 current_section.append(line_html)
                 continue
@@ -211,7 +236,7 @@ def is_question_line(raw):
     return bool(
         re.match(r'\*\*\d+\.\*\*', raw) or
         re.match(r'\*\*\(\d+\)\*\*', raw) or
-        re.match(r'(?:\*\*)?\[문제', raw) or
+        re.match(r'(?:\*\*)?[\[\(]문제', raw) or
         re.match(r'\*\*문제\s*\d+', raw) or
         re.match(r'문제\s*\d+', raw) or
         re.match(r'(?:\*\*)?\[?\s*논제', raw) or
@@ -232,7 +257,7 @@ def prescan_for_passage(lines):
         raw = line.strip()
         if '제시문' in raw:
             has_jesimun = True
-        if re.match(r'^(?:\*\*)?[\[\(]([가나다라마바사아자차카타파하])[\]\)](?:\*\*)?', raw):
+        if re.match(r'^(?:\*\*)?(?:[\[\(]([가나다라마바사아자차카타파하])[\]\)]|(?:<|&lt;)([가나다라마바사아자차카타파하])(?:>|&gt;))(?:\*\*)?', raw):
             korean_positions.append(i)
         if is_question_line(raw) and not re.match(r'\*\*\(\d+\)\*\*', raw):
             clear_question_positions.append(i)

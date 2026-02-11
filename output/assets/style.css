@@ -140,6 +140,19 @@ p {
   max-width: 70%;
   max-height: 240px;
 }
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
 .md-table {
   width: 100%;
   border-collapse: collapse;
