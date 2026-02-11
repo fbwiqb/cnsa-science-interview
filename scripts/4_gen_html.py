@@ -208,7 +208,9 @@ def smart_cdot_replace(formula):
                 elif formula[j] == '}':
                     brace_count -= 1
                 j += 1
-            result.append(formula[i:j])
+            block = formula[i:j]
+            block = block.replace('·', '}\\cdot \\text{')
+            result.append(block)
             i = j
         elif formula[i] == '·':
             result.append('\\cdot ')
