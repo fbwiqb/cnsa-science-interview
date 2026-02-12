@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-44 | 2020_GIST_물리학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-44-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<p><strong>단계 1</strong></p>
+<div class="spacer"></div>
+<p>그림과 같이 부피가 같은 두 부분 A, B가 밸브로 연결된 용기가 있다. 초기에 밸브를 닫은 채로 A 부분에 이상기체를 채우고, B 부분은 진공 상태로 만들었다. 밸브를 열면 A의 이상기체가 자유롭게 팽창하여 A, B 부분 모두를 채우고 부피가 처음의 두 배가 된다. 용기가 외부와 열 출입이 없는 단열 상태를 항상 유지하고 있다면, 밸브를 연 후 이상기체의 온도는 올라가는가, 내려가는가, 변하지 않는가? 이상기체의 의미와 관련지어 설명하시오.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZYAAADGCAIAAAB+YzGCAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFE0lEQVR4nO3bvW1cZxRFUSWM2IebcD9sgxELYxFy4IiNiP6BnIqGiKM97xushTPpi+7bGAwwX/4CONaXfz8AB5Iw4GASBhxMwoCDSRhwMAkDDiZhwMEkDDjY/yTsj69fzX52H1wbfI6EWTcJY07CrJuEMSdh1k3CmJMw6yZhzEmYdZMw5iTMukkYcxJm3SSMOQmzbhLGnIRZNwljTsKsm4QxJ2HWTcKYkzDrJmHMSZh1kzDmJMy6SRhzEmbdJIw5CbNuEsachFk3CWNOwqybhDEnYdZNwpiTMOsmYcxJmHWTMOYkzLpJGHMSZt0kjDkJs24SxpyEWTcJY07CrJuEMSdh1k3CmJMw6yZhzEmYdZMw5iTMukkYcxJm3SSMOQmzbhLGnIRZNwljTsKsm4QxJ2HWTcKYkzDrJmHMSZh1kzDmJMy6SRhzEmbdJIw5CbNuEsachFk3CWNOwqybhDEnYdZNwpiTMOsmYcxJmHWTMOYkzLpJGHMSZt0kjDkJs24SxpyEWTcJY07CrJuEMSdh1k3CmJMw6yZhzEmYdZMw5iTMukkYcxJm3SSMOQmzbhLGnIRZNwljTsKsm4QxJ2HWTcKYkzDrJmHMSZh1kzDmJMy6SRhzEmbdJIw5CbNuEsachFk3CWNOwqybhDEnYdZNwpiTMOsmYcxJmHX70Tn9+ftvH+zW7wiXJmHWTcKYkzDrJmHMSZh1kzDmJMy6SRhzEmbdJIw5CbNuEsachFk3CWNOwqybhDEnYdZNwpiTMOv2caokjE+QMOsmYcxJmHWTMOYkzLrdPGHfvn0bPo0rkDDrdvOEvby8PD09vb29DZ/JbUmYdbt5wp6fn/+53oeHByG7GxJm3S6SsO+E7D5ImHW7VMKE7D5ImHW7YMKE7HQSZt1+UcJ+dKU/S8hOJGHW7eIJ++7x8fH19fWXv3mMSJh1u3jCfAs7kYRZN7+FMSdh1u2CCROv00mYdbtUwsTrPkiYdbtIwsTrnkiYdbt5wvxH8v5ImHW7ecLe39+HT+MKJMy63Txh3B8Js24SxpyEWbcfnZOE8WkSZt0kjDkJs24SxpyEWTcJY07CrJuEMSdh1k3CmJMw6yZhzEmYdZMw5iTMukkYcxJm3SSMOQmzbh9cG3yOhFk3CWNOwqybhDEnYdZNwpiTMOsmYcxJmHWTMOYkzLpJGHMSZt0kjDkJs24SxpyEWTcJY07CrJuEMSdh1k3CmJMw6yZhzEmYdZMw5iTMukkYcxJm3SSMOQmzbhLGnIRZNwljTsKsm4QxJ2HWTcKYkzDrJmHMSZh1kzDmJMy6SRhzEmbdJIw5CbNuEsachFk3CWNOwqybhDEnYdZNwpiTMOsmYcxJmHWTMOYkzLpJGHMSZt0kjDkJs24SxpyEWTcJY07CrJuEMSdh1k3CmJMw6yZhzEmYdZMw5iTMukkYcxJm3SSMOQmzbhLGnIRZNwljTsKsm4QxJ2HWTcKYkzDrJmHMSZh1kzDmJMy6SRhzEmbdJIw5CbNuEsachFk3CWNOwqybhDEnYdZNwpiTMOsmYcxJmHWTMOYkzLpJGHMSZt0kjDkJs24SxpyEWTcJY07CrJuEMSdh1k3CmJMw6yZhzEmYdZMw5iTMukkYcxJm3SSMOQmzbhLGnIRZNwljTsKsm4QxJ2HWTcKYkzDrJmHMSZh1kzDmJMy6SRhzn0wYwJVJGHAwCQMOJmHAwSQMOJiEAQeTMOBgEgYc7L+EARzqbzs0Q/DhhtUrAAAAAElFTkSuQmCC" /></div>
+<div class="spacer"></div>
+<p><strong>단계 2</strong></p>
+<div class="spacer"></div>
+<p>그림과 같이 이상기체가 들어있는 피스톤 용기를 생각하자. 피스톤 용기는 완벽한 단열상태를 항상 유지한다고 가정한다. 피스톤이 아주 천천히 움직이도록 피스톤을 빼는 힘을 조절하여 용기의 부피를 두 배로 만들었다. 이때, 이상기체의 온도는 초기상태와 비교하여 올라가는가, 내려가는가, 변하지 않는가? 열역학 법칙과 관련지어 설명하시오.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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6qyb7Imz6hPmSoJkMUcP68dulDZb8bO63+/wbOiaIL2ADk1Z8av/AKmZ1WumUbwW4eml9NjmdZ8av/qZnVa6ZRvBbh6aX02A3QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUXtj9TXLy5fXEyMfbH6muXly+uJlB4PQHg9ARld+Tg8yz8Wty5w/7OR5cP4add+Tg8yz8WpG5Q/7G7+VD+AfWiaLLomiDFomiy6JogxaJosuiaIMWiaLLomiDFomiy6JogxaJosuiaIMWiaLLomiDFomiy6JogxaJosuiaIMWiaLLomiDFomiy6JogxaJosuiaIMWiaLLomiDFomiy6JogxaJosuiaIMWiaLLomiDFomiy6JogxaJosuiaIMWiaLLomiDFomiy6JoguAAOTVnxq/+pmdVrplG8FuHppfTY5nWfGr/AOpmdVrplG8FuHppfTYDdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRe2P1NcfLl9cTMw9sPqa4+XL64mcHg9AeD0BF175KDzLPxa2bp2ZrN4ukidJv0uGXMlwxQQ2zo7O6y2zvss/s1698lB5ln4tXmjeC3D00vpsBU9k67iErjzMjZOu4hK48zJeQFG2TruISuPMyNk67iErjzMl5AUbZOu4hK48zI2TruISuPMyXkBRtk67iErjzMjZOu4hK48zJeQFG2TruISuPMyNk67iErjzMl5AUbZOu4hK48zI2TruISuPMyXkBRtk67iErjzMjZOu4hK48zJeQFG2TruISuPMyNk67iErjzMl5AUbZOu4hK48zI2TruISuPMyXkBRtk67iErjzMjZOu4hK48zJeQFG2TruISuPMyNk67iErjzMl5AUbZOu4hK48zI2TruISuPMyXkBRtk67iErjzMjZOu4hK48zJeQFG2TruISuPMyNk67iErjzMl5AUbZOu4hK48zI2TruISuPMyXkBRtk67iErjzMjZOu4hK48zJeQFG2TruISuPMyNk67iErjzMl5AUbZOu4hK48zI2TruISuPMyXkBRtk67iErjzMjZOu4hK48zJeQFG2TruISuPMyZ7l2XrEm+yJs++ypkqCZDFHD+rHbpQ2W/Gzuts+PwXIAAByas+NX/wBTM6rXTKN4LcPTS+mxzOs+NX/1MzqtdMo3gtw9NL6bAboAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKN2w+p7j5cvriZmHth9T3Hy5fXEzg8HoDwegIuv/ACUHmWfi1eaN4LcPTS+mxR6/8lB5ln4tXijeC3D00vpsBugAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5NWfGr/6mZ1WumUbwW4eml9NjmdZ8av/AKmZ1WumUbwW4eml9NgN0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFG7YfU9x8uX1xNhr9sPqe4+XL64myDwegPB6Aiu0HyUHmWfi1eKN4LcPTS+mxSO0HyMHm2fi1d6N4LcPTS+mwG6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADk1Z8av/qZnVa6ZRvBbh6aX02OZ1nxq/8AqZnVa6ZRvBbh6aX02A3QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUbtf9T3Hy5fXE2mr2v+qLj5cvribYPB6A8HoCJ7Q/IwebZ+LV3o3gtw9NL6bFJ7Q/IwebZ+LV2o3gtw9NL6bAboAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOTVnxq/+pmdVrplG8FuHppfTY5nWfGr/wCpmdVq7UztNSLvTLpJm3vRmS5MEMVn6cdvdbZDZZb/AIBYxC7WUXfeVHkbWUXfeVHkCaELtZRd95UeRtZRd95UeQJoQu1lF33lR5G1lF33lR5AmhC7WUXfeVHkbWUXfeVHkCaELtZRd95UeRtZRd95UeQJoQu1lF33lR5G1lF33lR5AmhC7WUXfeVHkbWUXfeVHkCaELtZRd95UeRtZRd95UeQJoQu1lF33lR5G1lF33lR5AmhC7WUXfeVHkbWUXfeVHkCaELtZRd95UeRtZRd95UeQJoQu1lF33lR5G1lF33lR5AmhC7WUXfeVHkbWUXfeVHkCaELtZRd95UeRtZRd95UeQJoQu1lF33lR5G1lF33lR5AmhC7WUXfeVHkbWUXfeVHkCaELtZRd95UeRtZRd95UeQIDtf9UXDy5fXE3ER2jqdzv1eul5u079STLggsii0bbO62yO2234W2d/8Aa1s64uH3/wDxFkDeGjri4ff/APEWRri4ff8A/EWQN4aOuLh9/wD8RZGuLh9//wARZA1+0XyMHm2fi1dqN4LcPTS+mxQa1f7terpBBIm6cVkyy22zRts+Hdb/AM2LRTO01Iu9Mukmbe9GZLkwQxWfpx291tkNllv+AWMQu1lF33lR5G1lF33lR5AmhC7WUXfeVHkbWUXfeVHkCaELtZRd95UeTdp1WuVU/U/op36v6fdp/wCiKHu7+/u/vZZ/xaDdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABz+r9lqrMqd5nSJME6XOmRTLLYZllnd3xW291vf3fFpbJ1rcubBmAGyda3LmwZmyda3LmwZgBsnWty5sGZsnWty5sGYAbJ1rcubBmbJ1rcubBmAGyda3LmwZmyda3LmwZgBsnWty5sGZsnWty5sGYAbJ1rcubBmbJ1rcubBmAGyda3LmwZmyda3LmwZgBsnWty5sGZsnWty5sGYAbJ1rcubBmbJ1rcubBmAGyda3LmwZmyda3LmwZgBsnWty5sGZsnWty5sGYAbJ1rcubBmbJ1rcubBmAGyda3LmwZmyda3LmwZgBsnWty5sGZsnWty5sGYAbJ1rcubBmbJ1rcubBmAGyda3LmwZmyda3LmwZgBsnWty5sGZsnWty5sGYAbJ1rcubBmbJ1rcubBmAGyda3LmwZmyda3LmwZgBsnWty5sGZsnWty5sGYAbJ1rcubBmbJ1rcubBmAGyda3LmwZmyda3LmwZgBsnWty5sGZsnWty5sGYAbJ1rcubBms/Y2k32l/1n9bJ/S/U0ND/AFwxd/dpd/8Aa23/AJsAFmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//2Q==" /></div>
+<div class="spacer"></div>
+<p><strong>단계 3</strong></p>
+<div class="spacer"></div>
+<p>실생활이나 대기현상, 또는 물리실험에서 단열팽창의 예를 말해보고 그 원리를 간략히 설명해 보시오. "단계 1, 2"와의 차이점 또는 유사점을 설명하시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-44</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

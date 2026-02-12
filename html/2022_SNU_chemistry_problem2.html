@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-24 | 2022_서울대_화학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-24-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<p>문제 2. 최근 요소의 공급부족으로 인한 '요소수 대란'이 사회적으로 문제가 되고 있다. 요소(\((\text{NH}_2)_2\text{CO}\))는 디젤 엔진의 선택적 환원 촉매장치에 활용되어 질소산화물(\(\text{NO}_x\))의 분해를 돕는다. 이러한 질소산화물은 산성비와 미세먼지를 유발하는 등 대기오염의 주요 원인이기 때문에, 디젤 엔진에서 요소수의 사용을 통해 이를 분해하는 과정이 필수적이다. 대표적인 질소산화물인 일산화질소(NO)와 요소의 화학 반응식은 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<div class="math-block">\[4\text{NO} + 2(\text{NH}_2)_2\text{CO} + \text{O}_2 \to 4\text{N}_2 + 2\text{CO}_2 + 4\text{H}_2\text{O}\]</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-1</h2>
+<div class="spacer"></div>
+<p><strong>2-1.</strong> 위 반응식을 바탕으로, \(25\;°\text{C}\), \(1\;\text{atm}\)에서 \(1\;\text{mol}\)의 NO가 반응할 때의 엔탈피 변화를 구하라. 단, 각 화합물의 표준 생성 엔탈피(\(\Delta H_f\))는 다음과 같다.</p>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th></th><th>값</th><th></th><th>값</th></tr>
+<tr><td>\(\Delta H_f(\text{NO}(g))\)</td><td>\(= +100\;\text{kJ/mol}\)</td><td>\(\Delta H_f(\text{CO}_2(g))\)</td><td>\(= -350\;\text{kJ/mol}\)</td></tr>
+<tr><td>\(\Delta H_f((\text{NH}_2)_2\text{CO}(s))\)</td><td>\(= -350\;\text{kJ/mol}\)</td><td>\(\Delta H_f(\text{H}_2\text{O}(g))\)</td><td>\(= -250\;\text{kJ/mol}\)</td></tr>
+<tr><td>\(\Delta H_f(\text{H}_2\text{O}(l))\)</td><td>\(= -300\;\text{kJ/mol}\)</td><td></td><td></td></tr>
+</table>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-2</h2>
+<div class="spacer"></div>
+<p><strong>2-2.</strong> NO의 루이스 전자점식을 그려라. 가능한 루이스 전자점식을 두 가지 이상 제시하고, 가장 안정한 구조의 전자점식과 그 이유를 설명하라.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-3</h2>
+<div class="spacer"></div>
+<p><strong>2-3.</strong> 일산화질소와 요소의 산화·환원 반응에서 (1) 산화되는 물질과 환원되는 물질을 찾고, 그 물질들의 산화수 변화를 구하라. (2) 산화수의 변화를 바탕으로 전체 반응계의 전자 이동을 설명하고, (3) 이를 바탕으로 산화·환원 반응의 일반적인 특징을 서술하라.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-4</h2>
+<div class="spacer"></div>
+<p><strong>2-4.</strong> 또 다른 질소산화물인 이산화질소(\(\text{NO}_2\))는 암모니아(\(\text{NH}_3\))와 반응하여 질소 기체와 물을 생성한다. 이 반응이 일어날 때 주위의 온도가 어떻게 변화할지, 그 이유를 논리적으로 설명하라. \(\text{NO}_2\)와 \(\text{NH}_3\)의 반응은 아래와 같은 간단한 화학 반응식으로 나타낼 수 있다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[6\text{NO}_2 + 8\text{NH}_3 \to 7\text{N}_2 + 12\text{H}_2\text{O}\]</div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-5</h2>
+<div class="spacer"></div>
+<p><strong>2-5.</strong> 문제 2-4의 반응이 상온에서 가역적으로 일어나며, 반응 과정에서 온도가 일정하게 유지된다고 가정하자. 반응 용기의 부피가 줄어들었을 때 화학 평형이 어느 쪽으로 이동할지 서술하라.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-24</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

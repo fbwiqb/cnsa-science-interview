@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-141 | 2019_건국대_화학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-141-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">제시문</h1>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">(가)</span> 원자에 에너지를 가하면 가장 바깥 전자껍질에 배치되어 있는 원자가 전자가 원자핵으로부터 떨어져 나오게 된다. 기체 상태인 중성 원자의 바닥 상태로부터 전자 1개를 떼어 내어 이온으로 만드는데 필요한 최소 에너지를 이온화 에너지라고 한다. 전자를 받아들이는 과정은 전자를 떼어 내는 과정과 반대이므로 대부분의 경우 에너지가 방출된다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(나)</span> 1884년 스웨덴의 화학자 아레니우스는 수용액에서 수소 이온을 내놓는 물질을 산, 수산화 이온을 내놓는 물질을 염기라고 정의하였다. 1923년 덴마크의 브뢴스테드와 영국의 로우리는 수용액이 아닌 다른 용매에서도 산-염기 반응을 설명하기 위해 아레니우스 산-염기 개념을 확장한 새로운 산-염기 이론을 제창하였는데, 산은 다른 물질에게 수소 이온을 내줄 수 있는 물질이고, 염기는 다른 물질로부터 수소 이온을 받을 수 있는 물질이라고 정의하였다. 1923년에 미국의 화학자 루이스는 산-염기에 대해 보다 일반적인 개념을 제안하였다. 루이스의 정의에 의하면 비공유 전자쌍을 받는 물질을 산이라 하고, 비공유 전자쌍을 제공하는 물질을 염기라 정의하였다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(다)</span> 3개의 원자가 결합한 분자에서 중심 원자의 원자핵과 중심 원자와 결합한 두 원자의 핵을 연결했을 때 두 원자핵 사이의 거리를 결합 길이라고 하고, 중심 원자와 다른 두 원자가 이루는 각을 결합각이라고 한다. 전자쌍 반발 이론은 중심 원자를 둘러싸고 있는 전자쌍들은 (−)전하를 띠고 있어서 정전기적 반발력이 최소가 되도록 가능한 한 멀리 떨어지려는 방향으로 배치된다는 것이다. 이때, 전자쌍 사이의 반발력은 공유 전자쌍과 공유 전자쌍 사이가 보다 비공유 전자쌍과 공유 전자쌍 사이가 더 크고, 비공유 전자쌍 사이가 가장 크다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(라)</span> 소량의 수소 기체가 들어 있는 유리관에 고전압을 걸면 수소 원자가 생성되고 유리관에서 빛이 방출되는데, 이 빛을 프리즘으로 분해하면 특정한 파장의 빛으로 이루어진 불연속적인 선 스펙트럼이 나타난다. 1913년에 보어는 수소 원자의 선 스펙트럼을 설명하기 위해 전자가 원자핵 주위에 무질서하게 존재하는 것이 아니라, 특정한 에너지 준위를 가진 궤도에만 있을 수 있다는 새로운 모형을 제안하였다. 보어가 제안한 수소 원자 모형에서 원자핵 주위의 전자는 특정한 에너지를 가진 원형 궤도를 따라 빠르게 원운동하고 있다. 이 궤도를 전자 껍질이라고 하며 전자 껍질은 핵에서 가장 가까운 것부터 K(\(n\)=1), L(\(n\)=2), M(\(n\)=3), N(\(n\)=4) 껍질이라고 부른다. 여기서 \(n\)은 주양자수라고 하며 주양자수에 따른 각 궤도가 가지는 에너지 준위는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E_n = -\frac{k}{n^2} \qquad (k\text{는 상수}, n = 1, 2, 3, \ldots)\]</div>
+<div class="spacer"></div>
+<p>수소 원자의 전자가 에너지 준위가 다른 궤도로 전이할 때는 두 궤도의 에너지 준위 차이에 따라 자외선 영역, 가시광선 영역, 적외선 영역에 해당하는 파장의 빛이 얻어지며, 이때 빛에너지와 진동수, 파장의 관계는 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[E = h\nu = h\frac{c}{\lambda} \qquad (E: \text{빛에너지}, h: \text{플랑크상수}, \nu: \text{진동수}, c: \text{광속}, \lambda: \text{파장})\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>수소 원자의 선 스펙트럼에서 656 nm 파장에 해당하는 붉은 빛은 수소 원자의 전자가 주양자수 \(n\)=3에서 \(n\)=2로 전이했을 때 방출되는 가시광선이다. 수소 원자의 이온화 에너지와 동일한 에너지를 갖는 빛의 파장은 얼마일지 계산하고 그 과정을 유도하라. 원자번호 10번 네온 원자(Ne)의 이온화 에너지와 원자번호 9번 플루오린 원자(F)의 전자 친화도를 비교했을 때, 어느 것의 절대값이 더 클지 예상하고 그 이유를 설명하라.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<p>아래 반응은 산-염기 반응으로 볼 수 있는가? 그렇다면 산과 염기로 반응한 것은 각각 무엇인지 밝히고 그 이유를 설명하라. 반응 전후에 F-B-F, H-N-H 결합각에는 어떤 변화가 일어나는지 구체적으로 기술하고 그 이유를 설명하라.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{BF}_3 + \text{NH}_3 \rightarrow \text{F}_3\text{BNH}_3\]</div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-141</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

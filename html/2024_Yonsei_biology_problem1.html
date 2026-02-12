@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생-16 | 2024_연세대_생명과학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 생명과학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="생-16-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">[가]</span> 16세기에 사람들은 모든 식물은 씨앗(종자)에서 자라나는데 뿌리를 가진 이 식물의 경우 씨앗을 찾을 수 없었기 때문에 이 식물의 씨앗은 눈에 보이지 않는다고 생각했다. 당시 사람들은 식물의 약효가 잎과 꽃의 모양에 따라 좌우된다고 생각했다. 그러므로 키드니베치(Kidney Vetch)라는 콩은 콩팥 질환에 좋고, 우산이끼(Liverwort)는 이파리가 간처럼 생겼기 때문에 간에 좋은 약으로 생각했다. 이것은 '특징설(doctrine of signatures)'을 자연에까지 확대 적용한 것으로, 눈에 보이지 않는 이 식물의 씨앗을 얻으면 그 자신도 다른 사람의 눈에 보이지 않을 거라고 믿었다. (중략) 셰익스피어가 1597년에 쓴 희곡 &lt;헨리4세&gt;에서 가드실이라는 도둑은 공범을 끌어들이기 위해 이렇게 말한다. "성 안에 들어가면 우리는 보이지 않을 거야. 그 식물의 씨앗을 가지고 있거든. 안 보이게 걸어다닐 수 있어." 사실 이 식물은 유성생식을 하지만 씨앗으로 번식하지 않는다. - &lt;씨앗의 자연사&gt;, 진선미 번역</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[나]</span> 식물이라면 열매를 맺고 씨앗으로 번식할 수 있지 않을까 하는 궁금증이 생길 텐데요. 혹시 개나리 열매를 보신 분 계신가요? 씨앗은요? 은행나무가 암수한그루인 것처럼 개나리도 장주화와 단주화 두 가지로 나뉩니다. 엄밀히 따지면 암꽃, 수꽃과는 조금 다른 개념이긴 한데요. 장주화는 수술이 퇴화하고 씨방이 있는 암술만 발달한 꽃이고, 단주화는 반대로 암술이 퇴화하고 수술이 발달한 꽃입니다. 번식을 위해서는 수술과 암술이 모두 있는 개나리이거나 장주화와 단주화가 모두 있어야 할 텐데, 우리가 도시에 심는 개나리는 모두 단주화입니다. 개나리를 자세히 살펴보면 가운데 암술이 짧고 겉에 수술만 길게 나 있는 걸 발견할 수 있을 거예요. 그래서 당연히 수정도 하지 못하고 열매도 맺지 못하죠. 스스로 번식하지 못하고 인간에 의해 꺾꽂이 등의 방식으로만 번식하는 거예요. 개나리 줄기 일부를 잘라서 땅에 심으면 새로운 개체가 되는 것이죠. &lt;u&gt;비록 지금이야 우리 주변에 개나리가 흔하지만, 이렇게 자생하는 개체도 없는데 이와 같은 번식을 하는 경우 최후엔 멸종할 수밖에 없습니다.&lt;/u&gt; - &lt;식물의 책&gt;, 이소영</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[다]</span> 근친도(유전적 관련 정도)는 두 사람의 친족이 1개의 유전자를 공유하게 되는 확률을 나타낸다. - &lt;이기적유전자&gt;, 홍영남 번역</p>
+<p>달리 말해, 두 사람 사이에 특정 염색체의 특정 위치에 있는 유전자가 동일할 확률을 의미한다. 이때 동일하다는 것은 유전자의 기원이 동일하다는 의미이다. 여기에서는 하나의 염색체가 동일할 확률로 이해하자.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[라]</span> tRNA는 매우 독특한 RNA분자이다. tRNA의 말단에는 아미노산이 결합하는 자리가 있으며, 또한 mRNA의 코돈과 상보적으로 결합할 수 있는 안티코돈이 존재한다. 따라서 tRNA는 안티코돈 서열에 따라 여러 종류가 있다. tRNA는 번역 과정에서 중요한 역할을 한다. 리보솜에서 새로운 펩타이드 결합이 형성될 때, tRNA는 결합하고 있던 아미노산을 합성되는 단백질의 펩타이드 사슬에 전달하게 된다. 그리고 아미노산을 잃어버린 tRNA는 자신의 안티코돈 서열에 맞는 특정 아미노산과의 결합이 다시 일어나 번역과정에 재참여한다. 이러한 tRNA와 특정 아미노산의 결합을 매개하는 효소가 아미노아실-tRNA 합성효소(aminoacyl-tRNA synthetase)이다. 이 효소군은 tRNA의 안티코돈과 아미노산에 대한 기질특이성을 가지고 있다. 따라서 각각의 tRNA가 가지고 있는 안티코돈에 상응하는 정확한 아미노산을 tRNA의 말단에 결합시키는 일을 매개하며 여러 종류의 아미노아실-tRNA 합성효소가 있다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[마]</span> 아래는 코돈표의 일부이다.</p>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th>코돈</th><th>아미노산</th></tr>
+<tr><td>AUU, AUC, AUA</td><td>아이소류신</td></tr>
+<tr><td>ACU, ACC, ACA, ACG</td><td>트레오닌</td></tr>
+<tr><td>AAU, AAC</td><td>아스파라진</td></tr>
+<tr><td>AGU, AGC</td><td>세린</td></tr>
+<tr><td>AAA, AAG</td><td>라이신</td></tr>
+<tr><td>AGA, AGG</td><td>아르지닌</td></tr>
+<tr><td>AUG</td><td>메싸이오닌</td></tr>
+<tr><td>GUU, GUC, GUA, GUG</td><td>발린</td></tr>
+<tr><td>GCU, GCC, GCA, GCG</td><td>알라닌</td></tr>
+<tr><td>GAU, GAC</td><td>아스파트산</td></tr>
+<tr><td>GGU, GGC, GGA, GGG</td><td>글리신</td></tr>
+<tr><td>GAA, GAG</td><td>글루탐산</td></tr>
+</table>
+<div class="spacer"></div>
+<p>*번역은 개시코돈에서 시작해서 종결코돈에서 끝나며, AUG는 개시코돈, UAA와 UAG, UGA는 종결코돈임.</p>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-1</h2>
+<div class="spacer"></div>
+<p>제시문 가)의 밑줄 친 식물과 나)의 개나리가 각각 속할 수 있는 분류군이 무엇인지 근거와 함께 설명하고, 이 분류군들의 형질을 바탕으로 식물이 건조한 육상환경에 적응해 온 과정을 설명하라. (12점)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-2</h2>
+<div class="spacer"></div>
+<p>제시문 나)에서 작가가 밑줄 친 부분과 같이 글을 쓴 이유를 사람과 같은 대부분의 다세포생물의 번식과 비교하여 설명하라. 사람의 경우 한 부모에서 태어난 자손의 유전적 다양성이 얼마인지를 근거와 함께 설명하라. 또한, 제시문 다)를 참고하여 나와 어머니 사이의 유전적 관련 정도와 나와 형제자매 사이의 유전적 관련 정도는 각각 얼마이며, 그 차이는 무엇인지 설명하라. (단, 교차와 돌연변이 효과는 고려하지 않는다.) (16점)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-3</h2>
+<div class="spacer"></div>
+<p>제시문 라)와 마)를 참고하여 답하라. 깊은 바다 속에서 발견된 세균을 분석한 결과, 아미노아실-tRNA 합성효소 중 하나의 구조가 기존 생물종에서 발견된 것과 매우 달랐다. 이 합성효소의 기능을 조사하기 위해 일반적인 대장균(E), 그리고 상응하는 정상 아미노아실-tRNA 합성효소 유전자를 깊은 바다 속 세균의 합성효소 유전자로 바꾼 대장균(T)에서 아래와 같은 임의의 유전자를 발현시켜 다음과 같은 아미노산의 서열을 얻었다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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CxK5pguPrgDmGsa7PqEFlQ2asFoRixE2QRvEjNw+y4dCvPRajdlp6dM+w5wm1IxB4AbxIhvAzjzxlaHZuxNZozvnkdI5tqZgLjnADyAEGuizHXpB2lZQ3t4RqGYtxz3bwPyyvmpzyxatpEccjmsllkD2g8nARuIz80GoiyO0FmxW+jjVyXyXGsLd20PG13Iny5Lq1b1NtWZwoRtIY47hZ5jl1+yg1UVDQ5ZJ9DozSuL5H12Oc49SS0ZKoU7N3UKD74vMrDLvqdjSI8EjDieeeXPog3kXnxqdi3FoNgboe9TESMB5OGxx9MgFegQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERBka42Gsz6TsB87a20sg3YbuLsbvjzVyKhFDdksxFzDKPrGA+y4/tY801OizUqEtSR7mNkxlzcZGCD4/BRdxu//LWP/qi//KCtoMcul9m422oXiSLe50bRud9okYx8VB9HWy86wWD6R37mw56RYxws+eOef2lt145IogyWd07s/bcACfQAKVB5yaOvqfaSk6eAujdRkeGStwWne3qPNXdVdasOGmUmPiEjfrbOMCNnTDfN35K46jG7U47+53EZC6EN8MEg5/BWUGBrtSKODRqkW6OJtyNjdji0gBjuhCdmHirodp5EkgisznA9pzsPPqVs2akNp0JmaXGCQSs54w4AjP4lR6dQj06B8UTnOD5Xyku83HJQYzdMuvm+nC3GobstgJ5CHGOHnz8c+anvzCxqegTNa9ofLIdr24cPqnciFuKtZox2bdSw5zg6q9z2gdCS0t5+qCtqdGxeIYRSkgaQ5rZoXOIOOvJw8ysWvQdZ1K7S7ppgNUMy4wOO7cM9Ny9aqlehHX1C3ca5xfaDA4HoNowMIOKsFyCoYd1VuxobCI4nBrQPMbunosa7VnGrVIZa+myS2t54hgdy2jP7XNenUEtSGa1BZe0mWDdwznpuGCgxr7bLNQ0YWnQOxaO3hMLQBw3+ZK9AqtujHasVJnucHVpDI0DoTtLefqrSAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiD//Z" /></div>
+<div class="spacer"></div>
+<p>임의의 유전자 염기서열:</p>
+<p>5'-ACGAAATGGTCAATGATGATAAA-3'</p>
+<p>3'-TGCTTTACCAGTTACTACTATTT-5'</p>
+<div class="spacer"></div>
+<p>T 대장균에서 얻어진 아미노산 서열: 메싸이오닌-발린-라이신-아스파트산-글루탐산</p>
+<div class="spacer"></div>
+<p>동일한 유전자를 E 대장균에서 발현시켜 얻은 아미노산의 서열과 비교하라. 만약 이 서열이 T 대장균에서 얻은 서열과 다르다면 전사와 번역의 개시, 신장, 종결 중 어느 단계에서 차이가 발생했을지 추론하고, 그 단계에 해당하는 과정과 함께 설명하라. (단, 제시된 유전자 바뀜 외에 돌연변이 등 다른 변화는 고려하지 않는다.) (12점)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">생-16</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

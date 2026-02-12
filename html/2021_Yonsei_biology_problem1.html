@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생-37 | 2021_연세대_생명과학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 생명과학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="생-37-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>다음 제시문을 읽고 아래 질문에 답하시오.</p>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">[가]</span> 생태계 평형은 주로 먹이 사슬에 의해 유지되는데, 먹이 사슬이 없이 먹이 그물이 복잡해질수록 평형이 잘 유지된다. 낚시 인구의 증가로 여러 호수에서 2차 소비자인 큰 물고기 개체 수가 크게 줄어들어 호수 생태계의 평형이 깨졌다. 조사결과, 호수에서 1차 소비자인 작은 물고기가 많이 증가함에 따라 먹이인 수초, 즉 생산자가 감소한 것으로 나타났다. 이에 과학자들이 일정 수의 2차 소비자 큰 물고기를 호수에 넣고 생태계 변화를 관찰하였다. 그 결과, 일정한 시간이 지난 후에 해당 호수에서 1차 소비자가 다시 감소함을 확인하고 생태계가 평형을 회복하고 있다고 결론지었다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[나]</span> 대장균의 젖당 오페론은 젖당 이용을 관여한다. 이 오페론 앞에 있는 조절 유전자는 지속적으로 발현하여 억제 단백질을 만든다. 억제 단백질이 오페론의 작동 부위에 결합하면 RNA 중합효소가 프로모터에 결합할 수 없어 전사가 억제된다. 그런데 젖당이 대장균 세포 내로 유입되면 젖당 유도체가 되어 억제 단백질에 결합하게 된다. 그러면 RNA 중합효소가 작동하여 젖당 오페론에 있는 유전자의 전사가 일어나게 된다. 그 결과, 젖당 이용에 필요한 효소가 생성되어 젖당을 분해한다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[다]</span> 인간의 체액성 면역은 1차 면역 반응과 2차 면역 반응으로 나누어진다. 우리 몸에 처음 침입한 항원에 대응하여 일어나는 반응을 1차 면역 반응이라고 한다. 이 반응에서 면역 세포를 일부는 항원을 기억할 수 있는 기억 세포로 분화하여 기억 세포들은 항원이 제거된 후에도 남아 있다. 나중에 같은 항원이 다시 침입하면 남아 있던 기억 세포들이 분화하여 빠르고 강한 면역 반응을 나타내는데 이를 2차 면역 반응이라 한다. 백신은 2차 면역 반응의 원리를 이용한 것으로, 인체에 기억 세포를 생성시켜서 나중에 같은 항원이 침입할 경우 빠르게 항체를 생성하여 대처할 수 있게 한다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[라]</span> 가설의 옳고 그름을 가려내기 위해 탐구를 설계, 수행하게 된다. 탐구를 수행할 때에는 실험 결과에 대한 타당성을 높이기 위해 대조군을 설정하여 실험군과 비교하는 실험을 해야 한다. 실험군은 실험 조건을 변경하거나 제거하여 그 조건의 영향을 알아보기 위한 집단이고, 대조군은 실험군과 비교하기 위하여 실험 조건을 변화시키지 않은 집단이다. 실험에서 조작 변인을 제외한 다른 모든 변인을 일정하게 유지해야 하는데, 이를 변인 통제라고 한다.</p>
+<div class="spacer"></div>
+</div>
+<p><strong>[문제 1]</strong> 제시문 [나]와 [다]를 바탕으로 생물의 특성 2가지를 논술하시오. [10점]</p>
+<div class="spacer"></div>
+<p><strong>[문제 2]</strong> 귀납적 탐구 방법으로 제시문 [가]와 [나]를 종합하여 생명현상을 논술하시오. [15점]</p>
+<div class="spacer"></div>
+<p><strong>[문제 3]</strong> 한 연구원이 식물의 성장을 촉진할 것으로 기대되는 스테로이드성 물질이 실제로 촉진 효과가 있는지 알아보는 실험을 수행하고자 한다. 이 연구원은 이 물질을 1% 알코올에 녹인 용액 100mL를 실험군에 속하는 식물 전체에 분무기로 골고루 뿌렸다. 이 연구원은 대조 실험도 하였는데, 일부 식물에 같은 분무기로 물 100mL를 같은 방법으로 뿌렸다. 제시문 [라]에 근거하여, 이 연구원이 설계한 대조 실험을 평가하고, 그 근거를 논술하시오. (단, 같은 농도의 물질을 사용했다고 전제한다.) [15점]</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">생-37</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

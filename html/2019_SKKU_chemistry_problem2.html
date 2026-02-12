@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-80 | 2019_성균관대_화학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-80-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<p>[화학 I]</p>
+<div class="spacer"></div>
+<p>다음 &lt;제시문 1&gt; ~ &lt;제시문 4&gt;를 읽고 [화학 I - i] ~ [화학 I - v]를 문항별로 풀이와 함께 답하시오.</p>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">&lt;제시문 1&gt;</span></p>
+<div class="spacer"></div>
+<p>두 가지 이상의 서로 다른 종류의 원소가 결합하여 만들어진 물질을 화합물이라고 한다. 화학식을 사용하여 화학 변화를 나타낸 식을 화학 반응식이라고 한다. 화학 반응식을 사용하면 반응 전 물질이나 반응 후 생긴 물질을 나타낼 수 있으므로 화학변화의 과정을 쉽게 알 수 있게 된다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">&lt;제시문 2&gt;</span></p>
+<div class="spacer"></div>
+<p>아보가드로 법칙에 따르면 '모든 기체는 온도와 압력이 같을 때 같은 부피 속에 같은 수의 분자가 들어있다.' 실험에 의하면 \(0°\text{C}\), 1기압에서 기체 분자 1몰이 차지하는 부피는 22.4 L이다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">&lt;제시문 3&gt;</span></p>
+<div class="spacer"></div>
+<p>전자의 질량은 양성자나 중성자에 비해 매우 작으므로, 한 원자의 질량은 원자핵의 질량과 거의 같다. 따라서 원자핵 속의 양성자 수와 중성자 수를 합친 것이 그 원자의 질량수이다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">&lt;제시문 4&gt;</span></p>
+<div class="spacer"></div>
+<p>아미노산이 물에는 잘 녹지만 유기 용매에 잘 녹지 않는 것은 아미노산이 분자 내에서 이온화되어 극성을 띠기 때문이다. 아미노산은 수용액의 액성에 따라 분자의 존재 형태가 달라진다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-1 [화학 I - i]</h2>
+<div class="spacer"></div>
+<p>에텐(\(\text{C}_2\text{H}_4\))과 산소 기체로 이루어진 혼합물의 질량이 176 g이다. 이 혼합물에서 양성자 수의 총합과 중성자 수의 총합의 비는 6:5이다. 이 혼합물에서 에텐의 질량(g)은 얼마인지 구하고 그 근거를 논하시오. (단, 혼합물에서 수소, 탄소, 산소의 원자 번호는 각각 1, 6, 8이며 질량수는 각각 1, 12, 16이다.)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-2 [화학 I - ii]</h2>
+<div class="spacer"></div>
+<p>암모니아와 산소 기체의 반응에 의해 물과 함께 질소 화합물 \(\text{H}_2\text{NOH}\)와 \(\text{HNO}_3\)가 각각 99 g과 62 g 얻어졌다. 이 반응을 화학 반응식으로 나타내고, 소모된 산소 기체의 양이 \(0°\text{C}\), 1기압에서 몇 L인지 구하고 그 근거를 논하시오. (단, 수소, 질소, 산소의 원자량은 각각 1, 14, 16이다.)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-3 [화학 I - iii]</h2>
+<div class="spacer"></div>
+<p>다음 그림은 아미노산의 일종인 알라닌의 구조이다. 아래의 그림에 표시된 결합각 (가), (나), (다)를 증가하는 순으로 나타내고 그 근거를 논하시오.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-4 [화학 I - iv]</h2>
+<div class="spacer"></div>
+<p>알라닌을 산성 수용액에 녹인 다음 NaOH 수용액을 천천히 첨가하였더니 용액이 중성을 거쳐 염기성으로 바뀌었다. 산성, 중성, 염기성 용액에서의 알라닌 분자가 서로 다른 존재 형태를 가진다고 할 때, 각각의 존재 형태를 구조식으로 나타내고, 각 구조에서 \(\begin{pmatrix} \text{공유 전자쌍 수} \\ \text{비공유 전자쌍 수} \end{pmatrix}\)를 구하고 그 근거를 논하시오.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-5 [화학 I - v]</h2>
+<div class="spacer"></div>
+<p>알라닌 0.267 g을 산소와 반응시킨 다음, 탄소를 포함한 물질을 모두 분리한 결과, 일산화탄소와 이산화탄소 혼합물이 얻어졌다. 이 혼합물을 NaOH로 채워진 관에 통과시킨 결과, 관의 무게가 0.264 g 증가하였고 이산화탄소가 모두 제거되었다. 남은 일산화탄소를 이용하여 산화철(\(\text{Fe}_2\text{O}_3\))을 환원시켜 철(Fe)을 얻고자 할 때 얻을 수 있는 Fe의 최대량이 몇 g일지 구하고 그 근거를 논하시오. (단, 수소, 탄소, 질소, 산소, 철의 원자량은 각각 1, 12, 14, 16, 56이다.)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-80</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-135 | 2021_경희대_화학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-135-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">II-1</h2>
+<div class="spacer"></div>
+<p>[논제 II-1] 제시문 [가]~[마]를 참고하여 다음 질문에 답하시오.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> \(\text{A}_2\text{BX}_n\)형태의 물질을 물에 녹이면 양이온 분자와 음이온 분자로 나누어 진다. 원자의 크기는 X, B, A 순으로 커지는 것으로 측정이 되었다. 양이온의 전하는 +1이고 보유한 전자개수는 10이다. B는 바닥상태의 전자배치에서 p orbital에 2개의 전자를 가진다. \(\text{A}_2\text{BX}_n\)의 화학식량은 106이다. 이 물질이 무엇인지 논하시오. 단, 모든 원소는 동위원소를 가지고 있지 않으며 n은 10보다 작은 정수이다. (8점)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> \(\text{A}_2\text{BX}_n\)의 음이온을 루이스 구조식으로 표현하고 음이온 중심원자의 산화수를 예측하시오. 음이온의 분자 구조를 전자쌍 반발 이론을 이용하고 음이온의 중심원자와 외곽의 원자가 이루는 대략적인 각도에 대해서 논술하시오. (12점)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">II-2</h2>
+<div class="spacer"></div>
+<p>[논제 II-2] 제시문 [마]~[사]를 참조하여 다음 질문에 답하시오.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 등전자 이온이란 전자 배치가 같은 이온을 말한다. 다음은 10개의 전자를 가지며, 각 이온을 원자 번호가 증가하는 순서로 나열한 등전자 계열이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{O}^{2-}, \text{F}^-, \text{Na}^+, \text{Mg}^{2+}\]</div>
+<div class="spacer"></div>
+<p>위의 이온들을 이온 반지름이 큰 것부터 차례로 나열하고, 그 이유를 설명하시오. (10점)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 14족인 원소인 규소는 전자 배치가 \(1s^22s^22p^63s^23p^2\)이다. 중성 원자인 규소의 순차적 이온화 에너지 \(E_1\), \(E_2\), \(E_3\), \(E_4\), \(E_5\)의 크기가 어떤 경향을 보이며 변화하는지를 아래의 그래프를 이용하여 그림으로 나타내고 그 이유를 설명하시오. (가장 급격한 이온화 에너지 변화를 보이는 구간도 언급하여야 함.) (10점)</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-135</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

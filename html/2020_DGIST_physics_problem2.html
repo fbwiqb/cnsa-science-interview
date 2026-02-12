@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-41 | 2020_DGIST_물리학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-41-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<p><strong>1.</strong> 질량 m, 전하량 \(q\) \((&gt; 0)\) 를 갖는 입자가 \(v\) 의 속도로, 자기장의 크기가 B이고 그 방향이 지면을 뚫고 나오는 방향의 원형 (반지름 \(a\)) 자기장 영역에 들어와서 원운동을 하다가 아래의 그림과 같이 입사 방향에 대해 \(\theta\) 만큼 방향을 꺾어 자기장 영역을 벗어났다. \(\tan\theta\) 의 값을 구하시오. 참고로, 이 방법을 이용하면 전하를 갖는 입자의 운동 방향을 임의의 각도로 꺾을 수 있다. (5점)</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+<p><strong>2.</strong> 아래의 그림과 같이 동일한 질량 m의 입자 4개가 같은 속력 \(v\)를 갖고 등거리를 유지하면서 반지름 R의 원 위를 각각의 질량사이에 작용하는 중력을 받아 원운동을 하고 있다. 단, 중력 상수는 \(G\)이다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+<p>가. 어느 한 입자가 다른 세 입자로부터 받는 중력의 크기와 방향을 구하시오. (2.5점)</p>
+<div class="spacer"></div>
+<p>나. 원운동 속력 \(v\)의 크기를 계산하시오. (2.5점)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-41</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

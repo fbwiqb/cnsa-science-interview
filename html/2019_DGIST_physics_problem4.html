@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-62 | 2019_DGIST_물리학_문제4</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-62-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 4</h1>
+<div class="spacer"></div>
+<p>넓이가 같은 극판으로 전기 용량이 \(C\)인 축전기를 만들었다. 두 극판 사이의 거리는 \(d\)이다. 축전기 극판의 넓이는 매우 크다고 가정하자. 전압이 \(V\)인 배터리를 이 축전기에 연결하고 스위치 S를 닫아 한참의 시간이 지났다. 이 축전기 내부에 질량이 \(m\)이고 전하량이 \(q\)인 물체를 길이가 \(l\)인 절연체 실에 매달았다. 축전기와 물체가 있는 공간에는 중력이 작용하고 있으며 중력 상수는 \(g\)이다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<p><strong>(가)</strong> 그림과 같이 물체가 실에 팽팽하게 연결되어 평행판에 대해 \(\theta\)의 각도로 평형 상태를 이루었다. 이 각도를 구할 수 있는 식을 써보아라.</p>
+<div class="spacer"></div>
+<p><strong>(나)</strong> (가)에서 구한 각도를 중심으로 물체가 단진동 운동을 할 수 있음을 설명하고, 그 주기를 구하라.</p>
+<div class="spacer"></div>
+<p><strong>(다)</strong> 배터리를 축전기에 계속 연결한 채, 두 평행판 사이의 거리를 1/2로 줄였다면, 운동의 주기는 어떻게 될까? (거리를 줄여도 물체는 축전기판에 닿지 않는다고 가정하자)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-62</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

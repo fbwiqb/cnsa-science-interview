@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-1 | 2025_KAIST_물리학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-1-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>아래 그림과 같은 길이 \(L\), 너비 \(W\), 높이 \(H\)를 갖는 직육면체 형태의 밀폐된 방이 있다. 이 방의 왼쪽과 오른쪽 벽면에는 전하가 균일하게 분포되어 있다. 두 벽면의 총 전하량의 크기는 같고 부호는 반대이다. 벽면 간 거리 \(L\)이 충분히 짧아 전기장이 방 전체에 고르게 형성되어 있다고 가정하자. 중력 가속도 \(g\)는 \(-z\)방향을 향하며, 방 전체는 유전율 \(\epsilon\)의 가스로 채워져 있다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 그림과 같이 질량 \(m\), 양의 전하 \(q\)를 갖는 구슬을 바닥면으로부터 높이 \(h\)인 지점에서 속도 0으로 자유 낙하를 시켰더니 구슬이 방 바닥면에 닿는 순간의 속도 크기가 \(v = 2\sqrt{gh}\)로 측정되었다. 이때 전기장의 크기를 구하시오. 단, 구슬은 바닥면을 제외한 방의 다른 면에는 닿지 않았으며, 구슬의 크기는 무시할 정도로 작고, 구슬에 작용하는 마찰력 및 구슬의 운동으로 인한 전자기파는 무시한다. [2점]</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 문제 (1)의 상황에서 오른쪽 벽면의 총 전하량의 크기를 구하시오. [2점]</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 방 안 가스를 유전율 \(2\epsilon\)의 새로운 가스로 교체하고 문제 (1)의 실험을 반복할 때, 구슬이 방 바닥면에 닿는 순간의 속도 크기를 구하시오. [1점]</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-1</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

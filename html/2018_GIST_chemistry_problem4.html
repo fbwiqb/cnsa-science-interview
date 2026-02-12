@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-91 | 2018_GIST_화학_문제4</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-91-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 4</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">4-1</h2>
+<div class="spacer"></div>
+<p>동위원소와 동소체의 개념을 구별하여 설명하고, 각각 예를 들어보시오.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">4-2</h2>
+<div class="spacer"></div>
+<p>다음의 세 가지 경우의 중화적정실험을 고려해 보자.</p>
+<div class="spacer"></div>
+<p>1. 강산을 강염기로 적정</p>
+<p>2. 약산을 강염기로 적정</p>
+<p>3. 약염기를 강산으로 적정</p>
+<div class="spacer"></div>
+<p><strong>a.</strong> 각 경우에 해당하는 중화적정곡선의 개형을 그리시오.</p>
+<div class="spacer"></div>
+<p><strong>b.</strong> 중화점의 대략적인 위치를 표시하고, 그 이유를 설명하시오.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,/9j/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAGbAXEDASIAAhEBAxEB/8QAGgABAQEBAQEBAAAAAAAAAAAAAAQFAwIBBv/EAEcQAAEDAgMBDQYEAgoABwAAAAABAgMEEQUSE7IGFBUhMTU2QVFUdILRFiQyUpOjImFxgWWxIzNVcnORlKGk4SY0QlaiwfD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A/WAAAAAAAAAAAAAAB5ke2KN0kio1jUVzlXqRAPQONHVRVtJHUwrdkiXS/Kn5HYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBujop95VVWtfOjGoishZ+Fqcicfab5mbpOYKv8Aup/NALqX/wApD/cb/Iy8WmfWyvw+Bf6NjM9U9F5G8qM/Vf5FyunZhKOpWJJOkKZGqtkVbGNTuxSiw+WJcHVzno50sy1TLucvK5UA0dzfMFJ/dX+anPdMyqkweVlMiZbK6VyrazES6oh43LSzvwmJklNpxMb/AEcmdFz8a34uovxbmet8PJsqBj7jY6qOgcsiItNIqujW/GiotlS37H6Mydy3R2l8+2prAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzK/BI6+WR0tbWtZJa8TJbM4k7LfkaYAhoMMSherkrKudFblRs0uZE/RLFkjEkjcxb2ciotj0AOFFSR0NHHTRK5WRpZFcvHy3OeLcz1vh5NlSskxbmet8PJsqBJuW6O0vn21NYydy3R2l8+2prAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJMW5nrfDybKlZJi3M9b4eTZUCTct0dpfPtqaxk7lujtL59tTWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASYtzPW+Hk2VKyTFuZ63w8myoEm5bo7S+fbU1jJ3LdHaXz7amsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkxbmet8PJsqVkmLcz1vh5NlQJNy3R2l8+2prGTuW6O0vn21NYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJi3M9b4eTZUrJMW5nrfDybKgSblujtL59tTWMnct0dpfPtqawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACTFuZ63w8mypWSYtzPW+Hk2VAk3LdHaXz7amsZO5bo7S+fbU1gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEmLcz1vh5NlSskxbmet8PJsqBJuW6O0vn21NYydy3R2l8+2prAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJMW5nrfDybKlZJi3M9b4eTZUCTct0dpfPtqaxk7lujtL59tTWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnlxCjgkWOargjenK18iIqftc8cK4d3+l+s31Ps2GUNRK6WekhkkdyucxFVTJocMoX45ikT6SF0celkarEs27VvYDZgraWperKephlciXVrJEctu3iO5PT4fSUsivpqaKJ6pZVY1EWxQAAAAHmRXNjc5jM7kRVRt7XXsuZfCGMf2H/AMtnoBrEmLcz1vh5NlTlhOIy4iyZ0tLvdIn6f9ZnuqcvUdcW5nrfDybKgSblujtL59tTWMnct0dpfPtqawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGbVy4w2pelJT0z4eLK571RV4uP/e5BBDjsFdVVTaakV1TkzIr1smVLJY3KqZKalmnVLpExz1TtslzHo6KuxClZV1OJTxOmaj2xwWa1qLyAXUEmKPnVK+Cnjiy8SxuVVvdP+y8ysOqKqHEZcNrZUnc2NJYpbWVzb24/zuaoAAACLF6t1Fh0kkfHM6zIk7XrxJ6/sWmXPFJWY7Cj43JTUjdS6oqI+ReS3bZAK8NpG0NBDTN48jfxL2r1r/mecW5nrfDybKlZJi3M9b4eTZUDO3NT6eDYfDpSu1dT8bW3ayzlX8S9V+o0Ya/W3t7pVM183xx208vzdl+ok3LdHaXz7amsBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1CGv1t7e6VTNfN8cdtPL83ZfqKwBJDX629vdKpmvm+OO2nl+bsv1Henm3xAyXTkizJfJI3K5P1Q6AAAAAAAAAAAAOdQiuppUbGkjlYqIxVsjuLkuYtC7G6OBIN4RyRs4o7zpdrepFXrN4Afn4G4zHXS1kuHRSTPajE/p0RGMTjsn7mxRSVUsKurKdsEmayNa/NdO2/8AmUAAAAAAAEmLcz1vh5NlSskxbmet8PJsqBJuW6O0vn21NYydy3R2l8+2prAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJMW5nrfDybKlZJi3M9b4eTZUCTct0dpfPtqaxk7lujtL59tTWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASYtzPW+Hk2VKyTFuZ63w8myoEm5bo7S+fbU1jJ3LdHaXz7amsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkxbmet8PJsqVkmLcz1vh5NlQJNy3R2l8+2prGTuW6O0vn21NYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJi3M9b4eTZUrJMW5nrfDybKgSblujtL59tTWMnct0dpfPtqawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACTFuZ63w8mypWSYtzPW+Hk2VAk3LdHaXz7amsZO5bo7S+fbU1gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEmLcz1vh5NlSskxbmet8PJsqBJuW6O0vn21NYydy3R2l8+2prAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJMW5nrfDybKlZJi3M9b4eTZUCTct0dpfPtqaxk7lujtL59tTWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASYtzPW+Hk2VKyTFuZ63w8myoEm5bo7S+fbU1jJ3LdHaXz7amsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIazGMPoZUjqalrH/KiK5U/W3IWudlarl6kuZO5uFrsM33I1FmqnOfI5evjWyfoBqQzRVETZYJGyRu5HNW6KT4tzPW+Hk2VIcGa2mxXFKKNLRRvZIxqciZm3VP5F2Koq4RWonGug/ZUCTct0dpfPtqax+ZwHHcOosGgp6moySszZm5HLa7lXqT8zQ9psH739p/oBrAyfabB+9/af6D2mwfvf2n+gGsDJ9psH739p/oPabB+9/af6AawMn2mwfvf2n+g9psH739p/oBrAyfabB+9/af6D2mwfvf2n+gGsDJ9psH739p/oPabB+9/af6AawMn2mwfvf2n+g9psH739p/oBrAyfabB+9/af6D2mwfvf2n+gGsDJ9psH739p/oPabB+9/af6AawMn2mwfvf2n+g9psH739p/oBrAyfabB+9/af6D2mwfvf2n+gGsDJ9psH739p/oPabB+9/af6AawMn2mwfvf2n+g9psH739p/oBrAyfabB+9/af6D2mwfvf2n+gGsDJ9psH739p/oR+19G2vfErVdTcWSZiL2cd0Xj5QP0QOVNUw1cKS08jZI162qdQAAAAAAAAAAAAAAAAPjkRzVavIqWMPBK+noaJaCunZDPSuc1UkVG5kvdFTt5TdOM1JTVDkdPTxSubyK9iKqf5gZ2Cpvmrr8RRqpHUva2K6Wu1qWv+5rhERERESyJ1ACVcLw9yqrqGmVV41VYW8f+x84Kw7uFL9FvoUTSaUL5Mjn5Gq7KxLudbqRO0wa7dBM2Sl0aKvhRZkR6PgRFkb8qfmBrcFYd3Cl+i30HBWHdwpfot9D5Q4hv1727zq6fKl7zxZUX9OM54LUzVVG+Sd+dyTPai2ROJF4uQDrwVh3cKX6LfQcFYd3Cl+i30OVVWYlFUOZT4VrxJbLJvhrc3F2KcYMVrHYjDSVeG731kcqO10fZETsRP0Ar4Kw7uFL9FvoOCsO7hS/Rb6HKmqZpMbrad77xRMjVjbJxKqcZ1xSu4Ow6Wr09TTt+HNa91ROX9wHBWHdwpfot9BwVh3cKX6LfQk4Qxj+w/wDls9D1iFbWRYBPVOi3pUtTibmR+Xjty8nIBTwVh3cKX6LfQcFYd3Cl+i30KY1V0bVXlVEU9AScFYd3Cl+i30HBWHdwpfot9CfEKuvbiMNJQJTZnxukVZ0d1KidX6nj/wAQ/wAL+4BXwVh3cKX6LfQcFYd3Cl+i30OWDVtRWQ1G+2xJLBUOhXSRcq2t2/qdq7hDKzg/e17rn1837WsB84Kw7uFL9FvoOCsO7hS/Rb6GXT12N1FXU00fBupTq1H31LLdL8RXiNTWUtFSOc+Ns7542SaaXaqKvGiXAp4Kw7uFL9FvoOCsO7hS/Rb6FaqiIqqtkTlVTHTGqiou/D8MlqYEVU1VkRiOt2IvKBbwVh3cKX6LfQcFYd3Cl+i30PuH18WIQufGjmPYuWSN6WcxexTng9RLVUOpO7M/Ue29kTiRyonIB74Kw7uFL9FvoOCsO7hS/Rb6FZBi1e7D2Ur000bLUMie5/I1q3uvLxcgHTgrDu4Uv0W+g4Kw7uFL9FvoOFcO7/S/Wb6nCDFG1ONrSU8kMsCU+qr2OzLmzWtdFtyAd+CsO7hS/Rb6DgrDu4Uv0W+h7rZqmCFHUlLvp6usrNRGWTtuv/7jIeEMY/sP/ls9AK+CsO7hS/Rb6ES7msPfXvqZI0Vq2ywtRGsbZOxOUohq6+SGdamg3pkYqsdrNfdf0Q6YRPJU4VTTTOzSPZdy2RLr+wFTGMjYjI2tY1OJGtSyIegAAAAAAAAAAAAAAAAAAAAAADxNNHBC6WZ6MjYl3OXqMCffW6CVJ6JywU9MueB70tqyJ127PU/Qua17Va5Ec1UsqKl0VDGqXV8+Nuo6Ot3rEyBH2SFr+u3WB4jV2L1CxVEmIUFTC38ccL8rF4+VFtxnbcy3Jhbm3V1ppEu5bqvH1n3g/GP7c/4jPU9bnnvfhztVWq5JntVWsRiLZeWyAaiqiIqqtkTrMnDl4QxSbEkvoMboQL8yXu53+fEeqykrMRqHQTubBQIvGkbrvm/JV6kNKONkUbY42o1jUs1qciIBgurt5bo69d61NRnZHxQR57cXWaeIUnCuFPp8zoNZGrdzbq3jRbKl/wAiaj6S4l/hxfyUpxLDaPEGNdVw6mkiq2zlS1+Xk/QDLkZjDMUho+GL6sbn597M4rdVjvjEU8O5mqZVVO+JLf1mRGf+pOpCfDcBwmvoIqrejo9RL5dVy247cpVPgFPHhdVTYexIpJ2oiq97lRbLfj5fzA1ov6ln91D692VjnWVbJeycqhiZY2tXlREQ+gfmq+pjrp45loscgkY1WosEWXiUlbLG6V0bZN0qyMsrmovGl+S6GljksaV0USyYrqLHmRlCvFa/KqGa2KNsrpGx7pUkfZHORONbcl1A0cIqo6P3eKhxZdebM6Soh5FWyKqr2cVzQxKorY0ZDQUyySy3TUcv4I/zUm3O740KnfG+8usunvu+fLZO01ZLJG5VS6WXiAxkwKWkRlRQVHvyX1HSfDNdbqip1cZ7xRlVUUFEslOqTJUxueyP8eVEXluY9PQR1MDJodzWaN6Xau/1S6fup74HmWendBgW9VZM1zpN9o/8KLx8SqB+mr4X1GH1EMa2fJE5rf1VDNwjFqKPDYYJ5mU80DEjkjlXKqKiWXl5TRra6nw+FJquTTjV2W+VV4/2/QzJMY3P1L88r4JHJyOkhVV/3QD3gzt9YliFfE1Up5lYyNVS2fKllU67n+bF/wAaTbU9Q45hksrIYaprnuVGtajV9Dzuf5sX/Gk21A0zK3QUs9VTUyU9OlSsVQ2R0SuREc1EW6cf+RqmbPg2tO+XhLEI863yxz2an5IlgINKf/2pS/Vi9DphdJUNxt1U/DI6CHe6x5WPaqK7Mi3/AA/l/I4VeHSQYrQUrcUxFWVOpnVajjTK26W4i7gL+K4p/qP+gNYxdz6q3cpEqcqMkX/5OLqpmIRwxMw90DlalnuqVcqr2LxdZmU1DjtLQ70Y7Dlj/FxuV9/xKqr1fmBVhXRiHw6/yU64BzHR/wCGhLR02KUdCtPU7zWmjhc28avz8nFy8RVgHMdH/hoBoAAAAAAAAAAAAAAAAAAAAAAAAGdWYPHV1m+kqqqCRWIxdCTLdE/Y0QBk8BfxXFP9R/0W4fQx4fTaET5HtzK7NIt1VVKQAAAEkNFpYlU1mpfXa1uTL8OX8ypyZmq1eRUsfQBjx7nY4Y0jixLEmMbyNbPZE/ax64C/iuKf6j/o1gB4hj0oWR53PyNRuZ63c63Wq9p7AAz67CY62qZULU1MEjGZEWB+XivfsOPAX8VxT/Uf9GsAJaGh3k16b6qajMqcc8me36FLkzNVq8ipY+gDHj3PMijRkeJYkxjUsjWz2RP2seuAv4rin+o/6NYAAAAJsPo9402jnz/jc69rcqqv/wBlIAAACSoodfEaOr1Mu9s/4ct82ZLcvUVgAAAB5lZqQvZe2ZqpfsucaCl3lQw02fPpty5rWv8AsUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k=" /></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">4-3</h2>
+<div class="spacer"></div>
+<p>아세트산(\(\text{CH}_3\text{COOH}\))과 아세트산나트륨(\(\text{CH}_3\text{COONa}\))으로 구성된 완충용액은 4.8 부근의 pH를 유지한다.</p>
+<div class="spacer"></div>
+<p><strong>(a)</strong> 두 물질의 수용액상에서의 반응식을 나타내시오.</p>
+<div class="spacer"></div>
+<p><strong>(b)</strong> 이 완충용액에 강산인 HCl 을 넣어도 용액의 pH가 급격하게 변하지 않는 이유를 설명하시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-91</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

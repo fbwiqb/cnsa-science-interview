@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생-41 | 2020_GIST_생명과학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 생명과학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="생-41-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>붉은빵곰팡이에서 아르지닌은 선구물질인 글루탐산으로부터 아래와 같은 합성 대사 경로를 통해 합성된다. 야생형 붉은빵곰팡이 곰팡이에 X선을 조사하여 3가지 유형의 돌연변이들을 얻었고, 각각의 돌연변이들을 분석한 결과 아래와 같은 표를 얻었다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th></th><th>최소배지</th><th>최소배지+오르니틴</th><th>최소배지+시트롤린</th><th>최소배지+아르지닌</th></tr>
+<tr><td>야생주</td><td>자람</td><td>자람</td><td>자람</td><td>자람</td></tr>
+<tr><td>돌연변이 유형 A</td><td>자라지 못함</td><td>자라지 못함</td><td>자람</td><td>자람</td></tr>
+<tr><td>돌연변이 유형 B</td><td>자라지 못함</td><td>자람</td><td>자람</td><td>자람</td></tr>
+<tr><td>돌연변이 유형 C</td><td>자라지 못함</td><td>자라지 못함</td><td>자라지 못함</td><td>자람</td></tr>
+</table>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 돌연변이 A 유형은 (가)~(다) 효소 중에서 어떤 효소에 이상이 있는가? 그 이유를 간단히 설명하시오.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 돌연변이 B 유형은 (가)~(다) 효소 중에서 어떤 효소에 이상이 있는가? 그 이유를 간단히 설명하시오.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 돌연변이 C 유형은 (가)~(다) 효소 중에서 어떤 효소에 이상이 있는가? 그 이유를 간단히 설명하시오.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(4)</span> 비들과 테이텀은 위와 같은 실험을 바탕으로 1유전자 1효설을 주장하였고, 현재는 1유전자 1폴리펩타이드설로 발전하게 되었다. 이렇게 변한 이유를 설명하시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">생-41</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

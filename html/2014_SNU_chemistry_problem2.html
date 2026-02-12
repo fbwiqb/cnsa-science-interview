@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-121 | 2014_서울대_화학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-121-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<p>\(A \rightleftharpoons B\) 로 표시할 수 있는 기체 분자간의 화학 반응을 아래 그림에서와 같은 반응실에서 진행시켰다. 반응실 1과 반응실 2 사이의 칸막이는 생성물 \(B\)만 통과시키는 준투과막이며, 전체 반응실은 주변의 대기와 열을 주고 받을 수 있다. 주변의 대기는 일정한 온도 \(T\), 일정한 압력 \(P\)를 유지하였다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVIAAACGCAIAAAAAb5U1AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFcElEQVR4nO3dQVajShSAYdfVk7gTZ72NXoKuJtMMHWYBDlyKzXvpgxwIBAooqrzfN+jjS6dJHnV/gqjx6QsI5unoJwDkJnsIR/YQjuwhHNlDOLKHcGQP4cgewpE9hPMg+8vl8gcoW9Ppltk3W3wCytZ0un32z8/Phx7LqM/Ly8vpdGr+PPqJ/HBNm3tlv3SjYHLySNvPsmcXJicP2VMQk5OH7CmIyclD9hTE5OQhewpicvKQPQUxOXnInoKYnDxkT0FMTh6ypyAmJw/ZUxCTk4fsKYjJyUP2FMTk5CF7CmJy8pA9Bbm9QcvSt39gKdlDOLKHcGQP4cgewpE9hCN7CEf2EI7sIRzZUxDfrpOH7CmIyclD9hTE5OQhewpicvKQPQUxOXnIPkXzfzdxy/BvL5fL2G8dHbt8Nf0QP1XOyVm0iAkr+PAhDiT7FEuzb275/Pwcbqe5cWwO1k9MIRO2SLHZJ6zgw4eYcL1e28NK8/Gcf7KI7FPcPep3/3Z4/0VDc3e952c8fEq1yJz9/EVMO3CnLeKt+dvD3ba/efmyT7H01X7RKWK70r1R82q/rUWLuPQkf80i9v7J9AlFGtmneDgxyS+23aP77eN2AmS/rWIXsXcf2Zdi+nicvEi9EeltWfbbqmIRneQXZHjK1z3T6y3t2MlhV3vP9/f3rZ6k7KfNX8T5K/i16SIOjyBbkf32knvrXr8dWnrIl/0ahy/ifs1/yX4Pe/TWvIAs3azs1zh2EXdt/kv2ySbWb/hX868DT9zTq/3m5i/ioiv5KxdxeP1/c7JPtCiqsVUcXqTdcL1rzD7zD97O30XzV3Dizisfa0OyT7RobWRfpvl7O3P2Q8lbu0v2iSZO5IaLtMlJvow3N39vb3WSX8giyh7CkT2EI3sIR/YQjuwhHNlDOLKnIN4nPw/ZUxCTk4fsKYjJyUP2FMTk5CF7CmJy8pA9BTE5ecj+GHd/MKOcH9U4ShWT8wPWTvaH6U3JHm+QWp1aJqf2tZP9YbqDcntDlT1+/0ldapmc2tdO9ofpjs7T/m+oUoVaJqf2tZP9YdrRqe4UcT+1TE7tayf7w9zGZafff1CpWian9rWT/WGe7v2OtOBqmZza1072h7l9yaf/WnE+nw96PiWoZXIGa3f+/e+Ler+rWD7ZH6b/ld6Pt1/1zM1Oapmc3to1S/fr7ePr//pvHxRO9oe5dymomZ/Q2dfyg7djl/E+3n7XUL3syxI9+8qd36qIXvaFkX21/vscrVm7j/O5gvJlXxTZ16m9olfJtRnZl6OdnSquClEx2UM4sodwZA/hyB7CkT0FqeXbdWonewpicvKQPQUxOXnInoKYnDxkT0FMTh6ypyAmJ48ds39+fv4DS5xOp2Zymj+PfiI/XNPmXtkDJds4+9tXX4GSLf3+iPreIRhYSfYQjuwhHNlDOLKHcGQP4cgewpE9hCN7CEf2EI7sIRzZQziyh3BkD+HIHsKRPYQjewhH9nybfuem9m6Xy2XO3R4+1sTjjt2TTdihjBrrrbn98/Nz5hZ62rd/6mU/8biy35wdyn1N2GN5zzwpGNtmu5HuBnvbn/hP1rND6bter7eAX19fbx80t3TvsKbDtOwXffrAQ3Yl39rAup23R4FusTNP8u8+RO+DL6/22dmhLLbmkp7sS2CHsru7hXcPE9PHDtlvzg7ln8nrdKs+ux7LfoMnTRK7nlF3y0w4OrS3jF3JJzO7nm9pZ9eLPp9vLxYOH2vM0t/0xEOy51vaK/D87BMeq3uCwFbsUL49JX1lbizL6c8C5scs+83ZoXxL+8rcTucIK7fPBDsUwpE9hCN7CEf2EI7sIRzZQziyh3BkD+HIHsKRPYQjewjnLx7SdynETnnlAAAAAElFTkSuQmCC" /></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-1</h2>
+<div class="spacer"></div>
+<p>진공 상태로 있던 전체 반응실에 \(n_A^0\) 몰의 반응물 \(A\)를 부피가 \(V_1\)인 반응실 1에 넣어 반응을 진행시켜 평형에 도달했다고 하자. 반응이 진행하는 동안 생성물 \(B\)의 일부는 부피가 \(V_2\)인 반응실 2로 이동할 것이다. 이 때, 두 반응실 간 \(B\) 분포에 대한 물질 평형 조건은 양쪽의 분압이 같아야 한다는 것이다. 즉, \(P_{B1} = P_{B2} = P_B\) (\(P_{B1}\), \(P_{B2}\) 각각 반응실 1과 반응실 2에서의 \(B\)의 분압)이다. 이 화학 반응의 평형 상수는 평형 상태 분압의 비로 \(K = P_B / P_A\)와 같이 나타낼 수 있다. 반응 후 평형 상태에서 반응물 \(A\)와 생성물 \(B\)의 분압 \(P_A\)와 \(P_B\)를 \(n_A^0\), \(V_1\), \(V_2\), \(T\) 및 \(K\)로 나타내어라.</p>
+<div class="spacer"></div>
+<p>(단, 돌턴의 분압법칙이 성립하고, 이상기체임을 가정하라.)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-2</h2>
+<div class="spacer"></div>
+<p>이제 반응실 2의 오른쪽 벽면을 아래 그림처럼 좌우로 쉽게 미끄러질 수 있으나, 반응실 1까지 밀려 들어가지는 않게 만들었다. 반응실 2의 부피 \(V_2\)가 0보다 크기 위한 \(n_A^0\)의 최소값은 얼마이고, 그럴 경우 새로운 평형 상태에서의 반응실 2의 부피 \(V_2\)는 얼마인가?</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+<p>다음의 추가 문항은 2-1, 2-2 문항을 풀지 못했어도 답할 수 있다.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-3</h2>
+<div class="spacer"></div>
+<p>문항 2-1에서 얻어진 평형 상태에서 평형상수 \(K\)가 아주 클 때, \(P_B\)의 값은?</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-4</h2>
+<div class="spacer"></div>
+<p>문항 2-1에서 얻어진 평형 상태에서 반응실 2의 부피 \(V_2\)를 증가시키면 반응의 평형은 어느 쪽으로 이동하겠는가?</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">2-5</h2>
+<div class="spacer"></div>
+<p>문항 2-1에서 얻어진 평형 상태에서 반응실 1과 2의 칸막이를 제거하면 반응의 평형은 어느 쪽으로 이동하겠는가?</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-121</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

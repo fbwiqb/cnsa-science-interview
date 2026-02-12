@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-46 | 2020_GIST_화학_문제5</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-46-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 5</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">단계 1</h2>
+<div class="spacer"></div>
+<p>드라이아이스(\(\text{CO}_2\)), 얼음(\(\text{H}_2\text{O}\)), 소금결정(\(\text{NaCl}\))이 대기압에서 고체 상태로 존재하고 있다. 녹는 점을 비교하여 녹는 점이 낮은 물질부터 나열하시오. 나열한 이유를 각 물질에 주로 작용하는 분자간 힘이나 결합력의 세기를 이용하여 설명하시오.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">단계 2</h2>
+<div class="spacer"></div>
+<p>고체 탄산칼슘의 분해 반응식은 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{CaCO}_3\text{(s)} \rightarrow \text{CaO(s)} + \text{CO}_2\text{(g)}\]</div>
+<div class="spacer"></div>
+<p>10 g의 탄산칼슘을 분해하여 얻어지는 이산화탄소 기체가 300 K, 1 L의 용기 A에 들어 있다. 이 기체가 나타내는 압력은 얼마인가? 이 용기 A는 같은 온도의 \(\text{N}_2\) 기체 (2 L, 3 atm)가 들어 있는 용기 B와 연결되어 있고 연결 꼭지는 잠겨 있다. 꼭지를 열어 두 기체를 혼합했을 때 이산화탄소 기체가 나타내는 부분 압력과 전체 압력을 구하시오. (\(\text{CaCO}_3\)의 분자량은 100으로 계산하고, 모든 기체는 이상기체처럼 행동한다.)</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">단계 3</h2>
+<div class="spacer"></div>
+<p>고체 탄산칼슘의 분해 반응은 흡열반응이다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{CaCO}_3\text{(s)} \rightarrow \text{CaO(s)} + \text{CO}_2\text{(g)} \qquad \Delta H = +178.3\ \text{kJ/mol}\]</div>
+<div class="spacer"></div>
+<p>이 반응이 일어나는 계의 엔트로피 부호를 예측하고 이유를 설명하시오. 특정온도 이하에서는 이 반응이 자발적으로 일어나지 않는 이유를 설명하시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-46</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-117 | 2015_서울대_화학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-117-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">제시문</span></p>
+<div class="spacer"></div>
+<p>양초는 왁스가 연소할 때 발생하는 에너지로 빛을 낸다. 과거에는 벌집이나 동물성 지방으로 만든 왁스를 사용했지만, 현재는 석유에서 추출한 파라핀 왁스를 주로 사용한다.</p>
+<div class="spacer"></div>
+<p>파라핀 왁스는 다양한 길이의 사슬 모양 포화 탄화수소의 혼합물로, 녹는점은 50 ~ 60\(\degree\)C, 끓는점은 약 300\(\degree\)C이다. 촛불의 모양은 심지 끝부분에서 시작해서 위로 길게 늘어져 있는 형태이다. 촛불의 심지 끝부분의 온도는 약 600\(\degree\)C이지만, 상부외각의 가장 뜨거운 지점은 1400\(\degree\)C까지 올라가는 것으로 알려져 있다. 이러한 1000\(\degree\)C 이상의 높은 온도는 파라핀 왁스의 효율적인 분해와 연소에 중요한 역할을 한다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+</div>
+<p><strong>[문제 1]</strong> 아래는 양초의 구성 물질 중 하나인 탄화수소이다. 이 물질이 공기 중에서 완전 연소되는 반응의 화학 반응식을 완성하시오.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{CH}_3(\text{CH}_2)_{25}\text{CH}_3 + \underline{\quad} \text{O}_2 \rightarrow \underline{\quad\quad\quad} + \underline{\quad\quad\quad}\]</div>
+<div class="spacer"></div>
+<p>탄소화합물의 연소 에너지는 생명체뿐만 아니라 인간사회에서 다양한 형태로 변환되어 이용된다. 탄소화합물의 연소 에너지가 각각 다른 에너지로 변환되어 이용되는 예를 네 가지 드시오.</p>
+<div class="spacer"></div>
+<p><strong>[문제 2]</strong> 열린 공간에서 양초가 연소될 때 촛불은 파라핀 왁스로 직접 옮겨 붙지도 않고, 심지를 태우며 내려가 꺼지지도 않으며, 심지 끝에서 장시간 일정한 크기로 유지된다. 촛불이 파라핀 왁스를 연소시키는 과정에서 파라핀 왁스의 상변화와 이동과정 및 원리를 제시된 촛불 그림을 이용하여 설명하고, 촛불의 크기가 장시간 일정하게 유지되는 이유에 대하여 설명하시오.</p>
+<div class="spacer"></div>
+<p><strong>[힌트]</strong> 촛불의 크기가 장시간 일정하게 유지되는 이유와 관련하여, 파라핀 왁스의 연소를 촉진하는 요인과 제한하는 요인에 대해 생각해 보시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-117</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

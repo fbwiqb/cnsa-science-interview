@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-98 | 2018_서울대_화학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-98-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>최근 에너지 문제가 중요한 이슈로 떠오르고 있다. 화학 에너지는 여러 에너지원 중에서 큰 비중을 차지하고 있다. 다음은 에너지 생성과 관련된 대표적인 화학 반응이다.</p>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">(가)</span> 화석 연료의 연소</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{C}_3\text{H}_8 + 5\text{O}_2 \to 3\text{CO}_2 + 4\text{H}_2\text{O} \quad \Delta G = -2110 \text{ kJ}\]</div>
+<div class="spacer"></div>
+<p><span class="passage-marker">(나)</span> 수소 연료 전지</p>
+<div class="spacer"></div>
+<div class="math-block">\[2\text{H}_2 + \text{O}_2 \to 2\text{H}_2\text{O} \quad \Delta G = -474 \text{ kJ}\]</div>
+<div class="spacer"></div>
+<p><span class="passage-marker">(다)</span> 생명체의 호흡</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2 \to 6\text{CO}_2 + 6\text{H}_2\text{O} \quad \Delta G = -2660 \text{ kJ}\]</div>
+<div class="spacer"></div>
+<p>화학 반응에서 결합을 끊기 위해 필요한 에너지를 결합 에너지라고 한다. 결합 에너지는 결합의 세기를 나타내는 척도라고 할 수 있다. 다음 표는 몇 가지 주요 원자 사이의 평균 결합 에너지를 보여준다.</p>
+<div class="spacer"></div>
+<p>[표 1] 결합 에너지 (단위: kJ/mol)</p>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th>H-H</th><th>440</th><th>Cl-Cl</th><th>240</th></tr>
+<tr><td>C-C</td><td>350</td><td>O=O</td><td>500</td></tr>
+<tr><td>C=C</td><td>610</td><td>N-N</td><td>160</td></tr>
+<tr><td>C\(\equiv\)C</td><td>840</td><td>N=N</td><td>420</td></tr>
+<tr><td>C-H</td><td>410</td><td>N\(\equiv\)N</td><td>950</td></tr>
+</table>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-1</h2>
+<div class="spacer"></div>
+<p>화학 반응에서는 반응물을 구성하는 원자들의 결합이 끊어지면서 이 원자들이 다시 배열하여 새로운 결합이 형성된다. 반응 <strong>(가)</strong>를 다음과 같이 화학 결합의 변화로 표시할 때 빠진 부분을 채워 식을 완성하시오.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-2</h2>
+<div class="spacer"></div>
+<p>[표 2]는 연료로 쓰이는 몇 가지 화합물의 연소열과 밀도를 나타낸 것이다. 단위 질량(1 g)당 연소열의 크기순으로 연료를 나열해 보시오. 단위 질량당 연소열의 크기를 결정하는 가장 중요한 요소는 무엇이라고 생각하는가? 상온, 1기압에서 단위 부피(1 L)당 연소열의 크기순으로 연료를 나열하고 그 이유를 설명하시오.</p>
+<div class="spacer"></div>
+<p>[표 2] 연료의 연소열과 밀도</p>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th>연료</th><th>연소열(kJ/mol)</th><th>밀도(g/L)</th></tr>
+<tr><td>\(\text{H}_2\)</td><td>285</td><td>0.090</td></tr>
+<tr><td>\(\text{CH}_4\)</td><td>890</td><td>0.67</td></tr>
+<tr><td>\(\text{C}_3\text{H}_8\)</td><td>2220</td><td>1.87</td></tr>
+<tr><td>\(\text{C}_8\text{H}_{18}\)</td><td>5430</td><td>703</td></tr>
+<tr><td>\(\text{CH}_3\text{OH}\)</td><td>730</td><td>792</td></tr>
+<tr><td>\(\text{C}_3\text{H}_7\text{OH}\)</td><td>2020</td><td>803</td></tr>
+</table>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-3</h2>
+<div class="spacer"></div>
+<p>고분자전해질 연료 전지의 한 전극에서는 아래와 같은 반응이 일어난다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[2\text{H}_2 \to 4\text{H}^+ + 4e^-\]</div>
+<div class="spacer"></div>
+<p>이 반응은 어느 전극에서 일어나는가? 다른 전극에서 일어나는 반응식을 설명하시오. 각각의 전극에서 일어나는 전극 반응의 표준 전극 전위를 구하시오. (패러데이 상수 F = 96500 C)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-4</h2>
+<div class="spacer"></div>
+<p>제시문에서 호흡 <strong>(다)</strong>의 역반응은 광합성 반응이다. 광합성은 빛 에너지를 이용하여 물과 이산화탄소를 탄수화물과 산소로 변환하는 과정이며 반응식은 다음과 같이 쓸 수 있다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[6\text{CO}_2 + 12\text{H}_2\text{O} \to [\text{C}(\text{H}_2\text{O})]_6 + 6\text{H}_2\text{O} + 6\text{O}_2\]</div>
+<div class="spacer"></div>
+<p>광합성 반응에서 탄소가 겪는 변화 과정을 전기 음성도와 산화수의 개념을 이용하여 설명하시오. 생성물인 산소 분자와 포도당은 두 단계의 서로 다른 반응을 통하여 만들어지는 것으로 생각할 수 있다. 두 반응식을 설명하시오.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-5</h2>
+<div class="spacer"></div>
+<p>광합성의 첫 단계는 빛 에너지를 이용하여 물을 분해하는 과정이다. 결합 에너지 관점에서 이 반응이 가능한지 설명하시오. 광합성 첫 단계에서 파장 680 nm인 가시광선 영역의 빛이 흡수됐을 때 전달되는 에너지는 180 kJ/mol 정도이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-98</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-153 | 2010_건국대_물리학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-153-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">(가)</span> 물체가 정지 상태로부터 중력만을 받으면서 낙하하는 운동을 자유낙하운동이라고 한다. 자유낙하하는 물체의 속도는 일정하게 증가한다. 이것은 물체가 낙하하는 동안 중력이 계속 작용하여 가속도 운동을 하기 때문이다. 자유낙하하는 물체의 운동은 등가속도운동의 대표적인 예이다. 중력에 의해 생기는 가속도를 중력가속도라고 하며 \(g\)로 나타낸다. 중력가속도의 값은 낙하하는 물체의 질량과 관계없이 지구 표면에서 대략 \(9.8 \text{ m/s}^2\)이다. 또한 달 표면에서의 중력가속도의 값은 지구의 약 1/6정도로 작다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(나)</span> 우리는 농구 선수들이 공을 넣을 때 위로 점프하는 모습을 종종 본다. 농구 선수들이 위쪽으로 똑바로 뛰어 오르는 모습은 마치 중력에 대항하여 공중에 매달려 있는 것처럼 보인다. 점프하는 힘은 발이 지면에 닿아 있는 동안만 작용한다. 따라서 밖의 지면을 미는 힘이 셀수록 뛰어오르는 속력이 커지고 더 높이 점프할 수 있다. 밖이 지면에서 떨어지는 순간부터 위쪽으로 향하는 속력은 \(g\)만큼씩 일정하게 감소한다. 위로 올라가는 속력이 0이 되었을 때 선수는 최고 높이에 도달한다. 최고높이까지 올라간 선수는 다시 내려오기 시작하며, 내려올 때의 속력은 올라갈 때와 같은 비율로 증가한다. 다리를 곧바로 편 상태에서 올라갔다가 다시 내려오면 상승시간과 하강시간이 같다. 선수의 체공시간은 상승시간과 하강시간을 더한 것이다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(다)</span> 운동에너지는 운동하는 물체가 일을 할 수 있는 능력의 정도를 나타내는 물리량이라고 할 수 있으며, 일반적으로 질량 \(m\)인 물체가 속도 \(v\)로 운동할 때, 그 운동에너지는 \(\frac{1}{2}mv^2\)으로 주어진다. 지면에서 높이 \(h\)에 있는 질량 \(m\)인 물체는 연직 방향으로 크기가 \(mg\)인 중력을 받아 낙하하면서 다른 물체에 일을 할 수 있다. 이와 같이 높은 곳에 있는 물체가 가지고 있는 에너지를 중력에 의한 위치 에너지라 하며 그 값은 \(mgh\)로 주어진다. 탄성체를 변형시키려면 외부에서 일을 해주어야 하며 탄성체가 받은 일은 탄성체 내부에 저장된다. 이를 탄성력에 의한 위치에너지라고 하며 일반적으로 용수철 상수 \(k\)인 용수철을 원래길이에서 \(x\)만큼 변형시켰을 때 탄성력에 의한 위치에너지는 \(\frac{1}{2}kx^2\)으로 주어진다. 외부에서 다른 힘이 작용하지 않고 중력과 탄성력만이 작용할 때 운동하는 물체의 운동에너지와 위치에너지들의 총합은 항상 일정하다. 이를 역학적 에너지 보존 법칙이라고 한다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-1</h2>
+<div class="spacer"></div>
+<p>제시문 (나)에서와 같이 농구선수가 지구 표면에서 위쪽 방향의 초기속력 \(v\)로 점프했을 때 도달하는 최고 높이를 \(h_{\text{지구}}\)라 하고 체공시간을 \(t_{\text{지구}}\)라고 하자. 이 농구 선수의 두 배의 질량을 가진 선수가 달에서 같은 초기 속력으로 점프하는 실험을 상상하자. 이때 최고 높이를 \(h_{\text{달}}\), 체공 시간을 \(t_{\text{달}}\)이라 하자. \(h_{\text{달}}/h_{\text{지구}}\)와 \(t_{\text{달}}/t_{\text{지구}}\)의 값을 각각 구하여라.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-2</h2>
+<div class="spacer"></div>
+<p>수면 위 높이 \(h\)인 곳에서 번지 점프대가 설치되어 있다. 늘어나지 않았을 때의 길이가 \(L\)인 줄에 매달려 질량 \(m\)인 어떤 사람이 번지 점프를 한다. 줄은 탄성체로 용수철 상수 \(k\)인 용수철로 볼 수 있다고 하자. 수면에 이 사람의 머리가 닿을 때의 순간 속도가 0이 되도록 하려면 줄의 용수철 상수 \(k\)는 얼마이어야 하는가? 사람의 키는 무시하고 중력가속도는 \(g\)라고 하자.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-3</h2>
+<div class="spacer"></div>
+<p>지구의 질량은 달의 약 81배이다. 지구와 달은 반지름이 일정한 구로 이해하였을 때 표면적의 비를 구하여라. 단, 달과 지구 표면에서의 중력의 비는 1:6이라고 가정하자.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-4</h2>
+<div class="spacer"></div>
+<p>지구와 달의 지면에서 각각 전방을 향하여 지면에 대하여 같은 각도를 유지하고 화살을 쏘았다고 가정하여 보자. 화살의 초기속도가 지구와 달에서 모두 같다고 할 때 화살이 날아간 거리와 지면에 떨어질 때까지의 시간을 서로 비교하여라. 단, 달과 지구 표면에서의 중력의 비는 1:6이라고 가정하자.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-153</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

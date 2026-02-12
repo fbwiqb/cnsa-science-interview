@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-151 | 2011_건국대_물리학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-151-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">(가)</span> 물체의 운동 에너지와 위치 에너지의 합을 역학적 에너지라고 한다. 역학적 에너지가 보존되는 물리계를 '보존 계(conservative system)'라 하고, 역학적 에너지가 보존되지 않는 물리계를 비보존 계(non-conservative system)라 한다. 질량이 \(m\)인 물체에 마찰이 없는 용수철이 연결된 단순 조화 진동계를 보존 계의 대표적 예로 들 수 있다. 이러한 경우에 물체가 정지하게 되면 운동 에너지가 0이므로 용수철이 늘어나는(혹은 줄어드는) 변위의 크기가 가장 크다. 물체가 가장 빠른 속력으로 진동하는 경우에는 운동에너지가 가장 크고 위치에너지가 0인 상태로서 원래 위치에 도달한 것이며, 이때 용수철에는 탄성력이 작용하지 않으므로 변위는 0이다. 탄성 상수가 \(k\)인 용수철에 달린 질량이 \(m\)인 물체의 운동방정식으로부터 물체의 각진동수 \(\omega\)와 진동주기 \(T\)를 구하면, \(\omega = \sqrt{k/m}\)이며, \(T = 2\pi\sqrt{m/k}\)이다. 용수철이 원래의 위치로부터 \(x\)만큼 변위된 물체의 위치에너지는 \(E_s = \frac{1}{2}kx^2\)이고 운동에너지는 \(E_k = \frac{p^2}{2m}\)으로 주어진다. 물체의 총 에너지는 어떤 순간의 운동 에너지와 위치 에너지의 합인 전체 역학적 에너지와 항상 같다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+<p><span class="passage-marker">(나)</span> 광전효과를 설명하기 위하여 아인슈타인은 빛은 광량자라고 부르는 불연속적인 에너지 덩어리로 이루어져 있으며, 그 한 개의 에너지가 진동수 \(\nu\)에만 관계가 있다고 주장하였다. 광전효과에서는 금속의 표면에 빛이 쬐어지면, 충분히 높은 에너지의 빛만이 금속에서 전자를 내보내며, 이때 방출되는 전자를 광전자라고 부른다. 광전효과에서의 빛과 전자의 관계는 빛의 세기에 무관하며, 빛의 에너지가 높을수록 더 빠른 광전자가 방출된다. 일정 값 이하의 진동수를 가진 빛에서는 아무리 밝은 빛이라도 광전자가 방출되지 않는다. 금속표면에 빛을 쬐어 전자가 나오려면 먼저 금속 내부의 전자를 결합하고 있는 힘을 극복해야 한다. 전자가 금속의 속박으로부터 벗어나 진공으로 나오는 데 필요한 최소 에너지를 일함수라고 한다. 일 함수는 금속에 따라 서로 다른 값을 가지며 금속 표면을 탈출한 전자의 운동에너지의 최대값은 빛의 진동수에 비례하는 값과 일함수의 차이다. 그 비례 상수를 \(h\)라 하고 일함수를 \(\phi\), 빛의 진동수를 \(\nu\), 전자의 질량을 \(m_e\)라 할 때, 광전효과 방정식은 \(h\nu = \phi + \frac{1}{2}m_e v^2\)으로 나타낼 수 있다. 플랑크 상수 \(h\)의 값은 \(h = 6.626 \times 10^{-34} \text{ J} \cdot \text{s}\)이다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(다)</span> 아인슈타인의 E=MC\(^2\) 공식에 따르면 빛이 도달할 수 있는 매우 먼 거리에 있는 별에서 지구까지 오는 빛 신호에서 적색편이를 통해 은하와 항성의 후퇴 속도를 알아낼 수 있는데 관측한 빛의 진동수가 원래의 진동수보다 더 작아지는 도플러 효과를 적색편이라 하고, 원래보다 진동수가 더 크게 관측되면 청색편이라 한다고 가정하자. 아인슈타인의 더 넓은 일반적 의미의 도플러 효과에 따르면 관측 진동수는 이와 직교하는 운동 방향에도 영향을 받아 원래 진동수보다 작아질 수 있다고 가정하자.</p>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-1</h2>
+<div class="spacer"></div>
+<p>제시문 (가)에서와 같이 용수철 상수 \(k\)인 용수철에 매달린 단순진동계의 질량 \(m\)의 물체를 생각하자. 이 물리계의 역학적 에너지가 \(E\)로 주어질 때, \(E\), \(E_s\), \(E_k\)의 관계와 이 단순진동계 내의 물체의 최대 운동에너지를 구하고 변위가 가장 큰 물체의 위치를 평형점에서의 거리로 표현하시오. 그리고, \(E_s\)와 \(E_k\)가 같은 두 개의 위치를 \(E\), \(m\), \(k\)로 표현하시오.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-2</h2>
+<div class="spacer"></div>
+<p>제시문 (가)에서와 같이 단순 조화 진동을 하는 물체의 각진동수가 \(\omega\)일 때 시간에 따른 변위의 함수 \(x(t)\)는</p>
+<div class="spacer"></div>
+<div class="math-block">\[x(t) = \sqrt{\frac{2E}{k}} \cos\omega t\]</div>
+<div class="spacer"></div>
+<p>로 주어진다. 여기서 \(t\)는 시간, \(\omega\)는 물체의 각진동수, 운동방향 \(p(t) = m\frac{dx}{dt}\)이다. 역학적 에너지 보존법칙을 고려하면 함수 \(p(t)\)가 \(t\)의 함수로 \(E\), \(m\), \(k\)에 대한 식으로 나타내어지며, 또 시간에 대한 평균운동량 \(\frac{1}{T}\int_0^T E_k(t)dt\)를 계산하면 \(\frac{1}{2}\)의 결과를 갖는 것도 보이시오.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-3</h2>
+<div class="spacer"></div>
+<p>제시문 (가)에서와 같이 단순진동계의 물체에 역학적 에너지 \(E\)로 주어진 1차원 운동에서 \(x\)와 \(p\)를 좌표축 \((x, p)\)으로 그리면, 역학적 에너지가 같은 상태를 이어주는 닫힌 곡선을 그릴 수 있다. 그리고 \(E\)에 해당하는 닫힌 곡선의 안쪽 면적을 \(A_E\)라 하고, 역학적 에너지 \(E + \Delta E\)에 해당하는 닫힌 곡선의 안쪽 면적을 \(A_{E+\Delta E}\)라고 하자. \(\Delta E\)가 충분히 작을 때, 이 닫힌 곡선을 나타내는 좌표계에 대하여 에너지가 \(E\)와 \(E + \Delta E\)에 해당하는 두 곡선 사이의 면적 (\(A_{E+\Delta E} - A_E\))의 물리적 의미에 대하여 논술하시오.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-4</h2>
+<div class="spacer"></div>
+<p>서로 독립적으로 단순진동을 하는 5개의 물리계의 \(E_1, ..., E_5\)라고 하고, 역학적 에너지 \(n\)에 대하여 물리량의 역학적 에너지에 해당하는 위상면적 \(\Omega_n\)을 부여하자. 전체의 역학적 에너지가 주어질 때, \((e_1 \rightarrow e_1 + \eta_1)\)로 할 때, 각각의 \(\eta_1, ..., \eta_5\)는 독립적인 5개의 양의 실수이다. 물체 에너지 \(n\)에 대해서 위상면적이 \(\Omega_n\)으로 주어진다고 하자. 전체계의 위상면적이 \(\Omega_{\text{tot}} = \Omega_1 \cdot \Omega_2 \cdots \Omega_5\)로 주어질 때, 전체 에너지의 수 \(S\)에 대하여 \(e_1^* + \cdots + e_5^* = S\)를 만족하는 에너지의 값들 \((e_1^*, ..., e_5^*)\)이 각각의 \(\Omega(S)\)가 최대되는 조건을 쓰고, \(\Omega(S)\)와 절대온도 \(T\)와의 관계식을 쓰시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-151</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

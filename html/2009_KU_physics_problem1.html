@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-156 | 2009_건국대_물리학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-156-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">(가)</span> 누구나 좋아하는 소리만 듣고, 싫어하는 소리는 듣지 않고 싶을 것이다. 하지만 복잡한 현대사회에서는 너무나 당연한 이런 욕구조차 충족시키기 쉽지 않다. 손님을 끌기 위해 볼륨을 한껏 높인 상점의 스피커 소리, 옆 사람의 이어폰을 통해 새어 나오는 음악 소리 같이 듣기 싫어도 어쩔 수 없이 들어야 할 때가 많다. 집에 있을 때도 마찬가지다. 다른 식구들에게 피해를 주지 않기 위해 TV, 라디오, 컴퓨터의 볼륨을 작게 한 경험이 있을 것이다. 내게 기분 좋은 음악도 타인에게는 듣기 싫은 소음이 될 수 있기 때문이다. 불필요한 소리를 줄이기 위해 그저 조용조용히 다니는 방법 밖에는 없는 것일까? 여기 소리로 소리를 제어하는 방법이 있다.</p>
+<div class="spacer"></div>
+<p>얼마 전 국내 한 대학의 연구팀은 특정 개인에게만 소리를 들려주고 하는 '음향집중형 개인용 음향시스템'을 개발하였다. 이 시스템은 소리의 간섭현상을 이용해 다른 사람에게는 들리지 않고 사용자만 음악을 들을 수 있게 만든 장치다. 귀를 아프게 하는 이어폰이나 헤드셋을 쓰지 않아도 나 혼자 음악을 감상할 수 있다는 얘기다. 이 연구팀에서는 모니터에 일렬로 배치된 9개의 스피커에서 800Hz에서 5kHz의 서로 다른 주파수의 소리를 내게 하여 모니터 정면에 지름 30cm 정도의 청취영역을 만들었다. 청취영역에서는 나란히 들어선 9개의 스피커에서 나온 음파가 다른 공간 보다 20dB(데시벨, 소리의 세기의 단위) 큰 소리를 들을 수 있다고 한다. 스피커의 앞부분은 0도부터 180도까지 구분한다면 스피커의 바로 정면에 해당하는 60도~120도 사이에서 크게 들리고 다른 각도에서는 매우 작게 들린다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(나)</span> 물질의 경우 같은 위치에 두가지 물질이 존재할 수 없지만, 파동의 경우 두개 이상의 파동이 동일한 공간과 동일한 시간에 존재할 수 있다. 연못에 두 개의 돌을 던지면 각각의 파동에 의한 간섭무늬가 생긴다. 간섭무늬에서는 파동효과가 증가하거나, 감소되거나, 또는 그대로 있기도 한다. 한 파동의 마루가 다른 파동의 마루와 겹치면 그 효과가 더해진다. 그 결과 파동의 진폭은 증가된다. 이러한 간섭을 보강간섭이라고 한다. 한 파동의 마루가 다른 파동의 골과 겹치면 각각의 효과는 감소된다. 즉, 한 파동의 높은 부분이 다른 파동의 낮은 부분을 매꾸게 되고 이것을 상쇄간섭이라 한다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(다)</span> 파동의 간섭 현상을 알아볼 수 있는 간단한 예로 다음 그림과 같은 실험을 생각할 수 있다. 아래 그림과 같이 동일한 앰프에 연결되어 있는 두 개의 스피커 A, B 가 일정한 주파수의 음파를 방출하고 있다. 마이크를 이용하여 여러 곳에서 음파의 세기를 측정해 보면 소리가 유난히 커지거나 작아지는 지점을 찾아낼 수 있다. 예를 들면 마이크를 두 스피커로부터 같은 거리에 있는 점 O 에 대면 두 배의 진폭을 가진 음파를 얻을 수 있을 것이다. 점 O 를 지나면서 두 스피커를 잇는 직선 \(l_0\) 와 평행한 직선 \(l\)을 따라서 마이크를 움직이면 소리가 작아지는 지점 P 와 소리가 커지는 지점 Q 가 얼마나 생기는 것을 알 수 있다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-1</h2>
+<div class="spacer"></div>
+<p>제시문 (다)는 제시문 (가)에서 이용된 물리적 원리를 훨씬 간단한 형태로 보여주는 실험이다. 만일 제시문 (다)의 그림처럼 소리가 커지고 작아지는 지점들을 알아냈다고 하자. 두 스피커가 내고 있는 소리의 주파수를 천천히 증가시키면 점 O, P, Q 들 사이의 간격은 어떻게 변하게 되는지 설명하여라.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-2</h2>
+<div class="spacer"></div>
+<p>제시문 (다)의 실험에서 두 스피커 사이의 거리를 \(d\), 점 O 로부터 첫 번째 상쇄간섭이 일어나는 지점 P 까지의 거리를 \(x\), 두 스피커를 잇는 직선 \(l_0\) 와 점 O, P, Q 들이 놓여 있는 직선 \(l\) 사이의 거리를 \(L\) 이라 하자. 공기 중의 소리의 속도는 \(V\) 라고 할 때, 스피커가 내고 있는 소리의 주파수를 \(d, x, L, v\) 로 나타내어라.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-3</h2>
+<div class="spacer"></div>
+<p>제시문 (다)의 실험에서 \(d = 10\) m, \(L = 14\) m 이고, 스피커가 동시에 내고 있는 소리의 파장이 1.2 m 로 같다. 이때, 직선 \(l\) 위의 점 중에서 보강간섭이 일어나는 점의 개수 \(a\) 와 상쇄간섭이 일어나는 점의 개수 \(b\) 를 각각 구하여라.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">1-4</h2>
+<div class="spacer"></div>
+<p>세 개의 스피커가 놓여 있고, 이 세 개의 스피커가 동시에 동일한 파장의 소리를 낸다면, 세 개의 스피커에서 같은 거리에 있는 점 R 에서는 보강간섭이 일어나게 되어 소리가 잘 들리게 된다. 세 개의 스피커가 놓여 있는 점의 좌표가 각각 \(A(-3, 3)\), \(B(1, 1)\), \(C(2, 3)\) 일 때, 점 R 의 좌표를 구하여라.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-156</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

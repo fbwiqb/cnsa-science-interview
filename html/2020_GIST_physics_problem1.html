@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-43 | 2020_GIST_물리학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-43-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p><strong>단계 1</strong></p>
+<div class="spacer"></div>
+<p>직선상에서 운동하는 질량이 다른 두 물체의 충돌을 실험하였더니 충돌 전후의 운동량과 운동에너지가 같음을 관측하였다. 두 물체의 충돌 전후 상대 속도는 어떤 관계가 있는가?</p>
+<div class="spacer"></div>
+<p><strong>단계 2</strong></p>
+<div class="spacer"></div>
+<p>그림과 같은 피스톤 용기의 왼쪽 벽으로부터 질량 \(m\)을 가진 아주 작은 입자가 속력 \(v\)로 피스톤을 향하여 벽과 피스톤 면에 수직인 직선상으로 움직이기 시작했다. 이와 동시에 피스톤 역시 속력 \(v\)로 용기의 길이를 점점 줄이기 시작했다. 피스톤이 입자와 충돌할 때 피스톤이 입자에 전달하는 충격량을 설명해보시오. (단, 충돌전후의 상대속도 관계는 "단계 1"의 답을 따르고, 용기는 바닥에 고정되어 있고, 피스톤의 질량은 \(m\)보다 매우 크다고 가정하시오.)</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<p><strong>단계 3</strong></p>
+<div class="spacer"></div>
+<p>얼음위의 가만히 정지해 있는 두 사람이 공을 서로 던지고 받는 놀이를 하려고 한다. 처음 공을 던진 사람이 다시 공을 되받는 과정을 물리법칙을 사용해서 설명해 보고, 되받는 것이 가능한 경우와 불가능한 경우의 예를 들어보시오. 두 사람의 질량은 \(M\)으로 같고 공의 질량은 \(m\)이다. (얼음과 사람 사이의 마찰은 무시할 만큼 작고, 중력의 영향은 무시하여 공은 직선상 운동을 한다고 가정한다. 공을 던지는 사람은 공이 항상 던지는 사람 자신에 대해 상대속도 \(v\)로 상대방을 향해 진행하도록 던진다.)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-43</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

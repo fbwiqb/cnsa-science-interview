@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생-78 | 2019_성균관대_생명과학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 생명과학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="생-78-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<p>다음 &lt;제시문1&gt; ~ &lt;제시문5&gt;를 읽고 [생명과학 I-i] ~ [생명과학 I-v]를 문항별로 풀이와 함께 답하시오.</p>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker"><제시문1></span></p>
+<div class="spacer"></div>
+<p>사람의 유전 연구는 완두나 초파리와는 달리 많은 어려움이 있다. 유전 연구를 위해서는 단기간 내에 여러 세대를 관찰할 수 있어야 하고 인위적인 교배가 가능해야 하는데, 사람은 한 세대가 수십 년에 이르며, 인위적으로 교배 실험을 하는 것이 불가능하기 때문이다. 이러한 이유로 사람의 유전 현상을 연구할 때에는 주로 가계도 조사, 집단 조사, 쌍둥이 연구 등과 같은 간접적인 방법을 이용한다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker"><제시문2></span></p>
+<div class="spacer"></div>
+<p>가계도는 한 가계의 유전 형질을 조사하여 기호로 나타낸 것으로, 집안의 유전 형질을 조사할 때 주로 이용되는 유전 연구 방법이다. 가계도에는 성별, 형질 발현 유무, 혈연 및 결혼 관계 등을 나타내며, 가계도를 분석하여 어떤 특정한 형질이 가계에 어떻게 나타나는지를 알 수 있다. 가계도는 유전의 원리를 확인하고 가족 구성원의 유전자형을 추정하거나, 앞으로 태어날 자손에게서 특정한 형질이 나타날 확률을 예측하는 데 이용된다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker"><제시문3></span></p>
+<div class="spacer"></div>
+<p>유전에는 상염색체에 의한 유전과 성염색체에 의한 유전이 있다. 어떤 형질이 멘델의 법칙에 따라 유전될 때 그 형질이 부모에게는 나타나지 않았으나 자손에게 나타났다면 그 형질은 열성이다. 성염색체에는 성을 결정하는 유전자 외에도 여러 형질을 결정하는 유전자가 존재한다. 형질을 결정하는 유전자가 상염색체에 있으면 형질이 남녀 구분 없이 나타나지만, 유전자가 성염색체에 있으면 남자와 여자의 성염색체 구성이 다르므로 남녀에 따라 형질이 나타나는 빈도가 달라진다. 하나의 염색체에 함께 들어 있는 유전자들이 염색체 단위로 함께 행동하여 유전되는 현상을 연관이라고 한다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker"><제시문4></span></p>
+<div class="spacer"></div>
+<p>사람의 유전 형질 중 표현형이 2개의 대립 형질로 뚜렷하게 구분되는 것은 한 쌍의 대립 유전자에 의해 형질이 결정되기 때문이다. 이러한 유전을 단일 인자 유전이라고 한다. 사람의 ABO식 혈액형은 적혈구 표면에 있는 응집원의 종류에 따라 A형, B형, AB형, O형의 4가지 표현형으로 나타난다. ABO식 혈액형은 A, B, O 3개의 대립 유전자에 의해 결정된다. ABO식 혈액형과 같이 3개 이상의 대립 유전자에 의해 형질이 결정되는 유전을 복대립 유전이라고 한다. ABO식 혈액형과 같이 세 가지 이상의 대립 유전자에 의한 유전 방식 또한 결국 상염색체에 있는 한 쌍의 대립 유전자에 의한 단일 인자 유전자에 속한다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker"><제시문5></span></p>
+<div class="spacer"></div>
+<p>항체는 항원을 인식하는 부위를 가지고 있어 그 인식 부위에 맞는 항원과만 결합한다. 이러한 항체 반응의 특성을 항원-항체 반응의 특이성이라고 한다. 혈액형 판정은 항원-항체 반응의 대표적인 예이다. 사람의 적혈구 세포막에는 항원인 응집원이 있고, 혈장에는 항체인 응집소가 있어 다른 종류의 혈액과 섞이면 항원-항체 반응이 일어나 혈액이 응집하게 된다.</p>
+<div class="spacer"></div>
+<p>성균이는 자신의 가족 구성원들의 유전병 (가)와 유전병 (나), 그리고 ABO식 혈액형을 조사하여 다음과 같은 결과를 얻었다. 성균이의 아버지는 유전병 (가)와 (나)를 가지고 있으며, 성균이의 어머니는 유전병 (나)만 가지고 있다. 성균이의 여동생은 유전병 (가)와 (나) 중 어느 것도 가지고 있지 않다. 성균이는 아버지와 같이 유전병 (가)와 (나)를 모두 가지고 있다. 성균이의 부인은 유전병 (가)만 가지고 있다. 성균이의 장인은 유전병 (가)와 (나) 중 어느 것도 가지고 있지 않다. 성균이의 장모는 유전병 (가)와 (나) 모두 가지고 있다. 성균이의 아들은 유전병 (가)만 가지고 있으며 성균이의 딸은 유전병 (가)와 (나) 중 어느 것도 가지고 있지 않다. 성균이는 연구를 통해 유전병 (가)와 (나)의 유전형에 대해 다음과 같은 사실을 알게 되었다. 유전병 (가)는 대립 유전자 S와 S*에 의해, 유전병 (나)는 대립 유전자 K와 K*에 의해 결정되며 이 때 S는 S*에 대해, K는 K*에 대해 각각 완전 우성이다. 또한 성균이는 유전병 (가)의 유전자와 유전병 (나)의 유전자 중 하나만 ABO식 혈액형 유전자와 연관되어 있음을 발견하였다. 성균이는 실험을 통해 다음의 &lt;표1&gt;과 같은 ABO식 혈액형에 대한 응집 반응 결과를 얻었고 자신의 혈청에 응집소 \(\beta\)가 존재함을 알게 되었다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h2 class="sub-title"><표1></h2>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th>적혈구 \ 혈청</th><th>아버지</th><th>어머니</th><th>장인</th><th>장모</th><th>여동생</th><th>성균</th><th>부인</th><th>아들</th><th>딸</th></tr>
+<tr><td>아버지</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>-</td><td>+</td></tr>
+<tr><td>어머니</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td></tr>
+<tr><td>장인</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>-</td><td>+</td></tr>
+<tr><td>장모</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td></tr>
+<tr><td>여동생</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>-</td><td>+</td></tr>
+<tr><td>성균</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td></tr>
+<tr><td>부인</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>+</td><td>-</td><td>-</td><td>+</td></tr>
+<tr><td>아들</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td>-</td><td>+</td></tr>
+<tr><td>딸</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+</table>
+<div class="spacer"></div>
+<p>(+ : 응집됨, - : 응집 안 됨)</p>
+<div class="spacer"></div>
+<p>아래의 [생명과학 I-i] ~ [생명과학 I-v] 문항에서 돌연변이와 교차는 고려하지 않는다.</p>
+<div class="spacer"></div>
+<p><strong>(i)</strong> 유전병 (가)의 대립 유전자 S, S* 와 유전병 (나)의 대립 유전자 K, K* 중 어느 대립 유전자가 각 유전병에 대한 정상 대립 유전자인지를 결정하고 그 근거를 논하시오.</p>
+<div class="spacer"></div>
+<p><strong>(ii)</strong> 유전병 (가)와 유전병 (나)에 대해서 각각의 유전병의 유전이 상염색체에 의한 유전인지 성염색체에 의한 유전인지를 결정하고 그 근거를 논하시오.</p>
+<div class="spacer"></div>
+<p><strong>(iii)</strong> 유전병 (가)와 유전병 (나)를 결정하는 유전자 중 어느 유전자가 ABO식 혈액형을 결정하는 유전자와 연관되는지를 결정하고 그 근거를 논하시오.</p>
+<div class="spacer"></div>
+<p><strong>(iv)</strong> 성균이 부부가 셋째 아이를 낳게 되면 이 아이가 유전병 (가)와 유전병 (나)를 모두 가지고, ABO식 혈액형이 A형이 될 확률을 구하고 그 근거를 논하시오.</p>
+<div class="spacer"></div>
+<p><strong>(v)</strong> &lt;표1&gt;의 구성원 가운데 주어진 정보만 고려할 때 유전병 (가), 유전병 (나), ABO식 혈액형 중 하나라도 그 유전자형을 정확하게 알 수 없는 사람과 그 형질이 무엇인지 제시하시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">생-78</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

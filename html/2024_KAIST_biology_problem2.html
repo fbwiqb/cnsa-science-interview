@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생-10 | 2024_KAIST_생명과학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 생명과학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="생-10-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<p>다음 표는 서로 다른 유전자 변형 생쥐 1, 2, 3의 하루 평균 에너지 소비량과 에너지 섭취량을 나타낸 것이다.</p>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th>생쥐</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>기초 대사량</td><td>19.1</td><td>8.7</td><td>21</td></tr>
+<tr><td>활동 대사량</td><td>8.1</td><td>5.2</td><td>17.9</td></tr>
+<tr><td>기타 에너지 소비량</td><td>2.4</td><td>2.3</td><td>2.5</td></tr>
+<tr><td>에너지 섭취량</td><td>24.5</td><td>24.2</td><td>24.3</td></tr>
+</table>
+<div class="spacer"></div>
+<p>(단위: kcal)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 다른 생쥐들과는 달리 생쥐 2는 관찰 기간 6개월 동안 체중이 지속적으로 증가하였고 심각한 비만을 나타내었다. 그 원인은 무엇인지 설명하시오. (1점)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 생쥐 2를 대상으로 체내 호르몬 수치를 모두 분석하였으며, 정상 생쥐와 비교하였을 때 생쥐 2의 티록신과 갑상샘 자극 호르몬 (TSH) 농도 수치의 불균형이 발견되었다. 단, 생쥐 2의 뇌 기능은 정상 생쥐와 큰 차이를 보이지 않았다. 정상 생쥐와 비교할 때 생쥐 2의 티록신과 갑상샘 자극 호르몬 (TSH)의 농도 변화를 예측하고 이유를 설명하시오. (2점)</p>
+<div class="spacer"></div>
+<p>생쥐 2의 비만 원인을 이해하기 위해 부모세대와 자식세대에 걸쳐 유전자 돌연변이를 분석한 결과, 비만 조절과 직접적으로 관련된 어떠한 유전자들의 돌연변이도 발견되지 않았다. 이에 생쥐 2의 비만 발생 원인을 분석하는 다양한 연구를 수행해 다음과 같은 결과들을 확보하였다.</p>
+<div class="spacer"></div>
+<p>결과1. 생쥐 2의 갑상샘 조직을 정밀하게 분석한 결과, 갑상샘 조직의 크기가 줄어 들어 있었으며 구조적으로도 심각한 손상이 관찰되었다.</p>
+<div class="spacer"></div>
+<p>결과2. 생쥐 2의 피부세포를 역분화시켜 유도 만능 줄기세포를 제작한 후 갑상샘 세포로 분화를 유도한 경우, 갑상샘으로의 분화가 정상적으로 이루어졌으며 티록신 합성과 분비 능력 모두 정상임을 발견하였다.</p>
+<div class="spacer"></div>
+<p>결과3. 생쥐 2의 혈액으로부터 혈장만을 분리하여 정상 생쥐의 혈액내에 지속적으로 주입하였다. 6개월이 지나 생쥐 2의 혈장이 주입된 생쥐들에서 결과1에서 발견된 갑상샘 위축 및 손상이 나타나고 체중의 증가가 동반되었다.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 위의 결과를 바탕으로, 생쥐 2에서 비만이 발생한 원인을 종합적으로 예측하고 근거를 설명하시오. (2점)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">생-10</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

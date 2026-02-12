@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-75 | 2019_KAIST_화학_문제5</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-75-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 5</h1>
+<div class="spacer"></div>
+<p>배터리에 널리 사용되는 리튬은 금속 결정 물질로 상온, 상압에서 아래와 같은 체심 입방 구조 (body centered cubic structure; bcc)를 갖는다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 고체 리튬을 단원자 기체의 리튬으로 해리하는 아래의 화학 반응을 생각해보자.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{Li (bcc 결정)} \rightarrow \text{Li (단원자 기체)}\]</div>
+<div class="spacer"></div>
+<p>체심 입방 구조 내에서 그림과 같이 리튬 원자가 가장 근접한 이웃 리튬 원자와 공유 결합을 하고 있다고 단순히 가정해보자. 그리고 단순히 리튬 이합체 (Li-Li)의 결합 에너지가 24 kcal/mol 인 점과 체심 입방 구조의 원자당 배위수를 이용하여 위 화학 반응식의 반응 에너지를 예측해보시오.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 실제 실험적으로 고체 리튬을 단원자 리튬으로 해리하는 화학 반응 에너지는 37.6 kcal/mol 이다. 이합체 결합 에너지로부터 예측한 값과 실제 실험값을 비교하고, 차이가 있다면 그 원인에 대해 서술하시오.</p>
+<div class="spacer"></div>
+<p>(전체 3점)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-75</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

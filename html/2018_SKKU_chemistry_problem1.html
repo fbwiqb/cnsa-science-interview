@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-100 | 2018_성균관대_화학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-100-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>[화학 I]</p>
+<div class="spacer"></div>
+<p>다음 &lt;제시문1&gt; ~ &lt;제시문4&gt;를 읽고 [화학I-i] ~ [화학I-v]를 문항별로 풀이와 함께 답하시오.</p>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">&lt;제시문1&gt;</span> 아보가드로는 기체의 종류에 관계없이 같은 온도와 압력에서 같은 부피의 기체는 같은 수의 분자를 포함하고 있다고 하였다. 0\(^\circ\)C, 1기압에서 기체 1몰이 차지하는 부피는 기체의 종류에 관계없이 22.4 L이다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">&lt;제시문2&gt;</span> 햇빛의 스펙트럼은 연속 스펙트럼이고, 수소 방전관이나 헬륨 방전관과 같은 기체 방전관에서 나오는 빛의 스펙트럼은 선 스펙트럼이다. 스펙트럼에 나타나는 빛의 색은 빛의 에너지와 관련이 있다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">&lt;제시문3&gt;</span> 어떤 용매 X를 뷰렛에 넣은 후 꼭을 열어 가늘게 흐르게 하고 털가죽에 문지른 고무 풍선이나 자를 가까이 가져가 보았더니, X의 흐르는 줄기가 대전체 쪽으로 끌리면서 휘어졌다. X 대신에 사염화 탄소(\(\text{CCl}_4\))를 이용하여 같은 방법으로 실험하였을 때, 사염화 탄소의 흐르는 줄기는 대전체 쪽으로 끌리지 않았다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">&lt;제시문4&gt;</span> 원자들이 비활성 기체의 전자 배치를 가져 안정화되려는 경향을 옥텟 규칙이라고 하고, 원자가 전자를 점으로 표시하여 나타낸 식을 루이스 전자점식이라고 한다.</p>
+<div class="spacer"></div>
+</div>
+<p><strong>[화학 I-i]</strong> 0\(^\circ\)C, 1기압에서 실린더에 \(\text{A}_2\)(g) 4.0 g과 AB(g) 7.0 g을 넣고 반응시켰더니, 두 반응물이 모두 반응하여 \(\text{A}_2\text{B}\)(g)가 생성되었다. 반응 전 전체 기체의 부피가 8.4 L였을 때, 생성물 \(\text{A}_2\text{B}\)의 분자량을 구하고 그 근거를 논하시오. (단, A, B는 임의의 원소 기호이고, 피스톤의 질량과 마찰은 무시한다.)</p>
+<div class="spacer"></div>
+<p><strong>[화학 I-ii]</strong> 그림 (가)는 수소 원자에서 전자의 전이 \(a\)-\(d\)를 나타낸 것이고, (나)는 \(a\)-\(d\)에서 방출하는 빛의 에너지를 나타낸 것이다. (나)에서 \(w\)-\(z\)는 \(a\)-\(d\)에서 방출하는 빛의 에너지 중 하나이다. 바닥 상태의 수소 원자에 에너지 \(y\)를 갖는 빛을 가하여 전자를 전이시키고 난 후 바로 에너지 \(q\)를 갖는 빛을 가했더니 수소 원자가 이온화되었다고 할 때, \(q\)의 최솟값을 \(y\)를 이용하여 논하시오. (단, 수소 원자의 에너지 준위는 \(E_n = -\frac{N}{n^2}\) kJ/몰이고, \(N\)은 상수이며, \(n\)은 주양자수이다.)</p>
+<div class="spacer"></div>
+<p><strong>[화학 I-iii]</strong> 오른쪽 그림은 DNA를 이루는 뉴클레오타이드의 한 구조를 나타낸 것이다. 이 구조에서 당을 이루는 탄소(C)의 산화수의 총합과 염기를 이루는 탄소(C)의 산화수의 총합을 구하고 그 근거를 논하시오.</p>
+<div class="spacer"></div>
+<p><strong>[화학 I-iv]</strong> 다음은 5가지 화합물의 분자식이다.</p>
+<p>\(\text{OF}_2\), \(\text{CS}_2\), \(\text{NF}_3\), HCN, \(\text{C}_2\text{F}_2\)</p>
+<p>액체 상태일 때, &lt;제시문3&gt;에 주어진 용매 X와 같이 대전체 쪽으로 끌리는 화합물을 모두 고르고, 그 근거를 논하시오.</p>
+<div class="spacer"></div>
+<p><strong>[화학 I-v]</strong> &lt;제시문4&gt;를 참조하여, 폼산(HCOOH)과 인산(\(\text{H}_3\text{PO}_4\))의 루이스 전자점식을 각각 그리시오. 또한 각 화합물의 중심 원자 탄소(C)와 인(P)의 결합각을 비교하여 논하시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-100</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

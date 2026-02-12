@@ -1,4 +1,4 @@
-# Source PDFs (root level only)
+# Source PDFs
 /물리/
 /화학/
 /생물/
@@ -9,6 +9,10 @@
 /docs/
 /학교 로고 모음/
 
+# Old output (replaced by html/)
+/output/
+/data/
+
 # Root-level temp files
 /CLAUDE.md
 nul
@@ -16,16 +20,8 @@ nul
 /*.txt
 /*.json
 
-# Data folder: only keep images
-data/**/*.md
-data/**/*.json
-data/**/*.txt
-data/*.json
-data/*.csv
-
 # OS
 .DS_Store
 Thumbs.db
 desktop.ini
-
 .vercel

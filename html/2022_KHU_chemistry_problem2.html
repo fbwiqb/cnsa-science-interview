@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-131 | 2022_경희대_화학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-131-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">(바)</span> 균형 잡힌 화학 반응식은 화학 반응에 대한 여러 가지 정보를 담고 있어 반응에 관여하는 각 물질의 입자 수, 질량 관계, 기체의 경우는 부피 관계를 나타낸다. 이때 물과 입자 수, 물과 질량, 물과 기체의 부피 관계를 이용하면 반응물과 생성물의 질량,부피, 몰수를 구할 수 있다. 화학 반응식을 이용하면 반응물의 양으로 생성물이 얼마나 생길지 예상할 수 있고, 생성물의 양으로얼마만큼의 물질이 반응에 쓰이는지 알 수 있다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(사)</span> 질소, 산소, 아르곤 등의 혼합 기체인 공기와 같이, 서로 반응하지 않는 두 종류 이상의 기체들이 섞여 있는 혼합 기체에서 각 성분 기체가 나타내는 압력을 부분 압력(분압)이라고 한다. 혼합 기체에서 각 성분 기체가 나타내는 부분 압력은 각 성분 기체의 몰 분율에 비례한다. 서로 반응하지 않는 여러 가지 기체가 섞여 있는 혼합 기체의 압력은 각 성분 기체가 나타내는 부분 압력의 합과 같다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(아)</span> 화학 반응에서 출입하는 열에너지 변화, 즉 반응 엔탈피(\(\Delta H\))를 화학 반응식과 함께 나타낸 것을 열화학 반응식이라고 한다. 열화학 반응식은 다음 몇 가지 규칙들을 고려하여 나타낸다. 첫째, 반응 물질과 생성 물질의 가지 엔탈피는 물질의 상태에 따라 달리지므로 반드시 상태, 즉 고체(s), 액체(l), 기체(g) 및 수용액(aq) 등을 열화학 반응식에 함께 표시해야 한다. 둘째, 엔탈피의 값은 온도와 압력에 따라 달라지므로 열화학 반응식을 쓸 때에는 온도와 압력 등 반응 조건을 함께 표시해야 한다. 셋째, 열화학 반응식에 나타낸 계수의 비는 반응 물질과 생성 물질의 몰수 비이다. 넷째, 엔탈피는 몰수에 비례하므로 열화학 반응식의 계수가 변하면 엔탈피의 크기도 변한다.</p>
+<div class="spacer"></div>
+<p>한편, 화학 반응의 종류에 따라 나타나는 반응 엔탈피의 종류는 다양하여 연소 엔탈피, 중화 엔탈피, 생성 엔탈피, 분해 엔탈피, 용해 엔탈피 등이 있다. 일반적으로 반응 엔탈피는 25°C, 1기압의 조건에서 나타낸다. 25°C, 1기압에서, 가장 안정한 성분 원소로부터 1 몰의 물질이 생성될 때의 반응 엔탈피를 표준 생성 엔탈피(\(\Delta H^{\circ}_f\))라고 한다. 25°C, 1기압에서 어떤 원소의 가장 안정한 형태의 표준 생성 엔탈피는 0이다. 예를 들어 수소, 산소, 탄소는 25°C, 1기압에서 각각 \(\text{H}_2(g)\), \(\text{C}(s)\)로 존재하며 이들의 \(\Delta H^{\circ}_f\)는 0이다. 몇 가지 물질의 표준 생성 엔탈피는 다음과 같다.</p>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th>물질</th><th>표준 생성 엔탈피(\(\Delta H^{\circ}_f\), kJ/mol)</th></tr>
+<tr><td>\(\text{CH}_4(g)\)</td><td>\(-74.8\)</td></tr>
+<tr><td>\(\text{C}_3\text{H}_8(g)\)</td><td>\(-103.8\)</td></tr>
+<tr><td>\(\text{CO}_2(g)\)</td><td>\(-393.5\)</td></tr>
+<tr><td>\(\text{H}_2\text{O}(l)\)</td><td>\(-285.8\)</td></tr>
+</table>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">II-2</h2>
+<div class="spacer"></div>
+<p>[논제 II-2] 제시문 [바]~[아]를 참조하여 다음 질문에 답하시오. (18점)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 밀폐된 용기 내에서, 3.2 g의 메테인(\(\text{CH}_4(g)\))을 19.2 g의 산소(\(\text{O}_2(g)\))와 함께 가열하여 이산화탄소(\(\text{CO}_2(g)\))와 물(\(\text{H}_2\text{O}(g)\))을 얻었다. 반응이 끝난 뒤 일정 온도에서 측정한 혼합물의 전체 압력이 1.2 기압(atm) 일 때, 혼합물에 존재하는 각 기체의 분압에 대해 논술하시오 (단, 밀폐된 용기 내에서 연소는 반응물 중 어느 하나라도 모두 소모될 때까지 비가역적으로 진행되고, H, C, O 의 원자량은 각각 1, 12, 16이다). (6점)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 메테인(\(\text{CH}_4(g)\))과 프로페인(\(\text{C}_3\text{H}_8(g)\))의 연소반응에 대한 열화학 반응식을 이용하여, 25°C, 1기압에서 1 g의 메테인과 프로페인이 각각 연소될 때 발생하는 열을 구하고, 두 기체의 가격을 고려하여 비용 대비 연료로서의 가치를 비교하여 논술하시오 (단, 메테인과 프로페인은 모두 완전 연소되고, 액체 상태의 물이 생성되며, 질량당 가격은 각각 800 원/kg 메테인과 1,000 원/kg 프로페인으로 가정한다. 열화학 반응식을 반드시 명시하며, 숫자 계산은 최종값을 기준으로 소수점 이하는 반올림한다. H, C, O 의 원자량은 각각 1, 12, 16이다). (12점)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-131</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

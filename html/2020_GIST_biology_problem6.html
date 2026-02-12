@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생-46 | 2020_GIST_생명과학_문제6</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 생명과학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="생-46-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 6</h1>
+<div class="spacer"></div>
+<p><strong>단계1</strong></p>
+<div class="spacer"></div>
+<p>아래의 그림과 같이 세포막 단백질을 형광물질로 표지한 세포가 있다. (가) 부분을 탈색처리 하여 형광이 나오지 않게 만든 후 저온(4°C)에서 10분간 보관하였다가 37°C로 옮겼다. 시간에 따른 (나) 구역의 형광세기의 변화를 예상하여 오른쪽 그래프에 그리고 그 이유를 설명해 보시오.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<p><strong>단계2</strong></p>
+<div class="spacer"></div>
+<p>위의 세포는 백혈구이고 배양 접시에 세균을 넣어 준 후 현미경으로 관찰하였더니 세포 내부에서 형광물질이 보이는 것을 볼 수 있었다.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 세포의 어떤 작용에 의해 이러한 결과가 관찰된 것인가? 이 작용 과정을 간단히 설명하시오.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 현미경으로 계속 관찰하고 있으면 특정 세포내 소기관으로 모이는 것을 관찰할 수 있다. 그 소기관은 무엇이며 기능을 설명하시오.</p>
+<div class="spacer"></div>
+<p><strong>단계3</strong></p>
+<div class="spacer"></div>
+<p>리포솜은 약물이나 화장품에서 미용성분을 세포내로 전달하는 방법으로 활용되고 있다. 리포솜의 단면 구조를 그림으로 그려보고 세포내로 물질 수송이 이루어지는 원리를 설명하시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">생-46</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

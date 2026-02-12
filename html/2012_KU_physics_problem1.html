@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-149 | 2012_건국대_물리학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-149-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>전류에 의한 자기장의 방향은 오른나사가 진행하는 방향과 전류의 방향을 일치시켰을 때, 나사가 돌아가는 방향이다. 또는 오른손의 엄지손가락을 펴서 전류가 흐르는 직선 도선을 감아쥔 때 엄지손가락을 전류의 방향을 향하게 하면, 감아쥔 네 손가락의 방향이 자기장의 방향이 된다. 이것을 앙페르의 법칙 또는 오른나사의 법칙이라고 한다. 전류의 세기를 증가시키면 자기장이 강해지고, 전류의 세기가 감소하거나 직선 도선으로부터 멀어질수록 자기장이 약해진다. 1829년 비오와 사바르는 정밀한 실험을 통해 전류가 흐르는 직선 도선 주위에 생기는 자기장 \(B(T)\)는 도선으로부터 거리 \(r\)에 반비례하고, 전류의 세기 \(I\)에 비례한다는 사실을 밝혀 내었다. 이 관계를 식으로 나타내면</p>
+<div class="spacer"></div>
+<div class="math-block">\[B = k\frac{I}{r}\]</div>
+<div class="spacer"></div>
+<p>와 같다. 여기서 비례 상수 \(k\)는 \(2 \times 10^{-7} \text{ N/A}^2\)이며 자기장의 단위가 N/A\(\cdot\)m임을 알 수 있다.</p>
+<div class="spacer"></div>
+<p>전류는 그 주변에 자기장을 만들기도 하지만 그 자신도 자기장으로부터 힘을 받는다. 이와 같이 자기장에서 전류가 받는 힘도 자석과 자석을 가까이 할 때 두 자석 사이에 작용하는 힘과 마찬가지로 자기력이라고 한다. 여기서 전류가 받는 힘의 방향을 잘 관찰하여 보면 이는 전류의 방향과 자기장의 방향에 따라 달라지며, 각각에 수직이다. 이것은 오른손을 사용하면 잘 알 수 있는데 오른손을 펴서 네 손가락으로 자기장의 방향을 가리키며 하고 엄지손가락으로 도선에 흐르는 전류의 방향을 향하도록 하면 손바닥에서 수직 윗방향이 자기장으로부터 도선이 받는 힘의 방향이 된다. 정밀한 실험에 의하여 자기장에서 전류가 받는 힘의 크기 \(F\)는 자기장의 세기 \(B\)와 전류의 세기 \(I\), 그리고 자기장 안에 있는 도선의 길이 \(l\)에 비례한다는 것이 밝혀졌다. 따라서 다음과 같은 식이 성립한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[F = BIl\]</div>
+<div class="spacer"></div>
+<p>이 식은 도선의 방향이 자기장의 방향과 직각을 이루는 경우에만 성립한다.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-1</h2>
+<div class="spacer"></div>
+<p>다음 그림과 같이 매우 긴 직선 도선에 전류 \(I\)가 흐르고 있다. 직선 도선에서 \(a\)만큼 떨어진 곳으로부터 시작하여 한 변의 길이가 \(a\)인 정사각형 모양의 도선이 놓여 있다. 정사각형 모양의 도선에 같은 크기의 전류 \(I\)가 그림과 같이 시계 방향으로 흐르고 있다면 정사각형 모양의 도선이 받는 자기력의 합의 크기와 방향을 구하여라.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAewAAAIWCAIAAAAaqSnVAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAcgUlEQVR4nO3dv49U193HcbxZWY5kKRZyJNxYKSiQ5cJIUYRovu5cuAhFJHCaCCERS5YVOpBSpPAfAJ3LlKFz9eDSBUXKyJWLbdKlpHR5n2uGHS4zO7OzZ3fu995zXq/ikcPPDwee95697A6XOgBm61L2AADKiTjAjIk4wIyJOMCMiTjAjIk4wIyJOMCMiTjAjIk4wIyJOMCMiTjAjIk4wIyJOMCMiTjAjIk4wIyJOMCMiTjAjIk4wIyJOMCMtRjxx48fx7H+v7PnAJRrMeJ9uy8d6/87ew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5zBVR09uXjrdzSdH2UNpmohH9hxm4M2e339yJNxMhYhH9hzm4Nn91wl/lj0GBkQ8sucwAxrOZIl4ZM9h+jSc6RLxyJ7D5Gk4EybikT2HiRv+paaGMzkiHtlzmLZBw300IRMk4pE9h0nTcCZOxCN7DlOm4UydiEf2HCZMw5k8EY/sOUyXhjN9Ih7Zc5gsDWcGRDyy5zBVGs4ciHhkz2GiNJxZEPHInsM0aTjzIOKRPYdJ0nBmQsQjew5TNHi5FA1n0kQ8sucwQV7yitkQ8ciew/RoOPMh4pE9h8nRcGZExCN7DlOj4cyJiEf2HCZGw5kVEY/sOUyLhjMvIh7Zc5gUDWdmRDyy5zAlGs7ciHhkz2Eijo6eDf41zT7iT458lg/TJ+KRPYdMg5v3Fj5pk+kS8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sO0/Lo0aOrV6/eu3fv+fPn2VvgdCIe2XOYlr7dfcH7jh++JOhMnIhH9hymS9CZPhGP7DnMg6AzTSIe2XOYH0FnOkQ8sucwbycG/f/+7/+yd9EKEY/sOW354Ycf/lGvu3fvXr9+/fLlywcHB2+99dZvfvObjz/++M9//nP2rjf0vwXZfwq4SCIe2XPa0kfkEqn634LsPwXjaeEZl4hH9py2iHi6diL+4sWLw8PDH3/8MXvIfol4ZM9pi4inayfit27d6n+9169fzx6yXyIe2XPaMoz4p59+mvRYeI8ePnx4+/btGzduXLly5d133/34448///zzr776KndVf9StRby/hh8cHPS/3rfeeqvuy7iIR/actvxjEPFqatL34rvvvnvw4MEnn3zSt/vOnTvffvvtTz/9lL3rtSqPfbv+Gv7BBx8sbuJ1X8ZFPLLntKWamkw/3EPVHPuOFtfwp0+f9r/e/hpe92VcxCN7TltmXZN5hXto1sdeYHEN7/+j//X2/7fuy7iIR/actsyuJvMN99Dsjv08ltfw7jjidV/GRTyy57RlFjWpI9xDszj2i7K8hnfHEe+qvoyLeGTPacv0a/LPf/6zjnAPTf/YL8rwGt4NIl7xZVzEI3tOW9qpyaS0c+zDa3g3iHhX72VcxCN7TlvaqcmkNHLsK9fw7s2I13oZF/HIntOWRmoyNY0c+8o1vHsz4l2ll3ERj+w5bWmkJlPTwrGvX8O7tYhXeRkX8cie05YWajJBLRz7+jW8W4t4V+NlXMQje05bWqjJBFV/7Cdew7uTIl7fZVzEI3tOW6qvyTRVf+wnXsO7kyLeVXcZF/HIntOW6msyTXUf+6ZreLch4pVdxkU8sue0pe6aTFbdx77pGt5tiHhX12VcxCN7TlvqrslkVXzsW67h3eaI13QZF/HIntOWimsyZRUf+5ZreLc54l1Fl3ERj+w5bam4JlNW67Fvv4Z3WyNezWVcxCN7TltqrcnE1Xrs26/h3daId7VcxkU8sue0pdaaTFyVx37qNbw7LeJ1XMZFPLLntKXKmkxflcd+6jW8Oy3iXRWXcRGP7DltqbIm01ffse9yDe92iHgFl3ERj+w5bamvJrNQ37Hvcg3vdoh4N//LuIhH9py21FeTWajs2He8hne7RXzul3ERj+w5bamsJnNR2bHveA3vdot4N/PLuIhH9py2VFaTuajp2He/hnc7R3zWl3ERj+w5bampJjNS07Hvfg3vdo54N+fLuIhH9py21FSTGanm2M90De/OEvH5XsZFPLLntKWamsxLNcd+pmt4d5aId7O9jIt4ZM9pSzU1mZdqjv3GjRu7X8O7M0a8v4ZfvXr17KOSiXhkz2lLNTWZl2aP/UwRn6n6f4XrRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDxRszXJ1eyxi3idRDzRsCYPHz7MntMKEa9Y/b/CdSKe6E9/+tPy8G/fvp09p0Lff//9ixcvVr5wS8QfPXo03rjRiXidRDzRtWvXlod/48aN7DkVunXr1nfffbfyhZsi/vz588PDw1H3jUvE6yTiiS5fvrw8/CtXrmTPqdDjx48fPHiw8oWbIn7v3r05/jMIuxPxOol4ooODg+Xhv/POO+vv+HNO//nPfz755JOVL9wU8b7gfcdH3TcuEa+TiGfp33kfRvzatWvr7/hzfu+9997KW8dNET88POx/U8beN6LkiB89e3L/5s3jk795/8mzo+OvOdr6Hc9CxCN7TkP6S9/wccpnn322/o4/57f+WPzEiFf/QLzLjPhRn+9FuY/D3Re9/5L+fz67v2j6k4sJuYhH9pyG9O+8X79+fXn4f/3rX9ff8ef81h+Lnxjx6h+Id1kR7zN9HPCVr3nVbxE/JxHP0t/77t69O6zJ+jv+nN/6Y/ETI179A/EuJ+LHoV4r+C+Onty84IaLuIiPZfHO+0pNTvx4OM5v5a3jiRGv/oF4lxDxZaQ3NXr5DU5sfAkRj+w5rVi8875SkxM/Ho7zW3nruB7xFh6Id6NH/PU9e2Oit97Ti4h4ZM9pxeKd95WanPjxcJzfylvH9Yi38EC8Gzviyyfemx+VXHzDRVzEx7J45329Jh6L78PKW8f1Y2/hgXg3bsR3edx93PALeyDeibiIj2P5zvt6TTwW35PhW8f1Y2/hgXg3asR3afjxt7nIhou4iI9i+c77ek08Ft+T4VvHlWNv5IF4N2bEXzd886OSi/9LzV+IeGTPacLynff1iHssvifDt44rx97IA/FuzIi//gjwkRsu4iI+iuU77yd+rJvH4vswfOu4cuyNPBDvUiJ+pr/UPHp2//55H62IeGTPqd/wnfcTI+6x+J4s3zquHHsjD8S7lIif+sGFw8r3X3bua7mIR/ac+g3feT8x4h6L78nyrePw2O/evdvIA/Eu5Zn4piifVPmLaLiIi/j+Dd95PzHiHovvyfKt4/DYr1+/3sgD8S7lo1NO+Wz7lYZfwMepiHhkz6nf8J33Ta+J6rH4PizfOg6P/fLly408EO9G/mSfDa9O+MvLYd18/eKFy4j/EvaL+CtOEY/sOZVb+Wi2TRH3WHxPFm8dh8d+cHDQyAPxLuvT7m8ev2740cvXMzyu+quvfRnul69LezEfLi7ikT2ncisfzbYp4h6L78nireNKxLNHjWfkiHevur38tJ/Xryb+6mtfvUjty38hwqsYFhPxMa18NNumiHssvieLt44rj1OyR41n/IiPr/5f4ToRH9PKR7Ntinjnsfh+/Pvf/+7fOq78xWb2qPGIeJ1EfDTrn969JeIei+/Dzz///M477zx8+HB57Hfv3s0eNR4Rr5OIj2b907u3RNxj8T359NNPb9++venY6ybidRLx0ax/eveWiHssvif9Od+4cUPEa1X/r3CdiI/m+vXrKx/NtiXivTt37ow3rhk//PDDlStXRLxW2b/CwScybXGhr74r4pm2R5x9+Pnnnw8PD9s8dhEf1Zs9v//k6CLDPSTiiUQ8xe9+97s2j13Ex/X6BXkv+PV2V4h4IhFPMfwz39Sxi/ioxmq4iGcS8RR/+ctf2jx2ER/TaA0X8UwinuLvf/97m8cu4iMar+FvRPzGjRv7/cl4k4inaPbYRXw0w7/U3HfDu48++mj5k3344Yd7/tl4Q7M1ydXssYv4WAYNv9iPJjzR+++/v/wD/e677+77p2Oo2ZrkavbYRXwk4za8e/vtt5d/oJt6Wc4paLYmuZo9dhEfiYi3o9ma5Gr22EV8HCM3vHvrrbcuDfz444/7/zl5pdma5Gr22EV8FOM2/OnTp5fe1M6/NzgFzdYkV7PHLuJjGPkefuvWrZWIt/Mvf09BszXJVc2xP3r06EzvOp8p4i9evJjjlS494mM/S/nggw9WIr7yrxawV9XUZF6qOfbrL+3+7c8U8f6G1/fh7KOSZUd87IavPhBfaOcf/05XTU3mpZpj76/h/f8L734Z3z3i/TX84ODg6dOnpdPSJEd85IavPxBfmOP7UDNVTU3mpaZjP9NlfPeIz/Qa3mVHfOx7+PoD8QWPxUdTU01mpKZjP9NlfMeIz/ca3iVHfPRnKesPxBc8Fh9NTTWZkcqOfffL+I4Rn+81vMuN+OA1r8Zp+MkPxBc8Fh9HZTWZi8qOfffL+C4Rn/U1vEuN+IivW/jSpgfiCx6Lj6OymsxFfce+42V8l4jP+hreZUZ87IZvfCC+4LH4OOqrySzUd+w7XsZPjfjcr+FdYsRHb/jGB+ILHouPo76azEKVx77LZfzUiM/9Gt7lRXz8hm97IL7gsfgIqqzJ9FV57LtcxrdHvIJreJcW8dEbvv2B+ILH4iOosibTV+uxn3oZ3x7xCq7hXVbEx7+Hb38gvuCx+AhqrcnE1Xrsp17Gt0S8jmt4lxTxhGcpwwfiw+cqv/71r5f/7bH4CGqtycRVfOzbL+NbIl7HNbzLiXhCw994ID4Mev/bP7yMeyy+bxXXZMoqPvbtl/FNEa/mGt6NHvGjo2eDfxK5j/iToxE+y2f4QLz//R7+a/f9fw8v4x6L71vFNZmyuo99y2V8U8SruYZ340R8cPPeYo+ftDl8IN7/zq1EfHgZ91h83+quyWTVfexbLuMnRryma3iX/QJYIxk+P+mDvhLxR48eLf+nx+L7VndNJqv6Y990GT8x4jVdw7tGIj58IN6/+V2J+H//+9/hewQei+9V9TWZpuqPfdNlfD3ilV3DuxYivvJAvP+SlYj3X+Kx+Giqr8k0tXDsJ17G1yNe2TW8ayHiKw/Eu5Mi7rH4aFqoyQS1cOwnXsZXIl7fNbxrIeIrD8S7kyLusfhoWqjJBDVy7OuX8ZWI13cN71qI+MoD8e6kiHssPppGajI1jRz7+mV8GPEqr+Fd9RFffyDenRTxzmPxsTRSk6lp59hXLuPDiFd5De+qj/j6A/FuQ8Q9Fh9HTTXpb3bffffdgwcPHj9+nL3lFDUd+3Yrl/FlxGu9hnfVR3z9gXi3IeIei49j7jVZhvuTTz65cuXKnTt3vv32259++il71ynmfuxnMryMLyNe6zW8qz7i6w/Euw0R91h8HHOsyf/+979//etfX3755bzCPTTHYy82vIwvIl7xNbyrPuLLP7jLB+Ldhoh3HouPYi41WYb72rVrMw330FyO/aIsL+OLiFd8De+qj/gXX3xx9erVw8PD4W/hpoj3v+v9m+v+W/a/5W7iezLlmlQW7qEpH/s+LC/j/a+37mt4V33ET7Qp4oxgajWpONxDUzv2ESwu45de/mVYxdfwTsRFfGTDmnz66af/yPC3v/3tj3/84+9///v333//3Xff/fjjjz///POvvvoqZcw4+qNuLeKLy3j/6637Gt6JuIiP7B+DiJOikYh3xx83XPc1vBNxER+ZiKdrJ+KLZ+J1X8M7ERfxkYl4unYi3vvmm2+yJ+ydiEf2nLb88MMPSY+FX7l7927/Xvbly5cPDg5+9atf/fa3v/3DH/7w5Zdf5q4aU/9bkP2ngIsk4pE9hzTPnz+/d+/e4oNQ33777Y8++ujrr7/e9E/uwjSJeGTPYRIEnZkS8ciew+QIOjMi4pE9h0kTdCZOxCN7DrMh6EyQiEf2HGZpGPQbN25kz6FdIh7ZcwDKiXhkzwEoJ+KRPQegnIhH9hyAciIe2XMAyol4ZM8BKCfikT0HoJyIR/YcgHIiHtlzAMqJeGTPASgn4pE9B6CciEf2HIByIh7ZcwDKiXhkzwEoJ+KRPQegnIhH9hyAciIe2XMAyol4ZM8BKCfikT0HoJyIR/YcgHIiHtlzAMqJeGTPASgn4pE9B6CciEf2HIByIh7ZcwDKiXhkzwEoJ+KRPQegnIhH9hyAciIe2XMAyol4ZM8BKCfikT0HoJyIR/YcgHIiHtlzAMqJeGTPASgn4pE9B6CciEf2HIByIh7ZcwDKiXhkz+Ei3bt377PPPstesatvvvnm1q1bL168yB7CjIl47Punk5Vx9Od8eHj43nvvPX78OHvLrp4+ffrBBx8cHBzM9MyZAhGP/f1EsjKOOZ7z0BzPnOkQ8djHTyEr45j7OQ/N5cyZGhGPi/3BZWUcNZ3z0JTPnGkS8bioH1ZWxlHrOQ9N7cyZMhGP8/+AsjKOFs55aApnzvSJeJznh5KVcbR2zkNSznYiHmU/iKyMk5WWz3lIytlExOOs311WFvadFee8TspZJ+Kx+3eUlXX7yIpz3k7KGRLx2OW7yMp2F5UV57w7KWdBxGP7N5aV3Z0nK865jJQj4rHpm8lKmbNmxTmfn5S3TMRj/RvIyvntkhXnfLGkvE0iHsOvkpWLtSkrznl/pLw1Ih6LL5SV/Rlm5fvvv+/P+RKj6M/cn+fqiXg8f/5cVkbTZ+Xrr7++evWqq+L+uJE0RcSj/5K+47KyV+tZceb7IN8NEvFYfrms7MP2rDjziyLfzRLxWPlaWbkou2fFmZ+HfDdOxOPEbyMr51GWFWd+VvJNJ+LbP2NTVs7q/Flx5ruQb5ZEPE799rKyi4vNijPfRL5ZIeKx4/eSlU32l5X+zD/88ENnviDfnEjE40zfV1aGxsmKT0GUb7YQ8Sj4EWRl/Ky0eebyzalEPIp/HFkZ/2dv58zlmx2JeJzzR5OV8dV95tM5Z2ZBxONCfkxZGV99Zz7Nc2biRDwu8EeWlfHVcebTP2cmS8Tjwn98WRnffM98XufMBIl47OlnkZXxLc786tWr2UN29cUXX8zxnJkUEY+9/lyyAuyViEf2HIByIh7ZcwDKiXhkzwEoJ+KRPQegnIhH9hyAciIe2XMAyol4ZM8BKCfikT0HoJyIR/YcgHIiHtlzAMqJeGTPASgn4pE9B6CciEf2HIByIh7ZcwDKiXhkzwEoJ+KRPQegnIhH9hyAciIe2XMAyol4ZM8BKCfikT0HoJyIR/YcgHIiHtlzmJ6jZ0/u37x5/Ifk5v0nz46Ov+Zo63eE0Yl4ZM9hUo76fC/KfRzuvuj9l/T/89n9RdOfCDkTIuKRPecs3BD3qs/0ccBXvuZVv0Wc6RHxyJ6zIzfEfTsO9VrBf3H05KaGM0kiHtlzduCGuHfLSG86xeU3OLHxkEbEI3vOqdwQ9+71KW5M9NbfBcgj4pE9Zzs3xBEs35/Z/IZQw5kqEY/sOdu4IY5gl3dmjk/ZuztMjohH9pwt3BBHsEvDj7+NhjM9Ih7ZczZyQxzD61Pe/IbQIysmTMQje84mboijeP3xPRrOLIl4ZM/ZwA1xHGWPrI6e3b/vDSeTIOKRPWcDN8RxLM/51L86Hla+/zKHzjSIeGTP2cANcRynviU8qfIaznSIeGTP2cANcSTHFT/lc6lWGu5vIZgKEY/sORu4IY5mw2vP/PJiBzdfvzTN8mB/+Z1xykyGiEf2nE3cEMfz6jhvHr8q5NHLV6s5PstXX/vyoF++6phDZkJEPLLnbOaGOKKX3V5+UOfr14p89bWvXoLs5ev/KjhTIuKRPWcbN0RgOxGP7DmncEMEthDxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlRDyy5wCUE/HIngNQTsQjew5AORGP7DkA5UQ8sucAlBPxyJ4DUE7EI3sOQDkRj+w5AOVEPLLnAJQT8cieA1BOxCN7DkA5EY/sOQDlWoz448eP41j/39lzAMq1GHGAaog4wIyJOMCMiTjAjIk4wIyJOMCMiTjAjIk4wIyJOMCMiTjAjIk4wIyJOMCMiTjAjIk4wIyJOMCMiTjAjIk4wIyJOMCM/T9WjBMKK610BQAAAABJRU5ErkJggg==" /></div>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">3-2</h2>
+<div class="spacer"></div>
+<p>다음 그림과 같이 긴 도선 A, B가 평행하게 놓여 있다. 두 도선 사이의 거리는 \(r\)이다. 도선 A와 B에 흐르는 전류 \(I_A, I_B\)는 서로 같은 방향으로 흐르고 있다. 도선 A와 B가 놓인 평면의 도선 A와 B사이로 제한된 영역에서 자기장의 크기가 영이 되는 점들의 집합을 구하고 설명하여라.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-149</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

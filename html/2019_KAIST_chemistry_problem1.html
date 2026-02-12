@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-71 | 2019_KAIST_화학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-71-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>우리가 사는 3차원 세상이 아닌, 2차원 세상에서는 아래 그림과 같이 원모양의 s 오비탈과 x축, y축으로 놓여있는 2개의 p 오비탈이 존재하게 될 것이다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<p>2차원 세상에서의 주기율표에는 2주기에 몇 개의 원소가 있으며, 이 2주기 원소들의 원자번호 증가에 따른 이온화 에너지 변화는 어떠한 경향성을 가지게 될지 자세히 서술하시오. (3점)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-71</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

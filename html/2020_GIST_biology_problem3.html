@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생-43 | 2020_GIST_생명과학_문제3</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 생명과학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="생-43-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 3</h1>
+<div class="spacer"></div>
+<p><strong>단계1</strong></p>
+<div class="spacer"></div>
+<p>저해제가 있을 경우 효소의 활성에 영향을 미친다. 다음 그래프에서 (가)는 저해제가 없을 때의 기질의 농도에 따른 반응속도를 나타낸 것이다. (나)와 (다)는 각각 어떤 저해제를 넣어 준 경우이며, 각각 어떻게 효소의 활성을 저해하는지 설명하시오.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<p><strong>단계2</strong></p>
+<div class="spacer"></div>
+<p>위의 [단계1]의 그래프에서 (다)시험관 반응에 같은 효소 농도를 2배로 더 넣어 준 경우 예상되는 기질 농도에 따른 반응속도 그래프를 그려 보시오.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,/9j/2wBDAAwJCQsJCAwLCgsODQwPEx8UExEREyYbHRcfLSgwLywoLCsyOEg9MjVENissPlU/REpMUFFQMDxYXldOXkhPUE3/2wBDAQ0ODhMQEyUUFCVNMywzTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU3/wAARCAC7ASQDASIAAhEBAxEB/8QAGwABAQEBAQEBAQAAAAAAAAAAAAQGBQMCAQf/xABJEAABBAACBwUEBgYIBAcAAAAAAQIDBAURBhIVIVST0RMxNXOyQVZhpSIyRlF1whRSVXGBsRYjMzRCcpGhQ4LB8AdEYoOSorP/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQMCBP/EACkRAQEAAAMGBQUBAAAAAAAAAAABAgMREhMxkbHRITJBUWEUQlKB4aH/2gAMAwEAAhEDEQA/AP6Dh2HUpMNqPfTrue6Fiuc6Jqqq5JvXcU7LocDW5Tegwvwql5DPShWBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBJsuhwNblN6DZdDga3Kb0KwBh9KYo6uJRsrxthYsKKrY01Uzzdv3A+tMPFYvIT1OAGrwvwql5DPShWSYX4VS8hnpQrAAACXEr8OF4dYvWXasMDFe745exPivcYD/w40xmxfEcQo4jJnNM91mDNe5F+sxPgm5U/if0kymg/wBo/wAbs/lA1YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMTph4rF5CepwGmHisXkJ6nADV4X4VS8hnpQrJML8KpeQz0oVgAS3LM8CMZVqPsyvzy+kjGN+LnL3J+5FX7kXJSVl3FYntW5hcPYquSuqWVlc34q1zGbv3Zr8FA6hlNB/tH+N2fymrMpoP8AaP8AG7P5QNWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADE6YeKxeQnqcBph4rF5CepwA1eF+FUvIZ6UKyTC/CqXkM9KFYGbk1cSxfV2lidJ8cr0gakcHZuc1Fa7UVWOXuVdzlz71RMk3fsNuF2kTInXbdiRrntSK1Uexsaqiqmo5GNau5rkzdmqpnk7vRfXELWFQuWhPHea9ZknRYac7/poqPza5GKi7+/L9x7QQYNHarXYMNhitWpHIyVanZS55OVyrrIjk3Iv+vxA7BlNB/tH+N2fymrMpoP9o/xuz+UDVgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxOmHisXkJ6nAaYeKxeQnqcANXhfhVLyGelCskwvwql5DPShWBlcTXDH2b7r+BNtXGLlDIuFSTpImoitzejFRd+ad/sL6uGLSxOC2qySxviSCKLURG1E78mo1ERGrkiZqme5u/Lu+8SsYxDOx1WvR/RmyNRXS2ntdJmmqjckidl9JU3oq93xPqti081xkctRkcD3uhbK2VXKsjUVXJqq1Po/RciLnvy7kA6xlNB/tH+N2fymrMpoP8AaP8AG7P5QNWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADE6YeKxeQnqcBph4rF5CepwA1eF+FUvIZ6UKyTC/CqXkM9KFYHHxKGrHfqzvsrDbe9EhSaV/ZPVNytRqrqo5UVcsk1u/LNEU/ZKlLDrrbk9x8bXyKsVd7m6nauTerUy1lcu/dmveuSFj5q9qzYw6WLtMoWvka9qKxzXq5Mvj9Vc9xzcKgwyLEnLh2GVKiLE5FfFA1j1ykVqpmnszbmB3TKaD/aP8bs/lNWZTQf7R/jdn8oGrAAAAAAAAAAAA8JLlWH+1sws/zPRAlsnF7g5z8dwuP616Ff8rs/5Hiuk+EouTbKvX7mxuX/AKE1jO5+XOOKc3XBx/6S0l+oyy9PvbC7eP6Qxr9XD8Rev3Nr7/5jaifUZf5OwDj7ecu5uE4mq/GDJP5jbk37Iv8A/wAE6jahv8v36uwDj7Yufsa1/qg2vdXc3BrOfxc1EG1Df4PnlezsA4+1MS/YkvOaNqYl+xJec0bUN/g+eV7OwDj7UxL9iS85o2piX7El5zRtQ3+D55Xs7AOPtTEv2JLzmnUhe+SFj5I1je5qKrFXPVX7hLq6w5mHHw6WPQAFaAAAAADE6YeKxeQnqcBph4rF5CepwA1eF+FUvIZ6UKyTC/CqXkM9KFYHKs4ffXE5LtC7Wh7SFkT2T1nS/VVyoqKkjcvrr/oeGE4Jsy++bs4FfLG5Zp4okj7R6vV29M1Xci+1VJdK7U615KjY5Youzc9ZEcidtkn1G7/ZnrLnkqo1ckdvyuwyK3YkfblxO05iWJmpX1Ikj1Wvc1Ez1NbuRP8AEB2DKaD/AGj/ABuz+U1ZlNB/tH+N2fygasAAAAAJbuI1cPYjrUzWZ/Vb3ud+5CG1iktiw6lhLWyzpukmX+zi6r8D2o4NBUf28qrZtu3unk3rn8PuOddeDC5lxXTL5+n9T7SxO5/cMO7KNe6W07V/+qbz62bik++1izmJ+pXjRuX8e87ALp7rudfNbf8AOjj/ANG6b/7zJas+dM5f5ZHvHgWFxfVowr/mbrfzOiBpFmRlz7Y8GUqsf9nWhbl+qxEPZGo1MmoiJ9yH6CtJJOAAAoAAOVpEmLJhMsmByMS7H9JrHsRySJ7W/BfuMZoVpnimJ255Menjr0o/6trlgVjVl+5X9zck9iqmeaH9IPGOrXhbK2KGNjZXK+REamTnL3qv35geqKjkRUVFRd6Kh+nJ2IlV+vhNh9HfmsKJrwu/5F7v+VWnxhk2LXkSzJapNrLLI3sm1X6+q16t+v2mWe7v1f4AdkHLwDE2Ynhsb/0qKedn0ZtRzVVjs+5UTuX4HUAAAAAAAAAAADE6YeKxeQnqcBph4rF5CepwA1eF+FUvIZ6UKyTC/CqXkM9KFYHKxvZ89OWvdkzcxna9nG9EkRO7WRM+7fl9xZFYptsvpwzQJYaiyOgY5NdEVc1cre/eq9/xM/jtGwtm1Y7FOw1e17bWT9RWamXf3rn938SyKlaTGG51lbFHYfY/SdZuUiOZqo3LPPPenemWTU3gd0ymg/2j/G7P5TVmU0H+0f43Z/KBqwAB+KqImarkiHCls2MdldXovWGi1dWWyne//wBLOv8A2qxJJj1l9Os9WUIlynmb/wARf1Gr933r/wBr2oYY68TIoWIyNiZNanchzxee2510nl6/x8VKkFKBsFaNI42+xPb8V+89wDpvJJNIAAKAAAAAAAAAAAAABya+Cy1Xp2GL32wpI6TsdWFW73K5UzWPWyzVfbn8TrACDBq8tTCa0E7dSRjcnNzRct/wLwAAAAAAAAAAAAxOmHisXkJ6nAaYeKxeQnqcANXhfhVLyGelCskwvwql5DPShWBmsW0jfVuOrw3cDi7J7db9JxNI5FTcqtVnZrq5/vOjHftqlBZ4qrP0mZWf1EyzNVnZucio5Wt9rU9i7jzv4ditq3HLDiFKKKJyujY+m96pm1W717VM+9fYh918GdDJSdJiFiRlRrUZDqxpHrIzUz+rrdyquWsveB1TKaD/AGj/ABuz+U1ZlNB/tH+N2fygas4+KWZbVhMKpP1ZXpnPKn/CZ1UpxXENn1kVje0sSrqQx+1zl/6DCsP/AECuqyu7SzKuvNJ+s7ohzfHwYY7cd3c/fb9qatWKnWjrwN1Y2JkiHsAdNpJJpAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGJ0w8Vi8hPU4DTDxWLyE9TgBq8L8KpeQz0oVkmF+FUvIZ6UKwAAAGR0NlZBFpNLK5GsZjVpznL7E+ia4xk2h+INnvxUsXWKlfnktSMfC13ZyuXPP2K5O7dnluJXGO3Dh1wzWuxhUT8Rtuxey1URyataNf8DP1v3qdsybdH9KmtRrdMURETJETC4t3+5+7B0r98vlkXUSaJl4NiaerVgymwdK/fL5ZF1GwdK/fL5ZF1K0asGU2DpX75fLIuo2DpX75fLIuoGrBlNg6V++XyyLqNg6V++XyyLqBqwZTYOlfvl8si6jYOlfvl8si6gasGU2DpX75fLIuo2DpX75fLIuoGrBlNg6V++XyyLqNg6V++XyyLqBqwZTYOlfvl8si6jYOlfvl8si6gasGU2DpX75fLIuo2DpX75fLIuoGrBlNg6V++XyyLqNg6V++XyyLqBqwZTYOlfvl8si6jYOlfvl8si6gas+XyMj1dd7W6y6qZrlmv3GW2DpX75fLIupwtLtGdKbODdk7HH4vrSsyrMoxxb/ANbWRdyIB/SAZbQ3CMfwqnqY5iaWWqn0IMtdY/8A3F3r+7enxNSAAAAAAYnTDxWLyE9TgNMPFYvIT1OAGrwvwql5DPShWSYX4VS8hnpQrAAAAAAAAAAAAAAAAAAAAAAPG1aipVn2J1ckbMs9ViuXeuSZIiKq9/sIr2LyUo1mbhd2xA2PtXSx9k1GplmqKj3tdmiezI+8a8Nd5kX/AOjRbpz3rCRTujbh7clcxuaumX7nexG/BM9b2qiZooesN3trckCRq3VhjlRXLkv0lcmSp7MtX/c5WH47du4rLSdUotbD9eSO49+tl9bUziRHK1ckdv3Ku8vjaj8dutciOatWFFRU3KmtKZHELypiE1aPFMPpQ05tWGvPdrxdlqtTJWsdXcrUyXd9JQNrhtzaGG1bmp2fbxNk1M89XNM8s/aSWNIMPo4lLTv261RWxMka6edrNfWVyKiIuXdq/wC574MmWDUUWWCZUgYiyV8uzcqJvVuSImX3ZIhmcdrVdpSQWcSZh0f0ZWvvXLCsmdmq/QRJmNTVVE7s8s03JuzDVwX6tuq6zUsRWYEz+nC9HouXemabiGrjdi3HDLHgeIpDMjXNkc+vlqr3Kqdrn3fDMkwdNXBpbEcVu496rH9C0+RJmouSPj7Z+TUVN/f/ABduVefUixypK2JseP8A6DFGxsTM8P1s0zRUVc+7LVy3594GqS7C686nm9J0Z2mSxuRqt3Judlkvem5FKDmNe6TGqj3xPic6pIqxvVFc36Ue5clVP9FU6YAAAAAAAAAAAYnTDxWLyE9TgNMPFYvIT1OAGrwvwql5DPShWSbLocDW5Teg2XQ4Gtym9AKwSbLocDW5Teg2XQ4Gtym9AKwSbLocDW5Teg2XQ4Gtym9AKwSbLocDW5Teg2XQ4Gtym9AKwSbLocDW5Teg2XQ4Gtym9AKwSbLocDW5Teg2XQ4Gtym9AKwSbLocDW5Teg2XQ4Gtym9AKwSbLocDW5Teg2XQ4Gtym9AKwSbLocDW5Teg2XQ4Gtym9APeevDahfDYijmhemTo5Go5rk+KL3n0xjIo2xxtaxjURrWtTJERO5EQm2XQ4Gtym9BsuhwNblN6AVgk2XQ4Gtym9BsuhwNblN6AVgk2XQ4Gtym9BsuhwNblN6AVgk2XQ4Gtym9BsuhwNblN6Aeraldlp9pteJtl7UY6ZGJruansVe9UPYk2XQ4Gtym9BsuhwNblN6AVgk2XQ4Gtym9BsuhwNblN6AVgk2XQ4Gtym9BsuhwNblN6AVgk2XQ4Gtym9BsuhwNblN6AVgk2XQ4Gtym9BsuhwNblN6AZTTDxWLyE9TgavZlBP/JVuU3oAP/Z" /></div>
+<div class="spacer"></div>
+<p><strong>단계3</strong></p>
+<div class="spacer"></div>
+<p>감자즙에는 카탈레이스라는 효소가 있어 과산화수소(\(\text{H}_2\text{O}_2\))를 산소와 물로 분해하는 반응을 촉매한다. 시험관 I, II, III에 아래 표와 같이 물질들을 섞어 준 후 발생하는 산소의 양을 측정하였을 때 산소가 많이 발생하는 순서대로 적고 그 이유를 설명하시오. 또, 이 실험을 통해 알 수 있는 과학적 사실은 무엇인가?</p>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th>시험관</th><th>I</th><th>II</th><th>III</th></tr>
+<tr><td>감자즙</td><td>0 mL</td><td>2 mL</td><td>2 mL</td></tr>
+<tr><td>5% \(\text{H}_2\text{O}_2\)</td><td>30 mL</td><td>30 mL</td><td>30 mL</td></tr>
+<tr><td>5% NaOH</td><td>0 mL</td><td>0 mL</td><td>2 mL</td></tr>
+<tr><td>증류수</td><td>10 mL</td><td>8 mL</td><td>6 mL</td></tr>
+</table>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">생-43</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

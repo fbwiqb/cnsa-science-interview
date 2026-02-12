@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-61 | 2019_DGIST_물리학_문제3</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-61-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 3</h1>
+<div class="spacer"></div>
+<p>전투기와 여객기가 아래 그림과 같이 평행으로 날아가고 있다. 둘은 수직으로 \(d = 510\,\text{m}\)만큼 떨어져있고, \(v_1 = 680\,\text{m/s}\), \(v_2 = 170\,\text{m/s}\)이다. 음파의 속도는 \(340\,\text{m/s}\)라 하자.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<p><strong>-1.</strong> 전투기에서 생기는 충격파는 전투기의 진행방향과 어떤 각도를 만드는가? (30점)</p>
+<div class="spacer"></div>
+<p><strong>-2.</strong> 현재부터 몇 초 후에 충격파가 여객기에 도달하는가? (30점)</p>
+<div class="spacer"></div>
+<p><strong>-3.</strong> 여객기의 엔진에서 1 kHz의 소리가 나온다고 하면, 여객기 뒷편의 관제탑에서 들리는 여객기 엔진소리의 주파수는? (관제탑은 여객기의 진행방향의 정확히 뒷편에 있다고 가정하자) (20점)</p>
+<div class="spacer"></div>
+<p><strong>-4.</strong> 위 3번의 상황에서 관제탑에서 관측되는 엔진소리의 파장은? (20점)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-61</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

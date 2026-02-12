@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-2 | 2025_KAIST_물리학_문제2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-2-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 2</h1>
+<div class="spacer"></div>
+<p>아래 그림처럼 슬릿 간격이 \(d\)인 이중 슬릿이 설치되어 있다. 이중 슬릿의 중심으로부터 왼쪽으로 거리 \(L_1\)만큼 떨어진 곳에 단일 슬릿이 놓여 있고, 오른쪽으로 거리 \(L_2\)만큼 떨어진 곳에 스크린이 놓여 있다. 스크린 위 점 C는 이중 슬릿의 가운데와 단일 슬릿을 잇는 일직선 상에 위치한다. 이때 파장이 \(\lambda\)인 단색광이 단일 슬릿을 왼쪽에서 오른쪽으로 통과하고 스크린 위에 무늬를 만든다. \(L_1\)과 \(L_2\) 모두 \(\lambda\) 및 \(d\)보다 훨씬 크다고 가정하며, 모든 영역은 진공 상태이다. 단일 슬릿, 이중 슬릿, 스크린은 서로 평행하다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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" /></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 점 C로부터 첫 번째 이웃한 밝은 무늬의 중심까지의 거리를 구하시오. [1점]</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 단일 슬릿과 단색광이 함께 아래 방향으로 속도 \(v\)의 등속도 운동을 시작했다. 이 경우, 문제 (1)에서 점 C에 나타났던 밝은 무늬가 움직이는 방향과 속도의 크기(\(v_x\)), 그리고 이웃한 밝은 무늬 사이의 간격(\(\Delta x\))을 구하시오. 단, 빛의 도플러 효과는 무시한다. [2점]</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 문제 (2)의 상황에서 이중 슬릿과 스크린 사이 영역을 굴절률 \(n\)의 매질로 채웠을 때, \(v_x\)와 \(\Delta x\)를 구하시오. [2점]</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-2</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

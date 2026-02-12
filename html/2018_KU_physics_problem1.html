@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물-140 | 2018_건국대_물리학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 물리학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="물-140-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>제시문</p>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">(가)</span> 에너지 보존 법칙이란 에너지가 생성되거나 소멸되지 않는다는 것을 의미한다. 다만 에너지를 어떤 형태에서 다른 형태로 전환하는 것이다. 에너지는 형태를 변하기는 하지만 우주에 존재하는 에너지의 총합은 늘 같다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(나)</span> 패러데이는 코일에 자석을 가까이하거나 멀리하면 코일에 전류가 발생하는 전자기 유도 현상을 발견하였다. 이 때 코일에 발생한 기전력을 유도 기전력이라 하며, 유도 기전력에 의해 코일에 흐르는 전류를 유도 전류라고 한다. 유도 전류의 세기는 시간에 따른 자기장의 변화에 비례하며 이를 패러데이의 법칙이라고 한다. 여기서 코일에 흐르는 전류의 방향은 코일을 지나는 자기력선속의 변화를 방해하는 방향으로 생긴다. 이렇게 유도 전류의 방향을 결정하는 법칙을 렌츠 법칙이라고 한다. 유도 기전력 \(\mathcal{E}\)를 렌츠 법칙을 고려한 패러데이 법칙으로 나타내면 다음과 같다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\mathcal{E} = -\frac{\Delta\Phi}{\Delta t}\]</div>
+<div class="spacer"></div>
+<p>여기서 \(\Delta\Phi\)는 어떤 면적을 지나는 자기력선속의 변화량이고, \(\Delta t\)는 자기력선속이 \(\Delta\Phi\)만큼 변하는 동안의 시간 간격이다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">(다)</span> 어떤 물질 1kg을 1K 올리는 데 필요한 열에너지를 비열이라고 한다. 이 정의에 따르다면 열에너지 \(Q\)가 질량 \(m\)인 물체에 전달되어 온도가 \(\Delta T\)만큼 변했을 때 물질의 비열은 다음과 같이 쓸 수 있다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[c = \frac{Q}{m\Delta T}\]</div>
+<div class="spacer"></div>
+<p>이때 단위는 J/kg\(\cdot\)K 이다. 비열은 물질의 고유한 값 중 하나이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">문제 1</h2>
+<div class="spacer"></div>
+<p>구리관을 통과할 수 있는 크기의 자석을 준비하여 구리관 안에서 자석을 낙하시켜 낙하 시간을 측정하면 같은 높이에서 그냥 자유낙하 시킬 때와 비교하여 구리관을 통과할 때 더 늦게 떨어진다. 그 이유를 에너지 보존 법칙에 근거하여 설명하시오.</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">문제 2</h2>
+<div class="spacer"></div>
+<p>그림처럼 질량 0.1kg인 자석을 구리관 안에서 5m 자유 낙하시켰다. 구리관을 빠져 나온 직후 자석의 속력은 8m/s였다. 잠시 후, 구리관의 온도를 측정하였더니 구리관의 온도가 자석이 구리관을 통과하기 전보다 0.5K 증가하였다. 구리관이 자석 이외의 외부와 에너지 교환을 하지 않고 구리관에 발생한 전기에너지를 열에너지로 모두 전환하였다고 가정할 때 구리관의 질량은 얼마인가? (단, 구리의 비열은 360J/kg\(\cdot\)K, 중력가속도는 10m/s\(^2\)으로 계산하고, 자석의 두께는 구리관의 길이에 비해 무시할 만 하다.)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">물-140</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

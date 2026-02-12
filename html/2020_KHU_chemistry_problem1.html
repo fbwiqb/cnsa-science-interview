@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-139 | 2020_경희대_화학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-139-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">제시문</h1>
+<div class="spacer"></div>
+<div class="passage-box">
+<p><span class="passage-marker">[가]</span></p>
+<div class="spacer"></div>
+<p>원소 기호를 이용하여 적절한 화합물을 간단히 나타낸다듯이, 화학식을 이용하여 화학 변화를 나타낼 수 있다. 화학 변화를 화학식으로 나타낸 것을 화학 반응식이라고 한다. 화학 반응식의 왼쪽에 반응물을, 오른쪽에 생성물을 놓고 화살표로 연결한다. 화학 반응에서 원자가 생성되거나 사라지지 않으므로 반응물과 생성물의 원자의 종류와 수가 같아야 한다. 이것은 화학 반응에서 질량이 보존되기 때문이다. 화학 반응식에서 각 물질의 계수비는 몰수 비와 같다. 또한 화학 반응식은 반응물의 조성으로부터 생성물의 양을 계산할 수 있게 해 주는데, 이것을 화학양론(stoichiometry)도 알 수 있다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[나]</span></p>
+<div class="spacer"></div>
+<p>화학 변화에서 열을 흡수하거나 방출하는 반응이 있는데 열을 방출하는 반응을 발열 반응이라 하고, 열을 흡수하는 반응을 흡열 반응이라 한다. 이때 화학 반응에서 출입하는 열을 반응열이라 하며, 일정한 압력에서의 반응열을 엔탈피 변화(\(\Delta H\))라고 한다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[다]</span></p>
+<div class="spacer"></div>
+<p>탄소 수소로만 구성되어 있는 화합물을 탄화수소라 한다. 탄소 사이의 결합 종류에 따라서 단일 결합으로만 이루어진 탄화수소를 포화탄화수소라 하며, 이중 또는 삼중 결합을 포함하는 탄화수소를 불포화탄화수소라고 한다. 탄소의 원자가는 4이고, 탄소 사이에 이중결합 또는 삼중결합이 존재할 수 있으며, 가장 간단한 탄화수소인 메탄(\(\text{CH}_4\))으로부터 에탄, 프로판, 뷰탄 등의 탄화수소가 만들어진다. 탄소와 탄소 사이에 삼중결합을 포함하는 탄화수소 중 가장 간단한 분자는 아세틸렌(acetylene)이고, 고리 모양의 분자 중 가장 간단한 벤젠은 특별한 구조를 가지고 있다. 1865년에 케쿨레는 벤젠의 구조로 단소 원자 6개가 고리를 이루고 각각의 탄소가 수소 원자와 1개의 결합을 하고 있다고 주장하였다. 탄소와 탄소의 결합은 단일결합과 이중결합이 번갈아 있는 구조를 벤젠의 화학 반응식이라고 한다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[라]</span></p>
+<div class="spacer"></div>
+<p>화학 반응에서 출입하는 엔탈피 변화, 즉 반응 엔탈피(\(\Delta H\))는 생성물의 엔탈피에서 반응물의 엔탈피를 뺀 것으로 나타낸다. 생성물의 엔탈피가 반응물의 엔탈피보다 작으면 발열 반응이며, 엔탈피 변화가 음수이다. 반대로 생성물의 엔탈피가 반응물의 엔탈피보다 크면 흡열 반응이며, 엔탈피 변화가 양수이다. 셋째, 화학 반응의 출입하는 양의 에너지 단위는 kJ/mol로 나타낸다. 넷째, 반응 엔탈피는 반응 조건(온도, 압력)에 따라 달라지므로 표준상태(25 °C, 1기압)에서의 반응 엔탈피를 표준 반응 엔탈피(\(\Delta H°\))라고 한다. 다섯째, 화학 반응은 가역적이므로 역반응의 반응 엔탈피는 정반응의 반응 엔탈피와 크기가 같고 부호가 반대이다.</p>
+<div class="spacer"></div>
+<p><span class="passage-marker">[마]</span></p>
+<div class="spacer"></div>
+<p>화학 반응의 종류에 따라 나타나는 반응열의 종류는 다양하다. 반응열의 종류에는 연소열, 중화열, 생성열, 용해열, 분해열 등이 있다. 일반적으로 반응열은 25 °C, 1기압의 조건에서 측정하며, 이를 표준 반응열이라 한다. 표준열의 표준 상태는 25 °C, 1기압 조건에서 가장 안정한 상태이다. 1기압에서 가장 안정한 원소의 표준 생성 엔탈피(\(\Delta H°_\text{f}\))는 0이다. 예를 들어 수소, 산소, 탄소는 25 °C, 1기압에서 각각 \(\text{H}_2(g)\), \(\text{O}_2(g)\), C(s)는 원소에서의 \(\Delta H°_\text{f}\)는 0이다.</p>
+<div class="spacer"></div>
+</div>
+</div>
+<div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">II-1</h2>
+<div class="spacer"></div>
+<p>산소(\(\text{O}_2(g)\))가 들어있는 밀폐된 용기에 미지의 탄화수소 1.00 g을 주입하고 연소시켜 0.70 g의 일산화 탄소(\(\text{CO}(g)\))와 2.20 g의 이산화 탄소(\(\text{CO}_2(g)\)), 그리고 0.90 g의 물(\(\text{H}_2\text{O}(l)\))을 얻었고 연소되지 않고 남아 있는 탄화수소는 없었다.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 이 탄화수소의 실험식에 대해 논술하시오 (단, 밀폐된 용기 내에서의 연소는 반응물 중 어느 하나라도 모두 소모될 때까지 비가역적으로 진행되고 H, C, O의 원자량은 각각 1, 12, 16이다). (14점)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 연소 전 밀폐된 용기에 존재한 \(\text{O}_2\)의 질량과 탄화수소 1.00 g의 완전 연소를 위해 필요한 \(\text{O}_2\)의 최소 질량에 대해 논술하시오. (6점)</p>
+<div class="spacer"></div>
+</div>
+<div class="question-block">
+<h2 class="sub-title">II-2</h2>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 탄화수소인 아세틸렌(\(\text{C}_2\text{H}_2\))과 벤젠(\(\text{C}_6\text{H}_6\))은 동일한 실험식을 가진다. 아래의 자료를 이용하여 다음 반응의 표준 반응 엔탈피에 대해 논술하시오. (4점)</p>
+<div class="spacer"></div>
+<div class="math-block">\[3\text{C}_2\text{H}_2(g) \rightarrow \text{C}_6\text{H}_6(l)\]</div>
+<div class="spacer"></div>
+<table class="md-table">
+<tr><th>물질</th><th>표준 생성 엔탈피(\(\Delta H°_\text{f}\), kJ/mol)</th></tr>
+<tr><td>\(\text{C}_2\text{H}_2(g)\)</td><td>226.77</td></tr>
+<tr><td>\(\text{C}_6\text{H}_6(l)\)</td><td>49.0</td></tr>
+<tr><td>\(\text{CO}_2(g)\)</td><td>\(-393.5\)</td></tr>
+<tr><td>\(\text{H}_2\text{O}(l)\)</td><td>\(-285.83\)</td></tr>
+</table>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 아세틸렌과 벤젠의 연소 반응에 대한 열화학 반응식을 이용해 아세틸렌과 벤젠 각각이 연소될 때 발생되는 열을 kJ/g 단위로 구하고 어느 것이 단위 질량(g) 당 연료로서의 가치가 높은지에 대해 논술하시오 (단, 소수점 이하는 반올림한다). (16점)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-139</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

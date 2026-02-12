@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생-1 | 2025_KAIST_생명과학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 생명과학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="생-1-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>항이뇨 호르몬(ADH)은 뇌하수체 후엽에서 분비된 후 콩팥에 작용하여 수분의 재흡수를 촉진한다. 아래 그림은 정상 생쥐에서 혈장 삼투압의 변화에 따른 혈중 ADH 농도를 나타낸 것이다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 위 그림을 보고 정상 생쥐에서 혈장 삼투압의 변화가 ADH 분비에 미치는 영향을 설명하시오. [1점]</p>
+<div class="spacer"></div>
+<p>카이스트 대학원생 넙죽이는 돌연변이 생쥐 A와 B에 대한 연구를 수행 중이다. 돌연변이 생쥐 A는 ADH가 콩팥에서 정상적으로 작용하지 못한다. 돌연변이 생쥐 B는 뇌하수체의 ADH 분비에 이상이 있다. 넙죽이는 6시간 간격으로 생쥐 A, 생쥐 B, 정상 생쥐의 혈장 삼투압을 측정하여 아래 그림과 같은 결과를 얻었다.</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 생쥐 A의 혈중 ADH 농도는 정상 생쥐와 비교하여 어떤지 답하고 혈장 삼투압이 계속 높게 유지되는 이유를 설명하시오. [1점]</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 생쥐 B의 혈액을 채취하여 정상 생쥐에 주입하였다. 이 정상 생쥐의 혈장 삼투압이 시간의 경과에 따라 어떻게 변화할지 예측하고 이유를 설명하시오. [3점]</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">생-1</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생-73 | 2019_KAIST_생명과학_문제5</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 생명과학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="생-73-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 5</h1>
+<div class="spacer"></div>
+<p>아래 그림과 같이 아래 가닥의 일부가 끊어진 DNA 조각이 있다. (위 가닥 DNA에 표시된 \(\text{-OH}\)와 \(\text{-PO}_4\)는 각각 양쪽 말단의 수산기와 인산기를 의미함. 위 가닥과 아래 가닥 사이의 선은 염기 간 수소결합을 의미함.) (총 3점)</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/png;base64,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" /></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 이 DNA 조각을 대장균 세포 안에 넣은 후 DNA 복제 관련 효소들이 작용하였을 때 어떤 모양의 DNA가 될지 고르시오. (세포 내 DNA 분해 효소들은 작용하지 않았다고 가정함.)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> DNA 중합 반응에 필요한 화학물질과 조건이 갖추어진 시험관에 이 DNA 조각과 대장균에서 순수 정제한 DNA 중합효소들 만을 넣어준 후 반응시켰을 때 어떤 모양의 DNA가 될지 고르시오.</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(3)</span> 대장균 세포 안과 시험관 내의 반응 결과물이 다른 이유를 설명하시오.</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">생-73</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>

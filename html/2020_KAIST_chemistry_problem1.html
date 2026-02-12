@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화-48 | 2020_KAIST_화학_문제1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SamsungKin';
+  src: url('https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/fonts/SamsungKin-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 31mm 0 16mm 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'SamsungKin', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28mm;
+  padding: 8mm 20mm 0 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  background: white;
+}
+.header img {
+  height: 12mm;
+  margin-bottom: 2mm;
+}
+.header .header-text {
+  font-size: 9pt;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 2mm;
+}
+.header-line {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  border-bottom: 2px solid #003366;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14mm;
+  padding: 0 20mm;
+  background: white;
+  z-index: 100;
+}
+.footer-line {
+  border-top: 1px solid #003366;
+  margin-bottom: 2mm;
+}
+.footer-text {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #003366;
+}
+
+.content {
+  padding: 33mm 20mm 18mm 20mm;
+}
+.main-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-family: 'SamsungKin', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid #003366;
+  display: inline-block;
+  min-width: 50px;
+}
+.question-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 6px;
+}
+p {
+  margin-bottom: 5px;
+  text-align: justify;
+  word-break: keep-all;
+}
+.spacer {
+  height: 3px;
+}
+.sub-question {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.sq-num {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 3px;
+}
+.figure {
+  text-align: center;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure img {
+  max-width: 70%;
+  max-height: 240px;
+}
+.figure-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row img {
+  max-width: 48%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+}
+.md-table th, .md-table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.md-table th {
+  background: #f0f4f8;
+  font-weight: 700;
+  color: #003366;
+}
+.passage-box {
+  background: #f8f9fb;
+  border-left: 3px solid #003366;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+}
+.passage-box p {
+  margin-bottom: 5px;
+}
+.passage-box .spacer {
+  height: 2px;
+}
+.passage-box .figure {
+  margin: 10px 0;
+}
+.passage-box .md-table {
+  margin: 8px 0;
+}
+.passage-marker {
+  font-weight: 700;
+  color: #003366;
+}
+.ai-disclaimer {
+  background: #FFF9C4;
+  border-left: 4px solid #F9A825;
+  padding: 8px 14px;
+  margin: 10px 0;
+  font-size: 9pt;
+  font-style: italic;
+  color: #5D4037;
+  border-radius: 0 4px 4px 0;
+}
+.katex {
+  font-size: 1.05em;
+}
+.math-block {
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media print {
+  .content {
+    padding: 2mm 20mm 0 20mm;
+  }
+  .header, .footer {
+    position: fixed;
+  }
+  .question-block, .figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://ntgpabdgdzwheoykftou.supabase.co/storage/v1/object/public/interview-pdfs/html-assets/logo.png" />
+  <span class="header-text">과학 면접 아카데미 &nbsp;|&nbsp; 화학</span>
+</div>
+<div class="header-line"></div>
+
+<div style="text-align:right;padding:4px 20mm 0;"><a href="화-48-해설.html" class="sol-link" style="color:#003366;font-size:9pt;text-decoration:none;">해설 보기 &rarr;</a></div>
+<div class="content">
+  <div class="question-block">
+<h1 class="main-title">문제 1</h1>
+<div class="spacer"></div>
+<p>기체 A와 기체 B는 화학반응을 통해 기체 C를 형성한다.</p>
+<div class="spacer"></div>
+<div class="math-block">\[\text{A(g)} + \text{B(g)} \rightleftharpoons \text{C(g)}\]</div>
+<div class="spacer"></div>
+<p>아래 그림과 같이 1 기압의 공기로 채워져 있는 1 m 길이의 유리관 양쪽에서 1 기압의 기체 A와 1 기압의 기체 B를 밸브를 동시에 열어 유입시키고 기체 C가 형성되는 위치를 측정하였더니 왼쪽에서 60 cm이었다. (총 3점)</p>
+<div class="spacer"></div>
+<div class="figure"><img src="data:image/jpeg;base64,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ONkTAyNjWNHQGjAXpEBERAREQEREBERAREQEUezeqU8eU2YoiegPeAT7B1qMdTlm4UqFibsfKORZ/i877GlBYqPavVaTQ6zOyPe4NaT5zj2AdJPsUbyXUbP9JutrsP8AV1G8fe93H7A1b6unVKb3SQwgSu+tK4lz3e1xyT9qCMbWoXOFSsK0R/r7Q84+yMcfvFvsW2vpUEUwsTufasjomnIJb/COhvuAU5EBERAREQEREGmepWtACxXimA6BIwO/NRhomlA/7tqf+y34KeiDxHFHCwMijaxg6GtGAF7REBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAIBGCMhQHaNQLy9lcQPP69dxiJ97SMqeiCvFC3EByGpzED9WeNsg/AA/im9q8ecxUrA6i17oj9hDvzVgiCv8vtMbmXSrIPWY3xvH+YH8EGsVwMyQXY8dO9Uk/MNIVgiCvGuaZnDrkcZ7JMs/PCl17Ve2wvrTxTMBwXRvDgD2cFtXmWMSxPjcXAPaWktcWkZ7COIPeEGQ4OGWkEZxwWVydKhd0n9HuoU9Oglr3Ihe8kY0ZeCZZTGRnOSQWkZ6crzTpa1T19p8t1KxUZqJhAnc1zTXNXfLjwGf5bgD1dHQg6KbVtOryOjlvV2PacFhkG8Pd0rWNboOOI5ZJD/04Hv/ACBVgiCv51DnYho3pf8AsFn+fdWfKtRkdiLTAwds9hrf8ocp6IK/k9WlB37NWAdkcReR7yQPwTmkSH+dXbljh9Uy8m37GBuferBEEatQp0s+TVooieksYAT7T0lSURAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/2Q==" /></div>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(1)</span> 기체 A와 기체 B의 분자량의 비율이 어떻게 되는가? (각 기체의 용기 내에서의 이동 거리는 없고 가운데 유리관 내에서의 이동 거리만 가정한다.)</p>
+<div class="spacer"></div>
+<p class="sub-question"><span class="sq-num">(2)</span> 밸브를 열기 전 기체 A가 포함된 용기의 부피는 2 L, 기체 B가 포함된 용기의 부피는 1 L, 두 기체 사이를 연결하는 유리관의 부피는 1 L였다. 위 반응의 평형상수가 4라 할 때 평형을 이룬 후 유리관 내의 기압의 값을 구하여라. (단, \(\sqrt{2} = 1.4\)로 사용)</p>
+<div class="spacer"></div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-text">화-48</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+</body>
+</html>
