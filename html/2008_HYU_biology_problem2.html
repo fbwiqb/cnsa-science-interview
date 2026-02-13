@@ -161,6 +161,19 @@ p {
   max-height: 240px;
   object-fit: contain;
 }
+.figure-row-3 {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 14px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-row-3 img {
+  max-width: 32%;
+  max-height: 280px;
+  object-fit: contain;
+}
 .md-table {
   width: 100%;
   border-collapse: collapse;
@@ -261,9 +274,9 @@ p {
 <div class="spacer"></div>
 <p>우리 몸에 이물질이 침입한 후 시간 \(t\)가 경과했을 때의 항체 농도를 아래의 함수로 표현할 수 있다고 가정하자. 1차 침입의 경우는 함수 \(f(t)\)로, 2차 침입의 경우는 함수 \(g(t)\)로 표현한다.</p>
 <div class="spacer"></div>
-<div class="math-block">\[f(t) = \begin{cases} 0 &amp; (0 \le t &lt; c) \\ -a_1(t-c)(t-d) &amp; (c \le t \le d) \\ 0 &amp; (t &gt; d) \end{cases}\]</div>
+<div class="math-block">\[f(t) = \begin{cases} 0 & (0 \le t &lt; c) \\ -a_1(t-c)(t-d) & (c \le t \le d) \\ 0 & (t &gt; d) \end{cases}\]</div>
 <div class="spacer"></div>
-<div class="math-block">\[g(t) = \begin{cases} -a_2 t(t-e) &amp; (0 \le t \le e) \\ 0 &amp; (t &gt; e) \end{cases}\]</div>
+<div class="math-block">\[g(t) = \begin{cases} -a_2 t(t-e) & (0 \le t \le e) \\ 0 & (t &gt; e) \end{cases}\]</div>
 <div class="spacer"></div>
 <p>단, \(d &gt; c &gt; 0\), \(\quad c + d &gt; e &gt; d\), \(\quad a_2 &gt; a_1 &gt; 0\)</p>
 <div class="spacer"></div>
